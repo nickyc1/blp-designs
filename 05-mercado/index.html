@@ -1,0 +1,1223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Baby Let's Padel — El Mercado · Hecho en Houston</title>
+<meta name="description" content="El mercado — Baby Let's Padel. Padel apparel made in Houston by two Latinas. Care labels, quiet kit, considered drops.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Manrope:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Caveat:wght@500..700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bone:#FAF6EB;
+  --bone-2:#F1ECDC;
+  --cream:#E9E2D6;
+  --warm:#EFE5CD;
+  --sage:#5b7d6d;
+  --sage-deep:#4a6659;
+  --sage-soft:#A9BCB3;
+  --navy:#1E293B;
+  --navy-2:#141B27;
+  --taupe:#AFA393;
+  --taupe-deep:#8E826F;
+  --ink:#1A1F2A;
+  --ink-2:#3A4452;
+  --rule:rgba(26,31,42,.18);
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  background:var(--bone);
+  color:var(--ink);
+  font-family:'Manrope', system-ui, sans-serif;
+  font-weight:400;
+  font-size:15px;
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+  font-feature-settings:"kern" 1,"liga" 1;
+}
+a{color:inherit;text-decoration:none;transition:color .25s;}
+a:hover{color:var(--sage-deep);}
+img{display:block;max-width:100%;}
+
+.serif{font-family:'Fraunces', serif;}
+.cap{font-family:'JetBrains Mono', monospace;font-size:11px;letter-spacing:.28em;text-transform:uppercase;font-weight:500;}
+.script{font-family:'Caveat', cursive;font-weight:600;}
+.italic{font-style:italic;}
+
+.bar{
+  position:sticky;top:0;z-index:50;
+  background:rgba(250,246,235,.94);
+  backdrop-filter:saturate(120%) blur(8px);
+  -webkit-backdrop-filter:saturate(120%) blur(8px);
+  border-bottom:1px solid var(--rule);
+}
+.bar-inner{
+  max-width:1480px;
+  margin:0 auto;
+  padding:18px 48px;
+  display:grid;
+  grid-template-columns:auto 1fr auto;
+  align-items:center;
+  gap:32px;
+}
+.bar-l{display:flex;align-items:center;gap:14px;}
+.bar-l .badge{
+  width:38px;height:38px;
+  border-radius:50%;
+  background:var(--navy);
+  display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;
+  padding:5px;
+}
+.bar-l .badge img{width:100%;height:auto;}
+.bar-l-text{
+  font-family:'Fraunces', serif;
+  font-weight:400;
+  font-style:italic;
+  font-size:22px;
+  letter-spacing:-.005em;
+  line-height:1.05;
+}
+.bar-l-text small{
+  display:block;
+  font-family:'JetBrains Mono';
+  font-weight:500;
+  font-style:normal;
+  font-size:10px;
+  letter-spacing:.28em;
+  color:var(--ink-2);
+  text-transform:uppercase;
+  margin-top:2px;
+}
+.bar-c{display:flex;justify-content:center;gap:36px;}
+.bar-c a{
+  font-family:'JetBrains Mono';
+  font-size:11px;
+  letter-spacing:.28em;
+  text-transform:uppercase;
+  font-weight:500;
+}
+.bar-r{display:flex;gap:24px;align-items:center;}
+.bar-r a{
+  font-family:'JetBrains Mono';
+  font-size:11px;
+  letter-spacing:.28em;
+  text-transform:uppercase;
+  font-weight:500;
+}
+
+.top-meta{
+  display:grid;
+  grid-template-columns:1fr 1fr 1fr;
+  padding:14px 48px;
+  font-family:'JetBrains Mono', monospace;
+  font-size:11px;
+  letter-spacing:.28em;
+  text-transform:uppercase;
+  color:var(--ink-2);
+  border-bottom:1px solid var(--rule);
+  background:var(--bone-2);
+  max-width:1480px;
+  margin:0 auto;
+  font-weight:500;
+}
+.top-meta div:nth-child(2){text-align:center;}
+.top-meta div:last-child{text-align:right;}
+.top-meta b{color:var(--sage-deep);font-weight:600;}
+
+.hero{
+  max-width:1480px;
+  margin:0 auto;
+  padding:120px 48px 96px;
+  border-bottom:1px solid var(--rule);
+  position:relative;
+}
+.hero-meta{
+  display:grid;
+  grid-template-columns:1fr 1fr 1fr;
+  gap:48px;
+  margin-bottom:80px;
+  font-family:'JetBrains Mono';
+  font-size:11px;
+  letter-spacing:.32em;
+  text-transform:uppercase;
+  color:var(--ink-2);
+  font-weight:500;
+}
+.hero-meta div:nth-child(2){text-align:center;}
+.hero-meta div:last-child{text-align:right;}
+.hero-meta b{color:var(--sage-deep);font-weight:600;}
+.hero-h1{
+  font-family:'Fraunces', serif;
+  font-weight:300;
+  font-size:clamp(64px, 11vw, 180px);
+  line-height:.95;
+  letter-spacing:-.025em;
+  text-align:center;
+  font-variation-settings:"opsz" 144, "SOFT" 30;
+}
+.hero-h1 em{font-style:italic;color:var(--sage-deep);font-weight:300;}
+.hero-h1 .amp{font-family:'Fraunces';font-style:italic;font-weight:400;color:var(--sage-deep);}
+.hero-script{
+  text-align:center;
+  margin-top:18px;
+  font-family:'Caveat', cursive;
+  font-weight:700;
+  font-size:36px;
+  color:var(--sage-deep);
+  display:block;
+  transform:rotate(-2deg);
+  letter-spacing:0;
+}
+.hero-deck{
+  margin-top:64px;
+  text-align:center;
+  font-family:'Fraunces', serif;
+  font-style:italic;
+  font-weight:300;
+  font-size:24px;
+  line-height:1.4;
+  letter-spacing:-.005em;
+  color:var(--ink-2);
+  max-width:36ch;
+  margin-left:auto;margin-right:auto;
+}
+.hero-deck b{color:var(--ink);font-style:italic;font-weight:500;}
+.hero-foot{
+  margin-top:80px;
+  display:grid;
+  grid-template-columns:1fr 1fr 1fr;
+  gap:48px;
+  border-top:1px solid var(--rule);
+  padding-top:32px;
+  font-family:'JetBrains Mono';
+  font-size:11px;
+  letter-spacing:.28em;
+  text-transform:uppercase;
+  color:var(--ink-2);
+  font-weight:500;
+}
+.hero-foot div:nth-child(2){text-align:center;}
+.hero-foot div:last-child{text-align:right;}
+.hero-foot b{display:block;font-family:'Fraunces';font-style:italic;font-weight:400;font-size:24px;letter-spacing:-.01em;text-transform:none;color:var(--ink);margin-bottom:6px;}
+
+/* FOUNDERS — slow portrait */
+.founders{
+  max-width:1480px;
+  margin:0 auto;
+  padding:120px 48px;
+  border-bottom:1px solid var(--rule);
+}
+.founders-grid{
+  display:grid;
+  grid-template-columns:1fr 1.2fr;
+  gap:64px;
+  align-items:center;
+}
+.founders-l{
+  position:relative;
+  aspect-ratio:4/5;
+  background:var(--sage-deep);
+  overflow:hidden;
+}
+.founders-l-photo{
+  position:absolute;inset:0;
+  background:url('https://images.pexels.com/photos/35248501/pexels-photo-35248501.jpeg') center/cover;
+  filter:saturate(.95);
+}
+.founders-l::after{
+  content:"";
+  position:absolute;inset:0;
+  background:linear-gradient(180deg, transparent 50%, rgba(30,41,59,.4));
+}
+.founders-l-stamp{
+  position:absolute;
+  bottom:24px;left:24px;right:24px;
+  z-index:2;
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-end;
+  font-family:'JetBrains Mono';
+  font-weight:500;
+  font-size:10.5px;
+  letter-spacing:.28em;
+  text-transform:uppercase;
+  color:var(--bone);
+  gap:14px;
+}
+.founders-l-stamp-l{
+  font-family:'Fraunces', serif;
+  font-style:italic;
+  font-weight:400;
+  font-size:24px;
+  line-height:1.15;
+  text-transform:none;
+  letter-spacing:-.005em;
+}
+.founders-r .cap{color:var(--sage-deep);margin-bottom:18px;display:block;}
+.founders-r h2{
+  font-family:'Fraunces', serif;
+  font-weight:300;
+  font-size:clamp(48px, 6.5vw, 96px);
+  line-height:1;
+  letter-spacing:-.02em;
+}
+.founders-r h2 em{font-style:italic;color:var(--sage-deep);}
+.founders-r h2 .script{
+  font-family:'Caveat';font-weight:700;
+  font-size:.45em;color:var(--sage-deep);
+  display:inline-block;transform:rotate(-3deg);
+  margin-left:8px;letter-spacing:0;
+}
+.founders-r p{
+  margin-top:32px;
+  font-family:'Fraunces';font-weight:300;font-size:21px;line-height:1.5;
+  letter-spacing:-.005em;
+  color:var(--ink-2);
+  max-width:50ch;
+}
+.founders-r p em{font-style:italic;color:var(--sage-deep);font-weight:400;}
+.founders-r-bios{
+  margin-top:40px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:32px;
+  border-top:1px solid var(--rule);
+  padding-top:32px;
+}
+.founders-r-bios div b{
+  display:block;
+  font-family:'Fraunces';font-weight:500;font-size:22px;letter-spacing:-.005em;
+  margin-bottom:4px;
+}
+.founders-r-bios div b em{display:block;font-family:'Caveat';font-weight:600;font-style:normal;font-size:18px;color:var(--sage-deep);margin-top:2px;letter-spacing:0;}
+.founders-r-bios div span{
+  font-family:'Manrope';font-size:14px;line-height:1.55;color:var(--ink-2);
+}
+
+/* ATELIER — why we make what we make */
+.atelier{
+  max-width:1480px;
+  margin:0 auto;
+  padding:120px 48px;
+  border-bottom:1px solid var(--rule);
+  background:var(--bone-2);
+}
+.atelier-head{
+  display:grid;
+  grid-template-columns:1fr auto 1fr;
+  align-items:end;
+  gap:48px;
+  margin-bottom:64px;
+  border-bottom:1px solid var(--rule);
+  padding-bottom:32px;
+}
+.atelier-head .cap.l{font-size:12px;letter-spacing:.36em;}
+.atelier-head h2{
+  font-family:'Fraunces', serif;
+  font-weight:300;
+  font-size:clamp(48px, 7vw, 96px);
+  line-height:1;
+  letter-spacing:-.02em;
+  text-align:center;
+}
+.atelier-head h2 em{font-style:italic;color:var(--sage-deep);}
+.atelier-head .cap.r{font-size:12px;letter-spacing:.36em;text-align:right;}
+
+.atelier-grid{
+  display:grid;
+  grid-template-columns:repeat(3, 1fr);
+  gap:48px;
+}
+.atelier-card{
+  border-top:2px solid var(--rule);
+  padding-top:24px;
+}
+.atelier-card .num{
+  font-family:'Fraunces';
+  font-weight:300;
+  font-style:italic;
+  font-size:64px;
+  line-height:.85;
+  letter-spacing:-.02em;
+  color:var(--sage-deep);
+}
+.atelier-card h3{
+  font-family:'Fraunces', serif;
+  font-weight:400;
+  font-size:24px;
+  letter-spacing:-.01em;
+  line-height:1.2;
+  margin-top:14px;
+}
+.atelier-card h3 em{font-style:italic;color:var(--sage-deep);}
+.atelier-card p{
+  font-family:'Manrope';font-weight:400;font-size:15px;line-height:1.6;
+  color:var(--ink-2);margin-top:14px;
+}
+
+/* CATALOGUE — products */
+.catalogue{
+  max-width:1480px;
+  margin:0 auto;
+  padding:120px 48px;
+  border-bottom:1px solid var(--rule);
+}
+.catalogue-head{
+  display:grid;
+  grid-template-columns:1fr auto 1fr;
+  align-items:end;
+  gap:48px;
+  margin-bottom:80px;
+  border-bottom:1px solid var(--rule);
+  padding-bottom:32px;
+}
+.catalogue-head .cap.l{font-size:12px;letter-spacing:.36em;}
+.catalogue-head h2{
+  font-family:'Fraunces', serif;
+  font-weight:300;
+  font-size:clamp(48px, 7vw, 96px);
+  line-height:1;
+  letter-spacing:-.02em;
+  text-align:center;
+}
+.catalogue-head h2 em{font-style:italic;color:var(--sage-deep);}
+.catalogue-head .cap.r{font-size:12px;letter-spacing:.36em;text-align:right;}
+
+.catalogue-row{
+  display:grid;
+  grid-template-columns:1fr 1.2fr;
+  gap:48px;
+  margin-bottom:80px;
+  align-items:center;
+  padding-bottom:80px;
+  border-bottom:1px solid var(--rule);
+}
+.catalogue-row:last-child{border-bottom:none;padding-bottom:0;margin-bottom:0;}
+.catalogue-row.flip{direction:rtl;}
+.catalogue-row.flip > *{direction:ltr;}
+.cat-img{
+  aspect-ratio:4/5;
+  position:relative;
+  overflow:hidden;
+  display:flex;align-items:center;justify-content:center;
+}
+.cat-img img{width:50%;opacity:.55;}
+.cat1{background:linear-gradient(170deg, #6a8b7c 0%, #3a5346 100%);}
+.cat2{background:linear-gradient(170deg, #FAF6EB 0%, #DDD4BD 100%);}
+.cat3{background:linear-gradient(170deg, #2C3441 0%, #14191F 100%);}
+.cat4{background:linear-gradient(170deg, #FFFFFD 0%, #E9E2D6 100%);}
+.cat5{background:linear-gradient(170deg, #BFB29F 0%, #5b7d6d 100%);}
+.cat6{background:linear-gradient(170deg, #F8F4E9 0%, #C9C2B5 100%);}
+.cat1 img,.cat3 img{filter:brightness(0) invert(1);opacity:.4;}
+.cat-label{
+  position:absolute;
+  top:24px;left:24px;
+  background:var(--bone);
+  border:1px solid var(--ink);
+  padding:8px 12px;
+  font-family:'JetBrains Mono';
+  font-weight:500;
+  font-size:10.5px;letter-spacing:.28em;text-transform:uppercase;
+  color:var(--ink);
+  z-index:2;
+}
+.cat-label small{display:block;font-family:'Caveat';font-weight:600;font-size:14px;color:var(--sage-deep);letter-spacing:0;text-transform:none;margin-top:-2px;}
+
+.cat-info .cap{color:var(--sage-deep);}
+.cat-info h3{
+  font-family:'Fraunces', serif;
+  font-weight:300;
+  font-size:clamp(36px, 5vw, 64px);
+  line-height:1;
+  letter-spacing:-.02em;
+  margin-top:14px;
+}
+.cat-info h3 em{font-style:italic;color:var(--sage-deep);font-weight:300;}
+.cat-info-deck{
+  margin-top:24px;
+  font-family:'Fraunces', serif;
+  font-weight:300;
+  font-size:21px;
+  line-height:1.5;
+  letter-spacing:-.005em;
+  color:var(--ink-2);
+  max-width:42ch;
+}
+.cat-info-deck em{font-style:italic;color:var(--sage-deep);font-weight:400;}
+
+/* CARE LABEL */
+.care-label{
+  margin-top:32px;
+  border:1px solid var(--ink);
+  background:var(--bone);
+  padding:0;
+  max-width:420px;
+  position:relative;
+}
+.care-label::before{
+  content:"";
+  position:absolute;
+  top:50%;left:-1px;
+  width:14px;height:14px;
+  border-radius:50%;
+  background:var(--bone-2);
+  border:1px solid var(--ink);
+  transform:translate(-50%,-50%);
+}
+.care-label::after{
+  content:"";
+  position:absolute;
+  top:50%;right:-1px;
+  width:14px;height:14px;
+  border-radius:50%;
+  background:var(--bone-2);
+  border:1px solid var(--ink);
+  transform:translate(50%,-50%);
+}
+.care-label-head{
+  background:var(--ink);
+  color:var(--bone);
+  padding:10px 16px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  font-family:'JetBrains Mono';
+  font-weight:600;
+  font-size:10.5px;letter-spacing:.28em;text-transform:uppercase;
+}
+.care-label-head .price{
+  font-family:'Fraunces';font-weight:400;font-style:italic;
+  font-size:18px;letter-spacing:-.005em;color:var(--bone);
+  text-transform:none;
+}
+.care-label-body{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  padding:14px 16px;
+  gap:14px 24px;
+}
+.care-label-body div b{
+  display:block;
+  font-family:'JetBrains Mono';font-weight:500;
+  font-size:9.5px;letter-spacing:.24em;text-transform:uppercase;
+  color:var(--ink-2);margin-bottom:3px;
+}
+.care-label-body div span{
+  font-family:'Fraunces';font-weight:400;font-style:italic;
+  font-size:14.5px;letter-spacing:-.005em;color:var(--ink);
+}
+.care-label-foot{
+  border-top:1px dashed var(--ink-2);
+  padding:10px 16px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  font-family:'JetBrains Mono';
+  font-weight:500;
+  font-size:10px;letter-spacing:.24em;text-transform:uppercase;
+  color:var(--ink-2);
+}
+.care-label-foot a{
+  font-weight:600;color:var(--ink);
+  border-bottom:1px solid var(--ink);
+  padding-bottom:1px;
+}
+.care-label-foot a:hover{color:var(--sage-deep);border-color:var(--sage-deep);}
+
+/* INTERMISSION QUOTE */
+.intermission{
+  max-width:1480px;
+  margin:0 auto;
+  padding:120px 48px;
+  border-bottom:1px solid var(--rule);
+  background:var(--cream);
+  text-align:center;
+}
+.intermission .cap{color:var(--sage-deep);margin-bottom:32px;display:block;}
+.intermission h2{
+  font-family:'Fraunces';
+  font-weight:300;
+  font-style:italic;
+  font-size:clamp(48px, 8vw, 132px);
+  line-height:1.05;
+  letter-spacing:-.02em;
+  max-width:18ch;
+  margin:0 auto;
+}
+.intermission h2 em{font-style:italic;color:var(--sage-deep);font-weight:400;}
+.intermission-attr{
+  margin-top:48px;
+  font-family:'JetBrains Mono';
+  font-size:11px;letter-spacing:.32em;text-transform:uppercase;font-weight:500;
+  color:var(--ink-2);
+}
+
+/* OSAKA — in collaboration */
+.osaka{
+  max-width:1480px;
+  margin:0 auto;
+  padding:0 48px 120px;
+  border-bottom:1px solid var(--rule);
+}
+.osaka-head{
+  padding:120px 0 64px;
+  display:grid;
+  grid-template-columns:1fr auto 1fr;
+  align-items:center;
+  gap:48px;
+}
+.osaka-head .cap.l, .osaka-head .cap.r{font-size:12px;letter-spacing:.36em;}
+.osaka-head h2{
+  font-family:'Fraunces';
+  font-weight:300;
+  font-size:clamp(56px, 8vw, 132px);
+  line-height:.95;
+  letter-spacing:-.02em;
+  text-align:center;
+}
+.osaka-head h2 em{font-style:italic;color:var(--sage-deep);}
+.osaka-head h2 .amp{font-style:italic;font-weight:400;color:var(--sage-deep);}
+.osaka-head .cap.r{text-align:right;}
+.osaka-grid{
+  display:grid;
+  grid-template-columns:1.3fr 1fr;
+  gap:48px;
+}
+.osaka-img{
+  aspect-ratio:5/6;
+  background:#222 url('https://images.pexels.com/photos/35248501/pexels-photo-35248501.jpeg') center/cover;
+  position:relative;
+  overflow:hidden;
+}
+.osaka-img::after{
+  content:"";
+  position:absolute;inset:0;
+  background:linear-gradient(180deg, transparent 60%, rgba(30,41,59,.5));
+}
+.osaka-img-tag{
+  position:absolute;top:24px;left:24px;
+  background:var(--bone);
+  color:var(--ink);
+  border:1px solid var(--ink);
+  padding:8px 12px;
+  font-family:'JetBrains Mono';
+  font-weight:500;
+  font-size:10.5px;letter-spacing:.28em;text-transform:uppercase;
+  z-index:2;
+}
+.osaka-img-tag small{display:block;font-family:'Caveat';font-weight:600;font-size:14px;color:var(--sage-deep);text-transform:none;letter-spacing:0;margin-top:-2px;}
+.osaka-img-cap{
+  position:absolute;bottom:24px;left:24px;right:24px;
+  z-index:2;
+  font-family:'Fraunces';
+  font-style:italic;
+  font-weight:300;
+  font-size:22px;
+  line-height:1.3;
+  letter-spacing:-.005em;
+  color:var(--bone);
+}
+.osaka-text{
+  display:flex;flex-direction:column;justify-content:center;
+  padding:32px 0 32px 24px;
+  border-left:1px solid var(--rule);
+}
+.osaka-text .cap{color:var(--sage-deep);margin-bottom:14px;display:block;}
+.osaka-text h3{
+  font-family:'Fraunces', serif;
+  font-weight:300;
+  font-size:clamp(40px, 5vw, 64px);
+  line-height:1.05;
+  letter-spacing:-.02em;
+}
+.osaka-text h3 em{font-style:italic;color:var(--sage-deep);font-weight:300;}
+.osaka-text p{
+  margin-top:24px;
+  font-family:'Fraunces';font-weight:300;font-size:20px;line-height:1.5;
+  letter-spacing:-.005em;color:var(--ink-2);
+}
+.osaka-text p em{font-style:italic;color:var(--sage-deep);font-weight:400;}
+.osaka-text-meta{
+  margin-top:32px;
+  border-top:1px solid var(--rule);
+  padding-top:24px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:18px;
+}
+.osaka-text-meta div b{
+  display:block;
+  font-family:'JetBrains Mono';font-weight:500;font-size:10.5px;
+  letter-spacing:.28em;text-transform:uppercase;
+  color:var(--ink-2);margin-bottom:6px;
+}
+.osaka-text-meta div span{
+  font-family:'Fraunces';font-weight:400;font-style:italic;
+  font-size:18px;letter-spacing:-.005em;
+}
+.osaka-cta{
+  display:inline-flex;
+  align-items:center;gap:14px;
+  margin-top:32px;
+  font-family:'JetBrains Mono';
+  font-weight:500;
+  font-size:11px;
+  letter-spacing:.32em;
+  text-transform:uppercase;
+  border-bottom:1.5px solid var(--ink);
+  padding-bottom:6px;
+  align-self:flex-start;
+}
+.osaka-cta:hover{color:var(--sage-deep);border-color:var(--sage-deep);}
+.osaka-cta::after{content:"→";font-family:'Manrope';font-size:14px;}
+
+/* CALENDAR — quiet listing */
+.calendar{
+  max-width:1480px;
+  margin:0 auto;
+  padding:120px 48px;
+  border-bottom:1px solid var(--rule);
+}
+.calendar-head{
+  display:grid;
+  grid-template-columns:1fr auto 1fr;
+  align-items:end;
+  gap:48px;
+  margin-bottom:80px;
+  border-bottom:1px solid var(--rule);
+  padding-bottom:32px;
+}
+.calendar-head h2{
+  font-family:'Fraunces', serif;
+  font-weight:300;
+  font-size:clamp(48px, 7vw, 96px);
+  line-height:1;
+  letter-spacing:-.02em;
+  text-align:center;
+}
+.calendar-head h2 em{font-style:italic;color:var(--sage-deep);}
+.calendar-head .cap.l, .calendar-head .cap.r{font-size:12px;letter-spacing:.36em;}
+.calendar-head .cap.r{text-align:right;}
+.cal-list{display:grid;grid-template-columns:1fr;}
+.cal-row{
+  display:grid;
+  grid-template-columns:160px 1fr 1fr 100px;
+  gap:32px;
+  padding:32px 0;
+  border-bottom:1px solid var(--rule);
+  align-items:center;
+  transition:background .25s, padding .25s;
+}
+.cal-row:hover{background:var(--bone-2);padding-left:24px;padding-right:24px;}
+.cal-date{
+  font-family:'Fraunces', serif;
+  font-weight:300;
+  font-style:italic;
+  font-size:42px;
+  line-height:1;
+  letter-spacing:-.015em;
+}
+.cal-date small{
+  display:block;
+  font-family:'JetBrains Mono';
+  font-style:normal;font-weight:500;
+  font-size:10.5px;letter-spacing:.32em;text-transform:uppercase;
+  color:var(--ink-2);
+  margin-top:8px;
+}
+.cal-name{
+  font-family:'Fraunces', serif;
+  font-weight:400;
+  font-size:28px;
+  letter-spacing:-.01em;
+  line-height:1.1;
+}
+.cal-name em{font-style:italic;color:var(--sage-deep);font-weight:300;}
+.cal-name small{
+  display:block;
+  font-family:'JetBrains Mono';
+  font-weight:500;
+  font-size:10.5px;letter-spacing:.28em;text-transform:uppercase;
+  color:var(--ink-2);
+  margin-top:8px;
+  font-style:normal;
+}
+.cal-loc{
+  font-family:'Fraunces', serif;
+  font-style:italic;
+  font-weight:300;
+  font-size:18px;
+  color:var(--ink-2);
+}
+.cal-loc small{
+  display:block;
+  font-family:'JetBrains Mono';
+  font-style:normal;font-weight:500;
+  font-size:10.5px;letter-spacing:.28em;text-transform:uppercase;
+  color:var(--ink-2);
+  margin-top:6px;
+}
+.cal-rsvp{
+  text-align:right;
+  font-family:'JetBrains Mono';
+  font-weight:500;
+  font-size:11px;letter-spacing:.32em;text-transform:uppercase;
+  border-bottom:1px solid var(--ink);padding-bottom:4px;
+}
+.cal-rsvp:hover{border-color:var(--sage-deep);color:var(--sage-deep);}
+
+/* COLOPHON */
+.colophon{
+  max-width:1480px;
+  margin:0 auto;
+  padding:120px 48px;
+  text-align:center;
+  border-bottom:1px solid var(--rule);
+  background:var(--cream);
+}
+.colophon .cap{margin-bottom:32px;color:var(--sage-deep);display:block;}
+.colophon h2{
+  font-family:'Fraunces', serif;
+  font-weight:300;
+  font-style:italic;
+  font-size:clamp(48px, 6vw, 84px);
+  line-height:1.05;
+  letter-spacing:-.02em;
+  max-width:24ch;
+  margin:0 auto;
+}
+.colophon h2 em{font-style:italic;color:var(--sage-deep);font-weight:400;}
+.colophon p{
+  margin-top:32px;
+  font-family:'Fraunces';font-weight:300;font-size:18px;line-height:1.5;
+  max-width:48ch;
+  margin-left:auto;margin-right:auto;
+  color:var(--ink-2);
+}
+.colophon-cta{
+  display:inline-flex;
+  align-items:center;gap:14px;
+  margin-top:48px;
+  font-family:'JetBrains Mono';
+  font-weight:500;
+  font-size:11px;
+  letter-spacing:.32em;
+  text-transform:uppercase;
+  border-bottom:1.5px solid var(--ink);
+  padding-bottom:6px;
+}
+.colophon-cta:hover{border-color:var(--sage-deep);color:var(--sage-deep);}
+.colophon .script{
+  font-family:'Caveat';
+  font-weight:700;
+  font-size:36px;
+  color:var(--sage-deep);
+  display:inline-block;
+  transform:rotate(-2deg);
+  margin-top:24px;
+}
+
+footer{
+  background:var(--navy);
+  color:var(--bone);
+}
+.foot-inner{
+  max-width:1480px;
+  margin:0 auto;
+  padding:96px 48px 48px;
+}
+.foot-grid{
+  display:grid;
+  grid-template-columns:1.6fr 1fr 1fr 1.2fr;
+  gap:48px;
+  border-bottom:1px solid rgba(250,246,235,.18);
+  padding-bottom:48px;
+}
+.foot-l h2{
+  font-family:'Fraunces', serif;
+  font-weight:300;
+  font-style:italic;
+  font-size:clamp(48px, 6vw, 84px);
+  line-height:1;
+  letter-spacing:-.02em;
+}
+.foot-l h2 em{color:var(--sage-soft);font-style:italic;}
+.foot-l p{font-family:'JetBrains Mono';font-weight:500;font-size:11px;letter-spacing:.32em;text-transform:uppercase;color:var(--sage-soft);margin-top:24px;}
+.foot-grid h4{font-family:'JetBrains Mono';font-weight:500;font-size:10.5px;letter-spacing:.32em;text-transform:uppercase;color:var(--sage-soft);margin-bottom:18px;}
+.foot-grid a, .foot-grid li{display:block;font-family:'Fraunces';font-weight:300;font-size:18px;color:#D7D3CB;margin-bottom:6px;list-style:none;}
+.foot-grid a:hover{color:var(--bone);}
+.foot-news input{background:transparent;border:none;border-bottom:1px solid rgba(250,246,235,.4);padding:10px 0;width:100%;font-family:'Fraunces';font-weight:300;font-style:italic;font-size:18px;color:var(--bone);outline:none;}
+.foot-news input::placeholder{color:rgba(250,246,235,.5);}
+.foot-news button{margin-top:14px;background:transparent;color:var(--bone);border:1px solid var(--bone);padding:10px 18px;font-family:'JetBrains Mono';font-weight:500;font-size:11px;letter-spacing:.32em;text-transform:uppercase;cursor:pointer;transition:background .2s, color .2s;}
+.foot-news button:hover{background:var(--sage);border-color:var(--sage);}
+.foot-bottom{
+  margin-top:32px;
+  display:flex;
+  justify-content:space-between;
+  font-family:'JetBrains Mono';
+  font-weight:500;
+  font-size:10.5px;
+  letter-spacing:.32em;
+  text-transform:uppercase;
+  color:rgba(250,246,235,.5);
+  flex-wrap:wrap;gap:8px;
+}
+.foot-bottom a{color:var(--sage-soft);}
+
+@media (max-width:1100px){
+  .bar-inner, .top-meta, .hero, .founders, .atelier, .catalogue, .intermission, .osaka, .calendar, .colophon, .foot-inner{padding-left:32px;padding-right:32px;}
+  .hero{padding-top:64px;padding-bottom:64px;}
+  .catalogue-row, .catalogue-row.flip{grid-template-columns:1fr;direction:ltr;gap:32px;}
+  .osaka-grid, .foot-grid, .founders-grid, .atelier-grid{grid-template-columns:1fr;gap:32px;}
+  .osaka-text{border-left:none;border-top:1px solid var(--rule);padding:32px 0 0;}
+  .cal-row{grid-template-columns:120px 1fr;gap:14px;}
+  .cal-loc, .cal-rsvp{grid-column:1/-1;text-align:left;}
+  .bar-c{display:none;}
+  .calendar-head, .osaka-head, .atelier-head, .catalogue-head{grid-template-columns:1fr;gap:14px;text-align:left;}
+  .calendar-head h2, .osaka-head h2, .atelier-head h2, .catalogue-head h2{text-align:left;}
+  .calendar-head .cap.r, .osaka-head .cap.r, .atelier-head .cap.r, .catalogue-head .cap.r{text-align:left;}
+  .founders-r-bios{grid-template-columns:1fr;}
+}
+@media (max-width:560px){
+  .top-meta{grid-template-columns:1fr;gap:6px;}
+  .top-meta div:nth-child(2),.top-meta div:last-child{text-align:left;}
+  .hero-meta, .hero-foot{grid-template-columns:1fr;gap:14px;}
+  .hero-meta div:nth-child(2),.hero-meta div:last-child,.hero-foot div:nth-child(2),.hero-foot div:last-child{text-align:left;}
+  .care-label-body{grid-template-columns:1fr;}
+  .foot-bottom{flex-direction:column;gap:8px;}
+  .bar-inner{padding:14px 18px;}
+  .top-meta, .hero, .founders, .atelier, .catalogue, .intermission, .osaka, .calendar, .colophon, .foot-inner{padding-left:18px;padding-right:18px;}
+}
+</style>
+</head>
+<body>
+
+<header class="bar">
+  <div class="bar-inner">
+    <div class="bar-l">
+      <div class="badge"><img src="https://customer-assets.emergentagent.com/job_c0589f16-d62f-4855-9be3-f2d98f470a9c/artifacts/hay0j5gw_Logo%20BLP%20verde.png" alt="BLP"></div>
+      <div class="bar-l-text">Baby Let's Padel<small>El Mercado · Spring '26</small></div>
+    </div>
+    <nav class="bar-c">
+      <a href="#founders">Las Fundadoras</a>
+      <a href="#atelier">El Atelier</a>
+      <a href="#catalogue">El Catálogo</a>
+      <a href="#osaka">Osaka × BLP</a>
+    </nav>
+    <div class="bar-r">
+      <a href="#">Subscribe</a>
+      <a href="#">Bag (0)</a>
+    </div>
+  </div>
+  <div class="top-meta">
+    <div><b>Hecho en Houston, TX</b></div>
+    <div>Founded by two Latinas</div>
+    <div>Vol. 01 · Edition 04 / 26 / 26</div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-meta">
+    <div><b>El Mercado</b> · Vol. 01</div>
+    <div>An atelier in Houston, TX</div>
+    <div>Spring '26 · 06 pieces</div>
+  </div>
+  <h1 class="hero-h1">Hecho <em>en</em><br>Houston <span class="amp">&amp;</span> made <em>by hand.</em></h1>
+  <span class="hero-script">~ poco a poco ~</span>
+  <p class="hero-deck">A small atelier of padel apparel and Houston open plays, run by <b>two Latinas</b> on the courts they actually play.</p>
+  <div class="hero-foot">
+    <div><b>Apparel</b>Six pieces · unisex</div>
+    <div><b>Open plays</b>Four through May</div>
+    <div><b>Collaboration</b>Osaka USA · Spring '26</div>
+  </div>
+</section>
+
+<section class="founders" id="founders">
+  <div class="founders-grid">
+    <div class="founders-l">
+      <div class="founders-l-photo"></div>
+      <div class="founders-l-stamp">
+        <div class="founders-l-stamp-l">"We're the people<br>making the kit, <em>and</em><br>the people on the court."</div>
+        <div>Las Fundadoras<br>Houston, TX</div>
+      </div>
+    </div>
+    <div class="founders-r">
+      <span class="cap">— Las Fundadoras</span>
+      <h2>Two Latinas, <em>one studio,</em><br>one cancha.<span class="script">~ desde Houston ~</span></h2>
+      <p>The whole company is run out of a Houston studio by two Latinas — designing the kit, hosting the open plays, and answering the DMs themselves. <em>Every piece is made by people who have to play in it the next morning.</em></p>
+      <div class="founders-r-bios">
+        <div>
+          <b>Co-founder<em>~ Diseño + atelier</em></b>
+          <span>Designs every piece in the kit. Came to padel from tennis, never went back. Won't ship a piece she hasn't worn through three open plays first.</span>
+        </div>
+        <div>
+          <b>Co-founder<em>~ Comunidad + cancha</em></b>
+          <span>Runs the schedule, the courts, and the group chat. Houston-raised. Insists everyone learns each other's name before warmup ends.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="atelier" id="atelier">
+  <div class="atelier-head">
+    <span class="cap l">Plate 02</span>
+    <h2>From the <em>atelier.</em></h2>
+    <span class="cap r">Three principles · slow build</span>
+  </div>
+  <div class="atelier-grid">
+    <article class="atelier-card">
+      <div class="num">01</div>
+      <h3>Made for <em>the player on the court,</em> not the photo.</h3>
+      <p>We design what we wear when nobody is watching. Cotton that survives a Tuesday-night session. Knits that move with the swing. Caps that hold their shape after fifty wears.</p>
+    </article>
+    <article class="atelier-card">
+      <div class="num">02</div>
+      <h3>Sized <em>for movement,</em> not for a model.</h3>
+      <p>Unisex sizing across the whole kit. We patterned it on the people we play with — five-foot-two to six-foot-four, all body types, all genders. <em>If it doesn't fit, send it back.</em></p>
+    </article>
+    <article class="atelier-card">
+      <div class="num">03</div>
+      <h3>Slow <em>drops,</em> not seasonal hype.</h3>
+      <p>Two issues a year — spring and fall. Six pieces each. Restocks announced in the newsletter. <em>We'd rather under-make than overproduce.</em></p>
+    </article>
+  </div>
+</section>
+
+<section class="catalogue" id="catalogue">
+  <div class="catalogue-head">
+    <span class="cap l">Plate 03</span>
+    <h2>The <em>catálogo,</em> SS '26.</h2>
+    <span class="cap r">Six pieces · care labels</span>
+  </div>
+
+  <div class="catalogue-row">
+    <div class="cat-img cat1"><span class="cat-label">No. 01<small>~ heavy</small></span><img src="https://customer-assets.emergentagent.com/job_c0589f16-d62f-4855-9be3-f2d98f470a9c/artifacts/ob08t771_Decal-01.png" alt=""></div>
+    <div class="cat-info">
+      <span class="cap">— No. 01 · Heavyweight Crew</span>
+      <h3>Heavy crewneck, <em>eucalyptus.</em></h3>
+      <p class="cat-info-deck">Ringspun cotton, garment-dyed for a softer hand. <em>Built for cool mornings, indoor courts in February, and the long drive to Katy.</em></p>
+      <div class="care-label">
+        <div class="care-label-head"><span>Care · BLP-01-EU</span><span class="price">$53</span></div>
+        <div class="care-label-body">
+          <div><b>Material</b><span>80/20 ringspun cotton</span></div>
+          <div><b>Weight</b><span>350 GSM · heavy</span></div>
+          <div><b>Sizes</b><span>XS · S · M · L · XL</span></div>
+          <div><b>Wash</b><span>Cold · tumble low</span></div>
+        </div>
+        <div class="care-label-foot"><span>Hecho en Houston, TX</span><a href="#">Add to bag →</a></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="catalogue-row flip">
+    <div class="cat-img cat2"><span class="cat-label">No. 02<small>~ light</small></span><img src="https://customer-assets.emergentagent.com/job_c0589f16-d62f-4855-9be3-f2d98f470a9c/artifacts/ob08t771_Decal-01.png" alt=""></div>
+    <div class="cat-info">
+      <span class="cap">— No. 02 · Lightweight Crew</span>
+      <h3>Light crewneck, <em>off-white.</em></h3>
+      <p class="cat-info-deck">Combed cotton, pre-shrunk. The piece you wear from warmup to the post-session group chat. Reads neutral. Wears in.</p>
+      <div class="care-label">
+        <div class="care-label-head"><span>Care · BLP-02-OW</span><span class="price">$41</span></div>
+        <div class="care-label-body">
+          <div><b>Material</b><span>100% combed cotton</span></div>
+          <div><b>Weight</b><span>220 GSM · light</span></div>
+          <div><b>Sizes</b><span>XS · S · M · L · XL</span></div>
+          <div><b>Wash</b><span>Cold · hang dry</span></div>
+        </div>
+        <div class="care-label-foot"><span>Hecho en Houston, TX</span><a href="#">Add to bag →</a></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="catalogue-row">
+    <div class="cat-img cat3"><span class="cat-label">No. 03<small>~ heavy</small></span><img src="https://customer-assets.emergentagent.com/job_c0589f16-d62f-4855-9be3-f2d98f470a9c/artifacts/ob08t771_Decal-01.png" alt=""></div>
+    <div class="cat-info">
+      <span class="cap">— No. 03 · Heavyweight, in navy</span>
+      <h3>Heavy crewneck, <em>deep navy.</em></h3>
+      <p class="cat-info-deck">Same heavy build as No. 01, in our deepest navy. <em>Hides court dust between sets and photographs well at any hour.</em></p>
+      <div class="care-label">
+        <div class="care-label-head"><span>Care · BLP-03-DN</span><span class="price">$53</span></div>
+        <div class="care-label-body">
+          <div><b>Material</b><span>80/20 ringspun cotton</span></div>
+          <div><b>Weight</b><span>350 GSM · heavy</span></div>
+          <div><b>Sizes</b><span>XS · S · M · L · XL</span></div>
+          <div><b>Wash</b><span>Cold · tumble low</span></div>
+        </div>
+        <div class="care-label-foot"><span>Hecho en Houston, TX</span><a href="#">Add to bag →</a></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="catalogue-row flip">
+    <div class="cat-img cat4"><span class="cat-label">No. 04<small>~ train</small></span><img src="https://customer-assets.emergentagent.com/job_c0589f16-d62f-4855-9be3-f2d98f470a9c/artifacts/ob08t771_Decal-01.png" alt=""></div>
+    <div class="cat-info">
+      <span class="cap">— No. 04 · Long Sleeve Tee</span>
+      <h3>Long sleeve training tee, <em>off-white.</em></h3>
+      <p class="cat-info-deck">Cotton-elastane knit, flatlock seams. <em>Moves with the swing,</em> dries between games, layers under the heavy crew when the AC drops.</p>
+      <div class="care-label">
+        <div class="care-label-head"><span>Care · BLP-04-LS</span><span class="price">$31</span></div>
+        <div class="care-label-body">
+          <div><b>Material</b><span>92/8 cotton-elastane</span></div>
+          <div><b>Weight</b><span>160 GSM · train</span></div>
+          <div><b>Sizes</b><span>XS · S · M · L · XL</span></div>
+          <div><b>Wash</b><span>Cold · hang dry</span></div>
+        </div>
+        <div class="care-label-foot"><span>Hecho en Houston, TX</span><a href="#">Add to bag →</a></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="catalogue-row">
+    <div class="cat-img cat5"><span class="cat-label">No. 05<small>~ cap</small></span><img src="https://customer-assets.emergentagent.com/job_c0589f16-d62f-4855-9be3-f2d98f470a9c/artifacts/ob08t771_Decal-01.png" alt=""></div>
+    <div class="cat-info">
+      <span class="cap">— No. 05 · Six-Panel Cap</span>
+      <h3>Six-panel cap, <em>three colorways.</em></h3>
+      <p class="cat-info-deck">Washed cotton twill, curved brim, adjustable strap. Three colorways — taupe, sage, navy — sized one and built to <em>hold its shape after fifty wears.</em></p>
+      <div class="care-label">
+        <div class="care-label-head"><span>Care · BLP-05-CP</span><span class="price">$27</span></div>
+        <div class="care-label-body">
+          <div><b>Material</b><span>100% washed cotton twill</span></div>
+          <div><b>Sizing</b><span>One size · adjustable</span></div>
+          <div><b>Colorways</b><span>Taupe · Sage · Navy</span></div>
+          <div><b>Wash</b><span>Spot clean only</span></div>
+        </div>
+        <div class="care-label-foot"><span>Hecho en Houston, TX</span><a href="#">Add to bag →</a></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="catalogue-row flip">
+    <div class="cat-img cat6"><span class="cat-label">No. 06<small>~ visor</small></span><img src="https://customer-assets.emergentagent.com/job_c0589f16-d62f-4855-9be3-f2d98f470a9c/artifacts/ob08t771_Decal-01.png" alt=""></div>
+    <div class="cat-info">
+      <span class="cap">— No. 06 · Dri-Fit Visor</span>
+      <h3>Dri-fit visor, <em>off-white.</em></h3>
+      <p class="cat-info-deck">Polyester-spandex, quick-dry, sweat-wicking band. <em>The summer answer to the cap</em> — shade for the eyes, no top to overheat the head.</p>
+      <div class="care-label">
+        <div class="care-label-head"><span>Care · BLP-06-VS</span><span class="price">$22</span></div>
+        <div class="care-label-body">
+          <div><b>Material</b><span>92/8 polyester-spandex</span></div>
+          <div><b>UPF</b><span>30+</span></div>
+          <div><b>Sizing</b><span>One size · elastic</span></div>
+          <div><b>Wash</b><span>Hand wash · air dry</span></div>
+        </div>
+        <div class="care-label-foot"><span>Hecho en Houston, TX</span><a href="#">Add to bag →</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="intermission">
+  <span class="cap">Intermission</span>
+  <h2>Show up. <em>Hit balls.</em><br>Stay for the second game.</h2>
+  <div class="intermission-attr">— BLP House Rule No. 01</div>
+</section>
+
+<section class="osaka" id="osaka">
+  <div class="osaka-head">
+    <span class="cap l">Plate 04</span>
+    <h2>In collaboration <span class="amp"><em>with</em></span><br><em>Osaka USA.</em></h2>
+    <span class="cap r">A spring residency</span>
+  </div>
+
+  <div class="osaka-grid">
+    <div class="osaka-img">
+      <span class="osaka-img-tag">Curated by Osaka<small>~ guest in residence ~</small></span>
+      <div class="osaka-img-cap">"The frame, the bag, the kit. Curated for a Houston spring."</div>
+    </div>
+    <div class="osaka-text">
+      <span class="cap">— A guest curator</span>
+      <h3>Carbon-fiber rackets, <em>Dutch-engineered.</em></h3>
+      <p>Osaka USA is a Dutch performance label that builds rackets and apparel for serious players. <em>For the spring season they're our guest in residence</em> — their curated edit lives at every Houston open play. Demo a frame on court before you take one home.</p>
+      <div class="osaka-text-meta">
+        <div><b>Frames</b><span>Vision Pro · Vision Tour</span></div>
+        <div><b>Material</b><span>Carbon 18K · EVA core</span></div>
+        <div><b>Try-on</b><span>Tuesdays · RSC Katy</span></div>
+        <div><b>Edition</b><span>Spring '26 only</span></div>
+      </div>
+      <a href="https://www.osakaworldusa.com/collections/padel" target="_blank" rel="noopener" class="osaka-cta">Visit the residency</a>
+    </div>
+  </div>
+</section>
+
+<section class="calendar" id="calendar">
+  <div class="calendar-head">
+    <span class="cap l">Plate 05</span>
+    <h2>The <em>calendar,</em><br>through May.</h2>
+    <span class="cap r">Open plays · 04 events</span>
+  </div>
+
+  <div class="cal-list">
+    <div class="cal-row">
+      <div class="cal-date">04 / <em>22</em><small>Wednesday</small></div>
+      <div class="cal-name">Open play <em>at RSC Katy</em><small>Mixed levels · 14 spots</small></div>
+      <div class="cal-loc">Katy, Houston<small>7:00 PM</small></div>
+      <a href="#" class="cal-rsvp">RSVP →</a>
+    </div>
+    <div class="cal-row">
+      <div class="cal-date">04 / <em>28</em><small>Tuesday</small></div>
+      <div class="cal-name">Open play <em>at Willowbrook</em><small>Mixed levels · 16 spots</small></div>
+      <div class="cal-loc">Willowbrook, Houston<small>7:00 — 8:30 PM</small></div>
+      <a href="#" class="cal-rsvp">RSVP →</a>
+    </div>
+    <div class="cal-row">
+      <div class="cal-date">05 / <em>02</em><small>Saturday</small></div>
+      <div class="cal-name">Neon Padel Party <em>at Cube Padel</em><small>w/ Smash 305 · 22 spots · Event</small></div>
+      <div class="cal-loc">Cube Padel, Houston<small>8:00 PM</small></div>
+      <a href="#" class="cal-rsvp">RSVP →</a>
+    </div>
+    <div class="cal-row">
+      <div class="cal-date">05 / <em>04</em><small>Monday</small></div>
+      <div class="cal-name">Open play <em>at TEMPO</em><small>Mixed levels · 18 spots</small></div>
+      <div class="cal-loc">Inner Loop, Houston<small>7:00 PM</small></div>
+      <a href="#" class="cal-rsvp">RSVP →</a>
+    </div>
+  </div>
+</section>
+
+<section class="colophon">
+  <span class="cap">Colophon</span>
+  <h2>Made by hand <em>in Houston.</em><br>Two Latinas, one season at a time.</h2>
+  <p>An atelier in five plates: a statement, a studio, a catálogo, a guest residency, and a calendar. <em>The next edition arrives in September.</em></p>
+  <span class="script">~ poco a poco ~</span><br>
+  <a href="#" class="colophon-cta">Subscribe to the next edition →</a>
+</section>
+
+<footer>
+  <div class="foot-inner">
+    <div class="foot-grid">
+      <div class="foot-l">
+        <h2>Baby <em>Let's</em><br>Padel.</h2>
+        <p>Houston, TX · est. 2025<br>Founded by two Latinas</p>
+      </div>
+      <div>
+        <h4>~ El Mercado</h4>
+        <a href="#catalogue">El Catálogo</a>
+        <a href="#osaka">Osaka × BLP</a>
+        <a href="#calendar">Calendar</a>
+      </div>
+      <div>
+        <h4>~ La Casa</h4>
+        <a href="#founders">Las Fundadoras</a>
+        <a href="#atelier">El Atelier</a>
+        <a href="#">Contact</a>
+      </div>
+      <div class="foot-news">
+        <h4>~ The next edition</h4>
+        <p style="font-family:'Fraunces';font-style:italic;font-weight:300;font-size:18px;color:#D7D3CB;margin-bottom:14px;">Two issues a year. Spring &amp; fall.</p>
+        <input type="email" placeholder="email@address">
+        <button>Suscríbete</button>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Baby Let's Padel · Hecho en Houston, TX</span>
+      <span>El Mercado · Vol. 01 · Spring '26</span>
+      <span><a href="../">← All five designs</a></span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

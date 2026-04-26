@@ -1,0 +1,1134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Baby Let's Padel — Vamos a Padel · Spring '26</title>
+<meta name="description" content="Vamos a padel. Padel apparel and open plays from two Latinas building a padel movement in Houston, Texas.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Manrope:wght@300;400;500;600;700&family=Caveat:wght@400..700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bone:#F4EFDF;
+  --bone-2:#EDE5CD;
+  --cream:#E9E2D6;
+  --sage:#5b7d6d;
+  --sage-deep:#4a6659;
+  --sage-soft:#A9BCB3;
+  --navy:#1E293B;
+  --navy-2:#141B27;
+  --taupe:#AFA393;
+  --taupe-deep:#8E826F;
+  --ink:#1A1F2A;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  background:var(--bone);
+  color:var(--ink);
+  font-family:'Manrope', system-ui, sans-serif;
+  font-size:16px;
+  line-height:1.55;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+a{color:inherit;text-decoration:none;}
+img{display:block;max-width:100%;}
+button{font-family:inherit;}
+
+.bebas{font-family:'Bebas Neue', Impact, sans-serif;letter-spacing:.005em;line-height:.95;}
+.serif{font-family:'Fraunces', serif;}
+.script{font-family:'Caveat', cursive;font-weight:600;}
+.cap{font-family:'Manrope';font-weight:600;font-size:11px;letter-spacing:.24em;text-transform:uppercase;}
+
+.bar{
+  position:sticky;top:0;z-index:50;
+  background:var(--navy);
+  color:var(--bone);
+  display:grid;
+  grid-template-columns:auto 1fr auto;
+  align-items:center;
+  padding:0 24px;
+  border-bottom:1px solid rgba(244,239,223,.12);
+}
+.bar-l{display:flex;align-items:center;gap:14px;padding:12px 0;}
+.bar-l img{height:36px;width:auto;}
+.bar-l-text{
+  font-family:'Bebas Neue';
+  font-size:22px;
+  letter-spacing:.04em;
+  line-height:1;
+}
+.bar-l-text small{
+  font-family:'Caveat', cursive;
+  font-weight:500;
+  font-size:14px;
+  display:block;
+  color:var(--sage-soft);
+  letter-spacing:0;
+  margin-top:-2px;
+}
+.bar-c{display:flex;justify-content:center;gap:24px;}
+.bar-c a{
+  font-family:'Manrope';
+  font-weight:500;
+  font-size:11px;
+  letter-spacing:.22em;
+  text-transform:uppercase;
+  padding:14px 0;
+  color:var(--bone);
+  border-bottom:2px solid transparent;
+  transition:border-color .2s, color .2s;
+}
+.bar-c a:hover{border-color:var(--sage-soft);color:var(--sage-soft);}
+.bar-r{display:flex;align-items:center;gap:14px;}
+.bar-r a{
+  font-family:'Manrope';font-weight:600;font-size:11px;letter-spacing:.18em;text-transform:uppercase;
+  padding:8px 14px;
+  border:1px solid rgba(244,239,223,.36);
+}
+.bar-r a:hover{background:var(--sage);border-color:var(--sage);}
+.bar-r .pulse{
+  display:inline-flex;align-items:center;gap:8px;
+  font-family:'Manrope';font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:500;color:var(--sage-soft);
+}
+.bar-r .pulse::before{
+  content:"";width:7px;height:7px;border-radius:50%;background:var(--sage-soft);
+  animation:pulse 1.6s infinite;
+}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1);}50%{opacity:.4;transform:scale(.6);}}
+
+.hero{
+  background:var(--navy);
+  color:var(--bone);
+  position:relative;
+  overflow:hidden;
+  padding:64px 32px 96px;
+  border-bottom:1px solid rgba(244,239,223,.18);
+}
+.hero::before{
+  content:"";
+  position:absolute;
+  top:-200px;right:-200px;
+  width:680px;height:680px;
+  border-radius:50%;
+  background:
+    radial-gradient(circle at center, var(--bone) 0%, var(--cream) 30%, var(--taupe) 55%, transparent 75%),
+    repeating-radial-gradient(circle at center, transparent 0 4px, rgba(20,27,39,.18) 4px 8px);
+  background-blend-mode:multiply;
+  opacity:.92;
+  z-index:0;
+}
+.hero::after{
+  content:"";
+  position:absolute;
+  left:-200px;bottom:-300px;
+  width:600px;height:600px;
+  border-radius:50%;
+  background:radial-gradient(circle at center, rgba(169,188,179,.5), transparent 70%);
+  z-index:0;
+}
+.hero-inner{position:relative;z-index:2;}
+.hero-meta{
+  display:flex;
+  justify-content:space-between;
+  align-items:baseline;
+  margin-bottom:48px;
+  flex-wrap:wrap;
+  gap:16px;
+}
+.hero-meta .cap{color:var(--sage-soft);}
+.hero-meta b{color:var(--bone);font-weight:600;}
+.hero-h1{
+  font-family:'Bebas Neue', sans-serif;
+  font-size:clamp(96px, 17vw, 280px);
+  line-height:.82;
+  letter-spacing:-.005em;
+  text-transform:uppercase;
+  color:var(--bone);
+}
+.hero-h1 .accent{color:var(--sage-soft);font-style:italic;font-family:'Fraunces';font-weight:300;text-transform:none;letter-spacing:-.04em;}
+.hero-h1 .underline{position:relative;display:inline-block;}
+.hero-h1 .underline::after{
+  content:"";
+  position:absolute;
+  bottom:.06em;left:0;right:0;
+  height:.18em;
+  background:var(--sage);
+  z-index:-1;
+}
+.hero-script{
+  font-family:'Caveat', cursive;
+  font-size:clamp(36px, 5vw, 56px);
+  font-weight:600;
+  line-height:1.1;
+  color:var(--sage-soft);
+  margin-top:14px;
+  margin-left:.05em;
+  transform:rotate(-2deg);
+  display:inline-block;
+}
+.hero-deck-grid{
+  display:grid;
+  grid-template-columns:1.5fr 1fr;
+  gap:48px;
+  margin-top:64px;
+  padding-top:32px;
+  border-top:1px solid rgba(244,239,223,.18);
+  align-items:start;
+}
+.hero-deck{
+  font-family:'Fraunces', serif;
+  font-weight:300;
+  font-size:24px;
+  line-height:1.4;
+  color:#D7D3CB;
+  max-width:36ch;
+}
+.hero-deck b{color:var(--bone);font-weight:500;font-style:italic;}
+.hero-stats{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:0;
+  border-left:1px solid rgba(244,239,223,.18);
+  padding-left:24px;
+}
+.hero-stats div{padding:0 16px 0 0;}
+.hero-stats div:nth-child(2){padding-left:16px;border-left:1px solid rgba(244,239,223,.18);}
+.hero-stats b{
+  font-family:'Bebas Neue';
+  font-size:64px;
+  line-height:.95;
+  color:var(--sage-soft);
+  display:block;
+}
+.hero-stats span{
+  font-family:'Manrope';
+  font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:600;
+  color:#D7D3CB;
+  margin-top:8px;
+  display:block;
+}
+
+.marq{
+  background:var(--sage);
+  color:var(--bone);
+  display:flex;
+  overflow:hidden;
+  white-space:nowrap;
+  border-bottom:6px solid var(--navy);
+}
+.marq-track{
+  display:inline-flex;
+  gap:0;
+  animation:scroll 30s linear infinite;
+  flex-shrink:0;
+  padding:14px 0;
+}
+.marq-track span{
+  font-family:'Bebas Neue';
+  font-size:36px;
+  letter-spacing:.04em;
+  padding:0 24px;
+}
+.marq-track i{
+  font-family:'Caveat', cursive;
+  font-style:normal;
+  font-weight:700;
+  font-size:36px;
+  padding:0 24px;
+  color:var(--cream);
+  line-height:1;
+  align-self:center;
+}
+@keyframes scroll{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+
+.founders{
+  background:var(--bone);
+  padding:96px 32px;
+  border-bottom:1px solid var(--ink);
+  position:relative;
+}
+.founders-grid{
+  display:grid;
+  grid-template-columns:1fr 1.2fr;
+  gap:64px;
+  align-items:center;
+}
+.founders-l{position:relative;}
+.founders-l .cap{color:var(--sage-deep);margin-bottom:16px;}
+.founders-l h2{
+  font-family:'Bebas Neue', sans-serif;
+  font-size:clamp(72px, 11vw, 168px);
+  line-height:.82;
+  letter-spacing:-.005em;
+  color:var(--ink);
+}
+.founders-l h2 .sage{color:var(--sage-deep);}
+.founders-l h2 .serif{
+  font-family:'Fraunces', serif;
+  font-weight:300;
+  font-style:italic;
+  letter-spacing:-.03em;
+  font-size:.85em;
+}
+.founders-l .script{
+  font-family:'Caveat', cursive;
+  font-size:42px;
+  color:var(--sage-deep);
+  display:inline-block;
+  transform:rotate(-3deg);
+  margin-top:14px;
+  font-weight:600;
+}
+.founders-l p{
+  font-family:'Fraunces', serif;
+  font-weight:300;
+  font-size:22px;
+  line-height:1.4;
+  color:var(--ink);
+  margin-top:32px;
+  max-width:42ch;
+}
+.founders-l p em{font-style:italic;color:var(--sage-deep);font-weight:400;}
+.founders-r{
+  position:relative;
+  aspect-ratio:4/5;
+  background:var(--sage);
+  overflow:hidden;
+  border:1px solid var(--ink);
+}
+.founders-r-photo{
+  position:absolute;inset:0;
+  background:url('https://images.pexels.com/photos/35248501/pexels-photo-35248501.jpeg') center/cover;
+  filter:saturate(1.05) contrast(1.05);
+}
+.founders-r::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    repeating-radial-gradient(circle at 10% 50%, transparent 0 1px, rgba(74,102,89,.6) 1px 2.5px),
+    linear-gradient(180deg, rgba(30,41,59,.05), rgba(30,41,59,.4));
+  mix-blend-mode:multiply;
+  pointer-events:none;
+}
+.founders-r-stamp{
+  position:absolute;
+  top:24px;left:24px;
+  background:var(--bone);
+  color:var(--ink);
+  padding:10px 16px;
+  font-family:'Bebas Neue';
+  font-size:18px;
+  letter-spacing:.06em;
+  z-index:2;
+  border:1.5px solid var(--ink);
+}
+.founders-r-stamp small{display:block;font-family:'Caveat',cursive;font-size:14px;letter-spacing:0;color:var(--sage-deep);margin-top:-4px;font-weight:600;}
+.founders-r-cap{
+  position:absolute;
+  bottom:24px;left:24px;right:24px;
+  background:rgba(244,239,223,.96);
+  border:1.5px solid var(--ink);
+  padding:14px 16px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  z-index:2;
+  gap:14px;
+}
+.founders-r-cap-l{
+  font-family:'Fraunces', serif;
+  font-style:italic;
+  font-weight:400;
+  font-size:18px;
+  line-height:1.2;
+}
+.founders-r-cap-r{
+  font-family:'Manrope';
+  font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;font-weight:600;
+  color:var(--sage-deep);
+  text-align:right;
+  flex-shrink:0;
+}
+
+.lineup{
+  padding:96px 32px;
+  background:var(--cream);
+  border-bottom:1px solid var(--ink);
+  position:relative;
+}
+.lineup-head{
+  display:grid;
+  grid-template-columns:1fr auto;
+  align-items:end;
+  gap:32px;
+  margin-bottom:48px;
+  border-bottom:2px solid var(--ink);
+  padding-bottom:32px;
+}
+.lineup-head h2{
+  font-family:'Bebas Neue';
+  font-size:clamp(64px, 10vw, 168px);
+  line-height:.82;
+  color:var(--ink);
+}
+.lineup-head h2 em{font-family:'Fraunces';font-weight:300;font-style:italic;color:var(--sage-deep);font-size:.85em;letter-spacing:-.04em;}
+.lineup-head .lineup-tag{
+  text-align:right;
+  font-family:'Manrope';font-weight:600;font-size:11px;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--sage-deep);
+  max-width:24ch;
+}
+.lineup-head .lineup-tag b{font-family:'Bebas Neue';font-size:36px;display:block;color:var(--ink);font-weight:400;letter-spacing:.04em;margin-bottom:6px;}
+.lineup-grid{
+  display:grid;
+  grid-template-columns:repeat(3, 1fr);
+  gap:0;
+  border-top:1px solid var(--ink);
+  border-left:1px solid var(--ink);
+}
+.lineup-card{
+  border-right:1px solid var(--ink);
+  border-bottom:1px solid var(--ink);
+  background:var(--bone);
+  padding:24px;
+  display:flex;
+  flex-direction:column;
+  position:relative;
+  min-height:420px;
+  transition:background .2s;
+}
+.lineup-card:hover{background:var(--cream);}
+.lineup-card .cap{color:var(--sage-deep);}
+.lineup-card .cap b{color:var(--ink);}
+.lineup-card-img{
+  height:200px;
+  margin:18px -24px;
+  position:relative;
+  display:flex;align-items:center;justify-content:center;
+  overflow:hidden;
+}
+.lineup-card-img img{width:55%;opacity:.65;mix-blend-mode:multiply;}
+.l1{background:linear-gradient(160deg, #5b7d6d 0%, #4a6659 100%);}
+.l2{background:linear-gradient(160deg, #F4EFDF 0%, #DDD4BD 100%);}
+.l3{background:linear-gradient(160deg, #2C3441 0%, #14191F 100%);}
+.l4{background:linear-gradient(160deg, #FAF6E8 0%, #E9E2D6 100%);}
+.l5{background:linear-gradient(160deg, #AFA393 0%, #5b7d6d 100%);}
+.l6{background:linear-gradient(160deg, #F4EFDF 0%, #C9C2B5 100%);}
+.l1 img,.l3 img{filter:brightness(0) invert(1);opacity:.5;}
+.lineup-card h3{
+  font-family:'Bebas Neue';
+  font-size:32px;
+  letter-spacing:.02em;
+  line-height:.95;
+  margin-top:auto;
+}
+.lineup-card h3 em{font-family:'Fraunces';font-weight:300;font-style:italic;font-size:.7em;letter-spacing:-.02em;color:var(--sage-deep);display:block;text-transform:none;margin-top:4px;}
+.lineup-card-foot{
+  margin-top:14px;
+  padding-top:14px;
+  border-top:1px dashed var(--taupe-deep);
+  display:flex;justify-content:space-between;align-items:center;
+}
+.lineup-card-foot .price{
+  font-family:'Bebas Neue';font-size:28px;letter-spacing:.04em;
+  color:var(--ink);
+}
+.lineup-card-foot .add{
+  font-family:'Manrope';
+  font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:600;
+  background:var(--ink);color:var(--bone);
+  padding:8px 12px;
+  cursor:pointer;
+}
+.lineup-card-foot .add:hover{background:var(--sage);}
+.lineup-card-num{
+  position:absolute;
+  top:18px;right:18px;
+  font-family:'Caveat', cursive;
+  font-size:32px;
+  font-weight:700;
+  color:var(--sage-deep);
+  transform:rotate(-8deg);
+}
+
+.tour{
+  padding:96px 32px;
+  background:var(--bone);
+  border-bottom:1px solid var(--ink);
+  position:relative;
+}
+.tour::before{
+  content:"";
+  position:absolute;
+  top:60px;right:-100px;
+  width:280px;height:280px;
+  border-radius:50%;
+  background:
+    radial-gradient(circle, transparent 30%, var(--sage-soft) 30% 32%, transparent 32% 38%, var(--sage-soft) 38% 40%, transparent 40% 46%, var(--sage-soft) 46% 48%, transparent 48%);
+  opacity:.4;
+}
+.tour-head{
+  display:grid;
+  grid-template-columns:1.4fr 1fr;
+  gap:48px;
+  align-items:end;
+  margin-bottom:48px;
+  position:relative;
+  z-index:1;
+}
+.tour-head h2{
+  font-family:'Bebas Neue';
+  font-size:clamp(64px, 10vw, 168px);
+  line-height:.82;
+  color:var(--ink);
+}
+.tour-head h2 .sage{color:var(--sage-deep);}
+.tour-head h2 .serif{font-family:'Fraunces';font-weight:300;font-style:italic;font-size:.7em;letter-spacing:-.03em;color:var(--sage-deep);}
+.tour-head p{
+  font-family:'Fraunces';font-weight:300;font-size:21px;line-height:1.4;
+  color:var(--ink);max-width:42ch;
+}
+.tour-head p em{font-style:italic;color:var(--sage-deep);font-weight:400;}
+.tour-list{
+  border-top:2px solid var(--ink);
+  border-bottom:2px solid var(--ink);
+  position:relative;z-index:1;
+}
+.tour-row{
+  display:grid;
+  grid-template-columns:140px 1fr 200px 140px 100px;
+  align-items:center;
+  gap:24px;
+  padding:24px 0;
+  border-bottom:1px solid var(--ink);
+  transition:background .2s, padding .2s;
+}
+.tour-row:last-child{border-bottom:none;}
+.tour-row:hover{background:var(--cream);padding-left:14px;}
+.tour-d{
+  font-family:'Bebas Neue';
+  font-size:48px;
+  line-height:.9;
+  letter-spacing:.04em;
+}
+.tour-d small{
+  display:block;
+  font-family:'Manrope';
+  font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;font-weight:600;
+  color:var(--sage-deep);
+  margin-top:6px;
+}
+.tour-name{
+  font-family:'Bebas Neue';
+  font-size:28px;
+  letter-spacing:.04em;
+  line-height:.95;
+}
+.tour-name em{
+  font-family:'Fraunces';font-weight:300;font-style:italic;
+  font-size:.55em;letter-spacing:-.02em;color:var(--sage-deep);
+  display:block;text-transform:none;margin-top:4px;
+}
+.tour-loc{
+  font-family:'Manrope';font-weight:500;font-size:13px;
+  color:var(--ink);
+}
+.tour-loc small{display:block;font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--taupe-deep);font-weight:600;margin-top:4px;}
+.tour-time{
+  font-family:'Bebas Neue';font-size:22px;letter-spacing:.04em;
+}
+.tour-rsvp{
+  font-family:'Manrope';font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:600;
+  background:var(--sage);
+  color:var(--bone);
+  padding:10px 14px;
+  text-align:center;
+  border:none;cursor:pointer;
+}
+.tour-rsvp:hover{background:var(--sage-deep);}
+.tag-evt{
+  background:var(--sage);
+  color:var(--bone);
+  font-size:9.5px;
+  padding:3px 7px;
+  letter-spacing:.18em;
+  margin-left:10px;
+  vertical-align:middle;
+  font-family:'Manrope';
+  font-weight:700;
+  text-transform:uppercase;
+}
+
+.osaka{
+  background:var(--navy);
+  color:var(--bone);
+  border-bottom:6px solid var(--sage);
+  position:relative;
+  overflow:hidden;
+}
+.osaka::before{
+  content:"";
+  position:absolute;
+  top:-180px;left:-180px;
+  width:520px;height:520px;
+  border-radius:50%;
+  background:
+    radial-gradient(circle, var(--cream) 0%, var(--sage-soft) 30%, transparent 60%),
+    repeating-radial-gradient(circle, transparent 0 4px, rgba(20,27,39,.18) 4px 8px);
+  background-blend-mode:multiply;
+  opacity:.4;
+}
+.osaka-band{
+  background:var(--sage);
+  color:var(--bone);
+  padding:14px 32px;
+  display:flex;
+  justify-content:space-between;
+  font-family:'Bebas Neue';
+  font-size:18px;
+  letter-spacing:.04em;
+  flex-wrap:wrap;
+  gap:8px;
+}
+.osaka-band span:nth-child(2){color:var(--cream);}
+.osaka-grid{
+  display:grid;
+  grid-template-columns:1.1fr 1fr;
+  position:relative;z-index:1;
+}
+.osaka-l{
+  padding:80px 32px;
+  border-right:1px solid rgba(244,239,223,.18);
+}
+.osaka-l .cap{color:var(--sage-soft);}
+.osaka-l h2{
+  font-family:'Bebas Neue';
+  font-size:clamp(72px, 12vw, 200px);
+  line-height:.82;
+  letter-spacing:.005em;
+  margin-top:14px;
+}
+.osaka-l h2 .serif{
+  font-family:'Fraunces';font-weight:300;font-style:italic;font-size:.6em;letter-spacing:-.03em;
+  color:var(--sage-soft);
+  text-transform:none;
+}
+.osaka-l p{
+  font-family:'Fraunces', serif;
+  font-weight:300;
+  font-size:22px;
+  line-height:1.4;
+  margin-top:24px;
+  max-width:46ch;
+  color:#D7D3CB;
+}
+.osaka-l p em{font-style:italic;color:var(--bone);font-weight:400;}
+.osaka-l .script{
+  display:inline-block;
+  font-family:'Caveat', cursive;
+  font-weight:700;
+  font-size:36px;
+  color:var(--sage-soft);
+  transform:rotate(-3deg);
+  margin-top:18px;
+}
+.osaka-cta{
+  display:inline-flex;
+  align-items:center;gap:14px;
+  margin-top:40px;
+  padding:18px 28px;
+  background:var(--sage);
+  color:var(--bone);
+  font-family:'Bebas Neue';
+  font-size:22px;
+  letter-spacing:.04em;
+  border:2px solid var(--sage);
+  transition:background .2s, color .2s;
+}
+.osaka-cta:hover{background:transparent;color:var(--sage-soft);border-color:var(--sage-soft);}
+.osaka-cta::after{content:"→";font-family:'Manrope';font-size:18px;}
+
+.osaka-r{
+  background:url('https://images.pexels.com/photos/35248501/pexels-photo-35248501.jpeg') center/cover;
+  position:relative;
+  min-height:680px;
+}
+.osaka-r::before{
+  content:"";position:absolute;inset:0;
+  background:
+    repeating-radial-gradient(circle at 30% 30%, transparent 0 1.5px, rgba(91,125,109,.6) 1.5px 3px),
+    linear-gradient(180deg, rgba(30,41,59,.25), rgba(30,41,59,.85));
+  mix-blend-mode:multiply;
+}
+.osaka-r-tag{
+  position:absolute;
+  top:24px;left:24px;
+  background:var(--bone);
+  color:var(--ink);
+  padding:10px 14px;
+  font-family:'Bebas Neue';
+  font-size:18px;
+  letter-spacing:.04em;
+  z-index:2;
+  border:1.5px solid var(--ink);
+}
+.osaka-r-tag small{display:block;font-family:'Caveat';font-size:14px;color:var(--sage-deep);font-weight:600;letter-spacing:0;margin-top:-2px;}
+.osaka-r-stamp{
+  position:absolute;
+  top:32px;right:32px;
+  width:140px;height:140px;
+  border-radius:50%;
+  background:var(--sage);
+  color:var(--bone);
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  font-family:'Bebas Neue';
+  font-size:14px;
+  letter-spacing:.06em;
+  text-align:center;
+  z-index:2;
+  transform:rotate(-12deg);
+  border:2px solid var(--bone);
+  outline:1px solid var(--sage);
+  outline-offset:4px;
+}
+.osaka-r-stamp b{font-size:38px;line-height:.85;font-weight:400;display:block;}
+.osaka-r-foot{
+  position:absolute;
+  bottom:32px;left:32px;right:32px;
+  z-index:2;
+  background:rgba(244,239,223,.96);
+  color:var(--ink);
+  padding:20px;
+  border:1.5px solid var(--ink);
+  display:grid;
+  grid-template-columns:1fr 1fr 1fr;
+  gap:16px;
+}
+.osaka-r-foot div b{
+  display:block;
+  font-family:'Manrope';font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;font-weight:600;
+  color:var(--sage-deep);
+  margin-bottom:6px;
+}
+.osaka-r-foot div span{
+  font-family:'Bebas Neue';
+  font-size:22px;
+  letter-spacing:.04em;
+}
+
+.movimiento{
+  background:var(--sage);
+  color:var(--bone);
+  padding:96px 32px;
+  border-bottom:1px solid var(--ink);
+  text-align:center;
+  position:relative;
+  overflow:hidden;
+}
+.movimiento::before, .movimiento::after{
+  content:"";
+  position:absolute;
+  width:280px;height:280px;
+  border-radius:50%;
+  background:radial-gradient(circle, var(--bone) 0%, var(--cream) 50%, transparent 80%);
+  opacity:.18;
+}
+.movimiento::before{top:-100px;left:-80px;}
+.movimiento::after{bottom:-120px;right:-80px;}
+.movimiento-inner{position:relative;z-index:1;max-width:32ch;margin:0 auto;}
+.movimiento .cap{color:var(--cream);margin-bottom:18px;}
+.movimiento h2{
+  font-family:'Fraunces', serif;
+  font-weight:300;
+  font-style:italic;
+  font-size:clamp(48px, 7vw, 112px);
+  line-height:1;
+  letter-spacing:-.02em;
+}
+.movimiento h2 b{font-family:'Bebas Neue';font-style:normal;font-weight:400;letter-spacing:.04em;color:var(--cream);font-size:1.08em;}
+.movimiento .script{
+  display:inline-block;
+  font-family:'Caveat';
+  font-weight:700;
+  font-size:36px;
+  margin-top:24px;
+  color:var(--cream);
+  transform:rotate(-3deg);
+}
+
+footer{
+  background:var(--navy);
+  color:var(--bone);
+  padding:80px 32px 32px;
+  position:relative;
+  overflow:hidden;
+}
+footer::before{
+  content:"";
+  position:absolute;
+  top:-100px;right:-100px;
+  width:400px;height:400px;
+  border-radius:50%;
+  background:radial-gradient(circle, var(--sage-soft) 0%, transparent 60%);
+  opacity:.15;
+}
+.foot-h{
+  font-family:'Bebas Neue';
+  font-size:clamp(72px, 13vw, 220px);
+  line-height:.82;
+  letter-spacing:.005em;
+  border-bottom:6px solid var(--sage);
+  padding-bottom:24px;
+  margin-bottom:48px;
+  position:relative;
+  z-index:1;
+}
+.foot-h .serif{
+  font-family:'Fraunces';font-weight:300;font-style:italic;font-size:.7em;letter-spacing:-.03em;color:var(--sage-soft);
+}
+.foot-h .script{
+  display:block;
+  font-family:'Caveat';
+  font-weight:700;
+  font-size:.3em;
+  letter-spacing:0;
+  color:var(--sage-soft);
+  transform:rotate(-3deg);
+  margin-top:8px;
+  text-transform:none;
+}
+.foot-grid{
+  display:grid;
+  grid-template-columns:2fr 1fr 1fr 1fr 1fr;
+  gap:32px;
+  border-bottom:1px solid rgba(244,239,223,.18);
+  padding-bottom:48px;
+  position:relative;z-index:1;
+}
+.foot-grid h4{
+  font-family:'Manrope';font-size:11px;letter-spacing:.22em;text-transform:uppercase;font-weight:600;
+  color:var(--sage-soft);margin-bottom:18px;
+}
+.foot-grid a, .foot-grid li{
+  display:block;
+  font-family:'Bebas Neue';
+  font-size:20px;
+  letter-spacing:.04em;
+  margin-bottom:6px;
+  list-style:none;
+  color:#D7D3CB;
+}
+.foot-grid a:hover{color:var(--bone);}
+.foot-news input{
+  background:transparent;
+  border:none;
+  border-bottom:1px solid rgba(244,239,223,.4);
+  padding:10px 0;width:100%;
+  font-family:'Fraunces',serif;
+  font-style:italic;font-weight:300;
+  color:var(--bone);outline:none;
+  font-size:18px;
+}
+.foot-news input::placeholder{color:rgba(244,239,223,.4);}
+.foot-news button{
+  margin-top:14px;
+  background:var(--sage);
+  color:var(--bone);
+  border:none;
+  padding:12px 18px;
+  font-family:'Bebas Neue';
+  font-size:18px;
+  letter-spacing:.04em;
+  cursor:pointer;
+}
+.foot-news button:hover{background:var(--sage-deep);}
+.foot-bottom{
+  margin-top:24px;
+  display:flex;
+  justify-content:space-between;
+  font-family:'Manrope';
+  font-size:11px;letter-spacing:.18em;text-transform:uppercase;
+  color:rgba(244,239,223,.55);
+  position:relative;z-index:1;
+  flex-wrap:wrap;
+  gap:8px;
+}
+.foot-bottom a{color:var(--sage-soft);border-bottom:1px solid var(--sage-soft);padding-bottom:1px;}
+
+@media (max-width:1100px){
+  .lineup-grid{grid-template-columns:repeat(2, 1fr);}
+  .foot-grid{grid-template-columns:repeat(2, 1fr);}
+  .bar-c{display:none;}
+  .bar-r .pulse{display:none;}
+}
+@media (max-width:760px){
+  .hero,.founders,.lineup,.tour,.osaka-l,.movimiento,footer{padding-left:20px;padding-right:20px;}
+  .hero-deck-grid, .founders-grid, .lineup-head, .tour-head, .osaka-grid{grid-template-columns:1fr;gap:32px;}
+  .lineup-grid{grid-template-columns:1fr;}
+  .tour-row{grid-template-columns:120px 1fr;gap:14px;padding:18px 0;}
+  .tour-loc, .tour-time, .tour-rsvp{grid-column:1/-1;text-align:left;}
+  .tour-time{font-size:18px;}
+  .osaka-l{border-right:none;border-bottom:1px solid rgba(244,239,223,.18);padding:48px 20px;}
+  .osaka-r{min-height:520px;}
+  .osaka-r-foot{grid-template-columns:1fr;}
+  .foot-grid{grid-template-columns:1fr;}
+  .lineup-head .lineup-tag{text-align:left;}
+  .bar{padding:0 16px;}
+  .bar-l img{height:30px;}
+  .bar-r{gap:8px;}
+  .bar-r a{padding:6px 10px;font-size:10px;}
+  .founders-r-cap{flex-direction:column;align-items:flex-start;gap:8px;}
+  .founders-r-cap-r{text-align:left;}
+}
+</style>
+</head>
+<body>
+
+<header class="bar">
+  <div class="bar-l">
+    <img src="https://customer-assets.emergentagent.com/job_paddle-fit/artifacts/7cifacby_unnamed%20%281%29.png" alt="Baby Let's Padel">
+    <div class="bar-l-text">Baby Let's Padel<small>~ vamos a jugar ~</small></div>
+  </div>
+  <nav class="bar-c">
+    <a href="#lineup">El Lineup</a>
+    <a href="#tour">El Tour</a>
+    <a href="#osaka">Featured: Osaka</a>
+    <a href="#founders">Las Fundadoras</a>
+  </nav>
+  <div class="bar-r">
+    <span class="pulse">Spring '26 · Live</span>
+    <a href="#">Bag · 0</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-meta">
+      <span class="cap"><b>Vol. 01</b> · Spring '26 · Houston, TX</span>
+      <span class="cap">Founded by <b>two Latinas</b> · Building padel ~</span>
+    </div>
+
+    <h1 class="hero-h1">Vamos<br>A&nbsp;<span class="underline">Padel</span><br><span class="accent">y a la cancha.</span></h1>
+    <span class="hero-script">~ welcome to la casa ~</span>
+
+    <div class="hero-deck-grid">
+      <p class="hero-deck"><b>Baby Let's Padel</b> is a Houston padel community built by two Latinas — apparel, open plays, and a movement on the court. Mixed levels. All genders. Bring a friend, bring water, traemos el resto.</p>
+      <div class="hero-stats">
+        <div><b>04</b><span>Open plays<br>this month</span></div>
+        <div><b>02</b><span>Latinas<br>founded it</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="marq">
+  <div class="marq-track">
+    <span>Vamos a Padel</span><i>~</i>
+    <span>Houston, Texas</span><i>~</i>
+    <span>Dos Latinas. Un movimiento.</span><i>~</i>
+    <span>Open plays · Tue Wed Sat</span><i>~</i>
+    <span>Trae a un amigo</span><i>~</i>
+    <span>Vamos a Padel</span><i>~</i>
+    <span>Houston, Texas</span><i>~</i>
+    <span>Dos Latinas. Un movimiento.</span><i>~</i>
+    <span>Open plays · Tue Wed Sat</span><i>~</i>
+    <span>Trae a un amigo</span><i>~</i>
+  </div>
+</div>
+
+<section class="founders" id="founders">
+  <div class="founders-grid">
+    <div class="founders-l">
+      <span class="cap">— Las Fundadoras</span>
+      <h2>Two <span class="serif"><em>latinas,</em></span><br>one <span class="sage">cancha,</span><br>a&nbsp;movement.</h2>
+      <span class="script">~ y mucho corazón ~</span>
+      <p>We started Baby Let's Padel out of a group chat that wouldn't quit and a couple of Houston courts that needed regulars. Now we host open plays four nights a week and travel for tournaments. <em>The kit funds the courts. The courts feed the crew.</em></p>
+    </div>
+    <div class="founders-r">
+      <div class="founders-r-photo"></div>
+      <span class="founders-r-stamp">Las Fundadoras<small>~ Houston, TX ~</small></span>
+      <div class="founders-r-cap">
+        <div class="founders-r-cap-l">"We weren't waiting for permission. <br>So we made the courts ours."</div>
+        <div class="founders-r-cap-r">— BLP<br>Vol. 01</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="lineup" id="lineup">
+  <div class="lineup-head">
+    <h2>El Lineup —<br><em>spring kit, six pieces.</em></h2>
+    <div class="lineup-tag"><b>SS '26</b>Six pieces. Unisex. Sized for movement on a Houston court.</div>
+  </div>
+
+  <div class="lineup-grid">
+    <article class="lineup-card">
+      <span class="cap"><b>No. 01</b> · Heavyweight</span>
+      <span class="lineup-card-num">~01~</span>
+      <div class="lineup-card-img l1"><img src="https://customer-assets.emergentagent.com/job_c0589f16-d62f-4855-9be3-f2d98f470a9c/artifacts/ob08t771_Decal-01.png" alt=""></div>
+      <h3>Heavy Crewneck<em>Eucalyptus · 350 GSM</em></h3>
+      <div class="lineup-card-foot"><span class="price">$53</span><span class="add">Agregar</span></div>
+    </article>
+    <article class="lineup-card">
+      <span class="cap"><b>No. 02</b> · Lightweight</span>
+      <span class="lineup-card-num">~02~</span>
+      <div class="lineup-card-img l2"><img src="https://customer-assets.emergentagent.com/job_c0589f16-d62f-4855-9be3-f2d98f470a9c/artifacts/ob08t771_Decal-01.png" alt=""></div>
+      <h3>Light Crewneck<em>Off-White · 220 GSM</em></h3>
+      <div class="lineup-card-foot"><span class="price">$41</span><span class="add">Agregar</span></div>
+    </article>
+    <article class="lineup-card">
+      <span class="cap"><b>No. 03</b> · Heavyweight</span>
+      <span class="lineup-card-num">~03~</span>
+      <div class="lineup-card-img l3"><img src="https://customer-assets.emergentagent.com/job_c0589f16-d62f-4855-9be3-f2d98f470a9c/artifacts/ob08t771_Decal-01.png" alt=""></div>
+      <h3>Heavy Crewneck<em>Deep Navy · 350 GSM</em></h3>
+      <div class="lineup-card-foot"><span class="price">$53</span><span class="add">Agregar</span></div>
+    </article>
+    <article class="lineup-card">
+      <span class="cap"><b>No. 04</b> · Training</span>
+      <span class="lineup-card-num">~04~</span>
+      <div class="lineup-card-img l4"><img src="https://customer-assets.emergentagent.com/job_c0589f16-d62f-4855-9be3-f2d98f470a9c/artifacts/ob08t771_Decal-01.png" alt=""></div>
+      <h3>Long Sleeve Tee<em>Off-White · Wicking</em></h3>
+      <div class="lineup-card-foot"><span class="price">$31</span><span class="add">Agregar</span></div>
+    </article>
+    <article class="lineup-card">
+      <span class="cap"><b>No. 05</b> · Headwear</span>
+      <span class="lineup-card-num">~05~</span>
+      <div class="lineup-card-img l5"><img src="https://customer-assets.emergentagent.com/job_c0589f16-d62f-4855-9be3-f2d98f470a9c/artifacts/ob08t771_Decal-01.png" alt=""></div>
+      <h3>Six-Panel Cap<em>Taupe · Sage · Navy</em></h3>
+      <div class="lineup-card-foot"><span class="price">$27</span><span class="add">Agregar</span></div>
+    </article>
+    <article class="lineup-card">
+      <span class="cap"><b>No. 06</b> · Headwear</span>
+      <span class="lineup-card-num">~06~</span>
+      <div class="lineup-card-img l6"><img src="https://customer-assets.emergentagent.com/job_c0589f16-d62f-4855-9be3-f2d98f470a9c/artifacts/ob08t771_Decal-01.png" alt=""></div>
+      <h3>Dri-Fit Visor<em>Off-White · Quick-dry</em></h3>
+      <div class="lineup-card-foot"><span class="price">$22</span><span class="add">Agregar</span></div>
+    </article>
+  </div>
+</section>
+
+<section class="tour" id="tour">
+  <div class="tour-head">
+    <h2>El Tour <span class="serif"><em>~ thru May.</em></span></h2>
+    <p>Every open play, every event, every Tuesday-night Houston court we'll be on. Mixed levels. Rackets and balls courtside. <em>Trae a un amigo</em> who's never played — we'll teach.</p>
+  </div>
+
+  <div class="tour-list">
+    <div class="tour-row">
+      <div class="tour-d">04 / 22<small>Wednesday</small></div>
+      <div class="tour-name">RSC Katy<em>open play · 14 spots</em></div>
+      <div class="tour-loc">Katy, Houston<small>RSC Katy · Court 3</small></div>
+      <div class="tour-time">7:00 PM</div>
+      <button class="tour-rsvp">RSVP →</button>
+    </div>
+    <div class="tour-row">
+      <div class="tour-d">04 / 28<small>Tuesday</small></div>
+      <div class="tour-name">RSC Willowbrook<em>open play · 16 spots</em></div>
+      <div class="tour-loc">Willowbrook, Houston<small>RSC Willowbrook</small></div>
+      <div class="tour-time">7:00 — 8:30 PM</div>
+      <button class="tour-rsvp">RSVP →</button>
+    </div>
+    <div class="tour-row">
+      <div class="tour-d">05 / 02<small>Saturday</small></div>
+      <div class="tour-name">Neon Padel Party <span class="tag-evt">Event</span><em>w/ Smash 305 · Cube Padel · 22 spots</em></div>
+      <div class="tour-loc">Cube Padel<small>Houston, TX</small></div>
+      <div class="tour-time">8:00 PM</div>
+      <button class="tour-rsvp">RSVP →</button>
+    </div>
+    <div class="tour-row">
+      <div class="tour-d">05 / 04<small>Monday</small></div>
+      <div class="tour-name">TEMPO Padel<em>open play · 18 spots</em></div>
+      <div class="tour-loc">Inner Loop, Houston<small>TEMPO Padel</small></div>
+      <div class="tour-time">7:00 PM</div>
+      <button class="tour-rsvp">RSVP →</button>
+    </div>
+  </div>
+</section>
+
+<section class="osaka" id="osaka">
+  <div class="osaka-band">
+    <span>Featured Artist · Spring '26</span>
+    <span>Osaka USA × Baby Let's Padel</span>
+    <span>Now playing · Houston, TX</span>
+  </div>
+  <div class="osaka-grid">
+    <div class="osaka-l">
+      <span class="cap">— A guest on the lineup</span>
+      <h2>Osaka <span class="serif"><em>~ on tour with us.</em></span></h2>
+      <p>Osaka USA is a Dutch performance label that builds rackets and apparel for serious players — carbon-fiber frames, EVA cores, technical kit. <em>For our spring tour, they're the featured artist on the lineup.</em> Demos courtside at every open play in Houston.</p>
+      <span class="script">~ pruébalos en la cancha ~</span>
+      <br>
+      <a href="https://www.osakaworldusa.com/collections/padel" target="_blank" rel="noopener" class="osaka-cta">Shop Osaka × BLP</a>
+    </div>
+
+    <div class="osaka-r">
+      <span class="osaka-r-tag">Featured Artist<small>~ Osaka USA ~</small></span>
+      <div class="osaka-r-stamp"><span style="font-size:11px;letter-spacing:.18em;">SPRING TOUR</span><b>Edición</b><span style="font-size:11px;letter-spacing:.18em;">Limited '26</span></div>
+      <div class="osaka-r-foot">
+        <div><b>Frames</b><span>Vision Pro<br>Vision Tour</span></div>
+        <div><b>Try-on</b><span>Tue + Wed<br>RSC Katy</span></div>
+        <div><b>Material</b><span>Carbon 18K<br>EVA Core</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="movimiento">
+  <div class="movimiento-inner">
+    <span class="cap">— House Rule No. 01</span>
+    <h2><b>Vamos.</b><br>Trae a un amigo.<br>Stay for the second game.</h2>
+    <span class="script">~ todos juegan ~</span>
+  </div>
+</section>
+
+<footer>
+  <h2 class="foot-h">Baby <span class="serif"><em>let's</em></span><br>Padel.<br><span class="script">~ vamos a jugar ~</span></h2>
+  <div class="foot-grid">
+    <div class="foot-news">
+      <h4>~ La newsletter</h4>
+      <p style="font-family:'Fraunces';font-style:italic;font-weight:300;font-size:18px;color:#D7D3CB;margin-bottom:14px;">Tour dates, gear drops, founders' notes.</p>
+      <input type="email" placeholder="email@address">
+      <button>Suscríbete</button>
+    </div>
+    <div>
+      <h4>El Stand</h4>
+      <a href="#lineup">Crewnecks</a>
+      <a href="#lineup">Tops</a>
+      <a href="#lineup">Headwear</a>
+      <a href="#osaka">Osaka × BLP</a>
+    </div>
+    <div>
+      <h4>El Tour</h4>
+      <a href="#tour">Calendar</a>
+      <a href="#tour">RSVP</a>
+      <a href="#">Travel</a>
+    </div>
+    <div>
+      <h4>La Casa</h4>
+      <a href="#founders">Founders</a>
+      <a href="#">Crew</a>
+      <a href="#">Contact</a>
+    </div>
+    <div>
+      <h4>Follow</h4>
+      <a href="#">Instagram</a>
+      <a href="#">TikTok</a>
+      <a href="#">Strava</a>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    <span>© 2026 Baby Let's Padel · Hecho en Houston, TX</span>
+    <span>Vol. 01 · Spring '26 · Dos Latinas</span>
+    <span><a href="../">← All Five Designs</a></span>
+  </div>
+</footer>
+
+</body>
+</html>
