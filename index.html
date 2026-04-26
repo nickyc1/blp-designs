@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Baby Let's Padel — Five Design Directions</title>
+<meta name="description" content="Five design directions for Baby Let's Padel — editorial dispatch, technical field manual, brutalist signal, wayfinding atlas, gallery exhibition.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Manrope:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bone:#F8F7F4;
+  --bone-2:#F1EEE6;
+  --ink:#0F1620;
+  --ink-2:#1A2330;
+  --ink-3:#3A4452;
+  --ink-soft:#7A8290;
+  --sage:#5b7d6d;
+  --sage-deep:#4a6659;
+  --sage-soft:#A9BCB3;
+  --signal:#F65C2C;
+  --pin:#B8472D;
+  --taupe:#AFA393;
+  --taupe-soft:#E9E2D6;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  background:var(--bone);
+  color:var(--ink);
+  font-family:'Manrope', system-ui, sans-serif;
+  font-weight:400;
+  font-size:15px;
+  line-height:1.55;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit;text-decoration:none;}
+img{display:block;max-width:100%;}
+
+.mono{font-family:'JetBrains Mono', monospace;letter-spacing:.05em;}
+.serif{font-family:'Fraunces', serif;}
+.eyebrow{font-family:'JetBrains Mono', monospace;font-size:11px;letter-spacing:.2em;text-transform:uppercase;font-weight:500;color:var(--ink-3);}
+
+/* HEADER */
+.bar{
+  position:sticky;top:0;z-index:50;
+  background:var(--bone);
+  border-bottom:1px solid var(--ink);
+  display:grid;
+  grid-template-columns:auto 1fr auto;
+  align-items:center;
+  padding:14px 32px;
+  gap:24px;
+}
+.bar-l{display:flex;gap:12px;align-items:center;}
+.bar-mark{
+  width:30px;height:30px;
+  border-radius:50%;
+  background:var(--ink);
+  position:relative;
+}
+.bar-mark::before{
+  content:"";position:absolute;
+  top:50%;left:5px;right:5px;height:1.5px;
+  background:var(--bone);transform:translateY(-50%);
+}
+.bar-mark::after{
+  content:"";position:absolute;
+  inset:6px;
+  border:1.5px solid var(--bone);
+  border-radius:50%;
+}
+.bar-title{
+  font-family:'Fraunces', serif;
+  font-weight:500;
+  font-size:18px;
+  letter-spacing:-.005em;
+}
+.bar-title small{font-family:'JetBrains Mono';font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-soft);display:block;font-weight:500;}
+.bar-c{
+  display:flex;
+  justify-content:center;
+  gap:24px;
+}
+.bar-c a{
+  font-family:'JetBrains Mono';
+  font-size:11px;letter-spacing:.18em;text-transform:uppercase;
+  font-weight:500;
+}
+.bar-c a:hover{color:var(--sage-deep);}
+.bar-r{
+  font-family:'JetBrains Mono';
+  font-size:11px;letter-spacing:.18em;text-transform:uppercase;
+  font-weight:500;
+  color:var(--ink-soft);
+}
+.bar-r b{color:var(--ink);font-weight:600;}
+
+/* HERO */
+.hero{
+  padding:96px 32px 64px;
+  border-bottom:1px solid var(--ink);
+  background:var(--bone);
+  position:relative;
+  overflow:hidden;
+}
+.hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background-image:
+    linear-gradient(rgba(15,22,32,.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(15,22,32,.04) 1px, transparent 1px);
+  background-size:48px 48px;
+  pointer-events:none;
+}
+.hero-grid{
+  display:grid;
+  grid-template-columns:1fr auto;
+  gap:48px;
+  align-items:end;
+  position:relative;
+  z-index:1;
+}
+.hero-l .eyebrow{color:var(--sage-deep);}
+.hero-h1{
+  font-family:'Fraunces', serif;
+  font-weight:300;
+  font-size:clamp(56px, 8.5vw, 132px);
+  line-height:.92;
+  letter-spacing:-.025em;
+  margin-top:24px;
+  font-variation-settings:"opsz" 144, "SOFT" 30;
+}
+.hero-h1 em{font-style:italic;color:var(--sage-deep);font-weight:400;}
+.hero-deck{
+  margin-top:32px;
+  font-size:19px;
+  line-height:1.55;
+  max-width:64ch;
+  color:var(--ink-3);
+}
+.hero-stats{
+  font-family:'JetBrains Mono', monospace;
+  font-size:11px;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  color:var(--ink-3);
+  display:grid;
+  gap:12px;
+  border-left:1px solid var(--ink);
+  padding-left:24px;
+  min-width:240px;
+}
+.hero-stats div b{color:var(--ink);font-weight:600;display:block;font-family:'Fraunces';font-size:36px;letter-spacing:-.01em;text-transform:none;line-height:1;}
+.hero-foot{
+  margin-top:64px;
+  display:flex;
+  justify-content:space-between;
+  font-family:'JetBrains Mono', monospace;
+  font-size:11px;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--ink-soft);
+  position:relative;z-index:1;
+}
+.hero-foot b{color:var(--sage-deep);}
+
+/* DESIGNS GRID */
+.designs{
+  padding:96px 32px;
+  border-bottom:1px solid var(--ink);
+}
+.designs-head{
+  display:grid;
+  grid-template-columns:1fr auto;
+  align-items:end;
+  gap:32px;
+  margin-bottom:48px;
+  padding-bottom:24px;
+  border-bottom:2px solid var(--ink);
+}
+.designs-head h2{
+  font-family:'Fraunces', serif;
+  font-weight:400;
+  font-size:clamp(40px, 5vw, 72px);
+  line-height:.95;
+  letter-spacing:-.02em;
+}
+.designs-head h2 em{font-style:italic;color:var(--sage-deep);font-weight:300;}
+.designs-head .eyebrow{text-align:right;}
+.grid{
+  display:grid;
+  grid-template-columns:repeat(2, 1fr);
+  gap:32px;
+}
+.card{
+  display:block;
+  border:1px solid var(--ink);
+  background:var(--bone);
+  position:relative;
+  overflow:hidden;
+  transition:transform .25s, box-shadow .25s;
+}
+.card:hover{transform:translate(-3px,-3px);box-shadow:6px 6px 0 var(--ink);}
+.card-img{
+  aspect-ratio:16/9;
+  position:relative;
+  border-bottom:1px solid var(--ink);
+  overflow:hidden;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:40px;
+}
+.card-num{
+  position:absolute;
+  top:14px;left:14px;
+  background:var(--ink);
+  color:var(--bone);
+  padding:6px 10px;
+  font-family:'JetBrains Mono';
+  font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:600;
+  z-index:2;
+}
+.card-tag{
+  position:absolute;
+  top:14px;right:14px;
+  background:var(--bone);
+  color:var(--ink);
+  padding:6px 10px;
+  font-family:'JetBrains Mono';
+  font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;font-weight:500;
+  border:1px solid var(--ink);
+  z-index:2;
+}
+.card-meta{
+  padding:24px;
+  display:grid;
+  gap:14px;
+  background:var(--bone);
+}
+.card-meta h3{
+  font-family:'Fraunces', serif;
+  font-weight:400;
+  font-size:36px;
+  line-height:1;
+  letter-spacing:-.015em;
+}
+.card-meta h3 em{font-style:italic;color:var(--sage-deep);font-weight:300;}
+.card-meta p{font-size:15px;line-height:1.55;color:var(--ink-3);max-width:48ch;}
+.card-foot{
+  border-top:1px dashed var(--ink-3);
+  padding-top:14px;
+  display:flex;
+  justify-content:space-between;
+  font-family:'JetBrains Mono', monospace;
+  font-size:11px;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--ink-soft);
+}
+.card-foot b{color:var(--sage-deep);font-weight:600;}
+.card-foot a{color:var(--ink);font-weight:600;border-bottom:1px solid var(--ink);}
+
+/* PREVIEW PATTERNS */
+.prev-1{
+  background:linear-gradient(180deg, #F8F7F4 0%, #EFEAD9 100%);
+  position:relative;
+}
+.prev-1::before{
+  content:"Dispatch";
+  position:absolute;
+  top:50%;left:50%;
+  transform:translate(-50%,-50%);
+  font-family:'Fraunces', serif;
+  font-weight:300;
+  font-style:italic;
+  font-size:96px;
+  color:var(--sage-deep);
+  letter-spacing:-.02em;
+}
+.prev-1::after{
+  content:"VOL. 01 · SPRING '26 · HOUSTON, TX";
+  position:absolute;
+  bottom:18px;left:0;right:0;
+  text-align:center;
+  font-family:'JetBrains Mono', monospace;
+  font-size:10px;
+  letter-spacing:.32em;
+  color:var(--ink-3);
+}
+
+.prev-2{
+  background:var(--bone);
+  background-image:
+    linear-gradient(rgba(26,35,48,.10) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(26,35,48,.10) 1px, transparent 1px);
+  background-size:24px 24px;
+  position:relative;
+}
+.prev-2::before{
+  content:"";
+  position:absolute;
+  top:50%;left:50%;
+  transform:translate(-50%,-50%);
+  width:240px;height:160px;
+  border:1.5px solid var(--ink);
+  background:repeating-linear-gradient(45deg, transparent 0 6px, rgba(91,125,109,.08) 6px 12px);
+}
+.prev-2::after{
+  content:"FORM 001 · BLP-FM-001 · SPECS";
+  position:absolute;
+  top:50%;left:50%;
+  transform:translate(-50%,calc(-50% + 110px));
+  font-family:'JetBrains Mono', monospace;
+  font-size:11px;
+  letter-spacing:.24em;
+  text-transform:uppercase;
+  color:var(--ink);
+  font-weight:600;
+}
+
+.prev-3{
+  background:var(--ink);
+  position:relative;
+  overflow:hidden;
+}
+.prev-3::before{
+  content:"SIGNAL";
+  position:absolute;
+  top:50%;left:50%;
+  transform:translate(-50%,-50%);
+  font-family:'Manrope';
+  font-weight:800;
+  font-size:120px;
+  letter-spacing:-.04em;
+  color:var(--signal);
+  font-stretch:condensed;
+}
+.prev-3::after{
+  content:"// SS26 / DROP NO. 01 / NOW LIVE";
+  position:absolute;
+  bottom:18px;left:0;right:0;
+  text-align:center;
+  font-family:'JetBrains Mono', monospace;
+  font-size:10px;
+  letter-spacing:.28em;
+  color:var(--signal);
+  font-weight:600;
+}
+
+.prev-4{
+  background:#F4EFE2;
+  background-image:radial-gradient(circle at 12px 12px, rgba(26,35,48,.14) 1.4px, transparent 1.4px);
+  background-size:28px 28px;
+  position:relative;
+  overflow:hidden;
+}
+.prev-4-svg{
+  position:absolute;
+  inset:0;
+  width:100%;height:100%;
+}
+.prev-4::after{
+  content:"ATLAS · 29.7604° N · 95.3698° W";
+  position:absolute;
+  bottom:18px;left:0;right:0;
+  text-align:center;
+  font-family:'JetBrains Mono', monospace;
+  font-size:10px;
+  letter-spacing:.28em;
+  color:var(--ink-2);
+  font-weight:500;
+}
+
+.prev-5{
+  background:linear-gradient(180deg, #FAF7F0 0%, #EAE3D2 100%);
+  position:relative;
+}
+.prev-5::before{
+  content:"Exhibition";
+  position:absolute;
+  top:50%;left:50%;
+  transform:translate(-50%,-50%);
+  font-family:'Fraunces', serif;
+  font-weight:300;
+  font-style:italic;
+  font-size:84px;
+  color:var(--ink);
+  letter-spacing:-.02em;
+}
+.prev-5::after{
+  content:"PLATE 00 · CURATED BY BLP";
+  position:absolute;
+  bottom:18px;left:0;right:0;
+  text-align:center;
+  font-family:'Manrope';
+  font-weight:400;
+  font-size:10.5px;
+  letter-spacing:.32em;
+  text-transform:uppercase;
+  color:var(--ink-3);
+}
+
+.prev-bonus{
+  grid-column:1/-1;
+  background:var(--ink);
+  color:var(--bone);
+  padding:48px 32px;
+  display:grid;
+  grid-template-columns:1fr auto;
+  align-items:center;
+  gap:32px;
+  border:1px solid var(--ink);
+}
+.prev-bonus h3{
+  font-family:'Fraunces', serif;
+  font-weight:300;
+  font-size:clamp(28px, 3.5vw, 44px);
+  line-height:1.1;
+  letter-spacing:-.015em;
+}
+.prev-bonus h3 em{font-style:italic;color:var(--sage-soft);}
+.prev-bonus p{
+  margin-top:14px;
+  font-size:15px;
+  color:#D7D3CB;
+  max-width:60ch;
+}
+.prev-bonus-tag{
+  font-family:'JetBrains Mono';
+  font-size:11px;letter-spacing:.2em;text-transform:uppercase;
+  background:var(--sage);color:var(--bone);
+  padding:8px 12px;
+  font-weight:600;
+}
+
+/* HOW TO READ */
+.howto{
+  padding:96px 32px;
+  border-bottom:1px solid var(--ink);
+  background:var(--bone-2);
+}
+.howto-grid{
+  display:grid;
+  grid-template-columns:1fr 1.4fr;
+  gap:48px;
+  align-items:start;
+}
+.howto h2{
+  font-family:'Fraunces', serif;
+  font-weight:300;
+  font-size:clamp(40px, 5vw, 64px);
+  line-height:1;
+  letter-spacing:-.02em;
+}
+.howto h2 em{font-style:italic;color:var(--sage-deep);}
+.howto-list{
+  display:grid;
+  gap:0;
+}
+.howto-list div{
+  display:grid;
+  grid-template-columns:48px 1fr;
+  gap:18px;
+  padding:18px 0;
+  border-bottom:1px solid var(--ink);
+  font-family:'Manrope';
+  font-size:16px;
+  line-height:1.5;
+}
+.howto-list div:first-child{border-top:1px solid var(--ink);}
+.howto-list div b{font-family:'JetBrains Mono';font-size:13px;letter-spacing:.14em;color:var(--sage-deep);font-weight:600;}
+.howto-list div span b{
+  font-family:'Manrope';
+  font-weight:600;
+  letter-spacing:0;
+  color:var(--ink);
+  font-size:16px;
+}
+
+/* FOOTER */
+footer{
+  background:var(--ink);
+  color:var(--bone);
+  padding:64px 32px 32px;
+}
+.foot-grid{
+  display:grid;
+  grid-template-columns:2fr 1fr;
+  gap:32px;
+  border-bottom:1px solid rgba(248,247,244,.18);
+  padding-bottom:32px;
+  align-items:end;
+}
+.foot-l h2{
+  font-family:'Fraunces', serif;
+  font-weight:300;
+  font-style:italic;
+  font-size:clamp(48px, 6vw, 84px);
+  line-height:.95;
+  letter-spacing:-.02em;
+}
+.foot-l h2 em{color:var(--sage-soft);font-style:italic;}
+.foot-l p{font-family:'JetBrains Mono';font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--sage-soft);margin-top:18px;}
+.foot-r{
+  text-align:right;
+  font-family:'JetBrains Mono';
+  font-size:11px;letter-spacing:.18em;text-transform:uppercase;
+  color:#D7D3CB;
+}
+.foot-r a{color:var(--sage-soft);border-bottom:1px solid var(--sage-soft);padding-bottom:2px;}
+.foot-bot{
+  display:flex;justify-content:space-between;
+  margin-top:24px;
+  font-family:'JetBrains Mono';
+  font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;
+  color:rgba(248,247,244,.55);
+}
+
+/* RESPONSIVE */
+@media (max-width:1024px){
+  .hero-grid, .designs-head, .grid, .howto-grid, .foot-grid{grid-template-columns:1fr;gap:24px;}
+  .hero-stats{border-left:none;border-top:1px solid var(--ink);padding:24px 0 0;min-width:auto;}
+  .designs-head .eyebrow{text-align:left;}
+  .prev-bonus{grid-template-columns:1fr;}
+  .foot-r{text-align:left;}
+  .bar-c{display:none;}
+}
+@media (max-width:560px){
+  .bar{padding:12px 16px;gap:12px;grid-template-columns:auto auto;}
+  .bar-r{font-size:10px;}
+  .hero, .designs, .howto, footer{padding-left:18px;padding-right:18px;}
+  .hero-foot{flex-direction:column;gap:8px;}
+  .card-img{padding:20px;}
+  .prev-1::before{font-size:54px;}
+  .prev-3::before{font-size:64px;}
+  .prev-5::before{font-size:48px;}
+  .foot-bot{flex-direction:column;gap:8px;}
+}
+</style>
+</head>
+<body>
+
+<header class="bar">
+  <div class="bar-l">
+    <div class="bar-mark"></div>
+    <div class="bar-title">Baby Let's Padel<small>Five Design Directions · Apr '26</small></div>
+  </div>
+  <nav class="bar-c">
+    <a href="#designs">The Five</a>
+    <a href="#howto">How to read this</a>
+    <a href="#brief">The brief</a>
+  </nav>
+  <div class="bar-r">Prepared by <b>BLP design studio</b></div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-grid">
+    <div class="hero-l">
+      <span class="eyebrow">— A directional review · five POVs</span>
+      <h1 class="hero-h1">Five ways to <em>build</em><br>Baby Let's Padel.</h1>
+      <p class="hero-deck">Five fully realized design directions for the Baby Let's Padel storefront — same brand, same palette, same six-piece kit, but five distinct creative points of view. Each one shows a working hero, product display, schedule, and a partnership treatment with Osaka USA, so you can see how a collab would render under each direction. Click in. Pick a favorite. We'll build it.</p>
+    </div>
+    <div class="hero-stats">
+      <div><b>05</b><span>directions, fully built</span></div>
+      <div><b>06</b><span>kit pieces in each</span></div>
+      <div><b>04</b><span>open plays scheduled</span></div>
+      <div><b>01</b><span>Osaka collab in every cut</span></div>
+    </div>
+  </div>
+  <div class="hero-foot">
+    <span><b>// Brief</b> &nbsp;Unisex · sport-first · Houston-based</span>
+    <span><b>// Locked</b> &nbsp;Brand colors · logos · catalog</span>
+    <span><b>// Free</b> &nbsp;Type · grid · motion · tone</span>
+  </div>
+</section>
+
+<!-- DESIGNS -->
+<section class="designs" id="designs">
+  <div class="designs-head">
+    <h2>The five <em>directions.</em></h2>
+    <span class="eyebrow">— Click any tile to open</span>
+  </div>
+
+  <div class="grid">
+
+    <a class="card" href="01-dispatch/" target="_blank" rel="noopener">
+      <div class="card-img prev-1">
+        <span class="card-num">01</span>
+        <span class="card-tag">Editorial · magazine</span>
+      </div>
+      <div class="card-meta">
+        <h3>Dispatch <em>— the editorial</em></h3>
+        <p>A magazine. Big serif display, dispatch numbers, masthead, pullquotes. Treats every product launch like a feature article and every collab like a guest byline. Reference: Tracksmith, Bandit Running editorial.</p>
+        <div class="card-foot">
+          <span><b>Type</b> &nbsp;Fraunces + Newsreader + IBM Plex Mono</span>
+          <span>Open →</span>
+        </div>
+      </div>
+    </a>
+
+    <a class="card" href="02-field-manual/" target="_blank" rel="noopener">
+      <div class="card-img prev-2">
+        <span class="card-num">02</span>
+        <span class="card-tag">Technical · spec sheet</span>
+      </div>
+      <div class="card-meta">
+        <h3>Field Manual <em>— the technical</em></h3>
+        <p>A sport-science manual. Mono-heavy, court diagrams, ISO-style classifications, tabular spec rows. Treats the kit as a parts list and Osaka as a published field test. Reference: Satisfy, Hoka tech pages.</p>
+        <div class="card-foot">
+          <span><b>Type</b> &nbsp;JetBrains Mono + Manrope</span>
+          <span>Open →</span>
+        </div>
+      </div>
+    </a>
+
+    <a class="card" href="03-signal/" target="_blank" rel="noopener">
+      <div class="card-img prev-3">
+        <span class="card-num">03</span>
+        <span class="card-tag">Brutalist · poster</span>
+      </div>
+      <div class="card-meta">
+        <h3>Signal <em>— the loud one</em></h3>
+        <p>Monumentally large display type, signal-orange tactical accent, marquee tickers, asymmetric blocks. Treats every drop like a streetwear release and the Osaka collab as a stamped capsule. Reference: Highsnobiety, early Nike SB.</p>
+        <div class="card-foot">
+          <span><b>Type</b> &nbsp;Archivo Black + Manrope + JetBrains Mono</span>
+          <span>Open →</span>
+        </div>
+      </div>
+    </a>
+
+    <a class="card" href="04-atlas/" target="_blank" rel="noopener">
+      <div class="card-img prev-4">
+        <span class="card-num">04</span>
+        <span class="card-tag">Wayfinding · map</span>
+        <svg class="prev-4-svg" viewBox="0 0 600 320" preserveAspectRatio="xMidYMid slice">
+          <path d="M 80 200 Q 200 80, 360 160 T 540 80" stroke="#B8472D" stroke-width="2" stroke-dasharray="4 4" fill="none"/>
+          <circle cx="80" cy="200" r="8" fill="#B8472D" stroke="#F4EFE2" stroke-width="3"/>
+          <circle cx="360" cy="160" r="8" fill="#B8472D" stroke="#F4EFE2" stroke-width="3"/>
+          <circle cx="540" cy="80" r="8" fill="#5b7d6d" stroke="#F4EFE2" stroke-width="3"/>
+          <circle cx="220" cy="240" r="8" fill="#1A2330" stroke="#F4EFE2" stroke-width="3"/>
+        </svg>
+      </div>
+      <div class="card-meta">
+        <h3>Atlas <em>— the cartographic</em></h3>
+        <p>Houston padel rendered as a transit map. Coordinates, dotted-line routes, location pins, geographic dispatches. Treats Osaka as a satellite outpost on the map. Reference: vintage transit maps, expedition logs.</p>
+        <div class="card-foot">
+          <span><b>Type</b> &nbsp;DM Serif Display + DM Sans + DM Mono</span>
+          <span>Open →</span>
+        </div>
+      </div>
+    </a>
+
+    <a class="card" href="05-exhibition/" target="_blank" rel="noopener">
+      <div class="card-img prev-5">
+        <span class="card-num">05</span>
+        <span class="card-tag">Lookbook · gallery</span>
+      </div>
+      <div class="card-meta">
+        <h3>Exhibition <em>— the gallery</em></h3>
+        <p>A curated lookbook. Generous whitespace, light italic serif, plate numbers, very quiet. Treats the spring kit as an exhibition in five plates and Osaka as a guest residency. Reference: Aimé Leon Dore, Satisfy lookbooks.</p>
+        <div class="card-foot">
+          <span><b>Type</b> &nbsp;Cormorant Garamond + Manrope</span>
+          <span>Open →</span>
+        </div>
+      </div>
+    </a>
+
+    <div class="prev-bonus">
+      <div>
+        <span class="prev-bonus-tag">For the partnership conversation</span>
+        <h3 style="margin-top:14px;">Each direction includes a <em>distinct Osaka treatment.</em></h3>
+        <p>So your friends can see how a collab/partnership renders five different ways: as an editorial feature (Dispatch), a published field test (Field Manual), a stamped drop card (Signal), a satellite outpost on the map (Atlas), and a guest curator residency (Exhibition).</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- HOW TO READ -->
+<section class="howto" id="howto">
+  <div class="howto-grid">
+    <h2>How to <em>review</em><br>this deck.</h2>
+    <div class="howto-list">
+      <div><b>01</b><span><b>Click each tile</b> &nbsp;Each design is a fully working single-page concept — hero, products, schedule, Osaka section, manifesto, footer. Open them in separate tabs.</span></div>
+      <div><b>02</b><span><b>Pay attention to typography first</b> &nbsp;Type is the strongest signal of a design's POV. Fraunces (Dispatch) feels nothing like Archivo Black (Signal) feels nothing like Cormorant (Exhibition).</span></div>
+      <div><b>03</b><span><b>Then look at the Osaka section</b> &nbsp;Each one renders the partnership differently. That's the canary for whether you'd want this brand to host other collabs the same way.</span></div>
+      <div><b>04</b><span><b>Forget which one looks "newest"</b> &nbsp;Pick the one your friends' actual customer would feel proud to wear out of the house. The kit is unisex — the design should be too.</span></div>
+      <div><b>05</b><span><b>Tell us a winner</b> &nbsp;We'll bring the chosen direction up to a full storefront with real product detail pages, cart, and the rest of the page tree.</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="brief">
+  <div class="foot-grid">
+    <div class="foot-l">
+      <h2>Five takes.<br><em>One pick.</em></h2>
+      <p>Baby Let's Padel · directional review · April 2026</p>
+    </div>
+    <div class="foot-r">
+      Prepared in Houston, TX<br>
+      <a href="https://www.osakaworldusa.com/collections/padel" target="_blank" rel="noopener">Osaka USA reference →</a>
+    </div>
+  </div>
+  <div class="foot-bot">
+    <span>© 2026 — All five directions</span>
+    <span>Static · GitHub Pages · No build step</span>
+    <span>v.01 · 04 / 26 / 2026</span>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,1017 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Baby Let's Padel — Field Manual</title>
+<meta name="description" content="Field Manual: a technical reference for Baby Let's Padel training apparel and Houston open plays.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700;800&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bone:#F8F7F4;
+  --bone-2:#EFEBE0;
+  --grid:#1A1F2A;
+  --grid-soft:rgba(26,31,42,.12);
+  --grid-line:rgba(26,31,42,.32);
+  --ink:#0F1620;
+  --ink-2:#3A4452;
+  --sage:#5b7d6d;
+  --sage-deep:#4a6659;
+  --sage-soft:#A9BCB3;
+  --taupe:#AFA393;
+  --taupe-soft:#E9E2D6;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  background:var(--bone);
+  background-image:
+    linear-gradient(var(--grid-soft) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-soft) 1px, transparent 1px);
+  background-size:32px 32px;
+  background-position:-1px -1px;
+  color:var(--ink);
+  font-family:'JetBrains Mono', ui-monospace, monospace;
+  font-size:13px;
+  line-height:1.55;
+  -webkit-font-smoothing:antialiased;
+}
+img{display:block;max-width:100%;}
+a{color:inherit;text-decoration:none;}
+button{font-family:inherit;}
+
+.wrap{max-width:1440px;margin:0 auto;border-left:1px solid var(--grid);border-right:1px solid var(--grid);background:var(--bone);}
+.row{display:grid;}
+.label{
+  font-size:10.5px;
+  font-weight:500;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  color:var(--ink-2);
+}
+.tag{
+  display:inline-block;
+  font-size:10px;
+  font-weight:600;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  border:1px solid var(--ink);
+  padding:3px 7px;
+  background:var(--bone);
+}
+.sans{font-family:'Manrope', sans-serif;}
+
+/* HEADER */
+header.bar{
+  border-bottom:1px solid var(--grid);
+  display:grid;
+  grid-template-columns:auto 1fr auto;
+  align-items:stretch;
+  position:sticky;top:0;z-index:50;
+  background:var(--bone);
+}
+.bar-id{
+  padding:16px 20px;
+  border-right:1px solid var(--grid);
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+.bar-id-mark{
+  width:28px;height:28px;
+  background:var(--ink);
+  position:relative;
+}
+.bar-id-mark::before{
+  content:"";position:absolute;inset:6px;
+  border:1.5px solid var(--bone);
+  border-radius:50%;
+}
+.bar-id-mark::after{
+  content:"";position:absolute;
+  top:50%;left:6px;right:6px;height:1.5px;
+  background:var(--bone);transform:translateY(-50%);
+}
+.bar-id-text{font-size:11px;letter-spacing:.16em;text-transform:uppercase;font-weight:600;}
+.bar-id-text small{display:block;font-weight:400;color:var(--ink-2);font-size:10px;letter-spacing:.14em;}
+.bar-nav{
+  display:flex;
+  border-right:1px solid var(--grid);
+}
+.bar-nav a{
+  padding:0 22px;
+  display:flex;align-items:center;
+  font-size:11px;
+  font-weight:500;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  border-right:1px solid var(--grid-line);
+  transition:background .15s, color .15s;
+}
+.bar-nav a:last-child{border-right:none;}
+.bar-nav a:hover{background:var(--ink);color:var(--bone);}
+.bar-cta{
+  padding:0 22px;
+  display:flex;align-items:center;gap:10px;
+  font-size:11px;letter-spacing:.16em;text-transform:uppercase;font-weight:600;
+}
+.bar-cta::before{
+  content:"";width:8px;height:8px;
+  background:var(--sage);
+  display:inline-block;
+  animation:blink 2s infinite;
+}
+@keyframes blink{0%,49%{opacity:1;}50%,100%{opacity:.25;}}
+
+/* META BAR */
+.meta-bar{
+  display:grid;
+  grid-template-columns:repeat(5, 1fr);
+  border-bottom:1px solid var(--grid);
+}
+.meta-bar div{
+  padding:10px 20px;
+  border-right:1px solid var(--grid-line);
+  font-size:10.5px;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+}
+.meta-bar div:last-child{border-right:none;}
+.meta-bar b{color:var(--sage-deep);font-weight:600;}
+
+/* HERO — TECHNICAL */
+.hero{
+  display:grid;
+  grid-template-columns:1fr 1.1fr;
+  border-bottom:1px solid var(--grid);
+  min-height:78vh;
+}
+.hero-spec{
+  padding:48px 32px;
+  border-right:1px solid var(--grid);
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  position:relative;
+}
+.hero-spec::before{
+  content:"FILE / 001 — BLP / SPRING / 2026 / V.01";
+  position:absolute;
+  top:48px;right:32px;
+  font-size:10.5px;
+  letter-spacing:.18em;
+  color:var(--ink-2);
+}
+.hero-classifier{
+  font-size:10.5px;
+  letter-spacing:.2em;
+  text-transform:uppercase;
+  font-weight:600;
+  display:inline-flex;
+  gap:8px;align-items:center;
+  margin-bottom:32px;
+}
+.hero-classifier .pip{width:10px;height:10px;background:var(--sage);}
+.hero-h1{
+  font-family:'JetBrains Mono', monospace;
+  font-weight:800;
+  font-size:clamp(48px, 7vw, 92px);
+  line-height:.95;
+  letter-spacing:-.045em;
+  text-transform:uppercase;
+  margin:8px 0 24px;
+}
+.hero-h1 span{color:var(--sage-deep);}
+.hero-deck{
+  font-family:'Manrope', sans-serif;
+  font-weight:400;
+  font-size:18px;
+  line-height:1.55;
+  max-width:42ch;
+  color:var(--ink-2);
+  margin-bottom:32px;
+}
+.hero-readouts{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:0;
+  border-top:1px solid var(--grid);
+  margin-top:auto;
+}
+.readout{
+  padding:16px 0;
+  border-right:1px solid var(--grid-line);
+  padding-right:16px;
+}
+.readout:last-child{border-right:none;padding-left:16px;}
+.readout b{
+  display:block;
+  font-size:10.5px;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  color:var(--ink-2);
+  margin-bottom:8px;
+}
+.readout span{
+  font-family:'JetBrains Mono', monospace;
+  font-weight:700;
+  font-size:32px;
+  letter-spacing:-.02em;
+  color:var(--ink);
+}
+.readout small{display:block;color:var(--sage-deep);font-size:11px;letter-spacing:.12em;margin-top:4px;font-weight:500;}
+
+.hero-diagram{
+  background:var(--bone);
+  position:relative;
+  overflow:hidden;
+}
+.diagram-svg{
+  width:100%;height:100%;
+  position:absolute;inset:0;
+}
+.callout{
+  position:absolute;
+  background:var(--bone);
+  border:1px solid var(--ink);
+  padding:8px 12px;
+  font-size:10.5px;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  font-weight:500;
+  z-index:2;
+}
+.callout b{color:var(--sage-deep);font-weight:700;}
+.cal1{top:18%;left:6%;}
+.cal2{top:48%;right:6%;}
+.cal3{bottom:14%;left:12%;}
+.cal4{top:8%;right:18%;background:var(--sage);color:var(--bone);border-color:var(--sage-deep);}
+
+/* MARQUEE */
+.marquee{
+  border-bottom:1px solid var(--grid);
+  background:var(--ink);
+  color:var(--bone);
+  display:flex;
+  overflow:hidden;
+  padding:14px 0;
+  white-space:nowrap;
+}
+.marquee-track{
+  display:inline-flex;
+  gap:48px;
+  animation:scroll 32s linear infinite;
+  padding-left:48px;
+  flex-shrink:0;
+}
+.marquee span{
+  font-size:13px;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  font-weight:500;
+}
+.marquee span::after{content:" //";color:var(--sage-soft);margin-left:48px;}
+@keyframes scroll{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+
+/* SPEC TABLE — PRODUCTS */
+.specs{border-bottom:1px solid var(--grid);}
+.specs-head{
+  display:grid;
+  grid-template-columns:280px 1fr;
+  border-bottom:1px solid var(--grid);
+}
+.specs-head-l{
+  padding:48px 32px;
+  border-right:1px solid var(--grid);
+  background:var(--ink);
+  color:var(--bone);
+}
+.specs-head-l h2{
+  font-family:'JetBrains Mono', monospace;
+  font-weight:800;
+  font-size:48px;
+  line-height:1;
+  letter-spacing:-.04em;
+  text-transform:uppercase;
+}
+.specs-head-l h2 span{color:var(--sage-soft);}
+.specs-head-l p{
+  font-family:'Manrope', sans-serif;
+  font-size:14px;
+  margin-top:18px;
+  color:#C9C2B5;
+  line-height:1.55;
+}
+.specs-head-r{padding:48px 32px;display:flex;flex-direction:column;justify-content:space-between;}
+.specs-head-r h3{
+  font-family:'Manrope', sans-serif;
+  font-weight:300;
+  font-size:36px;
+  line-height:1.1;
+  letter-spacing:-.015em;
+  margin-bottom:16px;
+}
+.specs-head-r h3 b{font-weight:600;color:var(--sage-deep);}
+.specs-table{
+  width:100%;
+  border-collapse:collapse;
+}
+.specs-table thead{background:var(--ink);color:var(--bone);}
+.specs-table th{
+  text-align:left;
+  padding:12px 16px;
+  font-size:10.5px;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  font-weight:500;
+  border-right:1px solid rgba(248,247,244,.2);
+}
+.specs-table th:last-child{border-right:none;text-align:right;}
+.specs-table td{
+  padding:18px 16px;
+  border-bottom:1px solid var(--grid-line);
+  border-right:1px solid var(--grid-line);
+  vertical-align:top;
+  font-size:13px;
+}
+.specs-table td:last-child{border-right:none;text-align:right;}
+.specs-table tr:hover{background:var(--bone-2);}
+.specs-id{font-weight:600;font-size:11px;letter-spacing:.12em;color:var(--sage-deep);}
+.specs-name{font-family:'Manrope', sans-serif;font-weight:600;font-size:16px;letter-spacing:-.005em;color:var(--ink);}
+.specs-name small{display:block;font-family:'JetBrains Mono', monospace;color:var(--ink-2);font-weight:400;font-size:11px;letter-spacing:.1em;text-transform:uppercase;margin-top:4px;}
+.specs-mat{color:var(--ink-2);max-width:36ch;}
+.specs-sizes{display:flex;gap:6px;flex-wrap:wrap;}
+.specs-sizes span{border:1px solid var(--grid-line);padding:3px 7px;font-size:10px;font-weight:600;letter-spacing:.08em;}
+.specs-price{font-family:'JetBrains Mono', monospace;font-weight:700;font-size:18px;}
+
+/* OSAKA — FIELD TEST */
+.osaka{
+  background:var(--ink);
+  color:var(--bone);
+  border-bottom:1px solid var(--grid);
+}
+.osaka-head{
+  display:grid;
+  grid-template-columns:repeat(4, 1fr);
+  border-bottom:1px solid rgba(248,247,244,.2);
+}
+.osaka-head div{
+  padding:14px 24px;
+  border-right:1px solid rgba(248,247,244,.18);
+  font-size:10.5px;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+}
+.osaka-head div:last-child{border-right:none;}
+.osaka-head b{color:var(--sage-soft);font-weight:600;display:block;margin-bottom:4px;}
+.osaka-body{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+}
+.osaka-l{padding:64px 32px;border-right:1px solid rgba(248,247,244,.18);}
+.osaka-l h2{
+  font-family:'JetBrains Mono', monospace;
+  font-weight:800;
+  font-size:clamp(48px, 6.5vw, 88px);
+  line-height:.95;
+  letter-spacing:-.04em;
+  text-transform:uppercase;
+}
+.osaka-l h2 span{color:var(--sage-soft);}
+.osaka-l p{
+  font-family:'Manrope', sans-serif;
+  font-size:16px;
+  line-height:1.55;
+  color:#D7D3CB;
+  margin-top:24px;
+  max-width:46ch;
+}
+.osaka-rating{
+  margin-top:32px;
+  border:1px solid rgba(248,247,244,.3);
+  padding:20px;
+}
+.osaka-rating-head{
+  display:flex;justify-content:space-between;
+  font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--sage-soft);font-weight:600;
+  margin-bottom:14px;
+}
+.osaka-rating-row{
+  display:grid;
+  grid-template-columns:140px 1fr 60px;
+  align-items:center;
+  gap:16px;
+  padding:8px 0;
+  border-top:1px dashed rgba(248,247,244,.15);
+  font-size:11.5px;letter-spacing:.06em;
+}
+.osaka-rating-row:first-of-type{border-top:none;}
+.bar{height:8px;background:rgba(248,247,244,.15);position:relative;}
+.bar i{display:block;height:100%;background:var(--sage-soft);}
+.osaka-rating-row span:last-child{text-align:right;font-weight:600;}
+.osaka-cta{
+  display:inline-flex;
+  align-items:center;gap:14px;
+  margin-top:32px;
+  padding:16px 24px;
+  background:var(--sage);
+  color:var(--bone);
+  font-size:11px;
+  letter-spacing:.2em;
+  text-transform:uppercase;
+  font-weight:600;
+  border:1px solid var(--sage-deep);
+  transition:background .2s;
+}
+.osaka-cta:hover{background:var(--sage-deep);}
+.osaka-cta::after{content:"→";font-family:'Manrope';font-size:14px;}
+
+.osaka-r{
+  padding:64px 32px;
+  background:url('https://images.pexels.com/photos/35248501/pexels-photo-35248501.jpeg') center/cover;
+  position:relative;
+  min-height:600px;
+}
+.osaka-r::before{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg, rgba(15,22,32,.4), rgba(15,22,32,.85));
+}
+.osaka-r-content{position:relative;z-index:2;height:100%;display:flex;flex-direction:column;justify-content:space-between;min-height:472px;}
+.osaka-r-tag{
+  align-self:flex-start;
+  padding:8px 12px;
+  background:var(--bone);
+  color:var(--ink);
+  font-size:10.5px;
+  letter-spacing:.2em;
+  text-transform:uppercase;
+  font-weight:600;
+}
+.osaka-r-card{
+  background:var(--bone);
+  color:var(--ink);
+  padding:24px;
+  display:grid;
+  grid-template-columns:repeat(2, 1fr);
+  gap:18px;
+  border:1px solid var(--ink);
+}
+.osaka-r-card h4{
+  grid-column:1/-1;
+  font-family:'Manrope';
+  font-weight:700;
+  font-size:18px;
+  letter-spacing:-.005em;
+  border-bottom:1px solid var(--grid-line);
+  padding-bottom:10px;
+}
+.osaka-r-card div b{display:block;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--sage-deep);font-weight:600;margin-bottom:6px;}
+.osaka-r-card div span{font-size:13px;}
+
+/* SCHEDULE — TIMETABLE */
+.schedule{
+  border-bottom:1px solid var(--grid);
+  background:var(--bone-2);
+}
+.sch-head{
+  display:grid;
+  grid-template-columns:280px 1fr 280px;
+  border-bottom:1px solid var(--grid);
+  background:var(--bone);
+}
+.sch-head > div{padding:32px;border-right:1px solid var(--grid);}
+.sch-head > div:last-child{border-right:none;}
+.sch-head h2{
+  font-family:'JetBrains Mono', monospace;
+  font-weight:800;
+  font-size:48px;
+  line-height:.95;
+  letter-spacing:-.04em;
+  text-transform:uppercase;
+}
+.sch-head h2 span{color:var(--sage-deep);}
+.sch-head .legend{display:flex;flex-direction:column;gap:10px;}
+.sch-head .legend div{display:flex;gap:10px;align-items:center;font-size:11px;letter-spacing:.14em;text-transform:uppercase;}
+.sch-head .legend i{display:block;width:14px;height:14px;background:var(--sage);}
+.sch-head .legend i.event{background:var(--ink);}
+
+.sch-grid{
+  display:grid;
+  grid-template-columns:repeat(7, 1fr);
+  background:var(--bone);
+  border-bottom:1px solid var(--grid);
+}
+.sch-day{
+  padding:14px 12px;
+  border-right:1px solid var(--grid-line);
+  font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;
+  font-weight:600;
+}
+.sch-day:last-child{border-right:none;}
+.sch-day b{color:var(--sage-deep);}
+
+.sch-row{
+  display:grid;
+  grid-template-columns:120px 60px 1fr 200px 100px 80px;
+  align-items:center;
+  padding:18px 24px;
+  border-bottom:1px solid var(--grid-line);
+  gap:24px;
+  background:var(--bone);
+  transition:background .15s;
+}
+.sch-row:hover{background:var(--bone-2);}
+.sch-d{
+  font-family:'JetBrains Mono', monospace;
+  font-size:11px;letter-spacing:.12em;
+  font-weight:500;
+  color:var(--ink-2);
+}
+.sch-d b{display:block;font-size:24px;font-weight:700;color:var(--ink);letter-spacing:-.01em;text-transform:uppercase;}
+.sch-type{
+  width:14px;height:14px;
+  background:var(--sage);
+}
+.sch-type.event{background:var(--ink);}
+.sch-name{
+  font-family:'Manrope';font-weight:600;font-size:16px;letter-spacing:-.005em;
+}
+.sch-name small{display:block;font-family:'JetBrains Mono';font-weight:400;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2);margin-top:4px;}
+.sch-loc{font-size:13px;color:var(--ink-2);}
+.sch-loc small{display:block;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--sage-deep);font-weight:600;margin-top:2px;}
+.sch-time{font-family:'JetBrains Mono';font-weight:600;font-size:13px;}
+.sch-rsvp{
+  text-align:right;
+  font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;font-weight:600;
+  color:var(--ink);
+  padding:8px 12px;
+  border:1px solid var(--ink);
+  cursor:pointer;
+  background:var(--bone);
+}
+.sch-rsvp:hover{background:var(--ink);color:var(--bone);}
+
+/* MANIFESTO / FOOTER */
+.manifesto{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  border-bottom:1px solid var(--grid);
+}
+.man-l{padding:64px 32px;border-right:1px solid var(--grid);}
+.man-l h2{
+  font-family:'Manrope';
+  font-weight:300;
+  font-size:clamp(40px, 5vw, 64px);
+  line-height:1.05;
+  letter-spacing:-.02em;
+  margin-bottom:32px;
+}
+.man-l h2 b{font-weight:700;color:var(--sage-deep);}
+.man-l p{
+  font-family:'Manrope';
+  font-size:16px;
+  line-height:1.55;
+  color:var(--ink-2);
+  max-width:48ch;
+  margin-bottom:14px;
+}
+.man-r{padding:64px 32px;}
+.man-r-list{display:grid;gap:0;}
+.man-r-list div{
+  display:grid;
+  grid-template-columns:48px 1fr;
+  border-bottom:1px solid var(--grid-line);
+  padding:18px 0;
+  gap:20px;
+  font-family:'Manrope';
+  font-size:14px;
+  line-height:1.5;
+}
+.man-r-list div:first-child{border-top:1px solid var(--grid);}
+.man-r-list b{
+  font-family:'JetBrains Mono';
+  font-weight:700;
+  font-size:14px;
+  letter-spacing:.05em;
+  color:var(--sage-deep);
+}
+
+footer.foot{
+  background:var(--ink);
+  color:var(--bone);
+}
+.foot-grid{
+  display:grid;
+  grid-template-columns:1.6fr 1fr 1fr 1fr;
+  border-bottom:1px solid rgba(248,247,244,.18);
+}
+.foot-grid > div{padding:48px 32px;border-right:1px solid rgba(248,247,244,.18);}
+.foot-grid > div:last-child{border-right:none;}
+.foot-l h2{
+  font-family:'JetBrains Mono';
+  font-weight:800;
+  font-size:48px;
+  line-height:.95;
+  letter-spacing:-.04em;
+  text-transform:uppercase;
+}
+.foot-l h2 span{color:var(--sage-soft);}
+.foot-l p{margin-top:18px;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--sage-soft);}
+.foot-grid h4{font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--sage-soft);font-weight:600;margin-bottom:18px;}
+.foot-grid a, .foot-grid li{display:block;font-family:'Manrope';font-size:14px;color:#C9C2B5;margin-bottom:8px;list-style:none;}
+.foot-grid a:hover{color:var(--bone);}
+.foot-news input{background:transparent;border:none;border-bottom:1px solid rgba(248,247,244,.4);padding:10px 0;width:100%;font-family:'Manrope';color:var(--bone);outline:none;font-size:14px;}
+.foot-news button{margin-top:14px;background:var(--sage);color:var(--bone);border:none;padding:10px 18px;font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:600;cursor:pointer;}
+.foot-bottom{
+  display:grid;
+  grid-template-columns:repeat(4, 1fr);
+}
+.foot-bottom div{
+  padding:14px 32px;
+  border-right:1px solid rgba(248,247,244,.18);
+  font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;
+  color:rgba(248,247,244,.55);
+}
+.foot-bottom div:last-child{border-right:none;}
+
+/* RESPONSIVE */
+@media (max-width:1024px){
+  .hero, .specs-head, .osaka-body, .sch-head, .manifesto, .foot-grid, .foot-bottom{grid-template-columns:1fr;}
+  .specs-head-l, .specs-head-r, .osaka-l, .man-l, .foot-grid > div, .sch-head > div{border-right:none;border-bottom:1px solid var(--grid);}
+  .hero-spec{border-right:none;border-bottom:1px solid var(--grid);}
+  .meta-bar{grid-template-columns:repeat(2, 1fr);}
+  .meta-bar div{border-bottom:1px solid var(--grid-line);}
+  .sch-grid{display:none;}
+  .sch-row{grid-template-columns:80px 14px 1fr 80px;gap:10px;padding:14px 16px;}
+  .sch-loc, .sch-rsvp{grid-column:1/-1;text-align:left;}
+  .bar-nav a:nth-child(n+4){display:none;}
+}
+@media (max-width:560px){
+  .bar-nav{display:none;}
+  .bar-cta{padding:0 14px;font-size:10px;}
+  .meta-bar{grid-template-columns:1fr;}
+  .specs-head-l, .specs-head-r, .osaka-l, .osaka-r, .man-l, .man-r, .hero-spec, .hero-diagram{padding:32px 18px;}
+  .specs-table th, .specs-table td{padding:10px 8px;font-size:11px;}
+  .specs-name{font-size:13px;}
+  .hero-h1{font-size:42px;}
+  .foot-bottom{grid-template-columns:1fr 1fr;}
+}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+<header class="bar">
+  <div class="bar-id">
+    <div class="bar-id-mark"></div>
+    <div class="bar-id-text">Baby Let's Padel<small>Field Manual / V.01</small></div>
+  </div>
+  <nav class="bar-nav">
+    <a href="#specs">Specs</a>
+    <a href="#schedule">Schedule</a>
+    <a href="#osaka">Osaka</a>
+    <a href="#manifesto">Manifesto</a>
+    <a href="#">Crew</a>
+  </nav>
+  <div class="bar-cta">Open Plays Loaded</div>
+</header>
+
+<div class="meta-bar">
+  <div><b>Doc.</b> &nbsp;BLP-FM-001</div>
+  <div><b>Loc.</b> &nbsp;29.7604° N · 95.3698° W</div>
+  <div><b>Season</b> &nbsp;Spring '26</div>
+  <div><b>Issue</b> &nbsp;v1.0 — 04/26</div>
+  <div><b>Status</b> &nbsp;Active · Updated weekly</div>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-spec">
+    <div>
+      <div class="hero-classifier"><span class="pip"></span> Form / 001 — Brand · Ident · Ops</div>
+      <h1 class="hero-h1">Field<br>Manual /<br><span>Padel.</span></h1>
+      <p class="hero-deck">A technical reference for training apparel, courts, and crews built around padel. Houston operations. National travel. Read once. Memorize the schedule.</p>
+    </div>
+    <div class="hero-readouts">
+      <div class="readout"><b>Open Plays · 2026</b><span>16</span><small>// thru May</small></div>
+      <div class="readout"><b>Active SKUs</b><span>06</span><small>// XS — XL</small></div>
+      <div class="readout"><b>Court Pins</b><span>04</span><small>// Houston, TX</small></div>
+      <div class="readout"><b>Partner Frames</b><span>02</span><small>// Osaka USA</small></div>
+    </div>
+  </div>
+  <div class="hero-diagram">
+    <svg class="diagram-svg" viewBox="0 0 600 700" preserveAspectRatio="xMidYMid meet">
+      <!-- court outline -->
+      <rect x="100" y="120" width="400" height="460" fill="none" stroke="#1A1F2A" stroke-width="2"/>
+      <rect x="100" y="120" width="400" height="460" fill="none" stroke="#5b7d6d" stroke-width="1" stroke-dasharray="2 4" transform="translate(5 5)"/>
+      <line x1="100" y1="350" x2="500" y2="350" stroke="#1A1F2A" stroke-width="1.5"/>
+      <line x1="100" y1="220" x2="500" y2="220" stroke="#1A1F2A" stroke-width="1" stroke-dasharray="4 4"/>
+      <line x1="100" y1="480" x2="500" y2="480" stroke="#1A1F2A" stroke-width="1" stroke-dasharray="4 4"/>
+      <line x1="300" y1="220" x2="300" y2="480" stroke="#1A1F2A" stroke-width="1" stroke-dasharray="4 4"/>
+      <!-- net -->
+      <rect x="100" y="346" width="400" height="8" fill="#1A1F2A"/>
+      <!-- service zones -->
+      <rect x="200" y="220" width="200" height="130" fill="#5b7d6d" opacity=".08"/>
+      <rect x="200" y="350" width="200" height="130" fill="#5b7d6d" opacity=".08"/>
+      <!-- ball trajectory -->
+      <path d="M 160 540 Q 280 280 460 480" fill="none" stroke="#5b7d6d" stroke-width="1.5" stroke-dasharray="3 3"/>
+      <circle cx="160" cy="540" r="5" fill="#1A1F2A"/>
+      <circle cx="460" cy="480" r="5" fill="#5b7d6d"/>
+      <!-- crosshair -->
+      <line x1="0" y1="350" x2="100" y2="350" stroke="#1A1F2A" stroke-width=".5"/>
+      <line x1="500" y1="350" x2="600" y2="350" stroke="#1A1F2A" stroke-width=".5"/>
+      <line x1="300" y1="0" x2="300" y2="120" stroke="#1A1F2A" stroke-width=".5"/>
+      <line x1="300" y1="580" x2="300" y2="700" stroke="#1A1F2A" stroke-width=".5"/>
+      <!-- corner ticks -->
+      <g stroke="#1A1F2A" stroke-width="1.5">
+        <path d="M 80 100 L 120 100 L 120 140"/>
+        <path d="M 480 100 L 520 100 L 520 140"/>
+        <path d="M 80 600 L 120 600 L 120 560"/>
+        <path d="M 480 600 L 520 600 L 520 560"/>
+      </g>
+      <!-- coordinates -->
+      <text x="100" y="92" font-family="JetBrains Mono" font-size="10" fill="#3A4452" letter-spacing="2">A1</text>
+      <text x="495" y="92" font-family="JetBrains Mono" font-size="10" fill="#3A4452" letter-spacing="2">D1</text>
+      <text x="100" y="615" font-family="JetBrains Mono" font-size="10" fill="#3A4452" letter-spacing="2">A4</text>
+      <text x="495" y="615" font-family="JetBrains Mono" font-size="10" fill="#3A4452" letter-spacing="2">D4</text>
+      <text x="295" y="358" font-family="JetBrains Mono" font-size="10" fill="#F8F7F4" letter-spacing="2">NET</text>
+      <text x="55" y="355" font-family="JetBrains Mono" font-size="9" fill="#3A4452" letter-spacing="1.5" text-anchor="middle">0.0M</text>
+    </svg>
+
+    <div class="callout cal1">Fig. 01 / <b>Court A4 — Drop &amp; Lob</b></div>
+    <div class="callout cal4">SAGE = Service Zone</div>
+    <div class="callout cal2">Fig. 02 / <b>Trajectory: Bandeja</b></div>
+    <div class="callout cal3">Fig. 03 / <b>Net height: 0.92m</b></div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee">
+  <div class="marquee-track">
+    <span>Baby Let's Padel</span>
+    <span>RSC Katy · Wed 4/22</span>
+    <span>RSC Willowbrook · Tue 4/28</span>
+    <span>Neon Padel Party · Sat 5/2</span>
+    <span>TEMPO · Mon 5/4</span>
+    <span>Open plays every week</span>
+    <span>Osaka demos courtside</span>
+    <span>Houston → Everywhere</span>
+    <span>Baby Let's Padel</span>
+    <span>RSC Katy · Wed 4/22</span>
+    <span>RSC Willowbrook · Tue 4/28</span>
+    <span>Neon Padel Party · Sat 5/2</span>
+    <span>TEMPO · Mon 5/4</span>
+    <span>Open plays every week</span>
+    <span>Osaka demos courtside</span>
+    <span>Houston → Everywhere</span>
+  </div>
+</div>
+
+<!-- SPECS / PRODUCTS -->
+<section class="specs" id="specs">
+  <div class="specs-head">
+    <div class="specs-head-l">
+      <span class="label" style="color:var(--sage-soft);">02 / Apparel · Spec Sheet</span>
+      <h2 style="margin-top:18px;">SS26<br>Spec.<br><span>Index.</span></h2>
+      <p>Six pieces. All unisex. All sized XS–XL (or one-size where noted). Engineered for movement on hard court — not for the post-match group photo.</p>
+    </div>
+    <div class="specs-head-r">
+      <h3>The kit. <b>Stripped to specs.</b></h3>
+      <p style="font-family:'Manrope';font-size:14px;color:var(--ink-2);line-height:1.55;">Read the table like a parts list. Materials, sizes, weight class, and what it does on the court. We update the index every season. Discontinued IDs migrate to the archive.</p>
+    </div>
+  </div>
+
+  <table class="specs-table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Item · Colorway</th>
+        <th>Construction</th>
+        <th>Sizes</th>
+        <th>Class</th>
+        <th>USD</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="specs-id">BLP-01-EU</td>
+        <td><div class="specs-name">Heavyweight Crewneck<small>Eucalyptus</small></div></td>
+        <td class="specs-mat">80% ringspun cotton / 20% recycled polyester. Garment-dyed. Set-in sleeve. Bonded hem.</td>
+        <td><div class="specs-sizes"><span>XS</span><span>S</span><span>M</span><span>L</span><span>XL</span></div></td>
+        <td>Heavy<br><small style="color:var(--sage-deep);font-size:10.5px;letter-spacing:.14em;">350 GSM</small></td>
+        <td class="specs-price">$53</td>
+      </tr>
+      <tr>
+        <td class="specs-id">BLP-02-OW</td>
+        <td><div class="specs-name">Lightweight Crewneck<small>Off-White</small></div></td>
+        <td class="specs-mat">100% combed cotton. Pre-shrunk. Soft-hand finish. Reinforced collar.</td>
+        <td><div class="specs-sizes"><span>XS</span><span>S</span><span>M</span><span>L</span><span>XL</span></div></td>
+        <td>Light<br><small style="color:var(--sage-deep);font-size:10.5px;letter-spacing:.14em;">220 GSM</small></td>
+        <td class="specs-price">$41</td>
+      </tr>
+      <tr>
+        <td class="specs-id">BLP-03-DN</td>
+        <td><div class="specs-name">Heavyweight Crewneck<small>Deep Navy</small></div></td>
+        <td class="specs-mat">80% ringspun cotton / 20% recycled polyester. Garment-dyed. Set-in sleeve. Bonded hem.</td>
+        <td><div class="specs-sizes"><span>XS</span><span>S</span><span>M</span><span>L</span><span>XL</span></div></td>
+        <td>Heavy<br><small style="color:var(--sage-deep);font-size:10.5px;letter-spacing:.14em;">350 GSM</small></td>
+        <td class="specs-price">$53</td>
+      </tr>
+      <tr>
+        <td class="specs-id">BLP-04-LS</td>
+        <td><div class="specs-name">Long Sleeve Training Tee<small>Off-White</small></div></td>
+        <td class="specs-mat">92% cotton / 8% elastane. Moisture-wicking knit. Flatlock seams.</td>
+        <td><div class="specs-sizes"><span>XS</span><span>S</span><span>M</span><span>L</span><span>XL</span></div></td>
+        <td>Train<br><small style="color:var(--sage-deep);font-size:10.5px;letter-spacing:.14em;">160 GSM</small></td>
+        <td class="specs-price">$31</td>
+      </tr>
+      <tr>
+        <td class="specs-id">BLP-05-CP</td>
+        <td><div class="specs-name">Six-Panel Cap<small>Taupe / Sage / Navy</small></div></td>
+        <td class="specs-mat">100% washed cotton twill. Adjustable buckle strap. Curved brim.</td>
+        <td><div class="specs-sizes"><span>One Size</span></div></td>
+        <td>Headwear<br><small style="color:var(--sage-deep);font-size:10.5px;letter-spacing:.14em;">3 colorways</small></td>
+        <td class="specs-price">$27</td>
+      </tr>
+      <tr>
+        <td class="specs-id">BLP-06-VS</td>
+        <td><div class="specs-name">Dri-Fit Visor<small>Off-White</small></div></td>
+        <td class="specs-mat">92% polyester / 8% spandex. Quick-dry. Sweat-wicking band.</td>
+        <td><div class="specs-sizes"><span>One Size</span></div></td>
+        <td>Headwear<br><small style="color:var(--sage-deep);font-size:10.5px;letter-spacing:.14em;">UPF 30+</small></td>
+        <td class="specs-price">$22</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- OSAKA / FIELD TEST REPORT -->
+<section class="osaka" id="osaka">
+  <div class="osaka-head">
+    <div><b>Form 03</b>Field Test — Osaka × BLP</div>
+    <div><b>Test Site</b>RSC Katy · Court A4</div>
+    <div><b>Conditions</b>72°F · Indoor · Hard</div>
+    <div><b>Result</b>Recommended.</div>
+  </div>
+  <div class="osaka-body">
+    <div class="osaka-l">
+      <span class="label" style="color:var(--sage-soft);">Performance Partnership</span>
+      <h2 style="margin-top:18px;">Osaka<br><span>USA × BLP.</span></h2>
+      <p>Osaka builds rackets and apparel out of Amsterdam. Carbon-fiber frames, EVA cores, technical kit. We carry a curated edit at every Houston open play — demo before you buy.</p>
+      <p>The numbers below are from our own field tests across 14 sessions in March. Frames evaluated: Vision Pro and Vision Tour.</p>
+
+      <div class="osaka-rating">
+        <div class="osaka-rating-head"><span>Field Test · 14 sessions</span><span>Score / 10</span></div>
+        <div class="osaka-rating-row"><span>Power transfer</span><span class="bar"><i style="width:88%;"></i></span><span>8.8</span></div>
+        <div class="osaka-rating-row"><span>Control / spin</span><span class="bar"><i style="width:92%;"></i></span><span>9.2</span></div>
+        <div class="osaka-rating-row"><span>Comfort (long sets)</span><span class="bar"><i style="width:84%;"></i></span><span>8.4</span></div>
+        <div class="osaka-rating-row"><span>Build / durability</span><span class="bar"><i style="width:90%;"></i></span><span>9.0</span></div>
+        <div class="osaka-rating-row"><span>Looks on court</span><span class="bar"><i style="width:96%;"></i></span><span>9.6</span></div>
+      </div>
+
+      <a href="https://www.osakaworldusa.com/collections/padel" target="_blank" rel="noopener" class="osaka-cta">Shop Osaka × BLP</a>
+    </div>
+
+    <div class="osaka-r">
+      <div class="osaka-r-content">
+        <span class="osaka-r-tag">Form 03 — Demo Notes</span>
+        <div class="osaka-r-card">
+          <h4>Vision Pro · Spec Card</h4>
+          <div><b>Frame</b><span>Carbon 18K</span></div>
+          <div><b>Core</b><span>EVA Soft</span></div>
+          <div><b>Weight</b><span>360–375g</span></div>
+          <div><b>Balance</b><span>Mid / High</span></div>
+          <div><b>Shape</b><span>Diamond</span></div>
+          <div><b>For</b><span>Aggressive baseliners</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SCHEDULE -->
+<section class="schedule" id="schedule">
+  <div class="sch-head">
+    <div>
+      <span class="label" style="color:var(--sage-deep);">04 / Operations · Open Plays</span>
+      <h2 style="margin-top:14px;">Schedule.</h2>
+    </div>
+    <div>
+      <p style="font-family:'Manrope';font-size:16px;line-height:1.55;color:var(--ink-2);max-width:48ch;">All open plays through May 2026. Mixed levels. Rackets available courtside (Osaka demos). RSVP required — drop us a line on Instagram or via the form.</p>
+    </div>
+    <div>
+      <div class="legend">
+        <div><i></i> &nbsp;Open Play</div>
+        <div><i class="event"></i> &nbsp;Event / Special</div>
+        <div style="margin-top:8px;color:var(--ink-2);">Capacity shown in last col</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sch-grid">
+    <div class="sch-day">Mon</div>
+    <div class="sch-day"><b>Tue · 4/28</b></div>
+    <div class="sch-day"><b>Wed · 4/22</b></div>
+    <div class="sch-day">Thu</div>
+    <div class="sch-day">Fri</div>
+    <div class="sch-day"><b>Sat · 5/2</b></div>
+    <div class="sch-day">Sun</div>
+  </div>
+
+  <div class="sch-row">
+    <div class="sch-d">Wed<b>04 / 22</b></div>
+    <div class="sch-type"></div>
+    <div class="sch-name">Open Play · RSC Katy<small>Mixed Levels — Rackets Provided</small></div>
+    <div class="sch-loc">RSC Katy<small>Katy · Houston</small></div>
+    <div class="sch-time">7:00 PM</div>
+    <div class="sch-rsvp">RSVP / 14</div>
+  </div>
+  <div class="sch-row">
+    <div class="sch-d">Tue<b>04 / 28</b></div>
+    <div class="sch-type"></div>
+    <div class="sch-name">Open Play · RSC Willowbrook<small>Mixed Levels — Rackets Provided</small></div>
+    <div class="sch-loc">RSC Willowbrook<small>Willowbrook · Houston</small></div>
+    <div class="sch-time">7:00 — 8:30 PM</div>
+    <div class="sch-rsvp">RSVP / 16</div>
+  </div>
+  <div class="sch-row">
+    <div class="sch-d">Sat<b>05 / 02</b></div>
+    <div class="sch-type event"></div>
+    <div class="sch-name">Neon Padel Party<small>with Smash 305 — Cube Padel</small></div>
+    <div class="sch-loc">Cube Padel<small>Houston, TX</small></div>
+    <div class="sch-time">8:00 PM</div>
+    <div class="sch-rsvp">RSVP / 22</div>
+  </div>
+  <div class="sch-row">
+    <div class="sch-d">Mon<b>05 / 04</b></div>
+    <div class="sch-type"></div>
+    <div class="sch-name">Open Play · TEMPO<small>Mixed Levels — Rackets Provided</small></div>
+    <div class="sch-loc">TEMPO Padel<small>Houston, TX</small></div>
+    <div class="sch-time">7:00 PM</div>
+    <div class="sch-rsvp">RSVP / 18</div>
+  </div>
+</section>
+
+<!-- MANIFESTO -->
+<section class="manifesto" id="manifesto">
+  <div class="man-l">
+    <span class="label" style="color:var(--sage-deep);">05 / Operating Principles</span>
+    <h2 style="margin-top:14px;">House <b>rules</b> for the courts we play on.</h2>
+    <p>Baby Let's Padel is community-first. The kit funds the courts. The courts feed the crew. Every open play we host runs on the same playbook, regardless of city.</p>
+    <p>Mixed levels. Rotating doubles. Rackets and balls on us. New players welcome — we'll find you a fourth before warmup ends.</p>
+  </div>
+  <div class="man-r">
+    <div class="man-r-list">
+      <div><b>R.01</b><span>Show up. Hit balls. Stay for the second game.</span></div>
+      <div><b>R.02</b><span>Mixed levels welcome. We will find you a fourth.</span></div>
+      <div><b>R.03</b><span>The crew is the brand. The kit is the by-product.</span></div>
+      <div><b>R.04</b><span>Houston is home base. Everywhere else is a road game.</span></div>
+      <div><b>R.05</b><span>Bring a friend who's never played. We'll teach them.</span></div>
+      <div><b>R.06</b><span>Argue line calls less. Take the next point harder.</span></div>
+      <div><b>R.07</b><span>Demo Osaka rackets courtside. Tuesdays at RSC Katy.</span></div>
+    </div>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="foot-grid">
+    <div class="foot-l">
+      <h2>Baby Let's<br><span>// Padel.</span></h2>
+      <p>Houston, TX · est. 2025</p>
+    </div>
+    <div>
+      <h4>Shop</h4>
+      <a href="#">Crewnecks</a>
+      <a href="#">Tops</a>
+      <a href="#">Headwear</a>
+      <a href="#">Osaka Edit</a>
+    </div>
+    <div>
+      <h4>Crew</h4>
+      <a href="#">Schedule</a>
+      <a href="#">Manifesto</a>
+      <a href="#">Contact</a>
+      <a href="#">Travel</a>
+    </div>
+    <div class="foot-news">
+      <h4>Field Notes</h4>
+      <p style="font-family:'Manrope';font-size:13px;color:#C9C2B5;margin-bottom:8px;">Monthly. Schedule updates and gear notes.</p>
+      <input type="email" placeholder="email@address">
+      <button>Subscribe</button>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    <div>© 2026 Baby Let's Padel</div>
+    <div>BLP-FM-001 · v1.0</div>
+    <div>29.7604° N · 95.3698° W</div>
+    <div><a href="../" style="color:var(--sage-soft);">← All Designs</a></div>
+  </div>
+</footer>
+
+</div>
+</body>
+</html>

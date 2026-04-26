@@ -1,0 +1,1053 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Baby Let's Padel — Atlas of Houston Padel</title>
+<meta name="description" content="An atlas of Houston padel. Courts, open plays, road trips, and a curated edit with Osaka USA.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bone:#F4EFE2;
+  --bone-2:#EBE3CE;
+  --paper:#FAF6EB;
+  --ink:#1A2330;
+  --ink-2:#2D3A4E;
+  --ink-3:#5A6577;
+  --sage:#5b7d6d;
+  --sage-deep:#4a6659;
+  --taupe:#AFA393;
+  --pin:#B8472D;
+  --pin-2:#D7553A;
+  --rule:#1A2330;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:'DM Sans', system-ui, sans-serif;
+  font-size:15px;
+  line-height:1.55;
+  -webkit-font-smoothing:antialiased;
+}
+img{display:block;max-width:100%;}
+a{color:inherit;text-decoration:none;}
+
+.serif{font-family:'DM Serif Display', serif;}
+.mono{font-family:'DM Mono', monospace;letter-spacing:.06em;}
+.eyebrow{font-family:'DM Mono', monospace;font-size:11px;letter-spacing:.2em;text-transform:uppercase;font-weight:500;}
+
+/* PAPER GRID BG */
+.atlas-bg{
+  position:relative;
+}
+.atlas-bg::before{
+  content:"";
+  position:absolute;inset:0;
+  background-image:
+    radial-gradient(circle at 24px 24px, rgba(26,35,48,.10) 1.4px, transparent 1.4px);
+  background-size:48px 48px;
+  pointer-events:none;
+  opacity:.7;
+}
+
+/* HEADER */
+.bar{
+  border-bottom:1px solid var(--rule);
+  background:var(--paper);
+  padding:14px 32px;
+  display:grid;
+  grid-template-columns:auto 1fr auto;
+  align-items:center;
+  gap:32px;
+  position:sticky;top:0;z-index:50;
+}
+.bar-l{display:flex;align-items:center;gap:14px;}
+.compass{
+  width:32px;height:32px;
+  border:1.5px solid var(--ink);
+  border-radius:50%;
+  position:relative;
+}
+.compass::before, .compass::after{
+  content:"";position:absolute;
+  background:var(--ink);
+}
+.compass::before{
+  top:50%;left:3px;right:3px;height:1px;transform:translateY(-50%);
+}
+.compass::after{
+  left:50%;top:3px;bottom:3px;width:1px;transform:translateX(-50%);
+}
+.compass span{
+  position:absolute;
+  font-family:'DM Mono', monospace;
+  font-size:8px;
+  font-weight:600;
+  color:var(--pin);
+  top:1px;left:50%;transform:translateX(-50%);
+}
+.bar-title{
+  font-family:'DM Serif Display', serif;
+  font-size:22px;
+  letter-spacing:-.005em;
+}
+.bar-title small{font-family:'DM Mono';font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-3);display:block;font-weight:500;}
+.bar-nav{display:flex;justify-content:center;gap:32px;}
+.bar-nav a{
+  font-family:'DM Mono', monospace;
+  font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:500;
+}
+.bar-nav a:hover{color:var(--pin);}
+.bar-r{display:flex;gap:18px;align-items:center;}
+.bar-r a{font-family:'DM Mono';font-size:11px;letter-spacing:.18em;text-transform:uppercase;}
+.bar-r .pin-link{color:var(--pin);}
+
+/* COORDS BAR */
+.coords{
+  border-bottom:1px solid var(--rule);
+  padding:8px 32px;
+  display:flex;
+  justify-content:space-between;
+  font-family:'DM Mono', monospace;
+  font-size:11px;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--ink-2);
+  background:var(--paper);
+}
+.coords span b{color:var(--pin);font-weight:500;}
+
+/* HERO MAP */
+.hero{
+  padding:64px 32px 32px;
+  border-bottom:1px solid var(--rule);
+  background:var(--paper);
+  position:relative;
+  overflow:hidden;
+}
+.hero-grid{
+  display:grid;
+  grid-template-columns:1.1fr 1fr;
+  gap:48px;
+}
+.hero-l{padding-right:24px;}
+.hero-l .eyebrow{color:var(--pin);}
+.hero-l .eyebrow::before{content:"●";margin-right:10px;color:var(--pin);}
+.hero-h1{
+  font-family:'DM Serif Display', serif;
+  font-size:clamp(56px, 8.5vw, 124px);
+  line-height:.95;
+  letter-spacing:-.02em;
+  margin-top:24px;
+}
+.hero-h1 em{font-style:italic;color:var(--sage-deep);}
+.hero-deck{
+  font-size:18px;
+  line-height:1.6;
+  margin-top:24px;
+  max-width:48ch;
+  color:var(--ink-2);
+}
+.hero-coords{
+  margin-top:32px;
+  display:grid;
+  grid-template-columns:1fr 1fr 1fr;
+  gap:0;
+  border-top:1px solid var(--rule);
+}
+.hero-coords div{
+  border-right:1px solid var(--rule);
+  padding:18px 16px 0 0;
+}
+.hero-coords div:last-child{border-right:none;}
+.hero-coords div b{font-family:'DM Mono';font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-3);font-weight:500;display:block;margin-bottom:8px;}
+.hero-coords div span{font-family:'DM Serif Display';font-size:24px;line-height:1.1;letter-spacing:-.01em;}
+
+.hero-r{
+  position:relative;
+  background:var(--bone);
+  border:1px solid var(--rule);
+  min-height:560px;
+  border-radius:0;
+  overflow:hidden;
+}
+.hero-r::before{
+  content:"";
+  position:absolute;inset:0;
+  background-image:
+    linear-gradient(rgba(26,35,48,.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(26,35,48,.06) 1px, transparent 1px);
+  background-size:24px 24px;
+}
+.map-svg{
+  position:absolute;inset:0;
+  width:100%;height:100%;
+}
+.map-label{
+  position:absolute;
+  background:var(--paper);
+  border:1px solid var(--ink);
+  padding:6px 10px;
+  font-family:'DM Mono', monospace;
+  font-size:10.5px;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  font-weight:500;
+  z-index:2;
+  white-space:nowrap;
+}
+.map-label.pin{
+  background:var(--pin);
+  color:var(--paper);
+  border-color:var(--pin);
+  font-weight:600;
+}
+.map-label.event{
+  background:var(--ink);
+  color:var(--paper);
+  border-color:var(--ink);
+}
+.m-katy{top:34%;left:14%;}
+.m-will{top:18%;left:38%;}
+.m-cube{top:54%;left:42%;}
+.m-tempo{top:68%;left:18%;}
+.m-osaka{top:8%;right:6%;}
+.m-here{bottom:8%;right:6%;}
+.map-legend{
+  position:absolute;
+  bottom:16px;left:16px;
+  background:var(--paper);
+  border:1px solid var(--ink);
+  padding:14px;
+  z-index:3;
+  display:grid;
+  gap:8px;
+  font-family:'DM Mono', monospace;
+  font-size:10.5px;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+}
+.map-legend b{font-weight:500;color:var(--ink-3);}
+.map-legend div{display:flex;align-items:center;gap:10px;}
+.map-legend i{display:block;width:12px;height:12px;}
+.map-legend i.l-court{background:var(--pin);}
+.map-legend i.l-event{background:var(--ink);}
+.map-legend i.l-osaka{background:var(--sage);}
+
+/* MARQUEE LINE */
+.line-marq{
+  background:var(--ink);
+  color:var(--paper);
+  padding:14px 0;
+  display:flex;
+  overflow:hidden;
+  white-space:nowrap;
+  border-bottom:1px solid var(--rule);
+}
+.line-track{
+  display:inline-flex;
+  gap:48px;
+  animation:scroll 32s linear infinite;
+  flex-shrink:0;
+  padding-left:48px;
+}
+.line-track span{
+  font-family:'DM Mono', monospace;
+  font-size:13px;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+}
+.line-track span::after{content:"·";margin-left:48px;color:var(--taupe);}
+@keyframes scroll{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+
+/* COURT ROUTE — TIMELINE */
+.routes{
+  padding:96px 32px;
+  border-bottom:1px solid var(--rule);
+  background:var(--bone);
+  position:relative;
+}
+.routes-head{
+  display:grid;
+  grid-template-columns:1fr 1.5fr;
+  gap:48px;
+  align-items:end;
+  margin-bottom:64px;
+  border-bottom:2px solid var(--rule);
+  padding-bottom:32px;
+}
+.routes-head h2{
+  font-family:'DM Serif Display', serif;
+  font-size:clamp(56px, 7vw, 96px);
+  line-height:.95;
+  letter-spacing:-.02em;
+}
+.routes-head h2 em{font-style:italic;color:var(--sage-deep);}
+.routes-head p{font-size:17px;line-height:1.55;color:var(--ink-2);max-width:54ch;}
+.route{
+  position:relative;
+  display:grid;
+  grid-template-columns:120px 1fr 280px;
+  gap:32px;
+  padding:24px 0;
+  align-items:start;
+  border-bottom:1px dashed var(--ink-3);
+}
+.route:hover{background:rgba(184,71,45,.06);padding-left:14px;}
+.route-pin{
+  font-family:'DM Mono', monospace;
+  font-size:11px;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--pin);
+  font-weight:600;
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+.route-pin::before{
+  content:"";display:inline-block;
+  width:14px;height:14px;
+  background:var(--pin);
+  border-radius:50%;
+  border:2px solid var(--paper);
+  outline:1.5px solid var(--pin);
+  flex-shrink:0;
+}
+.route-pin.event::before{background:var(--ink);outline-color:var(--ink);}
+.route-pin small{display:block;color:var(--ink-3);font-weight:500;letter-spacing:.14em;margin-top:2px;}
+.route-info h3{
+  font-family:'DM Serif Display', serif;
+  font-size:36px;
+  letter-spacing:-.015em;
+  line-height:1.05;
+}
+.route-info h3 em{font-style:italic;color:var(--sage-deep);}
+.route-meta{
+  font-family:'DM Mono', monospace;
+  font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--ink-3);
+  margin-top:8px;
+  display:flex;gap:16px;flex-wrap:wrap;
+}
+.route-meta b{color:var(--ink);font-weight:500;}
+.route-r{
+  text-align:right;
+  font-family:'DM Mono', monospace;
+  font-size:11px;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:var(--ink-3);
+}
+.route-r b{
+  display:block;
+  font-family:'DM Serif Display';
+  font-size:36px;
+  letter-spacing:-.01em;
+  text-transform:none;
+  color:var(--ink);
+}
+.route-r b em{font-style:italic;color:var(--pin);}
+.route-r .rsvp{
+  display:inline-block;
+  margin-top:8px;
+  border:1px solid var(--ink);
+  padding:6px 12px;
+  font-weight:500;
+  letter-spacing:.18em;
+}
+.route-r .rsvp:hover{background:var(--ink);color:var(--paper);}
+
+/* GOODS — CATALOG */
+.goods{
+  padding:96px 32px;
+  border-bottom:1px solid var(--rule);
+  background:var(--paper);
+}
+.goods-head{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:48px;
+  margin-bottom:64px;
+  align-items:end;
+}
+.goods-head h2{
+  font-family:'DM Serif Display';
+  font-size:clamp(56px, 7vw, 96px);
+  line-height:.95;
+  letter-spacing:-.02em;
+}
+.goods-head h2 em{font-style:italic;color:var(--sage-deep);}
+.goods-head p{font-size:17px;line-height:1.55;color:var(--ink-2);max-width:48ch;}
+.goods-grid{
+  display:grid;
+  grid-template-columns:repeat(3, 1fr);
+  gap:32px;
+}
+.good{
+  display:flex;
+  flex-direction:column;
+}
+.good-img{
+  position:relative;
+  aspect-ratio:1/1;
+  overflow:hidden;
+  border:1px solid var(--rule);
+  margin-bottom:16px;
+}
+.good-img::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background-image:radial-gradient(circle at 16px 16px, rgba(26,35,48,.10) 1.2px, transparent 1.2px);
+  background-size:32px 32px;
+  z-index:1;
+  pointer-events:none;
+}
+.good-img-bg{
+  position:absolute;inset:0;
+  display:flex;align-items:center;justify-content:center;
+}
+.good-img-bg img{width:54%;opacity:.55;}
+.g1{background:linear-gradient(160deg, #6a8b7c 0%, #4a6659 100%);}
+.g2{background:linear-gradient(160deg, #F4EFE2 0%, #E0D8C2 100%);}
+.g3{background:linear-gradient(160deg, #2D3A4E 0%, #1A2330 100%);}
+.g4{background:linear-gradient(160deg, #FAFAF7 0%, #E9E2D6 100%);}
+.g5{background:linear-gradient(160deg, #AFA393 0%, #5b7d6d 100%);}
+.g6{background:linear-gradient(160deg, #F8F7F4 0%, #C9C2B5 100%);}
+.g1 .good-img-bg img,.g3 .good-img-bg img{filter:brightness(0) invert(1);}
+.good-pin{
+  position:absolute;
+  top:14px;left:14px;
+  background:var(--pin);
+  color:var(--paper);
+  padding:5px 9px;
+  font-family:'DM Mono';
+  font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;
+  font-weight:600;
+  z-index:2;
+}
+.good-pin.bone{background:var(--ink);}
+.good-meta{
+  display:grid;
+  grid-template-columns:1fr auto;
+  align-items:end;
+  gap:16px;
+  border-top:1px solid var(--rule);
+  padding-top:14px;
+}
+.good-meta h3{
+  font-family:'DM Serif Display';
+  font-size:24px;
+  letter-spacing:-.01em;
+  line-height:1.1;
+}
+.good-meta h3 em{display:block;font-size:14px;font-style:italic;color:var(--sage-deep);font-weight:400;margin-top:4px;}
+.good-price{
+  font-family:'DM Mono', monospace;
+  font-weight:500;
+  font-size:18px;
+  letter-spacing:.04em;
+}
+.good-spec{
+  font-family:'DM Mono', monospace;
+  font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--ink-3);
+  margin-top:10px;
+}
+
+/* OSAKA — SATELLITE OUTPOST */
+.osaka{
+  border-bottom:1px solid var(--rule);
+  background:var(--ink);
+  color:var(--paper);
+  position:relative;
+  overflow:hidden;
+}
+.osaka-band{
+  border-bottom:1px solid rgba(244,239,226,.18);
+  padding:14px 32px;
+  display:flex;justify-content:space-between;
+  font-family:'DM Mono', monospace;
+  font-size:11px;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--taupe);
+}
+.osaka-band b{color:var(--paper);font-weight:500;}
+.osaka-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+}
+.osaka-l{
+  padding:80px 32px;
+  border-right:1px solid rgba(244,239,226,.18);
+  position:relative;
+  z-index:2;
+}
+.osaka-l .eyebrow{color:var(--pin-2);}
+.osaka-l .eyebrow::before{content:"◉";margin-right:10px;color:var(--pin-2);}
+.osaka-l h2{
+  font-family:'DM Serif Display';
+  font-size:clamp(56px, 7.5vw, 108px);
+  line-height:.95;
+  letter-spacing:-.02em;
+  margin-top:24px;
+}
+.osaka-l h2 em{font-style:italic;color:var(--taupe);}
+.osaka-l p{
+  font-size:17px;line-height:1.6;
+  color:#D7D0BE;max-width:46ch;margin-top:24px;
+}
+.osaka-route{
+  margin-top:40px;
+  padding-top:24px;
+  border-top:1px solid rgba(244,239,226,.18);
+  display:grid;
+  grid-template-columns:repeat(3, 1fr);
+  gap:0;
+}
+.osaka-route div{
+  border-right:1px solid rgba(244,239,226,.18);
+  padding-right:14px;
+}
+.osaka-route div:last-child{border-right:none;padding-right:0;padding-left:14px;}
+.osaka-route b{
+  display:block;
+  font-family:'DM Mono';
+  font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--taupe);
+  font-weight:500;
+  margin-bottom:8px;
+}
+.osaka-route span{
+  font-family:'DM Serif Display';
+  font-size:22px;line-height:1.1;letter-spacing:-.01em;
+}
+.osaka-cta{
+  display:inline-flex;
+  align-items:center;
+  gap:14px;
+  margin-top:40px;
+  padding:16px 24px;
+  border:1px solid var(--paper);
+  font-family:'DM Mono';font-size:11px;letter-spacing:.2em;text-transform:uppercase;font-weight:500;
+  color:var(--paper);
+  transition:background .2s, color .2s;
+}
+.osaka-cta:hover{background:var(--pin);border-color:var(--pin);color:var(--paper);}
+.osaka-cta::after{content:"→";font-family:'DM Sans';font-size:14px;}
+
+.osaka-r{
+  background:var(--ink-2);
+  position:relative;
+  min-height:680px;
+}
+.osaka-r-svg{position:absolute;inset:0;width:100%;height:100%;}
+.osaka-card{
+  position:absolute;
+  bottom:32px;left:32px;right:32px;
+  z-index:3;
+  background:var(--paper);
+  color:var(--ink);
+  padding:24px;
+  border:1px solid var(--ink);
+}
+.osaka-card-head{
+  display:flex;justify-content:space-between;
+  font-family:'DM Mono';font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--ink-3);
+  border-bottom:1px solid var(--rule);
+  padding-bottom:12px;
+  margin-bottom:14px;
+}
+.osaka-card-head b{color:var(--pin);font-weight:600;}
+.osaka-card h3{
+  font-family:'DM Serif Display';
+  font-size:36px;
+  letter-spacing:-.015em;
+  line-height:1.05;
+}
+.osaka-card h3 em{font-style:italic;color:var(--sage-deep);}
+.osaka-card p{
+  margin-top:10px;
+  font-size:14px;
+  color:var(--ink-2);
+}
+.osaka-out-tag{
+  position:absolute;
+  top:32px;left:32px;
+  background:var(--pin);
+  color:var(--paper);
+  padding:8px 12px;
+  font-family:'DM Mono';
+  font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;font-weight:600;
+  z-index:3;
+}
+.osaka-coords-tag{
+  position:absolute;
+  top:32px;right:32px;
+  background:var(--paper);
+  color:var(--ink);
+  padding:8px 12px;
+  font-family:'DM Mono';
+  font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;font-weight:500;
+  border:1px solid var(--ink);
+  z-index:3;
+}
+
+/* LOG / NOTES */
+.log{
+  padding:96px 32px;
+  background:var(--bone-2);
+  border-bottom:1px solid var(--rule);
+  position:relative;
+}
+.log-head{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:48px;
+  align-items:end;
+  margin-bottom:48px;
+}
+.log-head h2{
+  font-family:'DM Serif Display';
+  font-size:clamp(48px, 6vw, 84px);
+  line-height:.95;
+  letter-spacing:-.02em;
+}
+.log-head h2 em{font-style:italic;color:var(--sage-deep);}
+.log-head p{font-size:17px;line-height:1.55;max-width:46ch;color:var(--ink-2);}
+.log-grid{
+  display:grid;
+  grid-template-columns:repeat(3, 1fr);
+  gap:24px;
+}
+.log-card{
+  background:var(--paper);
+  border:1px solid var(--ink);
+  padding:24px;
+  position:relative;
+}
+.log-card .eyebrow{color:var(--pin);}
+.log-card h3{
+  font-family:'DM Serif Display';
+  font-size:24px;
+  line-height:1.15;
+  letter-spacing:-.01em;
+  margin-top:14px;
+}
+.log-card h3 em{font-style:italic;color:var(--sage-deep);}
+.log-card p{font-size:14.5px;color:var(--ink-2);line-height:1.55;margin-top:14px;}
+.log-card-foot{
+  display:flex;justify-content:space-between;
+  font-family:'DM Mono';font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--ink-3);
+  border-top:1px dashed var(--ink-3);
+  padding-top:12px;
+  margin-top:18px;
+}
+
+/* FOOTER */
+footer{
+  background:var(--ink);
+  color:var(--paper);
+  padding:80px 32px 32px;
+}
+.foot-grid{
+  display:grid;
+  grid-template-columns:1.6fr 1fr 1fr 1fr;
+  gap:48px;
+  border-bottom:1px solid rgba(244,239,226,.2);
+  padding-bottom:48px;
+  margin-bottom:24px;
+}
+.foot-l h2{
+  font-family:'DM Serif Display';
+  font-size:clamp(48px, 6vw, 80px);
+  line-height:.95;
+  letter-spacing:-.02em;
+}
+.foot-l h2 em{font-style:italic;color:var(--taupe);}
+.foot-l p{font-family:'DM Mono';font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--taupe);margin-top:18px;}
+.foot-l p span{color:var(--pin-2);}
+.foot-grid h4{
+  font-family:'DM Mono';font-size:11px;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--taupe);font-weight:500;margin-bottom:14px;
+}
+.foot-grid a, .foot-grid li{display:block;font-family:'DM Sans';font-size:15px;color:#D7D0BE;margin-bottom:6px;list-style:none;}
+.foot-grid a:hover{color:var(--paper);}
+.foot-news input{background:transparent;border:none;border-bottom:1px solid rgba(244,239,226,.4);padding:10px 0;width:100%;color:var(--paper);outline:none;font-family:'DM Sans';font-size:15px;}
+.foot-news button{margin-top:14px;background:var(--pin);color:var(--paper);border:none;padding:10px 18px;font-family:'DM Mono';font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:500;cursor:pointer;}
+.foot-bottom{
+  display:flex;justify-content:space-between;
+  font-family:'DM Mono';font-size:11px;letter-spacing:.18em;text-transform:uppercase;
+  color:rgba(244,239,226,.55);
+}
+.foot-bottom a{color:var(--taupe);}
+
+@media (max-width:1100px){
+  .hero-grid, .routes-head, .goods-head, .osaka-grid, .log-head, .foot-grid{grid-template-columns:1fr;gap:32px;}
+  .goods-grid, .log-grid{grid-template-columns:repeat(2, 1fr);}
+  .route{grid-template-columns:120px 1fr;}
+  .route-r{grid-column:1/-1;text-align:left;}
+  .osaka-l{border-right:none;border-bottom:1px solid rgba(244,239,226,.18);}
+  .bar-nav{display:none;}
+}
+@media (max-width:560px){
+  .bar{padding:10px 16px;gap:12px;}
+  .coords{padding:8px 16px;flex-wrap:wrap;gap:8px;font-size:10px;}
+  .hero, .routes, .goods, .osaka-l, .log, footer{padding-left:18px;padding-right:18px;}
+  .goods-grid, .log-grid{grid-template-columns:1fr;}
+  .hero-coords{grid-template-columns:1fr;}
+  .hero-coords div{border-right:none;border-bottom:1px solid var(--rule);padding-bottom:14px;padding-right:0;}
+  .route{grid-template-columns:1fr;gap:8px;}
+  .osaka-route{grid-template-columns:1fr;gap:14px;}
+  .osaka-route div{border-right:none;border-bottom:1px solid rgba(244,239,226,.18);padding:0 0 14px 0;}
+}
+</style>
+</head>
+<body>
+
+<header class="bar">
+  <div class="bar-l">
+    <div class="compass"><span>N</span></div>
+    <div class="bar-title">Atlas <small>Houston Padel · Vol. 01</small></div>
+  </div>
+  <nav class="bar-nav">
+    <a href="#routes">The Map</a>
+    <a href="#goods">The Kit</a>
+    <a href="#osaka">Outpost</a>
+    <a href="#log">Field Log</a>
+  </nav>
+  <div class="bar-r">
+    <a href="#" class="pin-link">RSVP</a>
+    <a href="#">Cart · 0</a>
+  </div>
+</header>
+
+<div class="coords">
+  <span><b>29.7604° N · 95.3698° W</b></span>
+  <span>You are here · Houston, TX</span>
+  <span>Updated 04 / 26 / 2026</span>
+</div>
+
+<!-- HERO -->
+<section class="hero atlas-bg">
+  <div class="hero-grid">
+    <div class="hero-l">
+      <span class="eyebrow">An atlas of Houston padel</span>
+      <h1 class="hero-h1">Where to <em>play.</em><br>Where to <em>find us.</em></h1>
+      <p class="hero-deck">Baby Let's Padel keeps a running map of every court worth playing in Houston, every weekly open play, and every road trip we take. Bookmark it. The map updates every Sunday.</p>
+      <div class="hero-coords">
+        <div><b>Courts Mapped</b><span>04 in HOU</span></div>
+        <div><b>Weekly Plays</b><span>3 / Week</span></div>
+        <div><b>Outposts</b><span>Osaka USA</span></div>
+      </div>
+    </div>
+    <div class="hero-r">
+      <svg class="map-svg" viewBox="0 0 600 600" preserveAspectRatio="xMidYMid slice">
+        <defs>
+          <pattern id="dotgrid" width="24" height="24" patternUnits="userSpaceOnUse">
+            <circle cx="2" cy="2" r="1.2" fill="rgba(26,35,48,.18)"/>
+          </pattern>
+        </defs>
+        <rect width="600" height="600" fill="url(#dotgrid)"/>
+        <!-- river path -->
+        <path d="M 40 120 C 140 200, 220 180, 320 280 S 480 380, 580 480" stroke="#5b7d6d" stroke-width="3" fill="none" opacity=".4"/>
+        <path d="M 40 120 C 140 200, 220 180, 320 280 S 480 380, 580 480" stroke="#5b7d6d" stroke-width="1" fill="none" stroke-dasharray="4 6"/>
+        <!-- highways -->
+        <path d="M 100 0 L 100 600" stroke="rgba(26,35,48,.2)" stroke-width="1" stroke-dasharray="2 6"/>
+        <path d="M 0 200 L 600 200" stroke="rgba(26,35,48,.2)" stroke-width="1" stroke-dasharray="2 6"/>
+        <path d="M 0 400 L 600 400" stroke="rgba(26,35,48,.2)" stroke-width="1" stroke-dasharray="2 6"/>
+        <path d="M 400 0 L 400 600" stroke="rgba(26,35,48,.2)" stroke-width="1" stroke-dasharray="2 6"/>
+        <!-- transit lines connecting courts -->
+        <path d="M 130 240 Q 250 130, 380 220" stroke="#B8472D" stroke-width="2" fill="none" stroke-dasharray="4 4"/>
+        <path d="M 380 220 Q 460 320, 380 380" stroke="#B8472D" stroke-width="2" fill="none" stroke-dasharray="4 4"/>
+        <path d="M 380 380 Q 250 440, 200 460" stroke="#B8472D" stroke-width="2" fill="none" stroke-dasharray="4 4"/>
+        <path d="M 380 220 Q 530 130, 540 80" stroke="#5b7d6d" stroke-width="2" fill="none" stroke-dasharray="2 6"/>
+
+        <!-- court pins -->
+        <circle cx="130" cy="240" r="10" fill="#B8472D" stroke="#FAF6EB" stroke-width="3"/>
+        <circle cx="130" cy="240" r="16" fill="none" stroke="#B8472D" stroke-width="1" opacity=".4"/>
+
+        <circle cx="380" cy="220" r="10" fill="#B8472D" stroke="#FAF6EB" stroke-width="3"/>
+        <circle cx="380" cy="220" r="16" fill="none" stroke="#B8472D" stroke-width="1" opacity=".4"/>
+
+        <circle cx="380" cy="380" r="10" fill="#1A2330" stroke="#FAF6EB" stroke-width="3"/>
+        <circle cx="380" cy="380" r="16" fill="none" stroke="#1A2330" stroke-width="1" opacity=".4"/>
+
+        <circle cx="200" cy="460" r="10" fill="#B8472D" stroke="#FAF6EB" stroke-width="3"/>
+        <circle cx="200" cy="460" r="16" fill="none" stroke="#B8472D" stroke-width="1" opacity=".4"/>
+
+        <!-- osaka outpost -->
+        <circle cx="540" cy="80" r="14" fill="none" stroke="#5b7d6d" stroke-width="2"/>
+        <circle cx="540" cy="80" r="6" fill="#5b7d6d"/>
+
+        <!-- you-are-here marker -->
+        <circle cx="510" cy="540" r="10" fill="none" stroke="#B8472D" stroke-width="2"/>
+        <circle cx="510" cy="540" r="4" fill="#B8472D"/>
+        <line x1="510" y1="525" x2="510" y2="555" stroke="#B8472D" stroke-width="1.5"/>
+        <line x1="495" y1="540" x2="525" y2="540" stroke="#B8472D" stroke-width="1.5"/>
+      </svg>
+
+      <div class="map-label pin m-katy">A1 · RSC Katy</div>
+      <div class="map-label pin m-will">A2 · Willowbrook</div>
+      <div class="map-label event m-cube">A3 · Cube Padel</div>
+      <div class="map-label pin m-tempo">A4 · TEMPO</div>
+      <div class="map-label m-osaka" style="background:var(--sage);color:var(--paper);border-color:var(--sage-deep);">B1 · Osaka USA</div>
+      <div class="map-label m-here" style="border-style:dashed;">⊕ Houston, TX</div>
+
+      <div class="map-legend">
+        <b>Legend</b>
+        <div><i class="l-court"></i> Open Play (Court)</div>
+        <div><i class="l-event"></i> Special Event</div>
+        <div><i class="l-osaka"></i> Outpost (Partner)</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TICKER -->
+<div class="line-marq">
+  <div class="line-track">
+    <span>Atlas of Houston Padel</span>
+    <span>RSC Katy → Wed 04/22</span>
+    <span>Willowbrook → Tue 04/28</span>
+    <span>Cube Padel → Sat 05/02 · Neon Padel Party</span>
+    <span>TEMPO → Mon 05/04</span>
+    <span>Osaka Outpost → Always Open</span>
+    <span>Houston · Texas · USA</span>
+    <span>Atlas of Houston Padel</span>
+    <span>RSC Katy → Wed 04/22</span>
+    <span>Willowbrook → Tue 04/28</span>
+    <span>Cube Padel → Sat 05/02 · Neon Padel Party</span>
+    <span>TEMPO → Mon 05/04</span>
+    <span>Osaka Outpost → Always Open</span>
+    <span>Houston · Texas · USA</span>
+  </div>
+</div>
+
+<!-- ROUTES / SCHEDULE -->
+<section class="routes" id="routes">
+  <div class="routes-head">
+    <div>
+      <span class="eyebrow" style="color:var(--pin);">— The Routes</span>
+      <h2>Where <em>we'll be.</em></h2>
+    </div>
+    <p>Every open play and event through May 2026, mapped to a court. Each route is mixed levels, rackets-on-us, and demos courtside via Osaka. Tap a row for directions and RSVP.</p>
+  </div>
+
+  <div class="route">
+    <div class="route-pin">A1<small>Court · Katy</small></div>
+    <div class="route-info">
+      <h3>Open Play <em>at RSC Katy</em></h3>
+      <div class="route-meta"><b>Wed · 04 / 22 · 7:00 PM</b><span>14 spots</span><span>Mixed levels</span><span>Rackets provided</span></div>
+    </div>
+    <div class="route-r"><b>29.78° N <em>·</em> 95.83° W</b>20 mi from downtown · <a href="#" class="rsvp">RSVP →</a></div>
+  </div>
+
+  <div class="route">
+    <div class="route-pin">A2<small>Court · Willowbrook</small></div>
+    <div class="route-info">
+      <h3>Open Play <em>at RSC Willowbrook</em></h3>
+      <div class="route-meta"><b>Tue · 04 / 28 · 7:00 — 8:30 PM</b><span>16 spots</span><span>Mixed levels</span><span>Long session</span></div>
+    </div>
+    <div class="route-r"><b>29.97° N <em>·</em> 95.55° W</b>22 mi from downtown · <a href="#" class="rsvp">RSVP →</a></div>
+  </div>
+
+  <div class="route">
+    <div class="route-pin event">A3<small>Event · Cube Padel</small></div>
+    <div class="route-info">
+      <h3>Neon Padel Party <em>w/ Smash 305</em></h3>
+      <div class="route-meta"><b>Sat · 05 / 02 · 8:00 PM</b><span>22 spots</span><span>Tournament + DJ</span><span>BLP × Smash 305</span></div>
+    </div>
+    <div class="route-r"><b>29.74° N <em>·</em> 95.41° W</b>City limits · <a href="#" class="rsvp">RSVP →</a></div>
+  </div>
+
+  <div class="route">
+    <div class="route-pin">A4<small>Court · Inner Loop</small></div>
+    <div class="route-info">
+      <h3>Open Play <em>at TEMPO Padel</em></h3>
+      <div class="route-meta"><b>Mon · 05 / 04 · 7:00 PM</b><span>18 spots</span><span>Mixed levels</span><span>4 courts</span></div>
+    </div>
+    <div class="route-r"><b>29.72° N <em>·</em> 95.36° W</b>Inner Loop · <a href="#" class="rsvp">RSVP →</a></div>
+  </div>
+</section>
+
+<!-- GOODS -->
+<section class="goods atlas-bg" id="goods">
+  <div class="goods-head">
+    <div>
+      <span class="eyebrow" style="color:var(--pin);">— The Kit</span>
+      <h2>What we <em>wear on court.</em></h2>
+    </div>
+    <p>Six pieces, made for Houston weather and four sets a night. Heavyweight for cool mornings, lightweight knits and dri-fit for August in Texas. Cap and visor for everything in between. All unisex, all sized for movement.</p>
+  </div>
+
+  <div class="goods-grid">
+    <article class="good">
+      <div class="good-img g1"><span class="good-pin">A · 350 GSM</span><div class="good-img-bg"><img src="https://customer-assets.emergentagent.com/job_c0589f16-d62f-4855-9be3-f2d98f470a9c/artifacts/ob08t771_Decal-01.png" alt=""></div></div>
+      <div class="good-meta"><h3>Heavyweight Crewneck<em>Eucalyptus</em></h3><span class="good-price">$53</span></div>
+      <div class="good-spec">80/20 Cotton · Garment-dyed · XS — XL</div>
+    </article>
+    <article class="good">
+      <div class="good-img g2"><span class="good-pin bone">B · 220 GSM</span><div class="good-img-bg"><img src="https://customer-assets.emergentagent.com/job_c0589f16-d62f-4855-9be3-f2d98f470a9c/artifacts/ob08t771_Decal-01.png" alt=""></div></div>
+      <div class="good-meta"><h3>Lightweight Crewneck<em>Off-White</em></h3><span class="good-price">$41</span></div>
+      <div class="good-spec">100% Combed Cotton · Pre-shrunk · XS — XL</div>
+    </article>
+    <article class="good">
+      <div class="good-img g3"><span class="good-pin">C · 350 GSM</span><div class="good-img-bg"><img src="https://customer-assets.emergentagent.com/job_c0589f16-d62f-4855-9be3-f2d98f470a9c/artifacts/ob08t771_Decal-01.png" alt=""></div></div>
+      <div class="good-meta"><h3>Heavyweight Crewneck<em>Deep Navy</em></h3><span class="good-price">$53</span></div>
+      <div class="good-spec">80/20 Cotton · Garment-dyed · XS — XL</div>
+    </article>
+    <article class="good">
+      <div class="good-img g4"><span class="good-pin bone">D · 160 GSM</span><div class="good-img-bg"><img src="https://customer-assets.emergentagent.com/job_c0589f16-d62f-4855-9be3-f2d98f470a9c/artifacts/ob08t771_Decal-01.png" alt=""></div></div>
+      <div class="good-meta"><h3>Long Sleeve Tee<em>Off-White</em></h3><span class="good-price">$31</span></div>
+      <div class="good-spec">92/8 Cotton + Elastane · Wicking · XS — XL</div>
+    </article>
+    <article class="good">
+      <div class="good-img g5"><span class="good-pin">E · One Size</span><div class="good-img-bg"><img src="https://customer-assets.emergentagent.com/job_c0589f16-d62f-4855-9be3-f2d98f470a9c/artifacts/ob08t771_Decal-01.png" alt=""></div></div>
+      <div class="good-meta"><h3>Six-Panel Cap<em>Taupe / Sage / Navy</em></h3><span class="good-price">$27</span></div>
+      <div class="good-spec">100% Washed Cotton Twill · 3 Colorways</div>
+    </article>
+    <article class="good">
+      <div class="good-img g6"><span class="good-pin bone">F · One Size</span><div class="good-img-bg"><img src="https://customer-assets.emergentagent.com/job_c0589f16-d62f-4855-9be3-f2d98f470a9c/artifacts/ob08t771_Decal-01.png" alt=""></div></div>
+      <div class="good-meta"><h3>Dri-Fit Visor<em>Off-White</em></h3><span class="good-price">$22</span></div>
+      <div class="good-spec">92/8 Polyester + Spandex · UPF 30+</div>
+    </article>
+  </div>
+</section>
+
+<!-- OSAKA / OUTPOST -->
+<section class="osaka" id="osaka">
+  <div class="osaka-band">
+    <b>Outpost B1 — Partner Edition</b>
+    <span>Osaka USA × Baby Let's Padel</span>
+    <span>Coordinates filed 04 / 26 / 2026</span>
+  </div>
+  <div class="osaka-grid">
+    <div class="osaka-l">
+      <span class="eyebrow">A satellite outpost</span>
+      <h2>Osaka, by way of <em>Amsterdam.</em></h2>
+      <p>Osaka USA is the Dutch performance label that builds the rackets our crew actually plays with. Carbon-fiber frames. EVA cores. Technical kit. We carry their curated edit at every Houston open play — try a frame on court before you take one home.</p>
+
+      <div class="osaka-route">
+        <div><b>Origin</b><span>Amsterdam, NL</span></div>
+        <div><b>Outpost</b><span>Houston, TX</span></div>
+        <div><b>Try-On</b><span>Tue + Wed Plays</span></div>
+      </div>
+
+      <a href="https://www.osakaworldusa.com/collections/padel" target="_blank" rel="noopener" class="osaka-cta">Shop the Osaka Outpost</a>
+    </div>
+
+    <div class="osaka-r">
+      <svg class="osaka-r-svg" viewBox="0 0 600 700" preserveAspectRatio="xMidYMid slice">
+        <defs>
+          <pattern id="dotgrid2" width="24" height="24" patternUnits="userSpaceOnUse">
+            <circle cx="2" cy="2" r="1" fill="rgba(244,239,226,.10)"/>
+          </pattern>
+        </defs>
+        <rect width="600" height="700" fill="url(#dotgrid2)"/>
+        <!-- ocean curve -->
+        <path d="M 0 380 C 120 320, 240 360, 360 320 S 540 360, 600 320" stroke="#5b7d6d" stroke-width="2" fill="none" opacity=".5"/>
+        <path d="M 0 420 C 120 360, 240 400, 360 360 S 540 400, 600 360" stroke="#5b7d6d" stroke-width="1" fill="none" opacity=".3" stroke-dasharray="3 5"/>
+        <!-- transit arc -->
+        <path d="M 510 540 Q 360 200, 100 100" stroke="#B8472D" stroke-width="1.5" fill="none" stroke-dasharray="4 4"/>
+        <!-- houston -->
+        <circle cx="510" cy="540" r="10" fill="#B8472D" stroke="#1A2330" stroke-width="3"/>
+        <circle cx="510" cy="540" r="22" fill="none" stroke="#B8472D" stroke-width="1" opacity=".4"/>
+        <text x="510" y="580" font-family="DM Mono" font-size="10" letter-spacing="2" fill="#F4EFE2" text-anchor="middle">HOU · 29.76° N</text>
+        <!-- amsterdam -->
+        <circle cx="100" cy="100" r="10" fill="#5b7d6d" stroke="#F4EFE2" stroke-width="3"/>
+        <circle cx="100" cy="100" r="22" fill="none" stroke="#5b7d6d" stroke-width="1" opacity=".4"/>
+        <text x="100" y="80" font-family="DM Mono" font-size="10" letter-spacing="2" fill="#F4EFE2" text-anchor="middle">AMS · 52.37° N</text>
+        <!-- distance label -->
+        <rect x="220" y="290" width="160" height="38" fill="#F4EFE2" stroke="#1A2330" stroke-width="1"/>
+        <text x="300" y="307" font-family="DM Mono" font-size="10" letter-spacing="2" fill="#1A2330" text-anchor="middle">5,114 MI · ATL OCEAN</text>
+        <text x="300" y="320" font-family="DM Serif Display" font-size="14" fill="#B8472D" text-anchor="middle" font-style="italic">Outpost route</text>
+      </svg>
+
+      <span class="osaka-out-tag">Outpost B1 · Osaka USA</span>
+      <span class="osaka-coords-tag">52.37° N · 4.89° E</span>
+
+      <div class="osaka-card">
+        <div class="osaka-card-head">
+          <span><b>Spec Card</b> &nbsp;&nbsp; Vision Pro / Vision Tour</span>
+          <span>SS26</span>
+        </div>
+        <h3>Carbon-fiber rackets, <em>Dutch-engineered.</em></h3>
+        <p>Demo a frame at any open play. Most players need a session or two to find the right balance — we keep extras in the bag.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LOG -->
+<section class="log" id="log">
+  <div class="log-head">
+    <div>
+      <span class="eyebrow" style="color:var(--pin);">— The Field Log</span>
+      <h2>Notes from <em>the road.</em></h2>
+    </div>
+    <p>What we packed, what we played, what we learned. Each entry is a pin on the atlas. Updated after every trip.</p>
+  </div>
+
+  <div class="log-grid">
+    <article class="log-card">
+      <span class="eyebrow">Entry 008 · 04 / 18</span>
+      <h3>The case for a <em>second visor.</em></h3>
+      <p>Houston in April is humid before noon. We packed one visor each on the Cube Padel scout trip and rotated through three. Lesson: bring two. Wash one. Wear the other.</p>
+      <div class="log-card-foot"><span>RSC Katy</span><span>By BLP</span></div>
+    </article>
+    <article class="log-card">
+      <span class="eyebrow">Entry 009 · 04 / 21</span>
+      <h3>Why the <em>navy crewneck</em> outsells.</h3>
+      <p>The deep navy heavy crew has been the most-worn piece across our last six open plays. Theory: it's the only one that hides court dust between sets and still photographs well after.</p>
+      <div class="log-card-foot"><span>Inventory note</span><span>By BLP</span></div>
+    </article>
+    <article class="log-card">
+      <span class="eyebrow">Entry 010 · 04 / 26</span>
+      <h3>Osaka Vision Pro <em>vs.</em> Vision Tour.</h3>
+      <p>14 sessions, two frames. Vision Pro for aggressive baseliners, Vision Tour for control players. Both run light enough for a long open play. Demos courtside every Tuesday.</p>
+      <div class="log-card-foot"><span>Osaka Outpost</span><span>By BLP</span></div>
+    </article>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="foot-grid">
+    <div class="foot-l">
+      <h2>Baby <em>Let's</em><br>Padel.</h2>
+      <p><span>●</span> &nbsp;Houston, TX · est. 2025</p>
+      <p>29.7604° N · 95.3698° W</p>
+    </div>
+    <div>
+      <h4>The Map</h4>
+      <a href="#routes">Routes</a>
+      <a href="#routes">Open Plays</a>
+      <a href="#osaka">Outposts</a>
+      <a href="#log">Field Log</a>
+    </div>
+    <div>
+      <h4>The Kit</h4>
+      <a href="#goods">Crewnecks</a>
+      <a href="#goods">Tops</a>
+      <a href="#goods">Headwear</a>
+      <a href="#goods">Osaka Edit</a>
+    </div>
+    <div class="foot-news">
+      <h4>The Atlas — Newsletter</h4>
+      <p style="font-family:'DM Sans';font-size:13px;color:#D7D0BE;margin-bottom:12px;">Updated weekly. Schedule, road trips, and a pin or two.</p>
+      <input type="email" placeholder="email@address">
+      <button>Pin Me</button>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    <span>© 2026 Baby Let's Padel</span>
+    <span>Atlas · Vol. 01 · Edition 04 / 26</span>
+    <span><a href="../">← All Five Designs</a></span>
+  </div>
+</footer>
+
+</body>
+</html>

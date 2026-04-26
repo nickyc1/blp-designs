@@ -1,0 +1,1058 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Baby Let's Padel — Signal / Spring '26 Drop</title>
+<meta name="description" content="Baby Let's Padel · Spring 2026 drop · Houston open plays · Osaka collab.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo+Black&family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bone:#F4F1E9;
+  --bone-2:#E9E3D2;
+  --ink:#0A0E14;
+  --ink-2:#1A1F2A;
+  --sage:#5b7d6d;
+  --sage-deep:#4a6659;
+  --signal:#F65C2C;
+  --signal-2:#FF7A3F;
+  --navy:#1E293B;
+  --taupe:#AFA393;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  background:var(--bone);
+  color:var(--ink);
+  font-family:'Manrope', system-ui, sans-serif;
+  font-size:15px;
+  line-height:1.45;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+img{display:block;max-width:100%;}
+a{color:inherit;text-decoration:none;}
+
+.cap{font-family:'JetBrains Mono', monospace;font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:500;}
+.huge{font-family:'Anton', 'Archivo Black', Impact, sans-serif;font-weight:400;line-height:.85;letter-spacing:-.005em;text-transform:uppercase;}
+.archi{font-family:'Archivo Black', Impact, sans-serif;line-height:.9;letter-spacing:-.01em;text-transform:uppercase;}
+
+/* TOP NAV */
+.top{
+  position:fixed;
+  top:0;left:0;right:0;
+  z-index:100;
+  background:var(--ink);
+  color:var(--bone);
+  display:grid;
+  grid-template-columns:auto 1fr auto auto;
+  align-items:center;
+  padding:0;
+  border-bottom:1px solid rgba(244,241,233,.16);
+}
+.top-brand{
+  padding:14px 22px;
+  font-family:'Archivo Black', sans-serif;
+  font-size:18px;
+  letter-spacing:-.01em;
+  text-transform:uppercase;
+  border-right:1px solid rgba(244,241,233,.16);
+}
+.top-nav{display:flex;}
+.top-nav a{
+  padding:0 22px;
+  height:50px;
+  display:flex;align-items:center;
+  font-family:'JetBrains Mono', monospace;
+  font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:600;
+  border-right:1px solid rgba(244,241,233,.16);
+  transition:background .15s, color .15s;
+}
+.top-nav a:hover{background:var(--signal);color:var(--ink);}
+.top-status{
+  padding:0 18px;
+  display:flex;align-items:center;gap:10px;
+  font-family:'JetBrains Mono', monospace;
+  font-size:11px;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--signal-2);
+  border-right:1px solid rgba(244,241,233,.16);
+  height:50px;
+}
+.top-status::before{
+  content:"";width:8px;height:8px;background:var(--signal);border-radius:50%;
+  animation:pulse 1.4s infinite;
+}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1);}50%{opacity:.4;transform:scale(.7);}}
+.top-cart{
+  padding:0 22px;
+  height:50px;
+  display:flex;align-items:center;
+  background:var(--signal);color:var(--ink);
+  font-family:'JetBrains Mono', monospace;
+  font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:700;
+  cursor:pointer;
+}
+.top-cart:hover{background:var(--signal-2);}
+
+main{margin-top:50px;}
+
+/* HERO */
+.hero{
+  background:var(--ink);
+  color:var(--bone);
+  padding:64px 32px 0;
+  position:relative;
+  overflow:hidden;
+  border-bottom:6px solid var(--signal);
+}
+.hero-head{
+  display:flex;
+  justify-content:space-between;
+  align-items:baseline;
+  margin-bottom:32px;
+  flex-wrap:wrap;
+  gap:16px;
+}
+.hero-head .cap{color:var(--signal-2);}
+.hero-head .cap b{color:var(--bone);font-weight:600;}
+.hero-h1{
+  font-family:'Archivo Black', Impact, sans-serif;
+  font-size:clamp(72px, 17vw, 280px);
+  line-height:.82;
+  letter-spacing:-.045em;
+  text-transform:uppercase;
+  margin:0 -.05em;
+}
+.hero-h1 .o{color:var(--signal);display:inline-block;}
+.hero-h1 .stripe{
+  background:var(--signal);
+  color:var(--ink);
+  padding:0 .04em;
+  display:inline-block;
+}
+.hero-stack{
+  display:grid;
+  grid-template-columns:1fr 1fr 1fr;
+  gap:32px;
+  margin-top:48px;
+  padding-bottom:48px;
+  border-bottom:1px solid rgba(244,241,233,.18);
+}
+.hero-stack .lead{
+  font-family:'Manrope', sans-serif;
+  font-weight:500;
+  font-size:22px;
+  line-height:1.3;
+  letter-spacing:-.005em;
+  color:var(--bone);
+  max-width:32ch;
+}
+.hero-stack .lead span{color:var(--signal-2);}
+.hero-stat{
+  border-left:1px solid rgba(244,241,233,.3);
+  padding-left:18px;
+}
+.hero-stat b{
+  display:block;
+  font-family:'Archivo Black', sans-serif;
+  font-size:64px;
+  line-height:.95;
+  letter-spacing:-.02em;
+  color:var(--signal);
+}
+.hero-stat span{
+  display:block;
+  font-family:'JetBrains Mono', monospace;
+  font-size:11px;letter-spacing:.18em;text-transform:uppercase;
+  margin-top:10px;
+  color:#C9C2B5;
+  max-width:24ch;
+}
+.hero-foot{
+  display:grid;
+  grid-template-columns:1fr 1fr 1fr;
+  gap:0;
+  padding:24px 0;
+}
+.hero-foot div{
+  font-family:'JetBrains Mono', monospace;
+  font-size:11px;letter-spacing:.16em;text-transform:uppercase;
+}
+.hero-foot div b{color:var(--signal-2);font-weight:600;}
+
+/* BIG TICKER */
+.ticker{
+  background:var(--signal);
+  color:var(--ink);
+  padding:16px 0;
+  display:flex;
+  overflow:hidden;
+  white-space:nowrap;
+  border-bottom:6px solid var(--ink);
+}
+.ticker-track{
+  display:inline-flex;
+  gap:48px;
+  animation:scroll 28s linear infinite;
+  flex-shrink:0;
+  padding-left:48px;
+}
+.ticker span{
+  font-family:'Archivo Black', sans-serif;
+  font-size:32px;
+  line-height:1;
+  letter-spacing:-.01em;
+  text-transform:uppercase;
+}
+.ticker span::after{content:"✦";margin-left:48px;color:var(--ink);}
+@keyframes scroll{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+
+/* DROP / PRODUCTS */
+.drop{
+  padding:96px 32px 0;
+  background:var(--bone);
+  border-bottom:6px solid var(--ink);
+  position:relative;
+}
+.drop-head{
+  display:grid;
+  grid-template-columns:auto 1fr auto;
+  align-items:end;
+  margin-bottom:48px;
+  gap:32px;
+  border-bottom:2px solid var(--ink);
+  padding-bottom:32px;
+}
+.drop-head h2{
+  font-family:'Archivo Black', sans-serif;
+  font-size:clamp(64px, 11vw, 200px);
+  line-height:.85;
+  letter-spacing:-.04em;
+  text-transform:uppercase;
+}
+.drop-head h2 .stripe{background:var(--signal);padding:0 .03em;}
+.drop-head .cap{color:var(--ink-2);max-width:22ch;text-align:right;}
+.drop-head .cap b{display:block;font-family:'Archivo Black';font-size:32px;line-height:.95;letter-spacing:-.01em;color:var(--ink);text-transform:uppercase;margin-bottom:6px;}
+
+.drop-grid{
+  display:grid;
+  grid-template-columns:repeat(6, 1fr);
+  gap:0;
+  border-top:1px solid var(--ink);
+  border-left:1px solid var(--ink);
+  margin-bottom:0;
+}
+.prod{
+  position:relative;
+  border-right:1px solid var(--ink);
+  border-bottom:1px solid var(--ink);
+  background:var(--bone-2);
+  display:flex;
+  flex-direction:column;
+  min-height:380px;
+  cursor:pointer;
+  transition:background .2s;
+}
+.prod:hover{background:var(--bone);}
+.prod:hover .prod-cta{background:var(--signal);color:var(--ink);}
+.prod-num{
+  position:absolute;
+  top:0;left:0;
+  background:var(--ink);
+  color:var(--bone);
+  padding:6px 12px;
+  font-family:'JetBrains Mono', monospace;
+  font-size:11px;letter-spacing:.18em;font-weight:700;
+}
+.prod-img{
+  flex:1;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:24px;
+}
+.prod-img img{max-width:60%;opacity:.7;}
+.prod-1{background:linear-gradient(180deg, #5b7d6d, #4a6659);}
+.prod-2{background:linear-gradient(180deg, #F4F1E9, #E0D8C2);}
+.prod-3{background:linear-gradient(180deg, #2C3441, #1A1F2A);}
+.prod-4{background:linear-gradient(180deg, #FAFAF7, #E9E2D6);}
+.prod-5{background:linear-gradient(180deg, #AFA393, #5b7d6d);}
+.prod-6{background:linear-gradient(180deg, #F8F7F4, #C9C2B5);}
+.prod-1 img,.prod-3 img{filter:brightness(0) invert(1);opacity:.5;}
+.prod-info{
+  padding:16px;
+  background:var(--ink);
+  color:var(--bone);
+  display:grid;
+  grid-template-rows:auto auto auto;
+  gap:6px;
+}
+.prod-info h3{
+  font-family:'Archivo Black', sans-serif;
+  font-size:18px;
+  line-height:1;
+  letter-spacing:-.01em;
+  text-transform:uppercase;
+}
+.prod-info small{
+  font-family:'JetBrains Mono', monospace;
+  font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;
+  color:#C9C2B5;
+}
+.prod-foot{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-top:6px;
+}
+.prod-price{
+  font-family:'Archivo Black';
+  font-size:24px;
+  letter-spacing:-.01em;
+  color:var(--signal-2);
+}
+.prod-cta{
+  font-family:'JetBrains Mono', monospace;
+  font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;font-weight:700;
+  background:rgba(244,241,233,.14);
+  color:var(--bone);
+  padding:6px 10px;
+  transition:background .2s, color .2s;
+}
+
+.drop-foot{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:32px 0;
+  border-top:1px solid var(--ink);
+  margin-top:0;
+}
+.drop-foot .cap{color:var(--ink-2);}
+.drop-foot a{
+  font-family:'Archivo Black';
+  font-size:32px;
+  letter-spacing:-.02em;
+  text-transform:uppercase;
+  color:var(--ink);
+  border-bottom:4px solid var(--signal);
+  padding-bottom:2px;
+}
+.drop-foot a:hover{color:var(--signal);}
+
+/* MID BAND — DECLARATIVE */
+.declare{
+  background:var(--signal);
+  color:var(--ink);
+  padding:96px 32px;
+  border-bottom:6px solid var(--ink);
+  text-align:left;
+}
+.declare-grid{
+  display:grid;
+  grid-template-columns:1fr 280px;
+  gap:48px;
+  align-items:end;
+}
+.declare h2{
+  font-family:'Archivo Black', sans-serif;
+  font-size:clamp(56px, 9.5vw, 168px);
+  line-height:.85;
+  letter-spacing:-.045em;
+  text-transform:uppercase;
+}
+.declare h2 .knockout{
+  -webkit-text-stroke:2.5px var(--ink);
+  -webkit-text-fill-color:transparent;
+}
+.declare-r{
+  text-align:right;
+  font-family:'JetBrains Mono', monospace;
+  font-size:13px;line-height:1.55;letter-spacing:.04em;
+}
+.declare-r b{
+  display:block;
+  font-family:'Archivo Black';
+  font-size:48px;
+  line-height:.95;
+  letter-spacing:-.02em;
+  text-transform:uppercase;
+  margin-bottom:12px;
+}
+
+/* OSAKA — DROP ANNOUNCEMENT */
+.osaka{
+  background:var(--ink);
+  color:var(--bone);
+  border-bottom:6px solid var(--signal);
+  position:relative;
+}
+.osaka-band{
+  background:var(--signal);
+  color:var(--ink);
+  padding:14px 32px;
+  display:flex;
+  justify-content:space-between;
+  font-family:'JetBrains Mono', monospace;
+  font-size:11px;letter-spacing:.2em;text-transform:uppercase;font-weight:700;
+}
+.osaka-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+}
+.osaka-l{
+  padding:64px 32px;
+  border-right:1px solid rgba(244,241,233,.18);
+  position:relative;
+}
+.osaka-l h2{
+  font-family:'Archivo Black', sans-serif;
+  font-size:clamp(72px, 13vw, 220px);
+  line-height:.82;
+  letter-spacing:-.045em;
+  text-transform:uppercase;
+}
+.osaka-l h2 .signal{color:var(--signal);}
+.osaka-l h2 .stripe{background:var(--signal);color:var(--ink);padding:0 .04em;}
+.osaka-l p{
+  font-family:'Manrope', sans-serif;
+  font-size:18px;
+  line-height:1.5;
+  max-width:42ch;
+  color:#D7D3CB;
+  margin-top:32px;
+}
+.osaka-spec{
+  display:grid;
+  grid-template-columns:repeat(2, 1fr);
+  gap:0;
+  margin-top:40px;
+  border:1px solid rgba(244,241,233,.18);
+}
+.osaka-spec div{
+  padding:18px;
+  border-right:1px solid rgba(244,241,233,.18);
+  border-bottom:1px solid rgba(244,241,233,.18);
+}
+.osaka-spec div:nth-child(2n){border-right:none;}
+.osaka-spec div:nth-child(n+3){border-bottom:none;}
+.osaka-spec b{
+  display:block;
+  font-family:'Archivo Black';
+  font-size:28px;
+  line-height:.95;
+  letter-spacing:-.01em;
+  text-transform:uppercase;
+  color:var(--signal);
+}
+.osaka-spec span{
+  display:block;
+  font-family:'JetBrains Mono';
+  font-size:11px;letter-spacing:.16em;text-transform:uppercase;
+  color:#C9C2B5;
+  margin-top:8px;
+}
+.osaka-cta{
+  display:inline-flex;
+  align-items:center;
+  gap:14px;
+  margin-top:40px;
+  padding:18px 28px;
+  background:var(--signal);
+  color:var(--ink);
+  font-family:'Archivo Black';
+  font-size:18px;
+  letter-spacing:-.005em;
+  text-transform:uppercase;
+  border:2px solid var(--signal);
+  transition:background .2s, color .2s;
+}
+.osaka-cta:hover{background:transparent;color:var(--signal);}
+.osaka-cta::after{content:"→";font-size:20px;}
+
+.osaka-r{
+  background:url('https://images.pexels.com/photos/35248501/pexels-photo-35248501.jpeg') center/cover;
+  position:relative;
+  min-height:680px;
+}
+.osaka-r::before{
+  content:"";
+  position:absolute;inset:0;
+  background:
+    repeating-linear-gradient(45deg, rgba(246,92,44,.12) 0 4px, transparent 4px 28px),
+    linear-gradient(180deg, rgba(10,14,20,.18), rgba(10,14,20,.78));
+}
+.osaka-r-tag{
+  position:absolute;
+  top:32px;left:32px;
+  background:var(--signal);color:var(--ink);
+  padding:10px 14px;
+  font-family:'Archivo Black';
+  font-size:14px;
+  letter-spacing:-.005em;
+  text-transform:uppercase;
+  z-index:2;
+}
+.osaka-r-stamp{
+  position:absolute;
+  top:32px;right:32px;
+  width:120px;height:120px;
+  border-radius:50%;
+  background:var(--signal);
+  color:var(--ink);
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  font-family:'Archivo Black';
+  font-size:14px;
+  letter-spacing:-.01em;
+  text-transform:uppercase;
+  text-align:center;
+  z-index:2;
+  transform:rotate(-12deg);
+}
+.osaka-r-stamp b{font-size:42px;line-height:.85;}
+.osaka-r-foot{
+  position:absolute;
+  bottom:32px;left:32px;right:32px;
+  z-index:2;
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-end;
+  color:var(--bone);
+}
+.osaka-r-foot h3{
+  font-family:'Archivo Black';
+  font-size:48px;
+  line-height:.85;
+  letter-spacing:-.025em;
+  text-transform:uppercase;
+}
+.osaka-r-foot small{
+  font-family:'JetBrains Mono';
+  font-size:11px;letter-spacing:.18em;text-transform:uppercase;
+  color:#D7D3CB;
+}
+
+/* SCHEDULE / EVENTS — POSTER GRID */
+.events{
+  padding:96px 32px;
+  background:var(--bone);
+  border-bottom:6px solid var(--ink);
+}
+.events-head{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:32px;
+  margin-bottom:48px;
+  align-items:end;
+  border-bottom:2px solid var(--ink);
+  padding-bottom:32px;
+}
+.events-head h2{
+  font-family:'Archivo Black';
+  font-size:clamp(56px, 10vw, 180px);
+  line-height:.85;
+  letter-spacing:-.04em;
+  text-transform:uppercase;
+}
+.events-head .cap{color:var(--ink-2);max-width:36ch;text-align:right;justify-self:end;}
+
+.events-grid{
+  display:grid;
+  grid-template-columns:repeat(4, 1fr);
+  gap:24px;
+}
+.event-card{
+  border:2px solid var(--ink);
+  background:var(--bone);
+  padding:24px;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  min-height:420px;
+  position:relative;
+  overflow:hidden;
+  transition:transform .15s, box-shadow .15s;
+}
+.event-card:hover{transform:translate(-4px,-4px);box-shadow:8px 8px 0 var(--ink);}
+.event-card.hot{background:var(--signal);}
+.event-card.hot .cap{color:var(--ink);}
+.event-card.hot .e-num,.event-card.hot .e-day{color:var(--ink);}
+.e-num{
+  font-family:'JetBrains Mono', monospace;
+  font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:700;
+  color:var(--signal);
+}
+.event-card.hot .e-num{color:var(--ink);}
+.e-day{
+  font-family:'Archivo Black';
+  font-size:96px;
+  line-height:.85;
+  letter-spacing:-.04em;
+  margin:18px 0 8px;
+}
+.event-card.hot .e-day{color:var(--ink);}
+.e-mo{
+  font-family:'JetBrains Mono', monospace;
+  font-size:13px;letter-spacing:.2em;text-transform:uppercase;font-weight:600;
+  color:var(--ink-2);
+}
+.event-card.hot .e-mo{color:var(--ink);}
+.e-title{
+  font-family:'Archivo Black';
+  font-size:28px;
+  line-height:.92;
+  letter-spacing:-.02em;
+  text-transform:uppercase;
+  margin-top:24px;
+  color:var(--ink);
+}
+.e-meta{
+  font-family:'JetBrains Mono', monospace;
+  font-size:11px;letter-spacing:.14em;text-transform:uppercase;
+  margin-top:14px;
+  color:var(--ink-2);
+  line-height:1.7;
+}
+.event-card.hot .e-meta{color:var(--ink);}
+.e-rsvp{
+  font-family:'Archivo Black';
+  font-size:14px;
+  letter-spacing:-.01em;
+  text-transform:uppercase;
+  background:var(--ink);
+  color:var(--bone);
+  padding:10px 14px;
+  align-self:flex-start;
+  margin-top:24px;
+  border:none;
+  cursor:pointer;
+}
+.event-card.hot .e-rsvp{background:var(--ink);color:var(--signal);}
+.e-rsvp:hover{background:var(--signal);color:var(--ink);}
+.event-card.hot .e-rsvp:hover{background:var(--bone);color:var(--ink);}
+
+/* MANIFESTO — KNOCKOUT TYPE */
+.manifesto{
+  background:var(--ink);
+  color:var(--bone);
+  padding:96px 32px;
+  border-bottom:6px solid var(--signal);
+  position:relative;
+  overflow:hidden;
+}
+.manifesto-rail{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:0;
+}
+.man-line{
+  font-family:'Archivo Black';
+  font-size:clamp(40px, 7.5vw, 130px);
+  line-height:.95;
+  letter-spacing:-.035em;
+  text-transform:uppercase;
+  border-bottom:1px solid rgba(244,241,233,.18);
+  padding:18px 0;
+  display:flex;
+  align-items:baseline;
+  gap:24px;
+  transition:color .2s, padding .2s, background .2s;
+}
+.man-line:hover{color:var(--signal);padding-left:18px;}
+.man-line .num{
+  font-family:'JetBrains Mono', monospace;
+  font-size:14px;
+  letter-spacing:.14em;
+  color:var(--signal);
+  font-weight:600;
+  flex-shrink:0;
+  min-width:48px;
+  text-transform:uppercase;
+}
+.man-line .knockout{
+  -webkit-text-stroke:2px var(--bone);
+  -webkit-text-fill-color:transparent;
+}
+.man-line:hover .knockout{-webkit-text-stroke-color:var(--signal);}
+
+/* FOOTER */
+footer{
+  background:var(--bone);
+  color:var(--ink);
+  padding:64px 32px 32px;
+}
+.foot-h{
+  font-family:'Archivo Black';
+  font-size:clamp(72px, 14vw, 240px);
+  line-height:.85;
+  letter-spacing:-.045em;
+  text-transform:uppercase;
+  border-bottom:6px solid var(--signal);
+  padding-bottom:24px;
+  margin-bottom:48px;
+}
+.foot-h .signal{color:var(--signal);}
+.foot-grid{
+  display:grid;
+  grid-template-columns:2fr 1fr 1fr 1fr 1fr;
+  gap:32px;
+  border-bottom:2px solid var(--ink);
+  padding-bottom:48px;
+  margin-bottom:24px;
+}
+.foot-news h4, .foot-grid h4{
+  font-family:'JetBrains Mono', monospace;
+  font-size:11px;letter-spacing:.2em;text-transform:uppercase;font-weight:600;
+  color:var(--ink-2);
+  margin-bottom:18px;
+}
+.foot-grid a, .foot-grid li{
+  display:block;
+  font-family:'Archivo Black';
+  font-size:18px;
+  letter-spacing:-.005em;
+  text-transform:uppercase;
+  margin-bottom:8px;
+  list-style:none;
+  color:var(--ink);
+}
+.foot-grid a:hover{color:var(--signal);}
+.foot-news input{
+  background:transparent;
+  border:none;
+  border-bottom:2px solid var(--ink);
+  padding:10px 0;
+  width:100%;
+  font-family:'Archivo Black';
+  font-size:18px;
+  letter-spacing:-.005em;
+  text-transform:uppercase;
+  color:var(--ink);
+  outline:none;
+}
+.foot-news input::placeholder{color:rgba(10,14,20,.4);}
+.foot-news button{
+  margin-top:14px;
+  background:var(--signal);
+  color:var(--ink);
+  border:none;
+  padding:14px 22px;
+  font-family:'Archivo Black';
+  font-size:14px;
+  letter-spacing:-.005em;
+  text-transform:uppercase;
+  cursor:pointer;
+}
+.foot-news button:hover{background:var(--ink);color:var(--signal);}
+.foot-bottom{
+  display:flex;
+  justify-content:space-between;
+  font-family:'JetBrains Mono', monospace;
+  font-size:11px;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--ink-2);
+}
+.foot-bottom a{color:var(--signal);}
+
+/* RESPONSIVE */
+@media (max-width:1100px){
+  .drop-grid{grid-template-columns:repeat(3, 1fr);}
+  .events-grid{grid-template-columns:repeat(2, 1fr);}
+  .top-nav a:nth-child(n+4){display:none;}
+}
+@media (max-width:760px){
+  .top-nav{display:none;}
+  .top-status{display:none;}
+  .hero,.drop,.declare,.events,.manifesto,.osaka-l,.osaka-r,footer{padding-left:20px;padding-right:20px;}
+  .hero-stack, .drop-head, .declare-grid, .events-head, .osaka-grid, .foot-grid{grid-template-columns:1fr;gap:24px;}
+  .drop-grid{grid-template-columns:1fr 1fr;}
+  .events-grid{grid-template-columns:1fr;}
+  .declare-r{text-align:left;}
+  .events-head .cap{text-align:left;justify-self:start;}
+  .osaka-l{border-right:none;border-bottom:1px solid rgba(244,241,233,.18);padding:48px 20px;}
+  .osaka-r{min-height:420px;}
+  .foot-grid{grid-template-columns:1fr 1fr;}
+  .foot-bottom{flex-direction:column;gap:8px;}
+}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="top-brand">BLP / SIGNAL</div>
+  <nav class="top-nav">
+    <a href="#drop">Drop</a>
+    <a href="#osaka">Osaka</a>
+    <a href="#events">Plays</a>
+    <a href="#manifesto">House</a>
+  </nav>
+  <div class="top-status">SS26 / Live</div>
+  <div class="top-cart">Bag · 0</div>
+</header>
+
+<main>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-head">
+    <span class="cap"><b>Vol. 01 / Spring '26</b> — The Drop is Live</span>
+    <span class="cap">29.7604° N · 95.3698° W &nbsp; / &nbsp; Houston, TX</span>
+  </div>
+  <h1 class="hero-h1">Baby<br>Let'<span class="o">s</span><br><span class="stripe">Padel.</span></h1>
+  <div class="hero-stack">
+    <p class="lead">Training apparel for the racket sport. <span>Six pieces.</span> All unisex. All sized for movement.</p>
+    <div class="hero-stat"><b>06</b><span>Pieces in the spring kit</span></div>
+    <div class="hero-stat"><b>16</b><span>Open plays through May</span></div>
+  </div>
+  <div class="hero-foot">
+    <div><b>// Now</b> &nbsp; Spring kit live</div>
+    <div><b>// Next</b> &nbsp; Neon Padel Party · 5/2</div>
+    <div><b>// File</b> &nbsp; SS26 / V.01</div>
+  </div>
+</section>
+
+<!-- TICKER -->
+<div class="ticker">
+  <div class="ticker-track">
+    <span>Open Plays Loaded</span>
+    <span>RSC Katy 4/22</span>
+    <span>Willowbrook 4/28</span>
+    <span>Neon Padel Party 5/2</span>
+    <span>TEMPO 5/4</span>
+    <span>Houston → Everywhere</span>
+    <span>Open Plays Loaded</span>
+    <span>RSC Katy 4/22</span>
+    <span>Willowbrook 4/28</span>
+    <span>Neon Padel Party 5/2</span>
+    <span>TEMPO 5/4</span>
+    <span>Houston → Everywhere</span>
+  </div>
+</div>
+
+<!-- DROP -->
+<section class="drop" id="drop">
+  <div class="drop-head">
+    <h2>The <span class="stripe">Drop.</span></h2>
+    <span></span>
+    <span class="cap"><b>SS26 / 06 PCS</b>Six pieces. Unisex. Sized XS to XL.</span>
+  </div>
+
+  <div class="drop-grid">
+    <article class="prod">
+      <div class="prod-num">01</div>
+      <div class="prod-img prod-1"><img src="https://customer-assets.emergentagent.com/job_c0589f16-d62f-4855-9be3-f2d98f470a9c/artifacts/ob08t771_Decal-01.png" alt=""></div>
+      <div class="prod-info">
+        <h3>Heavy Crew</h3>
+        <small>Eucalyptus · 350 GSM</small>
+        <div class="prod-foot"><span class="prod-price">$53</span><span class="prod-cta">Add</span></div>
+      </div>
+    </article>
+    <article class="prod">
+      <div class="prod-num">02</div>
+      <div class="prod-img prod-2"><img src="https://customer-assets.emergentagent.com/job_c0589f16-d62f-4855-9be3-f2d98f470a9c/artifacts/ob08t771_Decal-01.png" alt=""></div>
+      <div class="prod-info">
+        <h3>Light Crew</h3>
+        <small>Off-White · 220 GSM</small>
+        <div class="prod-foot"><span class="prod-price">$41</span><span class="prod-cta">Add</span></div>
+      </div>
+    </article>
+    <article class="prod">
+      <div class="prod-num">03</div>
+      <div class="prod-img prod-3"><img src="https://customer-assets.emergentagent.com/job_c0589f16-d62f-4855-9be3-f2d98f470a9c/artifacts/ob08t771_Decal-01.png" alt=""></div>
+      <div class="prod-info">
+        <h3>Heavy Crew</h3>
+        <small>Deep Navy · 350 GSM</small>
+        <div class="prod-foot"><span class="prod-price">$53</span><span class="prod-cta">Add</span></div>
+      </div>
+    </article>
+    <article class="prod">
+      <div class="prod-num">04</div>
+      <div class="prod-img prod-4"><img src="https://customer-assets.emergentagent.com/job_c0589f16-d62f-4855-9be3-f2d98f470a9c/artifacts/ob08t771_Decal-01.png" alt=""></div>
+      <div class="prod-info">
+        <h3>L/S Tee</h3>
+        <small>Off-White · Wicking</small>
+        <div class="prod-foot"><span class="prod-price">$31</span><span class="prod-cta">Add</span></div>
+      </div>
+    </article>
+    <article class="prod">
+      <div class="prod-num">05</div>
+      <div class="prod-img prod-5"><img src="https://customer-assets.emergentagent.com/job_c0589f16-d62f-4855-9be3-f2d98f470a9c/artifacts/ob08t771_Decal-01.png" alt=""></div>
+      <div class="prod-info">
+        <h3>6-Panel</h3>
+        <small>Taupe · Sage · Navy</small>
+        <div class="prod-foot"><span class="prod-price">$27</span><span class="prod-cta">Add</span></div>
+      </div>
+    </article>
+    <article class="prod">
+      <div class="prod-num">06</div>
+      <div class="prod-img prod-6"><img src="https://customer-assets.emergentagent.com/job_c0589f16-d62f-4855-9be3-f2d98f470a9c/artifacts/ob08t771_Decal-01.png" alt=""></div>
+      <div class="prod-info">
+        <h3>Visor</h3>
+        <small>Off-White · Quick-dry</small>
+        <div class="prod-foot"><span class="prod-price">$22</span><span class="prod-cta">Add</span></div>
+      </div>
+    </article>
+  </div>
+
+  <div class="drop-foot">
+    <span class="cap">All sizes XS — XL · Free shipping over $75 · Restocks announced via newsletter</span>
+    <a href="#">Shop the kit →</a>
+  </div>
+</section>
+
+<!-- DECLARE -->
+<section class="declare">
+  <div class="declare-grid">
+    <h2>Show up.<br><span class="knockout">Hit balls.</span><br>Stay for the<br>second game.</h2>
+    <div class="declare-r">
+      <b>House Rule<br>No. 01</b>
+      Mixed levels. Mixed cities. Same playbook every time we hit the court.
+    </div>
+  </div>
+</section>
+
+<!-- OSAKA -->
+<section class="osaka" id="osaka">
+  <div class="osaka-band">
+    <span>Drop No. 02 / Collab Edition</span>
+    <span>Osaka × BLP</span>
+    <span>Available 04 / 26 — Now Live</span>
+  </div>
+  <div class="osaka-grid">
+    <div class="osaka-l">
+      <h2>Osaka<br><span class="signal">×</span><br><span class="stripe">BLP.</span></h2>
+      <p>Carbon-fiber rackets, EVA cores, technical kit. The Dutch performance label that builds the gear our crew actually plays with. Curated edit. Live in Houston.</p>
+
+      <div class="osaka-spec">
+        <div><b>02</b><span>Frames in the edit</span></div>
+        <div><b>18K</b><span>Carbon weave</span></div>
+        <div><b>360g</b><span>Avg. weight</span></div>
+        <div><b>FREE</b><span>Demo at every open play</span></div>
+      </div>
+
+      <a href="https://www.osakaworldusa.com/collections/padel" target="_blank" rel="noopener" class="osaka-cta">Shop Osaka × BLP</a>
+    </div>
+
+    <div class="osaka-r">
+      <span class="osaka-r-tag">Drop / 02 — Collab</span>
+      <div class="osaka-r-stamp"><span style="font-size:10px;letter-spacing:.16em;">Limited</span><b>Edit</b><span style="font-size:10px;letter-spacing:.16em;">Spring '26</span></div>
+      <div class="osaka-r-foot">
+        <h3>Vision Pro<br>Vision Tour</h3>
+        <small>Frames evaluated · 14 sessions</small>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EVENTS -->
+<section class="events" id="events">
+  <div class="events-head">
+    <h2>Open<br>Plays.</h2>
+    <span class="cap">Every Houston open play through May 2026. Mixed levels. RSVP required. Rackets and balls on us. Osaka demos courtside every Tuesday and Wednesday.</span>
+  </div>
+
+  <div class="events-grid">
+    <article class="event-card">
+      <div>
+        <span class="e-num">No. 01 / Open Play</span>
+        <div class="e-day">22</div>
+        <span class="e-mo">Apr · Wednesday</span>
+      </div>
+      <div class="e-title">RSC Katy</div>
+      <div class="e-meta">7:00 PM<br>Katy · Houston, TX<br>14 Spots</div>
+      <button class="e-rsvp">RSVP →</button>
+    </article>
+    <article class="event-card">
+      <div>
+        <span class="e-num">No. 02 / Open Play</span>
+        <div class="e-day">28</div>
+        <span class="e-mo">Apr · Tuesday</span>
+      </div>
+      <div class="e-title">RSC Willowbrook</div>
+      <div class="e-meta">7:00 — 8:30 PM<br>Willowbrook · Houston<br>16 Spots</div>
+      <button class="e-rsvp">RSVP →</button>
+    </article>
+    <article class="event-card hot">
+      <div>
+        <span class="e-num">No. 03 / Event</span>
+        <div class="e-day">02</div>
+        <span class="e-mo">May · Saturday</span>
+      </div>
+      <div class="e-title">Neon Padel Party</div>
+      <div class="e-meta">8:00 PM<br>w/ Smash 305<br>Cube Padel · 22 Spots</div>
+      <button class="e-rsvp">RSVP →</button>
+    </article>
+    <article class="event-card">
+      <div>
+        <span class="e-num">No. 04 / Open Play</span>
+        <div class="e-day">04</div>
+        <span class="e-mo">May · Monday</span>
+      </div>
+      <div class="e-title">TEMPO Padel</div>
+      <div class="e-meta">7:00 PM<br>Houston, TX<br>18 Spots</div>
+      <button class="e-rsvp">RSVP →</button>
+    </article>
+  </div>
+</section>
+
+<!-- MANIFESTO -->
+<section class="manifesto" id="manifesto">
+  <div class="manifesto-rail">
+    <div class="man-line"><span class="num">R.01</span>Show up. Hit balls. Stay for the second game.</div>
+    <div class="man-line"><span class="num">R.02</span><span class="knockout">Mixed levels. We'll find you a fourth.</span></div>
+    <div class="man-line"><span class="num">R.03</span>The crew is the brand. The kit is the by-product.</div>
+    <div class="man-line"><span class="num">R.04</span><span class="knockout">Houston is home. Everywhere else is a road game.</span></div>
+    <div class="man-line"><span class="num">R.05</span>Bring a friend who's never played before.</div>
+    <div class="man-line"><span class="num">R.06</span><span class="knockout">Argue line calls less. Take the next point harder.</span></div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="foot-h">Baby<br>Let'<span class="signal">s</span><br>Play.</div>
+  <div class="foot-grid">
+    <div class="foot-news">
+      <h4>The Signal — Newsletter</h4>
+      <input type="email" placeholder="email@address">
+      <button>Lock In</button>
+    </div>
+    <div>
+      <h4>Shop</h4>
+      <a href="#">Crewnecks</a>
+      <a href="#">Tops</a>
+      <a href="#">Headwear</a>
+      <a href="#">Osaka</a>
+    </div>
+    <div>
+      <h4>Plays</h4>
+      <a href="#">Calendar</a>
+      <a href="#">RSVP</a>
+      <a href="#">Travel</a>
+    </div>
+    <div>
+      <h4>House</h4>
+      <a href="#">Crew</a>
+      <a href="#">Manifesto</a>
+      <a href="#">Contact</a>
+    </div>
+    <div>
+      <h4>Follow</h4>
+      <a href="#">Instagram</a>
+      <a href="#">TikTok</a>
+      <a href="#">Strava</a>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    <span>© 2026 Baby Let's Padel</span>
+    <span>SS26 · Vol. 01 · Houston, TX</span>
+    <span><a href="../">← All Five Designs</a></span>
+  </div>
+</footer>
+
+</main>
+</body>
+</html>
