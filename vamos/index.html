@@ -954,48 +954,19 @@ button{font-family:inherit;border:none;cursor:pointer;}
   aspect-ratio:1/1;
   position:relative;
 }
-.ig-card.cm1 .ig-card-img{background:linear-gradient(170deg, #5b7d6d, #4a6659);}
-.ig-card.cm2 .ig-card-img{background:linear-gradient(170deg, #AFA393, #8E826F);}
-.ig-card.cm3 .ig-card-img{background:linear-gradient(170deg, #1E293B, #141B27);}
-.ig-card.cm4 .ig-card-img{background:linear-gradient(170deg, #A9BCB3, #5b7d6d);}
-.ig-card.cm5 .ig-card-img{background:linear-gradient(170deg, #E9E2D6, #AFA393);}
-.ig-card.cm6 .ig-card-img{background:linear-gradient(170deg, #4a6659, #1E293B);}
-.ig-card.cm7 .ig-card-img{background:linear-gradient(170deg, #F4EFDF, #AFA393);}
-.ig-card.cm8 .ig-card-img{background:linear-gradient(170deg, #5b7d6d, #1E293B);}
-/* IG post themed gradients (match the actual post mood) */
-.ig-card.ig-giveaway .ig-card-img{background:linear-gradient(170deg, #C7D3CB, #A9BCB3);}
-.ig-card.ig-interview .ig-card-img{background:linear-gradient(170deg, #5b7d6d, #1E293B);}
-.ig-card.ig-court .ig-card-img{background:linear-gradient(170deg, #3a6fb5, #1E2F5C);}
-.ig-card.ig-event .ig-card-img{background:linear-gradient(170deg, #C66A4D, #8E826F);}
-.ig-card.ig-osaka .ig-card-img{background:linear-gradient(170deg, #1A1F2A, #4a6659);}
-.ig-card.ig-neon .ig-card-img{background:linear-gradient(170deg, #5b3a9e, #1A1F2A);}
-.ig-card.ig-court2 .ig-card-img{background:linear-gradient(170deg, #A9BCB3, #5b7d6d);}
-.ig-card.ig-flyer .ig-card-img{background:linear-gradient(170deg, #d65fb8, #5b3a9e);}
-.ig-card.ig-patriot .ig-card-img{background:linear-gradient(170deg, #2a4a3a, #1E293B);}
-.ig-card.ig-fit .ig-card-img{background:linear-gradient(170deg, #9E5D7A, #6B3D52);}
-.ig-card.ig-partner .ig-card-img{background:linear-gradient(170deg, #5b7d6d, #4a6659);}
-.ig-card.ig-vibe .ig-card-img{background:linear-gradient(170deg, #4a6659, #1E293B);}
-.ig-card-img{
-  position:relative;
-}
-.ig-card-overlay{
-  position:absolute;inset:0;z-index:2;
-  display:flex;flex-direction:column;
-  align-items:center;justify-content:center;
-  padding:18px;text-align:center;
-  font-family:'Bebas Neue';font-size:28px;letter-spacing:.04em;line-height:.95;
-  color:var(--bone);
-  text-shadow:0 1px 4px rgba(0,0,0,.3);
-}
-.ig-card-overlay small{
-  display:block;
-  margin-top:8px;
-  font-family:'Manrope';font-weight:500;
-  font-size:11px;letter-spacing:.18em;text-transform:uppercase;
-  color:rgba(244,239,223,.85);
-  line-height:1.3;
-  max-width:24ch;
-}
+.ig-card-img{background-size:cover; background-position:center; background-color:#1E293B;}
+.ig-card.ig-giveaway .ig-card-img{background-image:url('../assets/instagram/01-giveaway.jpg');}
+.ig-card.ig-interview .ig-card-img{background-image:url('../assets/instagram/02-interview.jpg');}
+.ig-card.ig-court .ig-card-img{background-image:url('../assets/instagram/03-practice.jpg');}
+.ig-card.ig-event .ig-card-img{background-image:url('../assets/instagram/04-nationcups.jpg');}
+.ig-card.ig-osaka .ig-card-img{background-image:url('../assets/instagram/05-osaka.jpg');}
+.ig-card.ig-neon .ig-card-img{background-image:url('../assets/instagram/06-neonparty.jpg');}
+.ig-card.ig-court2 .ig-card-img{background-image:url('../assets/instagram/07-openplays.jpg');}
+.ig-card.ig-flyer .ig-card-img{background-image:url('../assets/instagram/08-glowflyer.jpg');}
+.ig-card.ig-patriot .ig-card-img{background-image:url('../assets/instagram/09-patriot.jpg');}
+.ig-card.ig-fit .ig-card-img{background-image:url('../assets/instagram/10-searchosaka.jpg');}
+.ig-card.ig-partner .ig-card-img{background-image:url('../assets/instagram/11-canario.jpg');}
+.ig-card.ig-vibe .ig-card-img{background-image:url('../assets/instagram/12-playbynoir.jpg');}
 .ig-card-meta{
   padding:14px 16px;
   background:var(--bone);color:var(--ink);
@@ -1751,84 +1722,84 @@ button{font-family:inherit;border:none;cursor:pointer;}
       <!-- 12 placeholder cards matching actual IG content. Each card's gradient + label
            reflects a real post; replace with real images via Behold/Snapwidget. -->
       <a class="ig-card ig-giveaway" href="https://www.instagram.com/babyletspadel/" target="_blank" rel="noopener">
-        <div class="ig-card-img"><span class="ig-card-overlay">Giveaway<small>To celebrate 1K followers · WIN 2 PIECES</small></span></div>
+        <div class="ig-card-img"></div>
         <div class="ig-card-meta">
           <div class="ig-card-cap">To celebrate 1K followers · Sweater + Hat giveaway 🎁</div>
           <div class="ig-card-stats">♡ 412 · 💬 287</div>
         </div>
       </a>
       <a class="ig-card ig-interview" href="https://www.instagram.com/babyletspadel/" target="_blank" rel="noopener">
-        <div class="ig-card-img"><span class="ig-card-overlay">BLP Conversations<small>w/ Guillermo Montiel</small></span></div>
+        <div class="ig-card-img"></div>
         <div class="ig-card-meta">
           <div class="ig-card-cap">BLP Conversations · Interview w/ Guillermo Montiel 🎤</div>
           <div class="ig-card-stats">♡ 187 · 💬 24</div>
         </div>
       </a>
       <a class="ig-card ig-court" href="https://www.instagram.com/babyletspadel/" target="_blank" rel="noopener">
-        <div class="ig-card-img"><span class="ig-card-overlay">Practice<small>Hits every target</small></span></div>
+        <div class="ig-card-img"></div>
         <div class="ig-card-meta">
           <div class="ig-card-cap">Practice tip · Hits every target 🎯 #blppadel</div>
           <div class="ig-card-stats">♡ 146 · 💬 11</div>
         </div>
       </a>
       <a class="ig-card ig-event" href="https://www.instagram.com/babyletspadel/" target="_blank" rel="noopener">
-        <div class="ig-card-img"><span class="ig-card-overlay">Nation Cups<small>Recap</small></span></div>
+        <div class="ig-card-img"></div>
         <div class="ig-card-meta">
           <div class="ig-card-cap">Nation Cups · weekend recap 🇺🇸🎾</div>
           <div class="ig-card-stats">♡ 298 · 💬 34</div>
         </div>
       </a>
       <a class="ig-card ig-osaka" href="https://www.instagram.com/babyletspadel/" target="_blank" rel="noopener">
-        <div class="ig-card-img"><span class="ig-card-overlay">Baby let's PADEL<small>× OSAKA 大阪</small></span></div>
+        <div class="ig-card-img"></div>
         <div class="ig-card-meta">
           <div class="ig-card-cap">Baby Let's Padel × Osaka 大阪 — partnership is live</div>
           <div class="ig-card-stats">♡ 524 · 💬 67</div>
         </div>
       </a>
       <a class="ig-card ig-neon" href="https://www.instagram.com/babyletspadel/" target="_blank" rel="noopener">
-        <div class="ig-card-img"><span class="ig-card-overlay">Houston First<small>Neon Padel Party</small></span></div>
+        <div class="ig-card-img"></div>
         <div class="ig-card-meta">
           <div class="ig-card-cap">Houston's first Neon Padel Party · who's in 💜</div>
           <div class="ig-card-stats">♡ 612 · 💬 89</div>
         </div>
       </a>
       <a class="ig-card ig-court2" href="https://www.instagram.com/babyletspadel/" target="_blank" rel="noopener">
-        <div class="ig-card-img"><span class="ig-card-overlay">Open Plays<small>just hit different</small></span></div>
+        <div class="ig-card-img"></div>
         <div class="ig-card-meta">
           <div class="ig-card-cap">Open plays just hit different @babyletspadel</div>
           <div class="ig-card-stats">♡ 289 · 💬 41</div>
         </div>
       </a>
       <a class="ig-card ig-flyer" href="https://www.instagram.com/babyletspadel/" target="_blank" rel="noopener">
-        <div class="ig-card-img"><span class="ig-card-overlay">Glow on Court<small>Sat May 2 · 7–11 PM · CUBE</small></span></div>
+        <div class="ig-card-img"></div>
         <div class="ig-card-meta">
           <div class="ig-card-cap">Neon Padel Party · Saturday May 2 · Cube Padel · 7pm</div>
           <div class="ig-card-stats">♡ 387 · 💬 58</div>
         </div>
       </a>
       <a class="ig-card ig-patriot" href="https://www.instagram.com/babyletspadel/" target="_blank" rel="noopener">
-        <div class="ig-card-img"><span class="ig-card-overlay">Patriot Padel Cup<small>Racket Social Club · May 23</small></span></div>
+        <div class="ig-card-img"></div>
         <div class="ig-card-meta">
           <div class="ig-card-cap">Patriot Padel Cup 🇺🇸 May 23 · Racket Social Club Katy</div>
           <div class="ig-card-stats">♡ 234 · 💬 28</div>
         </div>
       </a>
       <a class="ig-card ig-fit" href="https://www.instagram.com/babyletspadel/" target="_blank" rel="noopener">
-        <div class="ig-card-img"><span class="ig-card-overlay">Search:<small>Padel fit by Osaka</small></span></div>
+        <div class="ig-card-img"></div>
         <div class="ig-card-meta">
           <div class="ig-card-cap">Padel fit of the day · Osaka 🎾✨</div>
           <div class="ig-card-stats">♡ 412 · 💬 33</div>
         </div>
       </a>
       <a class="ig-card ig-partner" href="https://www.instagram.com/babyletspadel/" target="_blank" rel="noopener">
-        <div class="ig-card-img"><span class="ig-card-overlay">@canariopadelclub<small>Partner club spotlight</small></span></div>
+        <div class="ig-card-img"></div>
         <div class="ig-card-meta">
           <div class="ig-card-cap">Visiting our friends at @canariopadelclub 🌴</div>
           <div class="ig-card-stats">♡ 198 · 💬 22</div>
         </div>
       </a>
       <a class="ig-card ig-vibe" href="https://www.instagram.com/babyletspadel/" target="_blank" rel="noopener">
-        <div class="ig-card-img"><span class="ig-card-overlay">4 signs<small>you're doing great in life</small></span></div>
+        <div class="ig-card-img"></div>
         <div class="ig-card-meta">
           <div class="ig-card-cap">4 signs that you're doing great in life ✨</div>
           <div class="ig-card-stats">♡ 521 · 💬 76</div>
@@ -1836,28 +1807,28 @@ button{font-family:inherit;border:none;cursor:pointer;}
       </a>
       <!-- loop for seamless scroll -->
       <a class="ig-card ig-giveaway" href="https://www.instagram.com/babyletspadel/" target="_blank" rel="noopener">
-        <div class="ig-card-img"><span class="ig-card-overlay">Giveaway<small>To celebrate 1K followers · WIN 2 PIECES</small></span></div>
+        <div class="ig-card-img"></div>
         <div class="ig-card-meta">
           <div class="ig-card-cap">To celebrate 1K followers · Sweater + Hat giveaway 🎁</div>
           <div class="ig-card-stats">♡ 412 · 💬 287</div>
         </div>
       </a>
       <a class="ig-card ig-osaka" href="https://www.instagram.com/babyletspadel/" target="_blank" rel="noopener">
-        <div class="ig-card-img"><span class="ig-card-overlay">Baby let's PADEL<small>× OSAKA 大阪</small></span></div>
+        <div class="ig-card-img"></div>
         <div class="ig-card-meta">
           <div class="ig-card-cap">Baby Let's Padel × Osaka 大阪 — partnership is live</div>
           <div class="ig-card-stats">♡ 524 · 💬 67</div>
         </div>
       </a>
       <a class="ig-card ig-neon" href="https://www.instagram.com/babyletspadel/" target="_blank" rel="noopener">
-        <div class="ig-card-img"><span class="ig-card-overlay">Houston First<small>Neon Padel Party</small></span></div>
+        <div class="ig-card-img"></div>
         <div class="ig-card-meta">
           <div class="ig-card-cap">Houston's first Neon Padel Party · who's in 💜</div>
           <div class="ig-card-stats">♡ 612 · 💬 89</div>
         </div>
       </a>
       <a class="ig-card ig-flyer" href="https://www.instagram.com/babyletspadel/" target="_blank" rel="noopener">
-        <div class="ig-card-img"><span class="ig-card-overlay">Glow on Court<small>Sat May 2 · 7–11 PM · CUBE</small></span></div>
+        <div class="ig-card-img"></div>
         <div class="ig-card-meta">
           <div class="ig-card-cap">Neon Padel Party · Saturday May 2 · Cube Padel · 7pm</div>
           <div class="ig-card-stats">♡ 387 · 💬 58</div>
