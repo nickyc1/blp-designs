@@ -920,6 +920,72 @@ button{font-family:inherit;border:none;cursor:pointer;}
 }
 .community-card.light .community-card-stamp small{color:var(--sage-deep);}
 
+/* IG feed style (replaces community card stamps) */
+.ig-h2{
+  font-family:'Bebas Neue', sans-serif;
+  font-size:clamp(56px, 9vw, 144px);
+  line-height:.88;letter-spacing:.005em;
+  color:var(--bone);
+}
+.ig-h2 em{
+  font-family:'Fraunces';font-weight:300;font-style:italic;
+  font-size:.65em;letter-spacing:-.03em;color:var(--sage-soft);
+  display:block;text-transform:none;margin-top:8px;
+}
+.ig-handle{
+  display:inline-block;
+  margin-top:14px;
+  font-family:'Caveat',cursive;font-weight:700;
+  font-size:28px;color:var(--sage-soft);
+  transform:rotate(-2deg);
+}
+.ig-card{
+  width:300px;
+  flex-shrink:0;
+  background:var(--bone);
+  border:1px solid rgba(244,239,223,.2);
+  display:flex;flex-direction:column;
+  overflow:hidden;
+  transition:transform .25s, box-shadow .25s;
+}
+.ig-card:hover{transform:translateY(-4px);box-shadow:0 12px 32px rgba(0,0,0,.3);}
+.ig-card-img{
+  aspect-ratio:1/1;
+  position:relative;
+}
+.ig-card.cm1 .ig-card-img{background:linear-gradient(170deg, #5b7d6d, #4a6659);}
+.ig-card.cm2 .ig-card-img{background:linear-gradient(170deg, #AFA393, #8E826F);}
+.ig-card.cm3 .ig-card-img{background:linear-gradient(170deg, #1E293B, #141B27);}
+.ig-card.cm4 .ig-card-img{background:linear-gradient(170deg, #A9BCB3, #5b7d6d);}
+.ig-card.cm5 .ig-card-img{background:linear-gradient(170deg, #E9E2D6, #AFA393);}
+.ig-card.cm6 .ig-card-img{background:linear-gradient(170deg, #4a6659, #1E293B);}
+.ig-card.cm7 .ig-card-img{background:linear-gradient(170deg, #F4EFDF, #AFA393);}
+.ig-card.cm8 .ig-card-img{background:linear-gradient(170deg, #5b7d6d, #1E293B);}
+.ig-card-meta{
+  padding:14px 16px;
+  background:var(--bone);color:var(--ink);
+}
+.ig-card-cap{
+  font-family:'Manrope';font-weight:500;font-size:13px;line-height:1.4;
+  color:var(--ink);
+  display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;
+  overflow:hidden;text-overflow:ellipsis;
+  min-height:36px;
+}
+.ig-card-stats{
+  margin-top:8px;
+  font-family:'Manrope';font-weight:500;font-size:11px;letter-spacing:.05em;
+  color:var(--ink-2);
+}
+.ig-cta{
+  text-align:center;padding:48px 32px 0;
+  display:flex;flex-direction:column;align-items:center;gap:14px;
+}
+.ig-cta-script{
+  font-family:'Caveat',cursive;font-weight:700;
+  font-size:20px;color:var(--sage-soft);
+}
+
 /* PARTNERS */
 .partners{
   padding:96px 32px;
@@ -1451,7 +1517,7 @@ button{font-family:inherit;border:none;cursor:pointer;}
       <a class="product" href="products/heavy-crewneck-navy/">
         <div class="product-img p3">
           <span class="product-tag">No. 03 · Heavy</span>
-          <img class="real-img" src="../assets/products/heavy-crewneck-navy/01.jpg" alt="Heavy Crewneck Deep Navy" onerror="this.remove()">
+          <img class="real-img" src="../assets/products/heavy-crewneck-navy/02.jpg" alt="Heavy Crewneck Deep Navy" onerror="this.remove()">
           <img class="decal-fallback" src="../assets/decal.png" alt="">
         </div>
         <div class="product-meta">
@@ -1634,32 +1700,109 @@ button{font-family:inherit;border:none;cursor:pointer;}
   </div>
 </section>
 
-<!-- COMMUNITY -->
+<!-- THE LATEST (Instagram feed)
+     TODO: replace placeholder cards with a real IG feed widget
+     (Behold.so / Snapwidget / Curator.io / EmbedSocial — pick one and
+     swap the .ig-track contents). Each card links to a specific post URL.
+     For now: placeholder grid scroll, all cards link to the profile. -->
 <section class="community">
   <div class="community-head">
     <span class="cap">— La Crew · the people who keep showing up</span>
-    <h2>The crew is <em>the brand.</em></h2>
+    <h2 class="ig-h2">The Latest<em>with the community.</em></h2>
+    <span class="ig-handle">~ @babyletspadel ~</span>
   </div>
   <div class="community-strip">
     <div class="community-track">
-      <div class="community-card cm1"><span class="community-card-stamp">Open Play 04/22<small>RSC Katy</small></span></div>
-      <div class="community-card cm2 light"><span class="community-card-stamp">Tuesday Night<small>Willowbrook</small></span></div>
-      <div class="community-card cm3"><span class="community-card-stamp">Travel Team<small>Austin</small></span></div>
-      <div class="community-card cm4"><span class="community-card-stamp">Saturday<small>Cube Padel</small></span></div>
-      <div class="community-card cm5 light"><span class="community-card-stamp">Mixed Levels<small>RSC Willowbrook</small></span></div>
-      <div class="community-card cm6"><span class="community-card-stamp">First-timer<small>Welcome night</small></span></div>
-      <div class="community-card cm7 light"><span class="community-card-stamp">Group Chat<small>Friday roll-call</small></span></div>
-      <div class="community-card cm8"><span class="community-card-stamp">Demo Day<small>Osaka × BLP</small></span></div>
+      <a class="ig-card cm1" href="https://www.instagram.com/babyletspadel/" target="_blank" rel="noopener">
+        <div class="ig-card-img"></div>
+        <div class="ig-card-meta">
+          <div class="ig-card-cap">Tuesday night at RSC Katy 🎾</div>
+          <div class="ig-card-stats">♡ 142 · 💬 8</div>
+        </div>
+      </a>
+      <a class="ig-card cm2 light" href="https://www.instagram.com/babyletspadel/" target="_blank" rel="noopener">
+        <div class="ig-card-img"></div>
+        <div class="ig-card-meta">
+          <div class="ig-card-cap">New drop preview — pink is coming</div>
+          <div class="ig-card-stats">♡ 287 · 💬 23</div>
+        </div>
+      </a>
+      <a class="ig-card cm3" href="https://www.instagram.com/babyletspadel/" target="_blank" rel="noopener">
+        <div class="ig-card-img"></div>
+        <div class="ig-card-meta">
+          <div class="ig-card-cap">Travel team in Austin this weekend</div>
+          <div class="ig-card-stats">♡ 198 · 💬 12</div>
+        </div>
+      </a>
+      <a class="ig-card cm4" href="https://www.instagram.com/babyletspadel/" target="_blank" rel="noopener">
+        <div class="ig-card-img"></div>
+        <div class="ig-card-meta">
+          <div class="ig-card-cap">Open play · Cube Padel · 22 spots</div>
+          <div class="ig-card-stats">♡ 165 · 💬 19</div>
+        </div>
+      </a>
+      <a class="ig-card cm5 light" href="https://www.instagram.com/babyletspadel/" target="_blank" rel="noopener">
+        <div class="ig-card-img"></div>
+        <div class="ig-card-meta">
+          <div class="ig-card-cap">Welcome new player Sarah! Mixed levels welcome.</div>
+          <div class="ig-card-stats">♡ 213 · 💬 31</div>
+        </div>
+      </a>
+      <a class="ig-card cm6" href="https://www.instagram.com/babyletspadel/" target="_blank" rel="noopener">
+        <div class="ig-card-img"></div>
+        <div class="ig-card-meta">
+          <div class="ig-card-cap">Osaka demo day — try the Vision Pro</div>
+          <div class="ig-card-stats">♡ 254 · 💬 17</div>
+        </div>
+      </a>
+      <a class="ig-card cm7 light" href="https://www.instagram.com/babyletspadel/" target="_blank" rel="noopener">
+        <div class="ig-card-img"></div>
+        <div class="ig-card-meta">
+          <div class="ig-card-cap">Saturday brunch + court time. Vamos.</div>
+          <div class="ig-card-stats">♡ 309 · 💬 42</div>
+        </div>
+      </a>
+      <a class="ig-card cm8" href="https://www.instagram.com/babyletspadel/" target="_blank" rel="noopener">
+        <div class="ig-card-img"></div>
+        <div class="ig-card-meta">
+          <div class="ig-card-cap">Founders Laura + Isa · the original group chat</div>
+          <div class="ig-card-stats">♡ 421 · 💬 56</div>
+        </div>
+      </a>
       <!-- duplicate for seamless loop -->
-      <div class="community-card cm1"><span class="community-card-stamp">Open Play 04/22<small>RSC Katy</small></span></div>
-      <div class="community-card cm2 light"><span class="community-card-stamp">Tuesday Night<small>Willowbrook</small></span></div>
-      <div class="community-card cm3"><span class="community-card-stamp">Travel Team<small>Austin</small></span></div>
-      <div class="community-card cm4"><span class="community-card-stamp">Saturday<small>Cube Padel</small></span></div>
-      <div class="community-card cm5 light"><span class="community-card-stamp">Mixed Levels<small>RSC Willowbrook</small></span></div>
-      <div class="community-card cm6"><span class="community-card-stamp">First-timer<small>Welcome night</small></span></div>
-      <div class="community-card cm7 light"><span class="community-card-stamp">Group Chat<small>Friday roll-call</small></span></div>
-      <div class="community-card cm8"><span class="community-card-stamp">Demo Day<small>Osaka × BLP</small></span></div>
+      <a class="ig-card cm1" href="https://www.instagram.com/babyletspadel/" target="_blank" rel="noopener">
+        <div class="ig-card-img"></div>
+        <div class="ig-card-meta">
+          <div class="ig-card-cap">Tuesday night at RSC Katy 🎾</div>
+          <div class="ig-card-stats">♡ 142 · 💬 8</div>
+        </div>
+      </a>
+      <a class="ig-card cm2 light" href="https://www.instagram.com/babyletspadel/" target="_blank" rel="noopener">
+        <div class="ig-card-img"></div>
+        <div class="ig-card-meta">
+          <div class="ig-card-cap">New drop preview — pink is coming</div>
+          <div class="ig-card-stats">♡ 287 · 💬 23</div>
+        </div>
+      </a>
+      <a class="ig-card cm3" href="https://www.instagram.com/babyletspadel/" target="_blank" rel="noopener">
+        <div class="ig-card-img"></div>
+        <div class="ig-card-meta">
+          <div class="ig-card-cap">Travel team in Austin this weekend</div>
+          <div class="ig-card-stats">♡ 198 · 💬 12</div>
+        </div>
+      </a>
+      <a class="ig-card cm4" href="https://www.instagram.com/babyletspadel/" target="_blank" rel="noopener">
+        <div class="ig-card-img"></div>
+        <div class="ig-card-meta">
+          <div class="ig-card-cap">Open play · Cube Padel · 22 spots</div>
+          <div class="ig-card-stats">♡ 165 · 💬 19</div>
+        </div>
+      </a>
     </div>
+  </div>
+  <div class="ig-cta">
+    <a href="https://www.instagram.com/babyletspadel/" target="_blank" rel="noopener" class="btn btn-out" style="color:var(--bone);border-color:var(--bone);font-size:14px;letter-spacing:.22em;padding:18px 28px;">Follow @babyletspadel →</a>
+    <span class="ig-cta-script">~ tap any post to open in Instagram ~</span>
   </div>
 </section>
 
