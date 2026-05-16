@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>El Drop · Shop — Baby Let's Padel</title>
+<meta name="description" content="Shop the full Baby Let's Padel drop — heavy crewnecks, padel tanks, training tees, tennis skirt, sports bra. Founded by two Latinas in Houston.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Manrope:wght@300;400;500;600;700;800&family=Caveat:wght@500..700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bone:#F4EFDF;
+  --bone-2:#EDE5CD;
+  --cream:#E9E2D6;
+  --sage:#5b7d6d;
+  --sage-deep:#4a6659;
+  --sage-soft:#A9BCB3;
+  --navy:#1E293B;
+  --navy-2:#141B27;
+  --taupe:#AFA393;
+  --taupe-deep:#8E826F;
+  --ink:#1A1F2A;
+  --ink-2:#3A4452;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  background:var(--bone);color:var(--ink);
+  font-family:'Manrope', system-ui, sans-serif;
+  font-size:16px;line-height:1.55;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+a{color:inherit;text-decoration:none;}
+img{display:block;max-width:100%;}
+button{font-family:inherit;border:none;cursor:pointer;}
+
+.bebas{font-family:'Bebas Neue', Impact, sans-serif;letter-spacing:.005em;line-height:.95;}
+.serif{font-family:'Fraunces', serif;}
+.script{font-family:'Caveat', cursive;font-weight:600;}
+.cap{font-family:'Manrope';font-weight:600;font-size:11px;letter-spacing:.24em;text-transform:uppercase;}
+
+/* HEADER */
+.bar{
+  position:sticky;top:0;z-index:60;
+  background:var(--navy);color:var(--bone);
+  display:grid;grid-template-columns:auto 1fr auto;
+  align-items:center;padding:0 28px;
+  border-bottom:1px solid rgba(244,239,223,.16);
+  gap:24px;
+}
+.bar-l{display:flex;align-items:center;gap:14px;padding:10px 0;}
+.bar-l img{height:60px;width:auto;}
+.bar-l-text{font-family:'Bebas Neue';font-size:22px;letter-spacing:.04em;line-height:1;}
+.bar-l-text small{font-family:'Caveat',cursive;font-weight:500;font-size:14px;display:block;color:var(--sage-soft);letter-spacing:0;margin-top:-2px;}
+.bar-c{display:flex;justify-content:center;gap:24px;}
+.bar-c a{font-family:'Manrope';font-weight:500;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--bone);padding:14px 0;border-bottom:2px solid transparent;transition:border-color .2s, color .2s;}
+.bar-c a:hover{border-color:var(--sage-soft);color:var(--sage-soft);}
+.bar-c a.active{border-color:var(--sage-soft);color:var(--sage-soft);}
+.bar-r{display:flex;align-items:center;gap:14px;}
+.bar-r a{font-family:'Manrope';font-weight:600;font-size:11px;letter-spacing:.18em;text-transform:uppercase;padding:8px 14px;}
+.bar-r .cart{border:1px solid rgba(244,239,223,.36);}
+.bar-r .cart:hover{background:var(--sage);border-color:var(--sage);}
+.bar-r .reserve{background:var(--sage);border:1px solid var(--sage);}
+.bar-r .reserve:hover{background:var(--sage-deep);border-color:var(--sage-deep);}
+
+/* BREADCRUMB */
+.crumbs{
+  background:var(--bone-2);border-bottom:1px solid var(--ink);
+  padding:14px 32px;
+}
+.crumbs-inner{
+  max-width:1480px;margin:0 auto;
+  display:flex;align-items:center;gap:10px;flex-wrap:wrap;
+  font-family:'Manrope';font-weight:500;
+  font-size:11px;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--ink-2);
+}
+.crumbs-inner a{color:var(--ink-2);transition:color .2s;}
+.crumbs-inner a:hover{color:var(--sage-deep);}
+.crumbs-inner b{color:var(--ink);font-weight:600;}
+.crumbs-inner span.sep{color:var(--taupe);}
+
+/* SHOP HERO */
+.shop-hero{
+  padding:64px 32px 48px;
+  background:var(--bone);
+  border-bottom:1px solid var(--ink);
+}
+.shop-hero-inner{max-width:1480px;margin:0 auto;}
+.shop-hero-grid{
+  display:grid;
+  grid-template-columns:1fr auto;
+  gap:48px;
+  align-items:end;
+}
+.shop-hero .cap{color:var(--sage-deep);margin-bottom:14px;display:block;}
+.shop-hero h1{
+  font-family:'Bebas Neue', sans-serif;
+  font-size:clamp(72px, 11vw, 168px);
+  line-height:.85;letter-spacing:.005em;
+  color:var(--ink);
+}
+.shop-hero h1 em{
+  font-family:'Fraunces';font-weight:300;font-style:italic;
+  font-size:.55em;letter-spacing:-.03em;color:var(--sage-deep);
+  display:block;text-transform:none;margin-top:8px;
+}
+.shop-hero .script{
+  font-family:'Caveat',cursive;font-weight:700;
+  font-size:36px;color:var(--sage-deep);
+  display:inline-block;transform:rotate(-2deg);
+  margin-top:8px;
+}
+.shop-hero-stats{
+  display:grid;
+  grid-template-columns:1fr 1fr 1fr;
+  gap:24px;
+  border-top:1px solid var(--ink);
+  margin-top:48px;
+  padding-top:24px;
+}
+.shop-hero-stat{
+  font-family:'Manrope';font-weight:600;
+  font-size:10.5px;letter-spacing:.24em;text-transform:uppercase;
+  color:var(--ink-2);
+}
+.shop-hero-stat b{
+  display:block;
+  font-family:'Bebas Neue';font-size:42px;letter-spacing:.04em;
+  color:var(--ink);font-weight:400;
+  margin-bottom:4px;
+}
+
+/* FILTER BAR */
+.filters{
+  background:var(--ink);color:var(--bone);
+  padding:18px 32px;
+  position:sticky;top:80px;z-index:50;
+  border-bottom:1px solid var(--sage);
+}
+.filters-inner{
+  max-width:1480px;margin:0 auto;
+  display:flex;justify-content:space-between;align-items:center;
+  gap:24px;flex-wrap:wrap;
+}
+.filter-chips{display:flex;gap:8px;flex-wrap:wrap;}
+.filter-chip{
+  background:transparent;color:var(--bone);
+  border:1px solid rgba(244,239,223,.3);
+  padding:10px 16px;
+  font-family:'Manrope';font-weight:600;
+  font-size:11px;letter-spacing:.22em;text-transform:uppercase;
+  cursor:pointer;transition:background .2s, border-color .2s, color .2s;
+}
+.filter-chip:hover{border-color:var(--sage-soft);color:var(--sage-soft);}
+.filter-chip.active{background:var(--sage);border-color:var(--sage);color:var(--bone);}
+.filter-chip .count{
+  color:var(--sage-soft);font-weight:500;
+  margin-left:6px;
+}
+.filter-chip.active .count{color:var(--cream);}
+.filter-sort{
+  font-family:'Manrope';font-weight:500;
+  font-size:11px;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--sage-soft);
+  display:flex;align-items:center;gap:10px;
+}
+
+/* PRODUCT GRID */
+.shop{
+  padding:64px 32px 96px;
+  background:var(--bone);
+}
+.shop-inner{max-width:1480px;margin:0 auto;}
+
+.collection-section{margin-bottom:64px;}
+.collection-section:last-child{margin-bottom:0;}
+.collection-section-head{
+  display:grid;
+  grid-template-columns:auto 1fr auto;
+  align-items:end;gap:32px;
+  margin-bottom:32px;
+  padding-bottom:18px;
+  border-bottom:2px solid var(--ink);
+}
+.collection-section-head .label{
+  font-family:'Bebas Neue';font-size:64px;letter-spacing:.005em;
+  line-height:.88;
+}
+.collection-section-head .label em{
+  font-family:'Fraunces';font-weight:300;font-style:italic;
+  font-size:.5em;letter-spacing:-.03em;color:var(--sage-deep);
+  display:block;text-transform:none;margin-top:6px;
+}
+.collection-section-head .count-tag{
+  font-family:'Manrope';font-weight:600;
+  font-size:11px;letter-spacing:.22em;text-transform:uppercase;
+  background:var(--sage);color:var(--bone);
+  padding:8px 12px;align-self:center;
+}
+.collection-section-head .desc{
+  font-family:'Fraunces';font-weight:300;font-style:italic;
+  font-size:17px;color:var(--ink-2);max-width:42ch;
+}
+
+.products-grid{
+  display:grid;
+  grid-template-columns:repeat(4, 1fr);
+  gap:24px;
+}
+.product{
+  background:var(--bone);
+  border:1px solid var(--ink);
+  display:flex;flex-direction:column;
+  position:relative;
+  transition:transform .2s, box-shadow .2s;
+}
+.product:hover{transform:translate(-3px,-3px);box-shadow:6px 6px 0 var(--ink);}
+.product-img{
+  aspect-ratio:4/5;
+  position:relative;overflow:hidden;
+  display:flex;align-items:center;justify-content:center;
+  border-bottom:1px solid var(--ink);
+}
+.product-img .real-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:5;}
+.product-img .decal-fallback{width:55%;opacity:.55;mix-blend-mode:multiply;}
+.product-tag{
+  position:absolute;top:14px;left:14px;
+  background:var(--bone);border:1.5px solid var(--ink);
+  padding:6px 10px;
+  font-family:'Manrope';font-weight:600;
+  font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;
+  z-index:8;
+}
+.product-meta{
+  padding:18px;
+  display:flex;flex-direction:column;gap:6px;
+}
+.product-meta h3{
+  font-family:'Bebas Neue';font-size:24px;letter-spacing:.04em;line-height:.95;
+}
+.product-meta h3 em{
+  font-family:'Fraunces';font-weight:300;font-style:italic;
+  font-size:.6em;letter-spacing:-.005em;color:var(--sage-deep);
+  display:block;text-transform:none;margin-top:4px;
+}
+.product-foot{
+  margin-top:10px;padding-top:10px;
+  display:flex;justify-content:space-between;align-items:center;
+  border-top:1px dashed var(--ink-2);
+}
+.product-price{font-family:'Bebas Neue';font-size:26px;letter-spacing:.04em;}
+.product-cta{
+  font-family:'Manrope';font-weight:600;
+  font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--ink);
+}
+.product-cta:hover{color:var(--sage-deep);}
+
+/* Product image colorway gradients */
+.bg-eucalyptus{background:linear-gradient(160deg, #5b7d6d, #4a6659);}
+.bg-pink{background:linear-gradient(160deg, #E8C9C9, #C9A8A8);}
+.bg-navy{background:linear-gradient(160deg, #1E293B, #141B27);}
+.bg-offwhite{background:linear-gradient(160deg, #F4EFDF, #DDD4BD);}
+.bg-cream{background:linear-gradient(160deg, #FAF6E8, #E9E2D6);}
+
+/* FOOTER */
+.contact{
+  background:var(--navy);color:var(--bone);
+  padding:96px 32px 32px;position:relative;overflow:hidden;
+}
+.contact::before{
+  content:"";position:absolute;
+  top:-100px;right:-100px;
+  width:400px;height:400px;border-radius:50%;
+  background:radial-gradient(circle, var(--sage-soft) 0%, transparent 60%);
+  opacity:.18;
+}
+.contact-mark{display:flex;justify-content:center;margin-bottom:48px;position:relative;z-index:1;}
+.contact-mark img{height:140px;width:auto;background:var(--bone);padding:14px;border-radius:50%;}
+.contact-h{
+  font-family:'Bebas Neue';font-size:clamp(72px, 13vw, 220px);
+  line-height:.85;letter-spacing:.005em;text-align:center;position:relative;z-index:1;
+}
+.contact-h em{
+  font-family:'Fraunces';font-weight:300;font-style:italic;
+  font-size:.6em;letter-spacing:-.03em;color:var(--sage-soft);text-transform:none;
+}
+.contact-script{
+  text-align:center;font-family:'Caveat',cursive;font-weight:700;font-size:32px;
+  color:var(--sage-soft);display:block;margin-top:14px;transform:rotate(-2deg);
+  position:relative;z-index:1;
+}
+.foot-bot{
+  display:flex;justify-content:space-between;margin-top:48px;
+  max-width:1480px;margin-left:auto;margin-right:auto;
+  font-family:'Manrope';font-size:11px;letter-spacing:.22em;text-transform:uppercase;
+  color:rgba(244,239,223,.55);font-weight:600;
+  flex-wrap:wrap;gap:8px;position:relative;z-index:1;
+}
+.foot-bot a{color:var(--sage-soft);border-bottom:1px solid var(--sage-soft);padding-bottom:1px;}
+
+/* RESPONSIVE */
+@media (max-width:1100px){
+  .bar-c{display:none;}
+  .products-grid{grid-template-columns:repeat(3, 1fr);}
+  .shop-hero-grid{grid-template-columns:1fr;gap:24px;}
+  .collection-section-head{grid-template-columns:1fr;gap:14px;}
+}
+@media (max-width:760px){
+  .bar{padding:0 16px;}
+  .bar-l img{height:48px;}
+  .bar-r .reserve{padding:6px 10px;font-size:10px;}
+  .shop-hero,.shop,.contact{padding-left:18px;padding-right:18px;}
+  .products-grid{grid-template-columns:repeat(2, 1fr);}
+  .filters{padding:14px 18px;}
+  .filters-inner{flex-direction:column;align-items:flex-start;gap:14px;}
+  .foot-bot{flex-direction:column;gap:8px;}
+}
+@media (max-width:480px){
+  .products-grid{grid-template-columns:1fr;}
+}
+</style>
+</head>
+<body>
+
+<header class="bar">
+  <a class="bar-l" href="../" style="display:flex;align-items:center;gap:14px;padding:10px 0;color:var(--bone);">
+    <img src="../../assets/logo-mark.png" alt="Baby Let's Padel">
+    <div class="bar-l-text">Baby Let's Padel<small>~ vamos al padel ~</small></div>
+  </a>
+  <nav class="bar-c">
+    <a href="../#founders">Las Fundadoras</a>
+    <a href="./" class="active">El Drop</a>
+    <a href="../#partners">Partners</a>
+    <a href="../#events">Esta Semana</a>
+    <a href="../#contact">Contact</a>
+  </nav>
+  <div class="bar-r">
+    <a href="#" class="cart">Cart · 0</a>
+    <a href="../#events" class="reserve">Reserve a spot</a>
+  </div>
+</header>
+
+<div class="crumbs">
+  <div class="crumbs-inner">
+    <a href="../">Home</a><span class="sep">/</span>
+    <b>El Drop · Shop</b>
+  </div>
+</div>
+
+<!-- SHOP HERO -->
+<section class="shop-hero">
+  <div class="shop-hero-inner">
+    <div class="shop-hero-grid">
+      <div>
+        <span class="cap">— Spring '26 · Drop 01</span>
+        <h1>El Drop.<em>Cozy &amp; Courtside · Sport · On Court</em></h1>
+        <span class="script">~ shop the kit ~</span>
+      </div>
+      <div></div>
+    </div>
+    <div class="shop-hero-stats">
+      <div class="shop-hero-stat"><b>10</b>Pieces in the drop</div>
+      <div class="shop-hero-stat"><b>2</b>Collections</div>
+      <div class="shop-hero-stat"><b>XS–XL</b>All in stock</div>
+    </div>
+  </div>
+</section>
+
+<!-- FILTER BAR -->
+<div class="filters">
+  <div class="filters-inner">
+    <div class="filter-chips">
+      <button class="filter-chip active" data-filter="all">All <span class="count">10</span></button>
+      <button class="filter-chip" data-filter="cozy">Cozy &amp; Courtside <span class="count">4</span></button>
+      <button class="filter-chip" data-filter="sport">Sport · On Court <span class="count">6</span></button>
+    </div>
+    <div class="filter-sort">Drop 01 · Spring '26</div>
+  </div>
+</div>
+
+<!-- PRODUCT GRID -->
+<section class="shop">
+  <div class="shop-inner">
+
+    <!-- COZY & COURTSIDE -->
+    <div class="collection-section" data-collection="cozy">
+      <div class="collection-section-head">
+        <div class="label">Cozy &amp; Courtside<em>4 heavy crewnecks · 9.5 oz/yd² · garment-dyed</em></div>
+        <p class="desc">Heavyweight crewnecks in four colorways. Same Comfort Colors build, garment-dyed for the lived-in feel.</p>
+        <span class="count-tag">4 pieces</span>
+      </div>
+      <div class="products-grid">
+        <a class="product" href="../products/heavy-crewneck-eucalyptus/">
+          <div class="product-img bg-eucalyptus">
+            <span class="product-tag">No. 01</span>
+            <img class="real-img" src="../../assets/products/heavy-crewneck-eucalyptus/01.jpg" alt="Heavy Crewneck Eucalyptus" onerror="this.remove()">
+            <img class="decal-fallback" src="../../assets/decal.png" alt="">
+          </div>
+          <div class="product-meta">
+            <h3>Heavy Crewneck<em>Eucalyptus · 9.5 oz</em></h3>
+            <div class="product-foot"><span class="product-price">$53</span><span class="product-cta">View →</span></div>
+          </div>
+        </a>
+        <a class="product" href="../products/heavy-crewneck-pink/">
+          <div class="product-img bg-pink">
+            <span class="product-tag">No. 02</span>
+            <img class="real-img" src="../../assets/products/heavy-crewneck-pink/01.jpg" alt="Heavy Crewneck Pink" onerror="this.remove()">
+            <img class="decal-fallback" src="../../assets/decal.png" alt="">
+          </div>
+          <div class="product-meta">
+            <h3>Heavy Crewneck<em>Pink · 9.5 oz</em></h3>
+            <div class="product-foot"><span class="product-price">$53</span><span class="product-cta">View →</span></div>
+          </div>
+        </a>
+        <a class="product" href="../products/heavy-crewneck-navy/">
+          <div class="product-img bg-navy">
+            <span class="product-tag">No. 03</span>
+            <img class="real-img" src="../../assets/products/heavy-crewneck-navy/01.jpg" alt="Heavy Crewneck Deep Navy" onerror="this.remove()">
+            <img class="decal-fallback" src="../../assets/decal.png" alt="">
+          </div>
+          <div class="product-meta">
+            <h3>Heavy Crewneck<em>Deep Navy · 9.5 oz</em></h3>
+            <div class="product-foot"><span class="product-price">$53</span><span class="product-cta">View →</span></div>
+          </div>
+        </a>
+        <a class="product" href="../products/heavy-crewneck-off-white/">
+          <div class="product-img bg-offwhite">
+            <span class="product-tag">No. 04</span>
+            <img class="real-img" src="../../assets/products/heavy-crewneck-off-white/01.jpg" alt="Heavy Crewneck Off-White" onerror="this.remove()">
+            <img class="decal-fallback" src="../../assets/decal.png" alt="">
+          </div>
+          <div class="product-meta">
+            <h3>Heavy Crewneck<em>Off-White · 9.5 oz</em></h3>
+            <div class="product-foot"><span class="product-price">$53</span><span class="product-cta">View →</span></div>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <!-- SPORT · ON COURT -->
+    <div class="collection-section" data-collection="sport">
+      <div class="collection-section-head">
+        <div class="label">Sport · On Court<em>Tanks · tees · skirt · sports bra · 6 pieces</em></div>
+        <p class="desc">The performance side of the drop. Lightweight tanks, training tees, tennis skirt with built-in shorts, sports bra.</p>
+        <span class="count-tag">6 pieces</span>
+      </div>
+      <div class="products-grid">
+        <a class="product" href="../products/padel-tank-eucalyptus/">
+          <div class="product-img bg-eucalyptus">
+            <span class="product-tag">No. 05</span>
+            <img class="real-img" src="../../assets/products/padel-tank-eucalyptus/01.jpg" alt="Padel Tank Eucalyptus" onerror="this.remove()">
+            <img class="decal-fallback" src="../../assets/decal.png" alt="">
+          </div>
+          <div class="product-meta">
+            <h3>Padel Tank<em>Eucalyptus · Lightweight</em></h3>
+            <div class="product-foot"><span class="product-price">$35</span><span class="product-cta">View →</span></div>
+          </div>
+        </a>
+        <a class="product" href="../products/padel-tank-off-white/">
+          <div class="product-img bg-offwhite">
+            <span class="product-tag">No. 06</span>
+            <img class="real-img" src="../../assets/products/padel-tank-off-white/01.jpg" alt="Padel Tank Off-White" onerror="this.remove()">
+            <img class="decal-fallback" src="../../assets/decal.png" alt="">
+          </div>
+          <div class="product-meta">
+            <h3>Padel Tank<em>Off-White · Lightweight</em></h3>
+            <div class="product-foot"><span class="product-price">$35</span><span class="product-cta">View →</span></div>
+          </div>
+        </a>
+        <a class="product" href="../products/training-tee-navy/">
+          <div class="product-img bg-navy">
+            <span class="product-tag">No. 07</span>
+            <img class="real-img" src="../../assets/products/training-tee-navy/01.jpg" alt="Training Tee Navy" onerror="this.remove()">
+            <img class="decal-fallback" src="../../assets/decal.png" alt="">
+          </div>
+          <div class="product-meta">
+            <h3>Training Tee<em>Deep Navy · Soft Cotton</em></h3>
+            <div class="product-foot"><span class="product-price">$31</span><span class="product-cta">View →</span></div>
+          </div>
+        </a>
+        <a class="product" href="../products/training-tee-off-white/">
+          <div class="product-img bg-cream">
+            <span class="product-tag">No. 08</span>
+            <img class="real-img" src="../../assets/products/training-tee-off-white/01.jpg" alt="Training Tee Off-White" onerror="this.remove()">
+            <img class="decal-fallback" src="../../assets/decal.png" alt="">
+          </div>
+          <div class="product-meta">
+            <h3>Training Tee<em>Off-White · Soft Cotton</em></h3>
+            <div class="product-foot"><span class="product-price">$31</span><span class="product-cta">View →</span></div>
+          </div>
+        </a>
+        <a class="product" href="../products/tennis-skirt/">
+          <div class="product-img bg-offwhite">
+            <span class="product-tag">No. 09</span>
+            <img class="real-img" src="../../assets/products/skirt/01.jpg" alt="Tennis Skirt Off-White" onerror="this.remove()">
+            <img class="decal-fallback" src="../../assets/decal.png" alt="">
+          </div>
+          <div class="product-meta">
+            <h3>Tennis Skirt<em>Off-White · Built-in shorts</em></h3>
+            <div class="product-foot"><span class="product-price">$45</span><span class="product-cta">View →</span></div>
+          </div>
+        </a>
+        <a class="product" href="../products/sports-bra/">
+          <div class="product-img bg-cream">
+            <span class="product-tag">No. 10</span>
+            <img class="real-img" src="../../assets/products/sports-bra/01.jpg" alt="Sports Bra Off-White" onerror="this.remove()">
+            <img class="decal-fallback" src="../../assets/decal.png" alt="">
+          </div>
+          <div class="product-meta">
+            <h3>Sports Bra<em>Off-White · Strappy back</em></h3>
+            <div class="product-foot"><span class="product-price">$38</span><span class="product-cta">View →</span></div>
+          </div>
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="contact">
+  <div class="contact-mark"><img src="../../assets/logo-mark.png" alt="Baby Let's Padel"></div>
+  <h2 class="contact-h">Vamos<br><em>a jugar.</em></h2>
+  <span class="contact-script">~ Houston, TX · founded by two Latinas ~</span>
+  <div class="foot-bot">
+    <span>© 2026 Baby Let's Padel · Houston, TX</span>
+    <span>Founded by two Latinas · Vamos al padel</span>
+    <a href="../">← Back to home</a>
+  </div>
+</footer>
+
+<script>
+// Filter chip behavior
+document.querySelectorAll('.filter-chip').forEach(chip => {
+  chip.addEventListener('click', () => {
+    const filter = chip.dataset.filter;
+    document.querySelectorAll('.filter-chip').forEach(c => c.classList.remove('active'));
+    chip.classList.add('active');
+    document.querySelectorAll('.collection-section').forEach(section => {
+      const matches = filter === 'all' || section.dataset.collection === filter;
+      section.style.display = matches ? '' : 'none';
+    });
+  });
+});
+</script>
+
+</body>
+</html>

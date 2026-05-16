@@ -587,6 +587,59 @@ button{font-family:inherit;border:none;cursor:pointer;}
 }
 .drop-head .cap.r{font-size:12px;letter-spacing:.32em;text-align:right;color:var(--sage-deep);}
 
+/* DROP PREVIEW (homepage section) */
+.drop-preview-intro{
+  max-width:60ch;margin:0 0 32px;
+}
+.drop-preview-intro p{
+  font-family:'Fraunces';font-weight:300;font-style:italic;
+  font-size:20px;line-height:1.5;color:var(--ink-2);
+}
+.drop-preview-intro p em{color:var(--sage-deep);font-weight:400;}
+.drop-preview-grid{
+  display:grid;
+  grid-template-columns:repeat(6, 1fr);
+  gap:14px;
+  margin-bottom:48px;
+}
+.drop-preview-grid .product{
+  background:var(--bone);border:1px solid var(--ink);
+  display:flex;flex-direction:column;
+  transition:transform .2s, box-shadow .2s;
+}
+.drop-preview-grid .product:hover{transform:translate(-3px,-3px);box-shadow:6px 6px 0 var(--ink);}
+.drop-preview-grid .product-img{
+  aspect-ratio:4/5;position:relative;overflow:hidden;
+  display:flex;align-items:center;justify-content:center;
+  border-bottom:1px solid var(--ink);
+}
+.drop-preview-grid .product-img .real-img{
+  position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:5;
+}
+.drop-preview-grid .product-img .decal-fallback{width:55%;opacity:.55;mix-blend-mode:multiply;}
+.drop-preview-grid .product-meta{
+  padding:12px;
+}
+.drop-preview-grid .product-meta h4{
+  font-family:'Bebas Neue';font-size:16px;letter-spacing:.04em;line-height:1;
+}
+.drop-preview-grid .product-meta h4 em{
+  display:block;
+  font-family:'Fraunces';font-weight:300;font-style:italic;
+  font-size:.78em;letter-spacing:-.005em;color:var(--sage-deep);
+  text-transform:none;margin-top:4px;
+}
+.drop-preview-cta{
+  display:flex;align-items:center;gap:24px;
+  justify-content:center;flex-wrap:wrap;
+  padding:32px 0 16px;
+  border-top:2px solid var(--ink);
+}
+.drop-preview-cta .script-link{
+  font-family:'Caveat',cursive;font-weight:700;
+  font-size:24px;color:var(--sage-deep);
+}
+
 .collection{margin-bottom:80px;}
 .collection:last-child{margin-bottom:0;}
 .collection-head{
@@ -1115,7 +1168,8 @@ button{font-family:inherit;border:none;cursor:pointer;}
 /* RESPONSIVE */
 @media (max-width:1100px){
   .bar-c{display:none;}
-  .stats-grid, .collection-grid, .partners-grid, .contact-grid, .meet-grid{grid-template-columns:repeat(2, 1fr);}
+  .stats-grid, .collection-grid, .partners-grid, .contact-grid, .meet-grid, .drop-preview-grid{grid-template-columns:repeat(2, 1fr);}
+  .drop-preview-grid{grid-template-columns:repeat(3, 1fr);}
   .meet-grid{grid-template-columns:1fr;}
   .meet-head{grid-template-columns:1fr;gap:14px;}
   .meet-head p{justify-self:start;text-align:left;}
@@ -1133,7 +1187,8 @@ button{font-family:inherit;border:none;cursor:pointer;}
   .dropromo-text{padding:48px 24px;}
   .hero{padding-top:48px;padding-bottom:64px;}
   .hero-deck-grid{grid-template-columns:1fr;gap:24px;}
-  .stats-grid, .collection-grid, .partners-grid, .contact-grid{grid-template-columns:1fr;gap:14px;}
+  .stats-grid, .collection-grid, .partners-grid, .contact-grid, .drop-preview-grid{grid-template-columns:1fr;gap:14px;}
+  .drop-preview-grid{grid-template-columns:repeat(2, 1fr);gap:14px;}
   .founders-bios{grid-template-columns:1fr;gap:24px;}
   .bar{padding:0 16px;}
   .bar-l img{height:48px;}
@@ -1151,7 +1206,7 @@ button{font-family:inherit;border:none;cursor:pointer;}
   </div>
   <nav class="bar-c">
     <a href="#founders">Las Fundadoras</a>
-    <a href="#drop">El Drop</a>
+    <a href="shop/">El Drop</a>
     <a href="#partners">Partners</a>
     <a href="#events">Esta Semana</a>
     <a href="#contact">Contact</a>
@@ -1177,7 +1232,7 @@ button{font-family:inherit;border:none;cursor:pointer;}
       <p class="hero-deck"><b>A padel community where everyone plays.</b> Open plays four nights a week. Two seasonal drops a year. The crew, the kit, and the partners that keep the courts running. <em>Vamos.</em></p>
       <div class="hero-actions">
         <a href="#events" class="btn btn-sage">RSVP this week</a>
-        <a href="#drop" class="btn btn-out">Shop the drop</a>
+        <a href="shop/" class="btn btn-out">Shop the drop</a>
       </div>
     </div>
   </div>
@@ -1288,16 +1343,89 @@ button{font-family:inherit;border:none;cursor:pointer;}
   </div>
 </section>
 
-<!-- THE DROP -->
+<!-- THE DROP (PREVIEW — full grid lives at /shop/) -->
 <section class="drop" id="drop">
   <div class="drop-inner">
     <div class="drop-head">
       <span class="cap l">— BLP Drop · Spring '26</span>
       <h2>El <em>Drop.</em></h2>
-      <span class="cap r">Two collections · 10 pieces</span>
+      <span class="cap r">10 pieces · 2 collections</span>
     </div>
 
-    <!-- COLLECTION 1: Cozy & Courtside -->
+    <div class="drop-preview-intro">
+      <p>A first look at the spring drop — heavyweight crewnecks, lightweight tanks, training tees, tennis skirt, sports bra. <em>Tap any piece to see it up close.</em></p>
+    </div>
+
+    <div class="drop-preview-grid">
+      <a class="product" href="products/heavy-crewneck-eucalyptus/">
+        <div class="product-img p1">
+          <span class="product-tag">No. 01 · Heavy</span>
+          <img class="real-img" src="../assets/products/heavy-crewneck-eucalyptus/01.jpg" alt="Heavy Crewneck Eucalyptus" onerror="this.remove()">
+          <img class="decal-fallback" src="../assets/decal.png" alt="">
+        </div>
+        <div class="product-meta">
+          <h4>Heavy Crewneck<em>Eucalyptus · $53</em></h4>
+        </div>
+      </a>
+      <a class="product" href="products/heavy-crewneck-pink/">
+        <div class="product-img" style="background:linear-gradient(160deg, #E8C9C9, #C9A8A8);">
+          <span class="product-tag">No. 02 · Heavy</span>
+          <img class="real-img" src="../assets/products/heavy-crewneck-pink/01.jpg" alt="Heavy Crewneck Pink" onerror="this.remove()">
+          <img class="decal-fallback" src="../assets/decal.png" alt="">
+        </div>
+        <div class="product-meta">
+          <h4>Heavy Crewneck<em>Pink · $53</em></h4>
+        </div>
+      </a>
+      <a class="product" href="products/heavy-crewneck-navy/">
+        <div class="product-img p3">
+          <span class="product-tag">No. 03 · Heavy</span>
+          <img class="real-img" src="../assets/products/heavy-crewneck-navy/01.jpg" alt="Heavy Crewneck Deep Navy" onerror="this.remove()">
+          <img class="decal-fallback" src="../assets/decal.png" alt="">
+        </div>
+        <div class="product-meta">
+          <h4>Heavy Crewneck<em>Deep Navy · $53</em></h4>
+        </div>
+      </a>
+      <a class="product" href="products/padel-tank-eucalyptus/">
+        <div class="product-img" style="background:linear-gradient(160deg, #5b7d6d, #4a6659);">
+          <span class="product-tag">No. 05 · Tank</span>
+          <img class="real-img" src="../assets/products/padel-tank-eucalyptus/01.jpg" alt="Padel Tank Eucalyptus" onerror="this.remove()">
+          <img class="decal-fallback" src="../assets/decal.png" alt="">
+        </div>
+        <div class="product-meta">
+          <h4>Padel Tank<em>Eucalyptus · $35</em></h4>
+        </div>
+      </a>
+      <a class="product" href="products/tennis-skirt/">
+        <div class="product-img p4">
+          <span class="product-tag">No. 09 · Skirt</span>
+          <img class="real-img" src="../assets/products/skirt/01.jpg" alt="Tennis Skirt Off-White" onerror="this.remove()">
+          <img class="decal-fallback" src="../assets/decal.png" alt="">
+        </div>
+        <div class="product-meta">
+          <h4>Tennis Skirt<em>Off-White · $45</em></h4>
+        </div>
+      </a>
+      <a class="product" href="products/sports-bra/">
+        <div class="product-img p4">
+          <span class="product-tag">No. 10 · Bra</span>
+          <img class="real-img" src="../assets/products/sports-bra/01.jpg" alt="Sports Bra Off-White" onerror="this.remove()">
+          <img class="decal-fallback" src="../assets/decal.png" alt="">
+        </div>
+        <div class="product-meta">
+          <h4>Sports Bra<em>Off-White · $38</em></h4>
+        </div>
+      </a>
+    </div>
+
+    <div class="drop-preview-cta">
+      <a href="shop/" class="btn btn-sage" style="font-size:14px;letter-spacing:.22em;padding:18px 28px;">Shop the full drop · 10 pieces →</a>
+      <span class="script-link">~ 4 heavy crews + 6 sport pieces, all in stock ~</span>
+    </div>
+
+    <!-- COLLECTION 1: REMOVED — full grid moved to /shop/. Old markup kept commented for ref. -->
+    <div class="collection" style="display:none;">
     <div class="collection">
       <div class="collection-head">
         <div class="collection-num">01<span>~ available now</span></div>
@@ -1561,7 +1689,7 @@ button{font-family:inherit;border:none;cursor:pointer;}
     <span class="script">~ new look. same passion. ~</span>
     <p>Heavy crews. Lightweight tanks. Training tees. Court skirts. <em>The whole kit, dropped one season at a time.</em></p>
     <div class="dropromo-actions">
-      <a href="#drop" class="btn btn-sage">Shop the drop</a>
+      <a href="shop/" class="btn btn-sage">Shop the drop</a>
       <a href="#partners" class="btn btn-out" style="color:var(--ink);border-color:var(--ink);">Brand partners</a>
     </div>
   </div>
@@ -1582,8 +1710,8 @@ button{font-family:inherit;border:none;cursor:pointer;}
     </div>
     <div>
       <h4>El Drop</h4>
-      <a href="#drop">Cozy & Courtside</a>
-      <a href="#drop">Sport · Coming Soon</a>
+      <a href="shop/">Cozy &amp; Courtside</a>
+      <a href="shop/">Sport · On Court</a>
       <a href="#partners">Brand Partners</a>
     </div>
     <div>
