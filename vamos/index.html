@@ -335,27 +335,116 @@ button{font-family:inherit;border:none;cursor:pointer;}
   max-width:46ch;
 }
 .founders-r p em{font-style:italic;color:var(--sage-deep);font-weight:400;}
-.founders-bios{
-  margin-top:40px;
+/* MEET THE FOUNDERS — full bio cards */
+.meet{
+  background:var(--bone);
+  padding:0 32px 96px;
+  border-bottom:1px solid var(--ink);
+}
+.meet-inner{max-width:1480px;margin:0 auto;}
+.meet-head{
+  display:grid;
+  grid-template-columns:auto 1fr;
+  align-items:end;gap:32px;
+  margin-bottom:48px;
+  border-bottom:2px solid var(--ink);padding-bottom:24px;
+}
+.meet-head h2{
+  font-family:'Bebas Neue', sans-serif;
+  font-size:clamp(48px, 7vw, 96px);
+  line-height:.88;letter-spacing:.005em;
+  color:var(--ink);
+}
+.meet-head h2 em{
+  font-family:'Fraunces';font-weight:300;font-style:italic;
+  font-size:.7em;letter-spacing:-.03em;
+  color:var(--sage-deep);text-transform:none;
+}
+.meet-head p{
+  font-family:'Fraunces';font-weight:300;font-style:italic;
+  font-size:18px;line-height:1.5;color:var(--ink-2);max-width:48ch;
+  justify-self:end;text-align:right;
+}
+.meet-grid{
   display:grid;
   grid-template-columns:1fr 1fr;
   gap:32px;
-  border-top:1px solid var(--ink);
-  padding-top:32px;
 }
-.founders-bios div b{
+.meet-card{
+  border:1px solid var(--ink);
+  background:var(--bone);
+  display:flex;flex-direction:column;
+  overflow:hidden;
+}
+.meet-card-photo{
+  aspect-ratio:4/3;
+  position:relative;
+  border-bottom:1px solid var(--ink);
+  overflow:hidden;
+  display:flex;align-items:center;justify-content:center;
+}
+.meet-card-photo .meet-photo-img{
+  position:absolute;inset:0;
+  width:100%;height:100%;object-fit:cover;
+  z-index:2;
+}
+.meet-card-photo .meet-photo-fallback{
+  font-family:'Caveat',cursive;font-weight:700;
+  font-size:24px;color:var(--bone);
+  z-index:1;
+  text-align:center;
+  padding:18px;
+}
+.meet-card-photo .meet-photo-fallback small{
+  display:block;font-family:'Manrope';font-style:normal;
+  font-weight:600;font-size:10px;letter-spacing:.22em;text-transform:uppercase;
+  color:rgba(248,244,233,.78);margin-top:4px;
+}
+.laura-bg{background:linear-gradient(160deg, #5b7d6d, #4a6659);}
+.isa-bg{background:linear-gradient(160deg, #1E293B, #141B27);}
+.meet-card-stamp{
+  position:absolute;top:18px;left:18px;
+  background:var(--bone);border:1.5px solid var(--ink);
+  padding:8px 12px;z-index:3;
+  font-family:'Bebas Neue';font-size:16px;letter-spacing:.06em;
+}
+.meet-card-stamp small{
+  display:block;font-family:'Caveat',cursive;font-size:13px;
+  color:var(--sage-deep);letter-spacing:0;font-weight:700;margin-top:-3px;
+}
+.meet-card-body{
+  padding:32px;
+  display:flex;flex-direction:column;gap:14px;
+}
+.meet-card-head h3{
+  font-family:'Bebas Neue';font-size:42px;letter-spacing:.04em;line-height:1;
+}
+.meet-card-head h3 em{
   display:block;
-  font-family:'Bebas Neue';font-size:24px;letter-spacing:.04em;
-  margin-bottom:4px;
+  font-family:'Caveat',cursive;font-style:normal;font-weight:700;
+  font-size:.5em;color:var(--sage-deep);letter-spacing:0;text-transform:none;
+  margin-top:4px;
 }
-.founders-bios div b em{
+.meet-card-body p{
+  font-family:'Manrope';font-weight:400;font-size:15px;
+  line-height:1.6;color:var(--ink-2);
+}
+.meet-card-body p:first-of-type{
+  font-family:'Fraunces';font-style:italic;font-weight:400;
+  font-size:18px;line-height:1.5;color:var(--ink);
+}
+.meet-card-body p em{font-style:italic;color:var(--sage-deep);}
+.meet-card-body p strong{
   display:block;
-  font-family:'Caveat', cursive;font-style:normal;font-weight:700;font-size:18px;
-  color:var(--sage-deep);letter-spacing:0;text-transform:none;
-  margin-top:2px;
+  font-family:'Caveat',cursive;font-weight:700;font-style:normal;
+  font-size:22px;color:var(--sage-deep);
+  margin-top:8px;
 }
-.founders-bios div span{
-  font-family:'Manrope';font-size:14px;line-height:1.55;color:var(--ink-2);
+.meet-tagline{
+  margin-top:18px;padding-top:18px;
+  border-top:1px dashed var(--ink-2);
+  font-family:'Caveat',cursive;font-weight:700;
+  font-size:22px;color:var(--sage-deep);
 }
 
 /* STATS BAND — Signal-style on dark */
@@ -547,8 +636,15 @@ button{font-family:inherit;border:none;cursor:pointer;}
   position:relative;
   display:flex;align-items:center;justify-content:center;
   border-bottom:1px solid var(--ink);
+  overflow:hidden;
 }
-.product-img img{width:55%;opacity:.55;mix-blend-mode:multiply;}
+.product-img .decal-fallback{width:55%;opacity:.55;mix-blend-mode:multiply;}
+.product-img .real-img{
+  position:absolute;inset:0;
+  width:100%;height:100%;
+  object-fit:cover;
+  z-index:5;
+}
 .p1{background:linear-gradient(160deg, #5b7d6d, #4a6659);}
 .p2{background:linear-gradient(160deg, #F4EFDF, #DDD4BD);}
 .p3{background:linear-gradient(160deg, #1E293B, #141B27);}
@@ -994,7 +1090,10 @@ button{font-family:inherit;border:none;cursor:pointer;}
 /* RESPONSIVE */
 @media (max-width:1100px){
   .bar-c{display:none;}
-  .stats-grid, .collection-grid, .partners-grid, .contact-grid{grid-template-columns:repeat(2, 1fr);}
+  .stats-grid, .collection-grid, .partners-grid, .contact-grid, .meet-grid{grid-template-columns:repeat(2, 1fr);}
+  .meet-grid{grid-template-columns:1fr;}
+  .meet-head{grid-template-columns:1fr;gap:14px;}
+  .meet-head p{justify-self:start;text-align:left;}
   .partner.main{grid-row:auto;min-height:380px;}
   .founders-grid, .events-head, .stats-head, .drop-head, .partners-head, .collection-head{grid-template-columns:1fr;gap:24px;}
   .drop-head h2, .partners-head h2{text-align:left;}
@@ -1086,17 +1185,52 @@ button{font-family:inherit;border:none;cursor:pointer;}
       <span class="cap">— Las Fundadoras</span>
       <h2>Two latinas,<br>building a <span class="sage">Padel<br>movement,</span><br>en <span class="ser"><em>Houston.</em></span></h2>
       <span class="script">~ y mucho corazón ~</span>
-      <p>Baby Let's Padel started as a group chat — two Latinas in Houston who couldn't find a regular padel night that felt like home. <em>So we made one.</em> Four open plays a week, the kit our crew actually wears on court, and a movement that grows one Tuesday at a time.</p>
-      <div class="founders-bios">
-        <div>
-          <b>Laura<em>~ co-founder</em></b>
-          <span>[Add bio: where she's from, why padel, what she runs at BLP, fun detail. ~50 words.]</span>
+      <p>Baby Let's Padel started as a group chat between Laura and Isabella, two Latinas in Houston who couldn't find a regular padel night that felt like home. <em>So they built one.</em> Four open plays a week, the kit our crew actually wears on court, and a movement that grows one Tuesday at a time.</p>
+    </div>
+  </div>
+</section>
+
+<!-- MEET THE FOUNDERS — full bio cards -->
+<section class="meet">
+  <div class="meet-inner">
+    <div class="meet-head">
+      <h2>Meet <em>las fundadoras.</em></h2>
+      <p>Two Latinas, one group chat, a Houston padel community on the rise.</p>
+    </div>
+    <div class="meet-grid">
+
+      <article class="meet-card">
+        <div class="meet-card-photo">
+          <span class="meet-card-stamp">Laura<small>~ co-founder ~</small></span>
+          <img class="meet-photo-img" src="../assets/founders/laura.jpg" alt="Laura, co-founder of Baby Let's Padel" onerror="this.remove()">
+          <div class="meet-photo-fallback laura-bg" style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;">Photo coming this weekend<small>~ from the open play ~</small></div>
         </div>
-        <div>
-          <b>[Co-founder]<em>~ co-founder</em></b>
-          <span>[Add bio: where she's from, why padel, what she runs at BLP, fun detail. ~50 words.]</span>
+        <div class="meet-card-body">
+          <div class="meet-card-head"><h3>Laura<em>~ the community builder</em></h3></div>
+          <p>Hi, I'm Laura, co-founder of Baby Let's Padel.</p>
+          <p>I was born and raised in Venezuela, and my mom is Mexican, so I grew up around a mix of cultures, big personalities, good food, and loud conversations. I'm based in Houston now and love creating spaces where people can connect through community, wellness, travel, and good experiences. I'm usually planning my next trip, trying a new restaurant, organizing some kind of gathering, or hanging out with my dog Hope.</p>
+          <p>By day, I work in project controls, so yes — I'm very much a numbers girl. Spreadsheets, budgets, reporting, organized chaos, all my love languages. Ironically, I never played a racket sport until discovering padel, and somehow that turned into a <em>full blown obsession</em> and eventually a growing community.</p>
+          <p>I'm naturally a little goofy, love making people laugh, and somehow always end up introducing people to each other. I can come across a little intimidating at first, but I'm deeply loyal, love bringing people together, and I'm unapologetically a girls' girl — though some of my closest friendships are with the guys too.</p>
+          <div class="meet-tagline">~ And if you ever meet Hope, just know she's the real star of Baby Let's Padel ~</div>
         </div>
-      </div>
+      </article>
+
+      <article class="meet-card">
+        <div class="meet-card-photo">
+          <span class="meet-card-stamp">Isabella<small>~ co-founder ~</small></span>
+          <img class="meet-photo-img" src="../assets/founders/isabella.jpg" alt="Isabella, co-founder of Baby Let's Padel" onerror="this.remove()">
+          <div class="meet-photo-fallback isa-bg" style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:var(--bone);">Photo coming this weekend<small>~ from the open play ~</small></div>
+        </div>
+        <div class="meet-card-body">
+          <div class="meet-card-head"><h3>Isabella · "Isa"<em>~ the travel partner</em></h3></div>
+          <p>Born in Venezuela and based in the USA since the early 2000s, Isabella comes from a background in hospitality and supply chain management. Long before discovering padel, the only racket sport she knew was ping pong — a family favorite that was always part of her childhood. Growing up, there was always a ping pong table at home, at her uncles' houses, and somewhere in the middle of every family gathering.</p>
+          <p>Isa has always loved traveling, discovering new restaurants, and experiencing different cultures. But everything changed in 2025 when she discovered padel. <em>What started as a simple mission to beat Laura one time on the court</em> (which, of course, she did) quickly turned into a full-blown obsession.</p>
+          <p>Soon enough, she was taking classes, playing constantly, and planning trips around padel. That passion eventually evolved into Baby Let's Padel — a project created together with Laura that combines two of their favorite things: <em>travel and padel.</em></p>
+          <p>Because the best way to explore new destinations is with a racket in hand.</p>
+          <div class="meet-tagline">~ Let's play padel while we travel the world ~</div>
+        </div>
+      </article>
+
     </div>
   </div>
 </section>
@@ -1145,34 +1279,61 @@ button{font-family:inherit;border:none;cursor:pointer;}
         <span class="collection-tag">In stock</span>
       </div>
       <div class="collection-grid">
-        <article class="product">
-          <div class="product-img p1"><span class="product-tag">No. 01</span><img src="../assets/decal.png" alt=""></div>
-          <div class="product-meta">
-            <h4>Heavy Crewneck<em>Eucalyptus · 350 GSM</em></h4>
-            <div class="product-foot"><span class="product-price">$53</span><a href="#" class="product-cta">Add →</a></div>
+        <a class="product" href="products/heavy-crewneck-eucalyptus/">
+          <div class="product-img p1">
+            <span class="product-tag">No. 01</span>
+            <img class="real-img" src="../assets/products/heavy-crewneck-eucalyptus/01.jpg" alt="Heavy Crewneck Eucalyptus" onerror="this.remove()">
+            <img class="decal-fallback" src="../assets/decal.png" alt="">
           </div>
-        </article>
-        <article class="product">
-          <div class="product-img p2"><span class="product-tag">No. 02</span><img src="../assets/decal.png" alt=""></div>
           <div class="product-meta">
-            <h4>Light Crewneck<em>Off-White · 220 GSM</em></h4>
-            <div class="product-foot"><span class="product-price">$41</span><a href="#" class="product-cta">Add →</a></div>
+            <h4>Heavy Crewneck<em>Eucalyptus · 9.5 oz</em></h4>
+            <div class="product-foot"><span class="product-price">$53</span><span class="product-cta">View →</span></div>
           </div>
-        </article>
-        <article class="product">
-          <div class="product-img p3"><span class="product-tag">No. 03</span><img src="../assets/decal.png" alt=""></div>
+        </a>
+        <a class="product" href="products/heavy-crewneck-pink/">
+          <div class="product-img" style="background:linear-gradient(160deg, #E8C9C9, #C9A8A8);">
+            <span class="product-tag">No. 02</span>
+            <img class="real-img" src="../assets/products/heavy-crewneck-pink/01.jpg" alt="Heavy Crewneck Pink" onerror="this.remove()">
+            <img class="decal-fallback" src="../assets/decal.png" alt="">
+          </div>
           <div class="product-meta">
-            <h4>Heavy Crewneck<em>Deep Navy · 350 GSM</em></h4>
-            <div class="product-foot"><span class="product-price">$53</span><a href="#" class="product-cta">Add →</a></div>
+            <h4>Heavy Crewneck<em>Pink · 9.5 oz</em></h4>
+            <div class="product-foot"><span class="product-price">$53</span><span class="product-cta">View →</span></div>
           </div>
-        </article>
-        <article class="product">
-          <div class="product-img p4"><span class="product-tag">No. 04</span><img src="../assets/decal.png" alt=""></div>
+        </a>
+        <a class="product" href="products/heavy-crewneck-navy/">
+          <div class="product-img p3">
+            <span class="product-tag">No. 03</span>
+            <img class="real-img" src="../assets/products/heavy-crewneck-navy/01.jpg" alt="Heavy Crewneck Deep Navy" onerror="this.remove()">
+            <img class="decal-fallback" src="../assets/decal.png" alt="">
+          </div>
           <div class="product-meta">
-            <h4>L/S Training Tee<em>Off-White · Wicking</em></h4>
-            <div class="product-foot"><span class="product-price">$31</span><a href="#" class="product-cta">Add →</a></div>
+            <h4>Heavy Crewneck<em>Deep Navy · 9.5 oz</em></h4>
+            <div class="product-foot"><span class="product-price">$53</span><span class="product-cta">View →</span></div>
           </div>
-        </article>
+        </a>
+        <a class="product" href="products/light-crewneck/">
+          <div class="product-img p2">
+            <span class="product-tag">No. 04</span>
+            <img class="real-img" src="../assets/products/light-crewneck/01.jpg" alt="Lightweight Crewneck Off-White" onerror="this.remove()">
+            <img class="decal-fallback" src="../assets/decal.png" alt="">
+          </div>
+          <div class="product-meta">
+            <h4>Light Crewneck<em>Off-White · 6.4 oz</em></h4>
+            <div class="product-foot"><span class="product-price">$41</span><span class="product-cta">View →</span></div>
+          </div>
+        </a>
+        <a class="product" href="products/long-sleeve-tee/">
+          <div class="product-img p4">
+            <span class="product-tag">No. 05</span>
+            <img class="real-img" src="../assets/products/long-sleeve-tee/01.jpg" alt="Long Sleeve Training Tee Off-White" onerror="this.remove()">
+            <img class="decal-fallback" src="../assets/decal.png" alt="">
+          </div>
+          <div class="product-meta">
+            <h4>Long Sleeve Tee<em>Off-White · 6.1 oz</em></h4>
+            <div class="product-foot"><span class="product-price">$31</span><span class="product-cta">View →</span></div>
+          </div>
+        </a>
       </div>
     </div>
 
@@ -1187,31 +1348,47 @@ button{font-family:inherit;border:none;cursor:pointer;}
       </div>
       <div class="collection-grid">
         <article class="product">
-          <div class="product-img p5"><span class="product-tag">No. 05</span><img src="../assets/decal.png" alt=""></div>
+          <div class="product-img p5">
+            <span class="product-tag">soon</span>
+            <img class="real-img" src="../assets/products/cap/01.jpg" alt="" onerror="this.remove()">
+            <img class="decal-fallback" src="../assets/decal.png" alt="">
+          </div>
           <div class="product-meta">
             <h4>Six-Panel Cap<em>Taupe · Sage · Navy</em></h4>
-            <div class="product-foot"><span class="product-price">$27</span><a href="#" class="product-cta">Add →</a></div>
+            <div class="product-foot"><span class="product-price">$27</span><span class="product-cta">Notify me →</span></div>
           </div>
         </article>
         <article class="product">
-          <div class="product-img p6"><span class="product-tag">No. 06</span><img src="../assets/decal.png" alt=""></div>
+          <div class="product-img p6">
+            <span class="product-tag">soon</span>
+            <img class="real-img" src="../assets/products/visor/01.jpg" alt="" onerror="this.remove()">
+            <img class="decal-fallback" src="../assets/decal.png" alt="">
+          </div>
           <div class="product-meta">
             <h4>Dri-Fit Visor<em>Off-White · Quick-dry</em></h4>
-            <div class="product-foot"><span class="product-price">$22</span><a href="#" class="product-cta">Add →</a></div>
+            <div class="product-foot"><span class="product-price">$22</span><span class="product-cta">Notify me →</span></div>
           </div>
         </article>
         <article class="product">
-          <div class="product-img p7"><span class="product-tag">soon</span><img src="../assets/decal.png" alt=""></div>
+          <div class="product-img p7">
+            <span class="product-tag">soon</span>
+            <img class="real-img" src="../assets/products/skirt/01.jpg" alt="" onerror="this.remove()">
+            <img class="decal-fallback" src="../assets/decal.png" alt="">
+          </div>
           <div class="product-meta">
             <h4>Court Skirt<em>Eucalyptus · in development</em></h4>
-            <div class="product-foot"><span class="product-price">TBD</span><a href="#" class="product-cta">Notify me →</a></div>
+            <div class="product-foot"><span class="product-price">TBD</span><span class="product-cta">Notify me →</span></div>
           </div>
         </article>
         <article class="product">
-          <div class="product-img p8"><span class="product-tag">soon</span><img src="../assets/decal.png" alt=""></div>
+          <div class="product-img p8">
+            <span class="product-tag">soon</span>
+            <img class="real-img" src="../assets/products/dri-fit-tee/01.jpg" alt="" onerror="this.remove()">
+            <img class="decal-fallback" src="../assets/decal.png" alt="">
+          </div>
           <div class="product-meta">
             <h4>Dri-Fit Tee<em>Off-White · in development</em></h4>
-            <div class="product-foot"><span class="product-price">TBD</span><a href="#" class="product-cta">Notify me →</a></div>
+            <div class="product-foot"><span class="product-price">TBD</span><span class="product-cta">Notify me →</span></div>
           </div>
         </article>
       </div>
@@ -1380,7 +1557,7 @@ button{font-family:inherit;border:none;cursor:pointer;}
   <div class="foot-bot">
     <span>© 2026 Baby Let's Padel · Houston, TX</span>
     <span>Founded by two Latinas · Vamos al padel</span>
-    <span><a href="../">← Back to design directions</a></span>
+    <span><a href="../deck/">← Design directions archive</a></span>
   </div>
 </footer>
 

@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Heavy Crewneck · Deep Navy — Baby Let's Padel</title>
+<meta name="description" content="Heavyweight crewneck in deep navy. 9.5 oz/yd², 80% US ring spun cotton, garment dyed. From Baby Let's Padel.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Manrope:wght@300;400;500;600;700;800&family=Caveat:wght@500..700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bone:#F4EFDF;
+  --bone-2:#EDE5CD;
+  --cream:#E9E2D6;
+  --sage:#5b7d6d;
+  --sage-deep:#4a6659;
+  --sage-soft:#A9BCB3;
+  --navy:#1E293B;
+  --navy-2:#141B27;
+  --taupe:#AFA393;
+  --taupe-deep:#8E826F;
+  --ink:#1A1F2A;
+  --ink-2:#3A4452;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  background:var(--bone);
+  color:var(--ink);
+  font-family:'Manrope', system-ui, sans-serif;
+  font-size:16px;line-height:1.55;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+a{color:inherit;text-decoration:none;}
+img{display:block;max-width:100%;}
+button{font-family:inherit;border:none;cursor:pointer;}
+
+.bebas{font-family:'Bebas Neue', Impact, sans-serif;letter-spacing:.005em;line-height:.95;}
+.serif{font-family:'Fraunces', serif;}
+.script{font-family:'Caveat', cursive;font-weight:600;}
+.cap{font-family:'Manrope';font-weight:600;font-size:11px;letter-spacing:.24em;text-transform:uppercase;}
+
+/* HEADER */
+.bar{
+  position:sticky;top:0;z-index:60;
+  background:var(--navy);color:var(--bone);
+  display:grid;
+  grid-template-columns:auto 1fr auto;
+  align-items:center;padding:0 28px;
+  border-bottom:1px solid rgba(244,239,223,.16);
+  gap:24px;
+}
+.bar-l{display:flex;align-items:center;gap:14px;padding:10px 0;}
+.bar-l img{height:60px;width:auto;}
+.bar-l-text{font-family:'Bebas Neue';font-size:22px;letter-spacing:.04em;line-height:1;}
+.bar-l-text small{
+  font-family:'Caveat',cursive;font-weight:500;font-size:14px;
+  display:block;color:var(--sage-soft);letter-spacing:0;margin-top:-2px;
+}
+.bar-c{display:flex;justify-content:center;gap:24px;}
+.bar-c a{
+  font-family:'Manrope';font-weight:500;font-size:11px;
+  letter-spacing:.22em;text-transform:uppercase;color:var(--bone);
+  padding:14px 0;border-bottom:2px solid transparent;
+  transition:border-color .2s, color .2s;
+}
+.bar-c a:hover{border-color:var(--sage-soft);color:var(--sage-soft);}
+.bar-r{display:flex;align-items:center;gap:14px;}
+.bar-r a{
+  font-family:'Manrope';font-weight:600;font-size:11px;letter-spacing:.18em;text-transform:uppercase;
+  padding:8px 14px;
+}
+.bar-r .cart{border:1px solid rgba(244,239,223,.36);}
+.bar-r .cart:hover{background:var(--sage);border-color:var(--sage);}
+.bar-r .reserve{background:var(--sage);border:1px solid var(--sage);}
+.bar-r .reserve:hover{background:var(--sage-deep);border-color:var(--sage-deep);}
+
+/* BREADCRUMB */
+.crumbs{
+  background:var(--bone-2);
+  border-bottom:1px solid var(--ink);
+  padding:14px 32px;
+}
+.crumbs-inner{
+  max-width:1480px;margin:0 auto;
+  display:flex;align-items:center;gap:10px;flex-wrap:wrap;
+  font-family:'Manrope';font-weight:500;
+  font-size:11px;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--ink-2);
+}
+.crumbs-inner a{color:var(--ink-2);transition:color .2s;}
+.crumbs-inner a:hover{color:var(--sage-deep);}
+.crumbs-inner b{color:var(--ink);font-weight:600;}
+.crumbs-inner span.sep{color:var(--taupe);}
+
+/* PDP */
+.pdp{
+  padding:48px 32px 96px;
+  background:var(--bone);
+}
+.pdp-inner{
+  max-width:1480px;margin:0 auto;
+  display:grid;
+  grid-template-columns:1.3fr 1fr;
+  gap:64px;
+}
+
+/* GALLERY */
+.gallery{display:grid;gap:14px;}
+.gallery-main{
+  aspect-ratio:4/5;
+  background:linear-gradient(160deg, #1E293B, #141B27);
+  border:1px solid var(--ink);
+  position:relative;
+  display:flex;align-items:center;justify-content:center;
+  overflow:hidden;
+}
+.gallery-main img.real-img{
+  position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:3;
+}
+.gallery-main img.decal-fallback{width:55%;opacity:.55;mix-blend-mode:multiply;}
+.gallery-main .gallery-tag{
+  position:absolute;top:20px;left:20px;
+  background:var(--bone);border:1.5px solid var(--ink);
+  padding:8px 12px;
+  font-family:'Bebas Neue';font-size:16px;letter-spacing:.06em;
+  z-index:4;
+}
+.gallery-thumbs{
+  display:grid;
+  grid-template-columns:repeat(4, 1fr);
+  gap:14px;
+}
+.gallery-thumb{
+  aspect-ratio:1/1;
+  background:linear-gradient(160deg, #1E293B, #141B27);
+  border:1px solid var(--ink);
+  position:relative;
+  display:flex;align-items:center;justify-content:center;
+  overflow:hidden;
+  cursor:pointer;
+  transition:transform .2s;
+}
+.gallery-thumb:hover{transform:translateY(-2px);}
+.gallery-thumb img.real-img{
+  position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:3;
+}
+.gallery-thumb img.decal-fallback{width:50%;opacity:.45;mix-blend-mode:multiply;}
+.gallery-thumb .num{
+  position:relative;z-index:5;
+  font-family:'Caveat',cursive;font-weight:700;
+  font-size:22px;color:var(--bone);
+  background:rgba(30,41,59,.65);
+  padding:4px 10px;
+}
+
+/* PRODUCT INFO */
+.info{display:flex;flex-direction:column;gap:24px;}
+.info-cap{
+  font-family:'Manrope';font-weight:600;font-size:11px;
+  letter-spacing:.24em;text-transform:uppercase;color:var(--sage-deep);
+}
+.info-cap small{display:block;font-family:'Caveat',cursive;font-weight:700;font-size:18px;letter-spacing:0;color:var(--sage-deep);text-transform:none;margin-top:-2px;}
+.info h1{
+  font-family:'Bebas Neue', sans-serif;
+  font-size:clamp(56px, 6vw, 96px);
+  line-height:.88;letter-spacing:.005em;
+  color:var(--ink);
+}
+.info h1 em{
+  font-family:'Fraunces';font-weight:300;font-style:italic;
+  font-size:.55em;letter-spacing:-.03em;color:var(--sage-deep);
+  display:block;text-transform:none;margin-top:8px;
+}
+.info-price{
+  display:flex;align-items:baseline;gap:18px;
+  font-family:'Bebas Neue';font-size:48px;letter-spacing:.04em;
+  border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);
+  padding:18px 0;
+}
+.info-price small{
+  font-family:'Manrope';font-weight:500;font-size:12px;
+  letter-spacing:.22em;text-transform:uppercase;color:var(--ink-2);
+}
+.info-block{
+  display:flex;flex-direction:column;gap:10px;
+}
+.info-block-label{
+  font-family:'Manrope';font-weight:600;font-size:11px;
+  letter-spacing:.22em;text-transform:uppercase;color:var(--ink-2);
+  display:flex;justify-content:space-between;
+}
+.info-block-label b{color:var(--ink);font-weight:600;}
+.color-row{display:flex;gap:10px;}
+.color-swatch{
+  width:48px;height:48px;border-radius:50%;
+  border:2px solid var(--ink);
+  cursor:pointer;position:relative;
+  transition:transform .2s;
+}
+.color-swatch:hover{transform:scale(1.05);}
+.color-swatch.active{outline:1.5px solid var(--ink);outline-offset:3px;}
+.color-swatch.eucalyptus{background:#5b7d6d;}
+.color-swatch.navy{background:#1E293B;}
+.color-swatch.pink{background:#E8C9C9;}
+.size-row{display:grid;grid-template-columns:repeat(5, 1fr);gap:8px;}
+.size-btn{
+  font-family:'Bebas Neue';font-size:18px;letter-spacing:.04em;
+  background:var(--bone);
+  border:1.5px solid var(--ink);
+  padding:14px 0;text-align:center;
+  cursor:pointer;
+  transition:background .2s, color .2s;
+}
+.size-btn:hover{background:var(--cream);}
+.size-btn.active{background:var(--ink);color:var(--bone);}
+.size-btn.oos{
+  color:var(--ink-2);opacity:.4;cursor:not-allowed;text-decoration:line-through;
+}
+.add-btn{
+  display:block;width:100%;
+  background:var(--sage);color:var(--bone);
+  padding:20px;
+  font-family:'Bebas Neue';font-size:24px;letter-spacing:.04em;
+  border:1.5px solid var(--sage);
+  transition:background .2s;
+}
+.add-btn:hover{background:var(--sage-deep);border-color:var(--sage-deep);}
+.add-btn::after{content:" →";font-family:'Manrope';font-size:18px;}
+.trust{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:0;
+  border:1px solid var(--ink);
+}
+.trust div{
+  padding:14px;
+  border-right:1px solid var(--ink);
+  font-family:'Manrope';font-weight:500;
+  font-size:11px;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--ink-2);
+}
+.trust div:last-child{border-right:none;}
+.trust div b{display:block;color:var(--ink);font-weight:600;margin-bottom:4px;font-size:13px;}
+
+.highlight-list{
+  display:flex;flex-direction:column;gap:8px;
+  margin-top:8px;
+}
+.highlight-list li{
+  list-style:none;padding-left:18px;position:relative;
+  font-family:'Manrope';font-size:14px;line-height:1.55;color:var(--ink-2);
+}
+.highlight-list li::before{
+  content:"●";position:absolute;left:0;
+  color:var(--sage-deep);font-size:10px;top:6px;
+}
+
+/* DESCRIPTION SECTION */
+.desc{
+  background:var(--cream);
+  padding:96px 32px;
+  border-top:1px solid var(--ink);
+  border-bottom:1px solid var(--ink);
+}
+.desc-inner{max-width:1480px;margin:0 auto;}
+.desc-head{
+  display:grid;
+  grid-template-columns:auto 1fr;
+  align-items:end;gap:32px;
+  margin-bottom:48px;
+  border-bottom:2px solid var(--ink);padding-bottom:24px;
+}
+.desc-head h2{
+  font-family:'Bebas Neue';font-size:clamp(48px, 7vw, 96px);
+  line-height:.88;letter-spacing:.005em;
+}
+.desc-head h2 em{
+  font-family:'Fraunces';font-weight:300;font-style:italic;
+  font-size:.55em;letter-spacing:-.03em;color:var(--sage-deep);text-transform:none;
+}
+.desc-head .script{
+  font-family:'Caveat',cursive;font-weight:700;
+  font-size:32px;color:var(--sage-deep);
+  justify-self:end;transform:rotate(-2deg);
+}
+.desc-grid{
+  display:grid;
+  grid-template-columns:1.4fr 1fr;
+  gap:48px;
+}
+.desc-text p{
+  font-family:'Fraunces';font-weight:300;font-style:italic;
+  font-size:21px;line-height:1.55;
+  color:var(--ink);margin-bottom:18px;
+}
+.desc-text p:last-child{margin-bottom:0;}
+.desc-text p em{font-style:italic;color:var(--sage-deep);font-weight:400;}
+
+/* SPEC TABLE */
+.specs{
+  background:var(--bone);
+  border:1px solid var(--ink);
+}
+.specs-head{
+  background:var(--ink);color:var(--bone);
+  padding:14px 18px;
+  font-family:'Bebas Neue';font-size:18px;letter-spacing:.04em;
+  display:flex;justify-content:space-between;
+}
+.specs-head small{font-family:'Manrope';font-weight:500;font-size:10px;letter-spacing:.22em;color:var(--sage-soft);}
+.specs-row{
+  display:grid;grid-template-columns:140px 1fr;
+  padding:14px 18px;
+  border-bottom:1px solid rgba(26,31,42,.15);
+  font-family:'Manrope';font-size:14px;line-height:1.5;
+}
+.specs-row:last-child{border-bottom:none;}
+.specs-row b{
+  font-family:'Manrope';font-weight:600;font-size:10.5px;
+  letter-spacing:.22em;text-transform:uppercase;color:var(--ink-2);
+}
+.specs-row span{color:var(--ink);}
+
+/* CARE */
+.care{
+  background:var(--bone);
+  padding:80px 32px;
+  border-bottom:1px solid var(--ink);
+}
+.care-inner{max-width:1480px;margin:0 auto;}
+.care-head{
+  display:grid;grid-template-columns:auto 1fr;gap:32px;align-items:end;
+  margin-bottom:32px;border-bottom:1px solid var(--ink);padding-bottom:18px;
+}
+.care-head h2{
+  font-family:'Bebas Neue';font-size:48px;letter-spacing:.04em;line-height:1;
+}
+.care-head h2 em{
+  font-family:'Fraunces';font-weight:300;font-style:italic;
+  font-size:.5em;letter-spacing:-.03em;color:var(--sage-deep);text-transform:none;
+}
+.care-head p{
+  font-family:'Fraunces';font-style:italic;font-weight:300;
+  font-size:18px;color:var(--ink-2);justify-self:end;
+}
+.care-grid{
+  display:grid;
+  grid-template-columns:repeat(4, 1fr);
+  gap:0;
+}
+.care-item{
+  padding:24px;
+  border-right:1px solid var(--ink);
+}
+.care-item:last-child{border-right:none;}
+.care-icon{
+  width:48px;height:48px;
+  border:2px solid var(--ink);
+  border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Bebas Neue';font-size:18px;letter-spacing:.04em;
+  margin-bottom:14px;
+}
+.care-item h4{
+  font-family:'Bebas Neue';font-size:20px;letter-spacing:.04em;line-height:1;
+}
+.care-item p{
+  font-family:'Manrope';font-size:13px;line-height:1.5;color:var(--ink-2);margin-top:8px;
+}
+
+/* COMPLETE THE LOOK */
+.cross{
+  background:var(--cream);
+  padding:96px 32px;
+  border-bottom:6px solid var(--sage);
+}
+.cross-inner{max-width:1480px;margin:0 auto;}
+.cross-head{
+  display:grid;grid-template-columns:auto 1fr auto;
+  gap:32px;align-items:end;
+  margin-bottom:48px;border-bottom:2px solid var(--ink);padding-bottom:24px;
+}
+.cross-head h2{
+  font-family:'Bebas Neue';font-size:clamp(48px, 7vw, 96px);
+  line-height:.88;letter-spacing:.005em;text-align:center;
+}
+.cross-head h2 em{
+  font-family:'Fraunces';font-weight:300;font-style:italic;
+  font-size:.5em;letter-spacing:-.03em;color:var(--sage-deep);text-transform:none;
+}
+.cross-grid{
+  display:grid;grid-template-columns:repeat(4, 1fr);gap:14px;
+}
+.cross-card{
+  background:var(--bone);
+  border:1px solid var(--ink);
+  display:flex;flex-direction:column;
+  transition:transform .2s, box-shadow .2s;
+}
+.cross-card:hover{transform:translate(-3px,-3px);box-shadow:6px 6px 0 var(--ink);}
+.cross-card-img{
+  aspect-ratio:1/1;
+  position:relative;overflow:hidden;
+  display:flex;align-items:center;justify-content:center;
+  border-bottom:1px solid var(--ink);
+}
+.cross-card-img .real-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:5;}
+.cross-card-img .decal-fallback{width:55%;opacity:.55;mix-blend-mode:multiply;}
+.cc1{background:linear-gradient(160deg, #E8C9C9, #C9A8A8);}
+.cc2{background:linear-gradient(160deg, #1E293B, #141B27);}
+.cc3{background:linear-gradient(160deg, #F4EFDF, #DDD4BD);}
+.cc4{background:linear-gradient(160deg, #FAF6E8, #E9E2D6);}
+.cc2 .decal-fallback{filter:brightness(0) invert(1);opacity:.45;}
+.cross-card-meta{padding:14px;}
+.cross-card-meta h4{
+  font-family:'Bebas Neue';font-size:20px;letter-spacing:.04em;line-height:1;
+}
+.cross-card-meta h4 em{
+  display:block;font-family:'Fraunces';font-style:italic;font-weight:300;
+  font-size:.65em;letter-spacing:-.005em;color:var(--sage-deep);
+  text-transform:none;margin-top:3px;
+}
+.cross-card-foot{
+  display:flex;justify-content:space-between;align-items:center;
+  margin-top:8px;padding-top:8px;border-top:1px dashed var(--ink-2);
+}
+.cross-card-price{font-family:'Bebas Neue';font-size:22px;letter-spacing:.04em;}
+.cross-card-cta{
+  font-family:'Manrope';font-weight:600;font-size:10px;
+  letter-spacing:.18em;text-transform:uppercase;
+}
+
+/* FOOTER */
+.contact{
+  background:var(--navy);color:var(--bone);
+  padding:96px 32px 32px;position:relative;overflow:hidden;
+}
+.contact::before{
+  content:"";position:absolute;
+  top:-100px;right:-100px;
+  width:400px;height:400px;border-radius:50%;
+  background:radial-gradient(circle, var(--sage-soft) 0%, transparent 60%);
+  opacity:.18;
+}
+.contact-mark{display:flex;justify-content:center;margin-bottom:48px;position:relative;z-index:1;}
+.contact-mark img{height:140px;width:auto;background:var(--bone);padding:14px;border-radius:50%;}
+.contact-h{
+  font-family:'Bebas Neue';font-size:clamp(72px, 13vw, 220px);
+  line-height:.85;letter-spacing:.005em;text-align:center;position:relative;z-index:1;
+}
+.contact-h em{
+  font-family:'Fraunces';font-weight:300;font-style:italic;
+  font-size:.6em;letter-spacing:-.03em;color:var(--sage-soft);text-transform:none;
+}
+.contact-script{
+  text-align:center;font-family:'Caveat',cursive;font-weight:700;font-size:32px;
+  color:var(--sage-soft);display:block;margin-top:14px;transform:rotate(-2deg);
+  position:relative;z-index:1;
+}
+.foot-bot{
+  display:flex;justify-content:space-between;margin-top:48px;
+  max-width:1480px;margin-left:auto;margin-right:auto;
+  font-family:'Manrope';font-size:11px;letter-spacing:.22em;text-transform:uppercase;
+  color:rgba(244,239,223,.55);font-weight:600;
+  flex-wrap:wrap;gap:8px;position:relative;z-index:1;
+}
+.foot-bot a{color:var(--sage-soft);border-bottom:1px solid var(--sage-soft);padding-bottom:1px;}
+
+/* RESPONSIVE */
+@media (max-width:1100px){
+  .pdp-inner{grid-template-columns:1fr;gap:32px;}
+  .bar-c{display:none;}
+  .desc-grid{grid-template-columns:1fr;gap:32px;}
+  .cross-grid{grid-template-columns:repeat(2, 1fr);}
+  .care-grid{grid-template-columns:1fr 1fr;}
+  .care-item{border-right:none;border-bottom:1px solid var(--ink);}
+  .care-item:nth-child(2n){border-bottom:1px solid var(--ink);}
+  .care-item:last-child, .care-item:nth-last-child(2){border-bottom:none;}
+  .desc-head, .care-head, .cross-head{grid-template-columns:1fr;gap:14px;}
+  .desc-head .script, .care-head p{justify-self:start;}
+}
+@media (max-width:560px){
+  .pdp{padding-left:18px;padding-right:18px;}
+  .desc, .care, .cross, .contact{padding-left:18px;padding-right:18px;}
+  .gallery-thumbs{grid-template-columns:repeat(4, 1fr);}
+  .crumbs{padding:10px 18px;font-size:10px;}
+  .crumbs-inner{font-size:10px;letter-spacing:.16em;}
+  .care-grid{grid-template-columns:1fr;}
+  .care-item{border-right:none;border-bottom:1px solid var(--ink);}
+  .care-item:last-child{border-bottom:none;}
+  .cross-grid{grid-template-columns:1fr;}
+  .bar{padding:0 16px;}
+  .bar-l img{height:48px;}
+  .bar-r .reserve{padding:6px 10px;font-size:10px;}
+  .foot-bot{flex-direction:column;gap:8px;}
+}
+</style>
+</head>
+<body>
+
+<header class="bar">
+  <a class="bar-l" href="../../" style="display:flex;align-items:center;gap:14px;padding:10px 0;color:var(--bone);">
+    <img src="../../assets/logo-mark.png" alt="Baby Let's Padel">
+    <div class="bar-l-text">Baby Let's Padel<small>~ vamos al padel ~</small></div>
+  </a>
+  <nav class="bar-c">
+    <a href="../../#founders">Las Fundadoras</a>
+    <a href="../../#drop">El Drop</a>
+    <a href="../../#partners">Partners</a>
+    <a href="../../#events">Esta Semana</a>
+    <a href="../../#contact">Contact</a>
+  </nav>
+  <div class="bar-r">
+    <a href="#" class="cart">Cart · 0</a>
+    <a href="../../#events" class="reserve">Reserve a spot</a>
+  </div>
+</header>
+
+<!-- BREADCRUMB -->
+<div class="crumbs">
+  <div class="crumbs-inner">
+    <a href="../../">Home</a><span class="sep">/</span>
+    <a href="../../#drop">El Drop</a><span class="sep">/</span>
+    <a href="../../#drop">Cozy &amp; Courtside</a><span class="sep">/</span>
+    <b>Heavy Crewneck · Deep Navy</b>
+  </div>
+</div>
+
+<!-- PDP -->
+<section class="pdp">
+  <div class="pdp-inner">
+
+    <!-- LEFT: Gallery -->
+    <div class="gallery">
+      <div class="gallery-main">
+        <span class="gallery-tag">No. 03</span>
+        <img class="real-img" src="../../assets/products/heavy-crewneck-navy/01.jpg" alt="Heavy Crewneck Deep Navy, front" onerror="this.remove()">
+        <img class="decal-fallback" src="../../assets/decal.png" alt="">
+      </div>
+      <div class="gallery-thumbs">
+        <div class="gallery-thumb">
+          <span class="num">01</span>
+          <img class="real-img" src="../../assets/products/heavy-crewneck-navy/01.jpg" alt="" onerror="this.remove()">
+          <img class="decal-fallback" src="../../assets/decal.png" alt="">
+        </div>
+        <div class="gallery-thumb">
+          <span class="num">02</span>
+          <img class="real-img" src="../../assets/products/heavy-crewneck-navy/02.jpg" alt="" onerror="this.remove()">
+          <img class="decal-fallback" src="../../assets/decal.png" alt="">
+        </div>
+        <div class="gallery-thumb">
+          <span class="num">03</span>
+          <img class="real-img" src="../../assets/products/heavy-crewneck-navy/03.jpg" alt="" onerror="this.remove()">
+          <img class="decal-fallback" src="../../assets/decal.png" alt="">
+        </div>
+        <div class="gallery-thumb">
+          <span class="num">04</span>
+          <img class="real-img" src="../../assets/products/heavy-crewneck-navy/04.jpg" alt="" onerror="this.remove()">
+          <img class="decal-fallback" src="../../assets/decal.png" alt="">
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT: Info -->
+    <div class="info">
+      <div class="info-cap">Drop 01 · Cozy &amp; Courtside<small>~ in stock ~</small></div>
+      <h1>Heavy Crewneck<em>Deep Navy · garment-dyed heavyweight</em></h1>
+      <div class="info-price">$53.00<small>Free shipping over $75</small></div>
+
+      <div class="info-block">
+        <div class="info-block-label"><span>Color</span><b>Deep Navy</b></div>
+        <div class="color-row">
+          <a href="../heavy-crewneck-navy/" class="color-swatch eucalyptus" title="Eucalyptus"></a>
+          <a href="../heavy-crewneck-pink/" class="color-swatch pink" title="Pink"></a>
+          <a href="../heavy-crewneck-navy/" class="color-swatch navy active" title="Deep Navy"></a>
+        </div>
+      </div>
+
+      <div class="info-block">
+        <div class="info-block-label"><span>Size</span><b>Pick one</b></div>
+        <div class="size-row">
+          <button class="size-btn">XS</button>
+          <button class="size-btn">S</button>
+          <button class="size-btn active">M</button>
+          <button class="size-btn">L</button>
+          <button class="size-btn">XL</button>
+        </div>
+      </div>
+
+      <button class="add-btn">Add to cart</button>
+
+      <div class="trust">
+        <div><b>Free shipping</b>On orders $75+</div>
+        <div><b>Easy returns</b>30 days unworn</div>
+      </div>
+
+      <ul class="highlight-list">
+        <li><b>9.5 oz/yd² heavyweight fleece</b> · 80% US ring spun cotton, 20% polyester</li>
+        <li>Garment dyed — almost no shrinkage at home, lived-in feel from day one</li>
+        <li>Rolled forward drop shoulder, 1x1 rib collar / cuffs / waistband with spandex</li>
+        <li>Mid-length body, relaxed fit, side-seamed</li>
+        <li>OEKO-TEX certified low-impact dyes · US Cotton Trust Protocol member</li>
+        <li>Pairs with our matching sweat shorts (Style 1468L)</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- DESCRIPTION -->
+<section class="desc">
+  <div class="desc-inner">
+    <div class="desc-head">
+      <h2>The <em>story.</em></h2>
+      <span class="script">~ made for la cancha ~</span>
+    </div>
+    <div class="desc-grid">
+      <div class="desc-text">
+        <p>The most-worn piece in the kit. <em>Deep navy holds its shape, hides court dust between sets</em>, and photographs well at any hour. The one you'll keep reaching for through three seasons.</p>
+        <p>Same 9.5 oz/yd² heavyweight ringspun cotton fleece as the rest of the heavies, garment dyed in our deepest navy. The rolled forward drop shoulder, the rib collar, the side seams. <em>Built to outlast the season.</em></p>
+        <p>Designed for Houston winters, indoor courts in February, and the long drive home from Katy. <em>Vamos.</em></p>
+      </div>
+      <aside class="specs">
+        <div class="specs-head">Spec Card<small>BLP / 03 / DN</small></div>
+        <div class="specs-row"><b>Weight</b><span>9.5 oz/yd² · heavyweight fleece</span></div>
+        <div class="specs-row"><b>Material</b><span>80% US ring spun cotton, 20% polyester</span></div>
+        <div class="specs-row"><b>Construction</b><span>3-end fleece, 100% cotton face for printability</span></div>
+        <div class="specs-row"><b>Dye</b><span>Garment dyed · OEKO-TEX certified low-impact</span></div>
+        <div class="specs-row"><b>Fit</b><span>Relaxed, side-seamed, mid-length</span></div>
+        <div class="specs-row"><b>Shoulder</b><span>Rolled forward drop shoulder</span></div>
+        <div class="specs-row"><b>Trim</b><span>1x1 rib collar, cuffs, waistband (with spandex)</span></div>
+        <div class="specs-row"><b>Detail</b><span>Back neck patch · signature twill label</span></div>
+        <div class="specs-row"><b>Sizes</b><span>XS · S · M · L · XL</span></div>
+        <div class="specs-row"><b>Origin</b><span>US Cotton Trust Protocol member</span></div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- CARE -->
+<section class="care">
+  <div class="care-inner">
+    <div class="care-head">
+      <h2>Care for <em>the cozy.</em></h2>
+      <p>Treat it well, it'll outlast the season.</p>
+    </div>
+    <div class="care-grid">
+      <div class="care-item">
+        <div class="care-icon">30°</div>
+        <h4>Cold wash</h4>
+        <p>Wash inside out, cold cycle. Skip the chlorine bleach.</p>
+      </div>
+      <div class="care-item">
+        <div class="care-icon">≈</div>
+        <h4>Tumble low</h4>
+        <p>Tumble dry low, or hang dry for longer life.</p>
+      </div>
+      <div class="care-item">
+        <div class="care-icon">▭</div>
+        <h4>Iron low</h4>
+        <p>Low iron only. Avoid printed areas.</p>
+      </div>
+      <div class="care-item">
+        <div class="care-icon">⊘</div>
+        <h4>No bleach</h4>
+        <p>Chlorine fades the dye. Use color-safe alternatives if needed.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMPLETE THE LOOK -->
+<section class="cross">
+  <div class="cross-inner">
+    <div class="cross-head">
+      <span class="cap" style="color:var(--sage-deep);">— Complete the look</span>
+      <h2>Cozy <em>&amp;</em> Courtside.</h2>
+      <span class="cap" style="color:var(--sage-deep);text-align:right;">4 more pieces</span>
+    </div>
+    <div class="cross-grid">
+      <a href="../heavy-crewneck-eucalyptus/" class="cross-card">
+        <div class="cross-card-img" style="background:linear-gradient(160deg, #5b7d6d, #4a6659);">
+          <img class="real-img" src="../../assets/products/heavy-crewneck-eucalyptus/01.jpg" alt="" onerror="this.remove()">
+          <img class="decal-fallback" src="../../assets/decal.png" alt="">
+        </div>
+        <div class="cross-card-meta">
+          <h4>Heavy Crewneck<em>Eucalyptus · 9.5 oz</em></h4>
+          <div class="cross-card-foot"><span class="cross-card-price">$53</span><span class="cross-card-cta">View →</span></div>
+        </div>
+      </a>
+      <a href="../heavy-crewneck-pink/" class="cross-card">
+        <div class="cross-card-img cc1">
+          <img class="real-img" src="../../assets/products/heavy-crewneck-pink/01.jpg" alt="" onerror="this.remove()">
+          <img class="decal-fallback" src="../../assets/decal.png" alt="">
+        </div>
+        <div class="cross-card-meta">
+          <h4>Heavy Crewneck<em>Pink · 9.5 oz</em></h4>
+          <div class="cross-card-foot"><span class="cross-card-price">$53</span><span class="cross-card-cta">View →</span></div>
+        </div>
+      </a>
+      <a href="../light-crewneck/" class="cross-card">
+        <div class="cross-card-img cc3">
+          <img class="real-img" src="../../assets/products/light-crewneck/01.jpg" alt="" onerror="this.remove()">
+          <img class="decal-fallback" src="../../assets/decal.png" alt="">
+        </div>
+        <div class="cross-card-meta">
+          <h4>Light Crewneck<em>Off-White · 6.4 oz</em></h4>
+          <div class="cross-card-foot"><span class="cross-card-price">$41</span><span class="cross-card-cta">View →</span></div>
+        </div>
+      </a>
+      <a href="../long-sleeve-tee/" class="cross-card">
+        <div class="cross-card-img cc4">
+          <img class="real-img" src="../../assets/products/long-sleeve-tee/01.jpg" alt="" onerror="this.remove()">
+          <img class="decal-fallback" src="../../assets/decal.png" alt="">
+        </div>
+        <div class="cross-card-meta">
+          <h4>Long Sleeve Tee<em>Off-White · 6.1 oz</em></h4>
+          <div class="cross-card-foot"><span class="cross-card-price">$31</span><span class="cross-card-cta">View →</span></div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="contact">
+  <div class="contact-mark"><img src="../../assets/logo-mark.png" alt="Baby Let's Padel"></div>
+  <h2 class="contact-h">Vamos<br><em>a jugar.</em></h2>
+  <span class="contact-script">~ Houston, TX · founded by two Latinas ~</span>
+  <div class="foot-bot">
+    <span>© 2026 Baby Let's Padel · Houston, TX</span>
+    <span>Founded by two Latinas · Vamos al padel</span>
+    <a href="../../">← Back to the shop</a>
+  </div>
+</footer>
+
+</body>
+</html>
