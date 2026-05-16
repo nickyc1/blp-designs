@@ -862,14 +862,15 @@ button{font-family:inherit;border:none;cursor:pointer;}
 .community-head .cap{color:var(--sage-soft);margin-bottom:18px;display:block;}
 .community-head h2{
   font-family:'Bebas Neue', sans-serif;
-  font-size:clamp(56px, 9vw, 144px);
-  line-height:.88;
+  font-size:clamp(36px, 5vw, 64px);
+  line-height:1;
   letter-spacing:.005em;
   color:var(--bone);
+  display:flex;align-items:baseline;justify-content:center;gap:18px;flex-wrap:wrap;
 }
 .community-head h2 em{
   font-family:'Fraunces';font-weight:300;font-style:italic;
-  font-size:.85em;letter-spacing:-.03em;
+  font-size:.95em;letter-spacing:-.025em;
   color:var(--sage-soft);text-transform:none;
 }
 .community-strip{
@@ -923,21 +924,21 @@ button{font-family:inherit;border:none;cursor:pointer;}
 /* IG feed style (replaces community card stamps) */
 .ig-h2{
   font-family:'Bebas Neue', sans-serif;
-  font-size:clamp(56px, 9vw, 144px);
-  line-height:.88;letter-spacing:.005em;
+  font-size:clamp(36px, 5.5vw, 72px);
+  line-height:1;letter-spacing:.005em;
   color:var(--bone);
 }
 .ig-h2 em{
   font-family:'Fraunces';font-weight:300;font-style:italic;
-  font-size:.65em;letter-spacing:-.03em;color:var(--sage-soft);
-  display:block;text-transform:none;margin-top:8px;
+  font-size:.95em;letter-spacing:-.025em;color:var(--sage-soft);
+  text-transform:none;margin-left:18px;
 }
 .ig-handle{
-  display:inline-block;
-  margin-top:14px;
+  margin-left:18px;
   font-family:'Caveat',cursive;font-weight:700;
-  font-size:28px;color:var(--sage-soft);
-  transform:rotate(-2deg);
+  font-size:24px;color:var(--sage-soft);
+  transform:rotate(-2deg);display:inline-block;
+  vertical-align:middle;
 }
 .ig-card{
   width:300px;
@@ -961,6 +962,40 @@ button{font-family:inherit;border:none;cursor:pointer;}
 .ig-card.cm6 .ig-card-img{background:linear-gradient(170deg, #4a6659, #1E293B);}
 .ig-card.cm7 .ig-card-img{background:linear-gradient(170deg, #F4EFDF, #AFA393);}
 .ig-card.cm8 .ig-card-img{background:linear-gradient(170deg, #5b7d6d, #1E293B);}
+/* IG post themed gradients (match the actual post mood) */
+.ig-card.ig-giveaway .ig-card-img{background:linear-gradient(170deg, #C7D3CB, #A9BCB3);}
+.ig-card.ig-interview .ig-card-img{background:linear-gradient(170deg, #5b7d6d, #1E293B);}
+.ig-card.ig-court .ig-card-img{background:linear-gradient(170deg, #3a6fb5, #1E2F5C);}
+.ig-card.ig-event .ig-card-img{background:linear-gradient(170deg, #C66A4D, #8E826F);}
+.ig-card.ig-osaka .ig-card-img{background:linear-gradient(170deg, #1A1F2A, #4a6659);}
+.ig-card.ig-neon .ig-card-img{background:linear-gradient(170deg, #5b3a9e, #1A1F2A);}
+.ig-card.ig-court2 .ig-card-img{background:linear-gradient(170deg, #A9BCB3, #5b7d6d);}
+.ig-card.ig-flyer .ig-card-img{background:linear-gradient(170deg, #d65fb8, #5b3a9e);}
+.ig-card.ig-patriot .ig-card-img{background:linear-gradient(170deg, #2a4a3a, #1E293B);}
+.ig-card.ig-fit .ig-card-img{background:linear-gradient(170deg, #9E5D7A, #6B3D52);}
+.ig-card.ig-partner .ig-card-img{background:linear-gradient(170deg, #5b7d6d, #4a6659);}
+.ig-card.ig-vibe .ig-card-img{background:linear-gradient(170deg, #4a6659, #1E293B);}
+.ig-card-img{
+  position:relative;
+}
+.ig-card-overlay{
+  position:absolute;inset:0;z-index:2;
+  display:flex;flex-direction:column;
+  align-items:center;justify-content:center;
+  padding:18px;text-align:center;
+  font-family:'Bebas Neue';font-size:28px;letter-spacing:.04em;line-height:.95;
+  color:var(--bone);
+  text-shadow:0 1px 4px rgba(0,0,0,.3);
+}
+.ig-card-overlay small{
+  display:block;
+  margin-top:8px;
+  font-family:'Manrope';font-weight:500;
+  font-size:11px;letter-spacing:.18em;text-transform:uppercase;
+  color:rgba(244,239,223,.85);
+  line-height:1.3;
+  max-width:24ch;
+}
 .ig-card-meta{
   padding:14px 16px;
   background:var(--bone);color:var(--ink);
@@ -1497,7 +1532,7 @@ button{font-family:inherit;border:none;cursor:pointer;}
       <a class="product" href="products/heavy-crewneck-eucalyptus/">
         <div class="product-img p1">
           <span class="product-tag">No. 01 · Heavy</span>
-          <img class="real-img" src="../assets/products/heavy-crewneck-eucalyptus/01.jpg" alt="Heavy Crewneck Eucalyptus" onerror="this.remove()">
+          <img class="real-img" src="../assets/products/heavy-crewneck-eucalyptus/01-front.jpg" alt="Heavy Crewneck Eucalyptus" onerror="this.remove()">
           <img class="decal-fallback" src="../assets/decal.png" alt="">
         </div>
         <div class="product-meta">
@@ -1517,7 +1552,7 @@ button{font-family:inherit;border:none;cursor:pointer;}
       <a class="product" href="products/heavy-crewneck-navy/">
         <div class="product-img p3">
           <span class="product-tag">No. 03 · Heavy</span>
-          <img class="real-img" src="../assets/products/heavy-crewneck-navy/02.jpg" alt="Heavy Crewneck Deep Navy" onerror="this.remove()">
+          <img class="real-img" src="../assets/products/heavy-crewneck-navy/02-front.jpg" alt="Heavy Crewneck Deep Navy" onerror="this.remove()">
           <img class="decal-fallback" src="../assets/decal.png" alt="">
         </div>
         <div class="product-meta">
@@ -1575,7 +1610,7 @@ button{font-family:inherit;border:none;cursor:pointer;}
         <a class="product" href="products/heavy-crewneck-eucalyptus/">
           <div class="product-img p1">
             <span class="product-tag">No. 01</span>
-            <img class="real-img" src="../assets/products/heavy-crewneck-eucalyptus/01.jpg" alt="Heavy Crewneck Eucalyptus" onerror="this.remove()">
+            <img class="real-img" src="../assets/products/heavy-crewneck-eucalyptus/01-front.jpg" alt="Heavy Crewneck Eucalyptus" onerror="this.remove()">
             <img class="decal-fallback" src="../assets/decal.png" alt="">
           </div>
           <div class="product-meta">
@@ -1713,89 +1748,119 @@ button{font-family:inherit;border:none;cursor:pointer;}
   </div>
   <div class="community-strip">
     <div class="community-track">
-      <a class="ig-card cm1" href="https://www.instagram.com/babyletspadel/" target="_blank" rel="noopener">
-        <div class="ig-card-img"></div>
+      <!-- 12 placeholder cards matching actual IG content. Each card's gradient + label
+           reflects a real post; replace with real images via Behold/Snapwidget. -->
+      <a class="ig-card ig-giveaway" href="https://www.instagram.com/babyletspadel/" target="_blank" rel="noopener">
+        <div class="ig-card-img"><span class="ig-card-overlay">Giveaway<small>To celebrate 1K followers · WIN 2 PIECES</small></span></div>
         <div class="ig-card-meta">
-          <div class="ig-card-cap">Tuesday night at RSC Katy 🎾</div>
-          <div class="ig-card-stats">♡ 142 · 💬 8</div>
+          <div class="ig-card-cap">To celebrate 1K followers · Sweater + Hat giveaway 🎁</div>
+          <div class="ig-card-stats">♡ 412 · 💬 287</div>
         </div>
       </a>
-      <a class="ig-card cm2 light" href="https://www.instagram.com/babyletspadel/" target="_blank" rel="noopener">
-        <div class="ig-card-img"></div>
+      <a class="ig-card ig-interview" href="https://www.instagram.com/babyletspadel/" target="_blank" rel="noopener">
+        <div class="ig-card-img"><span class="ig-card-overlay">BLP Conversations<small>w/ Guillermo Montiel</small></span></div>
         <div class="ig-card-meta">
-          <div class="ig-card-cap">New drop preview — pink is coming</div>
-          <div class="ig-card-stats">♡ 287 · 💬 23</div>
+          <div class="ig-card-cap">BLP Conversations · Interview w/ Guillermo Montiel 🎤</div>
+          <div class="ig-card-stats">♡ 187 · 💬 24</div>
         </div>
       </a>
-      <a class="ig-card cm3" href="https://www.instagram.com/babyletspadel/" target="_blank" rel="noopener">
-        <div class="ig-card-img"></div>
+      <a class="ig-card ig-court" href="https://www.instagram.com/babyletspadel/" target="_blank" rel="noopener">
+        <div class="ig-card-img"><span class="ig-card-overlay">Practice<small>Hits every target</small></span></div>
         <div class="ig-card-meta">
-          <div class="ig-card-cap">Travel team in Austin this weekend</div>
-          <div class="ig-card-stats">♡ 198 · 💬 12</div>
+          <div class="ig-card-cap">Practice tip · Hits every target 🎯 #blppadel</div>
+          <div class="ig-card-stats">♡ 146 · 💬 11</div>
         </div>
       </a>
-      <a class="ig-card cm4" href="https://www.instagram.com/babyletspadel/" target="_blank" rel="noopener">
-        <div class="ig-card-img"></div>
+      <a class="ig-card ig-event" href="https://www.instagram.com/babyletspadel/" target="_blank" rel="noopener">
+        <div class="ig-card-img"><span class="ig-card-overlay">Nation Cups<small>Recap</small></span></div>
         <div class="ig-card-meta">
-          <div class="ig-card-cap">Open play · Cube Padel · 22 spots</div>
-          <div class="ig-card-stats">♡ 165 · 💬 19</div>
+          <div class="ig-card-cap">Nation Cups · weekend recap 🇺🇸🎾</div>
+          <div class="ig-card-stats">♡ 298 · 💬 34</div>
         </div>
       </a>
-      <a class="ig-card cm5 light" href="https://www.instagram.com/babyletspadel/" target="_blank" rel="noopener">
-        <div class="ig-card-img"></div>
+      <a class="ig-card ig-osaka" href="https://www.instagram.com/babyletspadel/" target="_blank" rel="noopener">
+        <div class="ig-card-img"><span class="ig-card-overlay">Baby let's PADEL<small>× OSAKA 大阪</small></span></div>
         <div class="ig-card-meta">
-          <div class="ig-card-cap">Welcome new player Sarah! Mixed levels welcome.</div>
-          <div class="ig-card-stats">♡ 213 · 💬 31</div>
+          <div class="ig-card-cap">Baby Let's Padel × Osaka 大阪 — partnership is live</div>
+          <div class="ig-card-stats">♡ 524 · 💬 67</div>
         </div>
       </a>
-      <a class="ig-card cm6" href="https://www.instagram.com/babyletspadel/" target="_blank" rel="noopener">
-        <div class="ig-card-img"></div>
+      <a class="ig-card ig-neon" href="https://www.instagram.com/babyletspadel/" target="_blank" rel="noopener">
+        <div class="ig-card-img"><span class="ig-card-overlay">Houston First<small>Neon Padel Party</small></span></div>
         <div class="ig-card-meta">
-          <div class="ig-card-cap">Osaka demo day — try the Vision Pro</div>
-          <div class="ig-card-stats">♡ 254 · 💬 17</div>
+          <div class="ig-card-cap">Houston's first Neon Padel Party · who's in 💜</div>
+          <div class="ig-card-stats">♡ 612 · 💬 89</div>
         </div>
       </a>
-      <a class="ig-card cm7 light" href="https://www.instagram.com/babyletspadel/" target="_blank" rel="noopener">
-        <div class="ig-card-img"></div>
+      <a class="ig-card ig-court2" href="https://www.instagram.com/babyletspadel/" target="_blank" rel="noopener">
+        <div class="ig-card-img"><span class="ig-card-overlay">Open Plays<small>just hit different</small></span></div>
         <div class="ig-card-meta">
-          <div class="ig-card-cap">Saturday brunch + court time. Vamos.</div>
-          <div class="ig-card-stats">♡ 309 · 💬 42</div>
+          <div class="ig-card-cap">Open plays just hit different @babyletspadel</div>
+          <div class="ig-card-stats">♡ 289 · 💬 41</div>
         </div>
       </a>
-      <a class="ig-card cm8" href="https://www.instagram.com/babyletspadel/" target="_blank" rel="noopener">
-        <div class="ig-card-img"></div>
+      <a class="ig-card ig-flyer" href="https://www.instagram.com/babyletspadel/" target="_blank" rel="noopener">
+        <div class="ig-card-img"><span class="ig-card-overlay">Glow on Court<small>Sat May 2 · 7–11 PM · CUBE</small></span></div>
         <div class="ig-card-meta">
-          <div class="ig-card-cap">Founders Laura + Isa · the original group chat</div>
-          <div class="ig-card-stats">♡ 421 · 💬 56</div>
+          <div class="ig-card-cap">Neon Padel Party · Saturday May 2 · Cube Padel · 7pm</div>
+          <div class="ig-card-stats">♡ 387 · 💬 58</div>
         </div>
       </a>
-      <!-- duplicate for seamless loop -->
-      <a class="ig-card cm1" href="https://www.instagram.com/babyletspadel/" target="_blank" rel="noopener">
-        <div class="ig-card-img"></div>
+      <a class="ig-card ig-patriot" href="https://www.instagram.com/babyletspadel/" target="_blank" rel="noopener">
+        <div class="ig-card-img"><span class="ig-card-overlay">Patriot Padel Cup<small>Racket Social Club · May 23</small></span></div>
         <div class="ig-card-meta">
-          <div class="ig-card-cap">Tuesday night at RSC Katy 🎾</div>
-          <div class="ig-card-stats">♡ 142 · 💬 8</div>
+          <div class="ig-card-cap">Patriot Padel Cup 🇺🇸 May 23 · Racket Social Club Katy</div>
+          <div class="ig-card-stats">♡ 234 · 💬 28</div>
         </div>
       </a>
-      <a class="ig-card cm2 light" href="https://www.instagram.com/babyletspadel/" target="_blank" rel="noopener">
-        <div class="ig-card-img"></div>
+      <a class="ig-card ig-fit" href="https://www.instagram.com/babyletspadel/" target="_blank" rel="noopener">
+        <div class="ig-card-img"><span class="ig-card-overlay">Search:<small>Padel fit by Osaka</small></span></div>
         <div class="ig-card-meta">
-          <div class="ig-card-cap">New drop preview — pink is coming</div>
-          <div class="ig-card-stats">♡ 287 · 💬 23</div>
+          <div class="ig-card-cap">Padel fit of the day · Osaka 🎾✨</div>
+          <div class="ig-card-stats">♡ 412 · 💬 33</div>
         </div>
       </a>
-      <a class="ig-card cm3" href="https://www.instagram.com/babyletspadel/" target="_blank" rel="noopener">
-        <div class="ig-card-img"></div>
+      <a class="ig-card ig-partner" href="https://www.instagram.com/babyletspadel/" target="_blank" rel="noopener">
+        <div class="ig-card-img"><span class="ig-card-overlay">@canariopadelclub<small>Partner club spotlight</small></span></div>
         <div class="ig-card-meta">
-          <div class="ig-card-cap">Travel team in Austin this weekend</div>
-          <div class="ig-card-stats">♡ 198 · 💬 12</div>
+          <div class="ig-card-cap">Visiting our friends at @canariopadelclub 🌴</div>
+          <div class="ig-card-stats">♡ 198 · 💬 22</div>
         </div>
       </a>
-      <a class="ig-card cm4" href="https://www.instagram.com/babyletspadel/" target="_blank" rel="noopener">
-        <div class="ig-card-img"></div>
+      <a class="ig-card ig-vibe" href="https://www.instagram.com/babyletspadel/" target="_blank" rel="noopener">
+        <div class="ig-card-img"><span class="ig-card-overlay">4 signs<small>you're doing great in life</small></span></div>
         <div class="ig-card-meta">
-          <div class="ig-card-cap">Open play · Cube Padel · 22 spots</div>
-          <div class="ig-card-stats">♡ 165 · 💬 19</div>
+          <div class="ig-card-cap">4 signs that you're doing great in life ✨</div>
+          <div class="ig-card-stats">♡ 521 · 💬 76</div>
+        </div>
+      </a>
+      <!-- loop for seamless scroll -->
+      <a class="ig-card ig-giveaway" href="https://www.instagram.com/babyletspadel/" target="_blank" rel="noopener">
+        <div class="ig-card-img"><span class="ig-card-overlay">Giveaway<small>To celebrate 1K followers · WIN 2 PIECES</small></span></div>
+        <div class="ig-card-meta">
+          <div class="ig-card-cap">To celebrate 1K followers · Sweater + Hat giveaway 🎁</div>
+          <div class="ig-card-stats">♡ 412 · 💬 287</div>
+        </div>
+      </a>
+      <a class="ig-card ig-osaka" href="https://www.instagram.com/babyletspadel/" target="_blank" rel="noopener">
+        <div class="ig-card-img"><span class="ig-card-overlay">Baby let's PADEL<small>× OSAKA 大阪</small></span></div>
+        <div class="ig-card-meta">
+          <div class="ig-card-cap">Baby Let's Padel × Osaka 大阪 — partnership is live</div>
+          <div class="ig-card-stats">♡ 524 · 💬 67</div>
+        </div>
+      </a>
+      <a class="ig-card ig-neon" href="https://www.instagram.com/babyletspadel/" target="_blank" rel="noopener">
+        <div class="ig-card-img"><span class="ig-card-overlay">Houston First<small>Neon Padel Party</small></span></div>
+        <div class="ig-card-meta">
+          <div class="ig-card-cap">Houston's first Neon Padel Party · who's in 💜</div>
+          <div class="ig-card-stats">♡ 612 · 💬 89</div>
+        </div>
+      </a>
+      <a class="ig-card ig-flyer" href="https://www.instagram.com/babyletspadel/" target="_blank" rel="noopener">
+        <div class="ig-card-img"><span class="ig-card-overlay">Glow on Court<small>Sat May 2 · 7–11 PM · CUBE</small></span></div>
+        <div class="ig-card-meta">
+          <div class="ig-card-cap">Neon Padel Party · Saturday May 2 · Cube Padel · 7pm</div>
+          <div class="ig-card-stats">♡ 387 · 💬 58</div>
         </div>
       </a>
     </div>
