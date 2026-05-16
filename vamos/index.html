@@ -383,9 +383,11 @@ button{font-family:inherit;border:none;cursor:pointer;}
   overflow:hidden;
   display:flex;align-items:center;justify-content:center;
 }
+.meet-card-photo{aspect-ratio:1/1;}
 .meet-card-photo .meet-photo-img{
   position:absolute;inset:0;
   width:100%;height:100%;object-fit:cover;
+  object-position:center 18%;
   z-index:2;
 }
 .meet-card-photo .meet-photo-fallback{
@@ -970,29 +972,52 @@ button{font-family:inherit;border:none;cursor:pointer;}
 }
 
 /* POSTCARDS pull-quote */
-.postcards{
+/* EL DROP PROMO — replaces Postcards */
+.dropromo{
   background:var(--bone);
-  padding:96px 32px;
   border-bottom:1px solid var(--ink);
-  text-align:center;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  align-items:stretch;
+  min-height:560px;
+  overflow:hidden;
 }
-.postcards-inner{max-width:36ch;margin:0 auto;}
-.postcards .cap{color:var(--sage-deep);margin-bottom:24px;display:block;}
-.postcards h2{
-  font-family:'Fraunces', serif;
-  font-weight:300;
-  font-style:italic;
-  font-size:clamp(48px, 7vw, 108px);
-  line-height:1.05;
-  letter-spacing:-.025em;
+.dropromo-img{
+  background:url('../assets/promo/drop.jpg') center/cover;
+  position:relative;
+  min-height:480px;
 }
-.postcards h2 em{font-style:italic;color:var(--sage-deep);font-weight:400;}
-.postcards .script{
-  display:inline-block;
-  margin-top:32px;
-  font-family:'Caveat', cursive;font-weight:700;
-  font-size:32px;color:var(--sage-deep);
-  transform:rotate(-2deg);
+.dropromo-text{
+  display:flex;flex-direction:column;justify-content:center;
+  padding:80px 64px;
+  background:var(--bone);
+}
+.dropromo-text .cap{color:var(--sage-deep);margin-bottom:18px;display:block;}
+.dropromo-text h2{
+  font-family:'Bebas Neue', sans-serif;
+  font-size:clamp(64px, 8.5vw, 144px);
+  line-height:.85;letter-spacing:.005em;
+  color:var(--ink);
+}
+.dropromo-text h2 em{
+  font-family:'Fraunces';font-weight:300;font-style:italic;
+  font-size:.55em;letter-spacing:-.03em;color:var(--sage-deep);
+  display:block;text-transform:none;margin-top:8px;
+}
+.dropromo-text .script{
+  font-family:'Caveat',cursive;font-weight:700;
+  font-size:36px;color:var(--sage-deep);
+  margin-top:18px;display:inline-block;transform:rotate(-2deg);
+}
+.dropromo-text p{
+  margin-top:28px;
+  font-family:'Fraunces';font-weight:300;font-style:italic;
+  font-size:21px;line-height:1.4;color:var(--ink-2);max-width:42ch;
+}
+.dropromo-text p em{font-style:italic;color:var(--sage-deep);font-weight:400;}
+.dropromo-actions{
+  margin-top:36px;
+  display:flex;gap:14px;flex-wrap:wrap;
 }
 
 /* CONTACT + FOOTER */
@@ -1102,7 +1127,10 @@ button{font-family:inherit;border:none;cursor:pointer;}
   .event-loc, .event-time, .event-rsvp{grid-column:1/-1;text-align:left;}
 }
 @media (max-width:560px){
-  .hero,.founders,.stats,.rule,.drop,.partners,.events,.postcards,.contact{padding-left:18px;padding-right:18px;}
+  .hero,.founders,.stats,.rule,.drop,.partners,.events,.contact{padding-left:18px;padding-right:18px;}
+  .dropromo{grid-template-columns:1fr;min-height:0;}
+  .dropromo-img{min-height:320px;}
+  .dropromo-text{padding:48px 24px;}
   .hero{padding-top:48px;padding-bottom:64px;}
   .hero-deck-grid{grid-template-columns:1fr;gap:24px;}
   .stats-grid, .collection-grid, .partners-grid, .contact-grid{grid-template-columns:1fr;gap:14px;}
@@ -1266,7 +1294,7 @@ button{font-family:inherit;border:none;cursor:pointer;}
     <div class="drop-head">
       <span class="cap l">— BLP Drop · Spring '26</span>
       <h2>El <em>Drop.</em></h2>
-      <span class="cap r">Two collections · 06+ pieces</span>
+      <span class="cap r">Two collections · 10 pieces</span>
     </div>
 
     <!-- COLLECTION 1: Cozy & Courtside -->
@@ -1274,7 +1302,7 @@ button{font-family:inherit;border:none;cursor:pointer;}
       <div class="collection-head">
         <div class="collection-num">01<span>~ available now</span></div>
         <div class="collection-title">
-          <h3>Cozy &amp; Courtside<em>Heavy crews + lightweight knit · Spring '26</em></h3>
+          <h3>Cozy &amp; Courtside<em>Heavyweight crewnecks · 4 colorways</em></h3>
         </div>
         <span class="collection-tag">In stock</span>
       </div>
@@ -1312,85 +1340,96 @@ button{font-family:inherit;border:none;cursor:pointer;}
             <div class="product-foot"><span class="product-price">$53</span><span class="product-cta">View →</span></div>
           </div>
         </a>
-        <a class="product" href="products/light-crewneck/">
+        <a class="product" href="products/heavy-crewneck-off-white/">
           <div class="product-img p2">
             <span class="product-tag">No. 04</span>
-            <img class="real-img" src="../assets/products/light-crewneck/01.jpg" alt="Lightweight Crewneck Off-White" onerror="this.remove()">
+            <img class="real-img" src="../assets/products/heavy-crewneck-off-white/01.jpg" alt="Heavy Crewneck Off-White" onerror="this.remove()">
             <img class="decal-fallback" src="../assets/decal.png" alt="">
           </div>
           <div class="product-meta">
-            <h4>Light Crewneck<em>Off-White · 6.4 oz</em></h4>
-            <div class="product-foot"><span class="product-price">$41</span><span class="product-cta">View →</span></div>
-          </div>
-        </a>
-        <a class="product" href="products/long-sleeve-tee/">
-          <div class="product-img p4">
-            <span class="product-tag">No. 05</span>
-            <img class="real-img" src="../assets/products/long-sleeve-tee/01.jpg" alt="Long Sleeve Training Tee Off-White" onerror="this.remove()">
-            <img class="decal-fallback" src="../assets/decal.png" alt="">
-          </div>
-          <div class="product-meta">
-            <h4>Long Sleeve Tee<em>Off-White · 6.1 oz</em></h4>
-            <div class="product-foot"><span class="product-price">$31</span><span class="product-cta">View →</span></div>
+            <h4>Heavy Crewneck<em>Off-White · 9.5 oz</em></h4>
+            <div class="product-foot"><span class="product-price">$53</span><span class="product-cta">View →</span></div>
           </div>
         </a>
       </div>
     </div>
 
-    <!-- COLLECTION 2: Sport / Skirts & Dri-fit -->
+    <!-- COLLECTION 2: Sport · On Court -->
     <div class="collection">
       <div class="collection-head">
-        <div class="collection-num">02<span>~ summer launch</span></div>
+        <div class="collection-num">02<span>~ available now</span></div>
         <div class="collection-title">
-          <h3>Sport · Skirts &amp; Dri-Fit<em>Skirts, dri-fit shirts, headwear · Summer '26</em></h3>
+          <h3>Sport · On Court<em>Tanks, tees, skirts, performance · Spring '26</em></h3>
         </div>
-        <span class="collection-tag coming">Coming soon</span>
+        <span class="collection-tag">In stock</span>
       </div>
       <div class="collection-grid">
-        <article class="product">
-          <div class="product-img p5">
-            <span class="product-tag">soon</span>
-            <img class="real-img" src="../assets/products/cap/01.jpg" alt="" onerror="this.remove()">
+        <a class="product" href="products/padel-tank-eucalyptus/">
+          <div class="product-img" style="background:linear-gradient(160deg, #5b7d6d, #4a6659);">
+            <span class="product-tag">No. 05</span>
+            <img class="real-img" src="../assets/products/padel-tank-eucalyptus/01.jpg" alt="Padel Tank Eucalyptus" onerror="this.remove()">
             <img class="decal-fallback" src="../assets/decal.png" alt="">
           </div>
           <div class="product-meta">
-            <h4>Six-Panel Cap<em>Taupe · Sage · Navy</em></h4>
-            <div class="product-foot"><span class="product-price">$27</span><span class="product-cta">Notify me →</span></div>
+            <h4>Padel Tank<em>Eucalyptus · Lightweight</em></h4>
+            <div class="product-foot"><span class="product-price">$35</span><span class="product-cta">View →</span></div>
           </div>
-        </article>
-        <article class="product">
-          <div class="product-img p6">
-            <span class="product-tag">soon</span>
-            <img class="real-img" src="../assets/products/visor/01.jpg" alt="" onerror="this.remove()">
+        </a>
+        <a class="product" href="products/padel-tank-off-white/">
+          <div class="product-img p4">
+            <span class="product-tag">No. 06</span>
+            <img class="real-img" src="../assets/products/padel-tank-off-white/01.jpg" alt="Padel Tank Off-White" onerror="this.remove()">
             <img class="decal-fallback" src="../assets/decal.png" alt="">
           </div>
           <div class="product-meta">
-            <h4>Dri-Fit Visor<em>Off-White · Quick-dry</em></h4>
-            <div class="product-foot"><span class="product-price">$22</span><span class="product-cta">Notify me →</span></div>
+            <h4>Padel Tank<em>Off-White · Lightweight</em></h4>
+            <div class="product-foot"><span class="product-price">$35</span><span class="product-cta">View →</span></div>
           </div>
-        </article>
-        <article class="product">
-          <div class="product-img p7">
-            <span class="product-tag">soon</span>
-            <img class="real-img" src="../assets/products/skirt/01.jpg" alt="" onerror="this.remove()">
+        </a>
+        <a class="product" href="products/training-tee-navy/">
+          <div class="product-img p3">
+            <span class="product-tag">No. 07</span>
+            <img class="real-img" src="../assets/products/long-sleeve-tee/01.jpg" alt="Training Tee Navy" onerror="this.remove()">
             <img class="decal-fallback" src="../assets/decal.png" alt="">
           </div>
           <div class="product-meta">
-            <h4>Court Skirt<em>Eucalyptus · in development</em></h4>
-            <div class="product-foot"><span class="product-price">TBD</span><span class="product-cta">Notify me →</span></div>
+            <h4>Training Tee<em>Deep Navy · Soft Cotton</em></h4>
+            <div class="product-foot"><span class="product-price">$31</span><span class="product-cta">View →</span></div>
           </div>
-        </article>
-        <article class="product">
-          <div class="product-img p8">
-            <span class="product-tag">soon</span>
-            <img class="real-img" src="../assets/products/dri-fit-tee/01.jpg" alt="" onerror="this.remove()">
+        </a>
+        <a class="product" href="products/training-tee-off-white/">
+          <div class="product-img p4">
+            <span class="product-tag">No. 08</span>
+            <img class="real-img" src="../assets/products/long-sleeve-tee/02.jpg" alt="Training Tee Off-White" onerror="this.remove()">
             <img class="decal-fallback" src="../assets/decal.png" alt="">
           </div>
           <div class="product-meta">
-            <h4>Dri-Fit Tee<em>Off-White · in development</em></h4>
-            <div class="product-foot"><span class="product-price">TBD</span><span class="product-cta">Notify me →</span></div>
+            <h4>Training Tee<em>Off-White · Soft Cotton</em></h4>
+            <div class="product-foot"><span class="product-price">$31</span><span class="product-cta">View →</span></div>
           </div>
-        </article>
+        </a>
+        <a class="product" href="products/tennis-skirt/">
+          <div class="product-img p4">
+            <span class="product-tag">No. 09</span>
+            <img class="real-img" src="../assets/products/skirt/01.jpg" alt="Tennis Skirt Off-White" onerror="this.remove()">
+            <img class="decal-fallback" src="../assets/decal.png" alt="">
+          </div>
+          <div class="product-meta">
+            <h4>Tennis Skirt<em>Off-White · Built-in shorts</em></h4>
+            <div class="product-foot"><span class="product-price">$45</span><span class="product-cta">View →</span></div>
+          </div>
+        </a>
+        <a class="product" href="products/sports-bra/">
+          <div class="product-img p4">
+            <span class="product-tag">No. 10</span>
+            <img class="real-img" src="../assets/products/sports-bra/01.jpg" alt="Sports Bra Off-White" onerror="this.remove()">
+            <img class="decal-fallback" src="../assets/decal.png" alt="">
+          </div>
+          <div class="product-meta">
+            <h4>Sports Bra<em>Off-White · Strappy back</em></h4>
+            <div class="product-foot"><span class="product-price">$38</span><span class="product-cta">View →</span></div>
+          </div>
+        </a>
       </div>
     </div>
   </div>
@@ -1513,12 +1552,18 @@ button{font-family:inherit;border:none;cursor:pointer;}
   </div>
 </section>
 
-<!-- POSTCARDS -->
-<section class="postcards">
-  <div class="postcards-inner">
-    <span class="cap">— A note from the founders</span>
-    <h2>Postcards from <em>la cancha.</em></h2>
-    <span class="script">~ Houston, TX ~</span>
+<!-- EL DROP PROMO -->
+<section class="dropromo">
+  <div class="dropromo-img"></div>
+  <div class="dropromo-text">
+    <span class="cap">— The April Drop</span>
+    <h2>Made for padel.<em>Made for la cancha.</em></h2>
+    <span class="script">~ new look. same passion. ~</span>
+    <p>Heavy crews. Lightweight tanks. Training tees. Court skirts. <em>The whole kit, dropped one season at a time.</em></p>
+    <div class="dropromo-actions">
+      <a href="#drop" class="btn btn-sage">Shop the drop</a>
+      <a href="#partners" class="btn btn-out" style="color:var(--ink);border-color:var(--ink);">Brand partners</a>
+    </div>
   </div>
 </section>
 
