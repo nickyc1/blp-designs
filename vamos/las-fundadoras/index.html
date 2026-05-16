@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Las Fundadoras — Baby Let's Padel</title>
+<meta name="description" content="Meet Laura and Isabella — the two Latinas behind Baby Let's Padel, a Houston padel community building a movement on court.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Manrope:wght@300;400;500;600;700;800&family=Caveat:wght@500..700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bone:#F4EFDF;
+  --bone-2:#EDE5CD;
+  --cream:#E9E2D6;
+  --sage:#5b7d6d;
+  --sage-deep:#4a6659;
+  --sage-soft:#A9BCB3;
+  --navy:#1E293B;
+  --navy-2:#141B27;
+  --taupe:#AFA393;
+  --taupe-deep:#8E826F;
+  --ink:#1A1F2A;
+  --ink-2:#3A4452;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  background:var(--bone);color:var(--ink);
+  font-family:'Manrope', system-ui, sans-serif;
+  font-size:16px;line-height:1.55;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+a{color:inherit;text-decoration:none;}
+img{display:block;max-width:100%;}
+button{font-family:inherit;border:none;cursor:pointer;}
+
+.bebas{font-family:'Bebas Neue', Impact, sans-serif;letter-spacing:.005em;line-height:.95;}
+.serif{font-family:'Fraunces', serif;}
+.script{font-family:'Caveat', cursive;font-weight:600;}
+.cap{font-family:'Manrope';font-weight:600;font-size:11px;letter-spacing:.24em;text-transform:uppercase;}
+
+/* HEADER */
+.bar{
+  position:sticky;top:0;z-index:60;
+  background:var(--navy);color:var(--bone);
+  display:grid;grid-template-columns:auto 1fr auto;
+  align-items:center;padding:0 28px;
+  border-bottom:1px solid rgba(244,239,223,.16);
+  gap:24px;
+}
+.bar-l{display:flex;align-items:center;gap:14px;padding:10px 0;}
+.bar-l img{height:60px;width:auto;}
+.bar-l-text{font-family:'Bebas Neue';font-size:22px;letter-spacing:.04em;line-height:1;}
+.bar-l-text small{font-family:'Caveat',cursive;font-weight:500;font-size:14px;display:block;color:var(--sage-soft);letter-spacing:0;margin-top:-2px;}
+.bar-c{display:flex;justify-content:center;gap:24px;}
+.bar-c a{font-family:'Manrope';font-weight:500;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--bone);padding:14px 0;border-bottom:2px solid transparent;transition:border-color .2s, color .2s;}
+.bar-c a:hover{border-color:var(--sage-soft);color:var(--sage-soft);}
+.bar-c a.active{border-color:var(--sage-soft);color:var(--sage-soft);}
+.bar-r{display:flex;align-items:center;gap:14px;}
+.bar-r a{font-family:'Manrope';font-weight:600;font-size:11px;letter-spacing:.18em;text-transform:uppercase;padding:8px 14px;}
+.bar-r .cart{border:1px solid rgba(244,239,223,.36);}
+.bar-r .cart:hover{background:var(--sage);border-color:var(--sage);}
+.bar-r .reserve{background:var(--sage);border:1px solid var(--sage);}
+.bar-r .reserve:hover{background:var(--sage-deep);border-color:var(--sage-deep);}
+
+/* BREADCRUMB */
+.crumbs{
+  background:var(--bone-2);border-bottom:1px solid var(--ink);
+  padding:14px 32px;
+}
+.crumbs-inner{
+  max-width:1480px;margin:0 auto;
+  display:flex;align-items:center;gap:10px;flex-wrap:wrap;
+  font-family:'Manrope';font-weight:500;
+  font-size:11px;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--ink-2);
+}
+.crumbs-inner a{color:var(--ink-2);transition:color .2s;}
+.crumbs-inner a:hover{color:var(--sage-deep);}
+.crumbs-inner b{color:var(--ink);font-weight:600;}
+.crumbs-inner span.sep{color:var(--taupe);}
+
+/* HERO */
+.hero{
+  padding:80px 32px 64px;
+  background:var(--bone);
+  border-bottom:1px solid var(--ink);
+  position:relative;overflow:hidden;
+}
+.hero::after{
+  content:"";position:absolute;
+  top:-100px;right:-100px;
+  width:380px;height:380px;border-radius:50%;
+  background:radial-gradient(circle, rgba(91,125,109,.16) 0%, transparent 65%);
+  pointer-events:none;
+}
+.hero-inner{
+  max-width:1480px;margin:0 auto;
+  position:relative;z-index:1;
+}
+.hero .cap{color:var(--sage-deep);margin-bottom:18px;display:block;}
+.hero h1{
+  font-family:'Bebas Neue', sans-serif;
+  font-size:clamp(96px, 14vw, 220px);
+  line-height:.82;letter-spacing:.005em;
+  color:var(--ink);
+}
+.hero h1 em{
+  font-family:'Fraunces';font-weight:300;font-style:italic;
+  font-size:.5em;letter-spacing:-.03em;color:var(--sage-deep);
+  display:block;text-transform:none;margin-top:14px;
+}
+.hero .script{
+  display:inline-block;margin-top:18px;
+  font-family:'Caveat',cursive;font-weight:700;
+  font-size:42px;color:var(--sage-deep);
+  transform:rotate(-2deg);
+}
+.hero-deck{
+  margin-top:48px;
+  font-family:'Fraunces';font-weight:300;font-style:italic;
+  font-size:24px;line-height:1.45;color:var(--ink-2);
+  max-width:60ch;
+}
+.hero-deck b{color:var(--ink);font-weight:500;font-style:italic;}
+.hero-deck em{color:var(--sage-deep);font-style:italic;font-weight:400;}
+
+/* FOUNDER FEATURE */
+.founder{
+  padding:96px 32px;
+  border-bottom:1px solid var(--ink);
+}
+.founder:nth-child(odd){background:var(--bone);}
+.founder:nth-child(even){background:var(--cream);}
+.founder-inner{
+  max-width:1480px;margin:0 auto;
+  display:grid;
+  grid-template-columns:1fr 1.3fr;
+  gap:64px;align-items:center;
+}
+.founder-inner.flip{direction:rtl;}
+.founder-inner.flip > *{direction:ltr;}
+
+.founder-photo{
+  position:relative;
+  aspect-ratio:4/5;
+  background:var(--sage);
+  overflow:hidden;
+  border:1px solid var(--ink);
+}
+.founder-photo img{
+  position:absolute;inset:0;
+  width:100%;height:100%;object-fit:cover;
+  object-position:center 18%;
+  z-index:2;
+}
+.founder-photo-fallback{
+  position:absolute;inset:0;
+  display:flex;flex-direction:column;
+  align-items:center;justify-content:center;
+  font-family:'Caveat',cursive;font-weight:700;
+  font-size:24px;color:var(--bone);
+  text-align:center;padding:18px;
+  z-index:1;
+}
+.founder-stamp{
+  position:absolute;top:20px;left:20px;z-index:5;
+  background:var(--bone);color:var(--ink);
+  padding:10px 14px;border:1.5px solid var(--ink);
+  font-family:'Bebas Neue';font-size:18px;letter-spacing:.06em;
+}
+.founder-stamp small{
+  display:block;font-family:'Caveat',cursive;font-weight:600;
+  font-size:14px;color:var(--sage-deep);
+  letter-spacing:0;margin-top:-4px;
+}
+
+.founder-text .cap{color:var(--sage-deep);margin-bottom:14px;display:block;}
+.founder-text h2{
+  font-family:'Bebas Neue', sans-serif;
+  font-size:clamp(72px, 10vw, 168px);
+  line-height:.85;letter-spacing:.005em;
+  color:var(--ink);
+}
+.founder-text h2 em{
+  font-family:'Fraunces';font-weight:300;font-style:italic;
+  font-size:.45em;letter-spacing:-.03em;color:var(--sage-deep);
+  display:block;text-transform:none;margin-top:14px;
+}
+.founder-text h2 .script{
+  font-family:'Caveat',cursive;font-weight:700;
+  font-size:.32em;color:var(--sage-deep);
+  display:inline-block;transform:rotate(-2deg);
+  letter-spacing:0;text-transform:none;
+  margin-top:6px;
+}
+.founder-text p{
+  margin-top:20px;
+  font-family:'Manrope';font-weight:400;font-size:17px;
+  line-height:1.65;color:var(--ink-2);max-width:60ch;
+}
+.founder-text p:first-of-type{
+  font-family:'Fraunces';font-style:italic;font-weight:400;
+  font-size:22px;line-height:1.45;color:var(--ink);
+}
+.founder-text p em{font-style:italic;color:var(--sage-deep);}
+.founder-tagline{
+  display:inline-block;
+  margin-top:32px;padding-top:18px;
+  border-top:1px dashed var(--ink-2);
+  font-family:'Caveat',cursive;font-weight:700;
+  font-size:24px;color:var(--sage-deep);
+}
+
+/* JOINT MOMENT */
+.together{
+  background:var(--navy);color:var(--bone);
+  padding:120px 32px;text-align:center;
+  border-bottom:6px solid var(--sage);
+  position:relative;overflow:hidden;
+}
+.together::before, .together::after{
+  content:"";position:absolute;
+  width:380px;height:380px;border-radius:50%;
+  background:radial-gradient(circle, var(--sage-soft) 0%, transparent 65%);
+  opacity:.16;
+}
+.together::before{top:-120px;left:-120px;}
+.together::after{bottom:-160px;right:-120px;}
+.together-inner{
+  max-width:36ch;margin:0 auto;
+  position:relative;z-index:1;
+}
+.together .cap{color:var(--sage-soft);margin-bottom:24px;display:block;}
+.together h2{
+  font-family:'Bebas Neue', sans-serif;
+  font-size:clamp(56px, 9vw, 144px);
+  line-height:.88;letter-spacing:.005em;
+}
+.together h2 em{
+  font-family:'Fraunces';font-weight:300;font-style:italic;
+  font-size:.6em;letter-spacing:-.03em;color:var(--sage-soft);
+  text-transform:none;
+}
+.together .script{
+  display:inline-block;
+  margin-top:32px;
+  font-family:'Caveat',cursive;font-weight:700;
+  font-size:36px;color:var(--sage-soft);
+  transform:rotate(-2deg);
+}
+.together-cta{
+  display:inline-flex;align-items:center;gap:14px;
+  margin-top:48px;
+  padding:18px 28px;
+  background:var(--sage);color:var(--bone);
+  border:1.5px solid var(--sage);
+  font-family:'Manrope';font-weight:600;
+  font-size:12px;letter-spacing:.22em;text-transform:uppercase;
+  transition:background .2s,border-color .2s;
+}
+.together-cta:hover{background:var(--sage-deep);border-color:var(--sage-deep);}
+.together-cta::after{content:"→";font-size:14px;letter-spacing:0;}
+
+/* FOOTER */
+.contact{
+  background:var(--bone-2);color:var(--ink);
+  padding:96px 32px 32px;
+}
+.contact-mark{display:flex;justify-content:center;margin-bottom:48px;}
+.contact-mark img{height:140px;width:auto;}
+.contact-h{
+  font-family:'Bebas Neue';font-size:clamp(72px, 13vw, 220px);
+  line-height:.85;letter-spacing:.005em;text-align:center;
+  color:var(--ink);
+}
+.contact-h em{
+  font-family:'Fraunces';font-weight:300;font-style:italic;
+  font-size:.6em;letter-spacing:-.03em;color:var(--sage-deep);text-transform:none;
+}
+.contact-script{
+  text-align:center;font-family:'Caveat',cursive;font-weight:700;font-size:32px;
+  color:var(--sage-deep);display:block;margin-top:14px;transform:rotate(-2deg);
+}
+.foot-bot{
+  display:flex;justify-content:space-between;margin-top:48px;
+  max-width:1480px;margin-left:auto;margin-right:auto;
+  font-family:'Manrope';font-size:11px;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--ink-2);font-weight:600;
+  flex-wrap:wrap;gap:8px;
+}
+.foot-bot a{color:var(--sage-deep);border-bottom:1px solid var(--sage-deep);padding-bottom:1px;}
+
+/* RESPONSIVE */
+@media (max-width:1100px){
+  .bar-c{display:none;}
+  .founder-inner, .founder-inner.flip{grid-template-columns:1fr;direction:ltr;gap:32px;}
+}
+@media (max-width:760px){
+  .bar{padding:0 16px;}
+  .bar-l img{height:48px;}
+  .bar-r .reserve{padding:6px 10px;font-size:10px;}
+  .hero,.founder,.together,.contact{padding-left:18px;padding-right:18px;}
+  .foot-bot{flex-direction:column;gap:8px;}
+}
+</style>
+</head>
+<body>
+
+<header class="bar">
+  <a class="bar-l" href="../" style="display:flex;align-items:center;gap:14px;padding:10px 0;color:var(--bone);">
+    <img src="../../assets/logo-mark.png" alt="Baby Let's Padel">
+    <div class="bar-l-text">Baby Let's Padel<small>~ vamos al padel ~</small></div>
+  </a>
+  <nav class="bar-c">
+    <a href="./" class="active">Las Fundadoras</a>
+    <a href="../shop/">El Drop</a>
+    <a href="../#partners">Partners</a>
+    <a href="../#events">Esta Semana</a>
+    <a href="../#contact">Contact</a>
+  </nav>
+  <div class="bar-r">
+    <a href="#" class="cart">Cart · 0</a>
+    <a href="../#events" class="reserve">Reserve a spot</a>
+  </div>
+</header>
+
+<div class="crumbs">
+  <div class="crumbs-inner">
+    <a href="../">Home</a><span class="sep">/</span>
+    <b>Las Fundadoras</b>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <span class="cap">— Meet the two Latinas behind BLP</span>
+    <h1>Las<br><em>Fundadoras.</em></h1>
+    <span class="script">~ y mucho corazón ~</span>
+    <p class="hero-deck">
+      Baby Let's Padel started as a group chat between <b>Laura and Isabella</b>, two Latinas in Houston who couldn't find a regular padel night that felt like home. <em>So they built one.</em> Four open plays a week, the kit our crew actually wears on court, and a movement that grows one Tuesday at a time.
+    </p>
+  </div>
+</section>
+
+<!-- LAURA -->
+<section class="founder">
+  <div class="founder-inner">
+    <div class="founder-photo">
+      <span class="founder-stamp">Laura<small>~ co-founder ~</small></span>
+      <div class="founder-photo-fallback" style="background:linear-gradient(160deg, #5b7d6d, #4a6659);">Laura<br><small style="font-family:'Manrope';font-weight:600;font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:rgba(244,239,223,.78);margin-top:4px;display:block;">Co-founder</small></div>
+      <img src="../../assets/founders/laura.jpg" alt="Laura, co-founder of Baby Let's Padel" onerror="this.remove()">
+    </div>
+    <div class="founder-text">
+      <span class="cap">— Laura · co-founder</span>
+      <h2>Laura.<em>The community builder.</em><span class="script">~ y mucho corazón ~</span></h2>
+      <p>Hi, I'm Laura, co-founder of Baby Let's Padel.</p>
+      <p>I was born and raised in Venezuela, and my mom is Mexican, so I grew up around a mix of cultures, big personalities, good food, and loud conversations. I'm based in Houston now and love creating spaces where people can connect through community, wellness, travel, and good experiences. I'm usually planning my next trip, trying a new restaurant, organizing some kind of gathering, or hanging out with my dog Hope.</p>
+      <p>By day, I work in project controls, so yes — I'm very much a numbers girl. Spreadsheets, budgets, reporting, organized chaos, all my love languages. Ironically, I never played a racket sport until discovering padel, and somehow that turned into a <em>full blown obsession</em> and eventually a growing community.</p>
+      <p>I'm naturally a little goofy, love making people laugh, and somehow always end up introducing people to each other. I can come across a little intimidating at first, but I'm deeply loyal, love bringing people together, and I'm unapologetically a girls' girl — though some of my closest friendships are with the guys too.</p>
+      <span class="founder-tagline">~ And if you ever meet Hope, just know she's the real star of Baby Let's Padel ~</span>
+    </div>
+  </div>
+</section>
+
+<!-- ISABELLA -->
+<section class="founder">
+  <div class="founder-inner flip">
+    <div class="founder-photo">
+      <span class="founder-stamp">Isabella<small>~ co-founder ~</small></span>
+      <div class="founder-photo-fallback" style="background:linear-gradient(160deg, #1E293B, #141B27);">Isabella<br><small style="font-family:'Manrope';font-weight:600;font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:rgba(244,239,223,.78);margin-top:4px;display:block;">Co-founder</small></div>
+      <img src="../../assets/founders/isabella.jpg" alt="Isabella, co-founder of Baby Let's Padel" onerror="this.remove()">
+    </div>
+    <div class="founder-text">
+      <span class="cap">— Isabella "Isa" · co-founder</span>
+      <h2>Isabella.<em>The travel partner.</em><span class="script">~ let's play padel while we travel the world ~</span></h2>
+      <p>Born in Venezuela and based in the USA since the early 2000s, Isabella comes from a background in hospitality and supply chain management.</p>
+      <p>Long before discovering padel, the only racket sport she knew was ping pong — a family favorite that was always part of her childhood. Growing up, there was always a ping pong table at home, at her uncles' houses, and somewhere in the middle of every family gathering.</p>
+      <p>Isa has always loved traveling, discovering new restaurants, and experiencing different cultures. But everything changed in 2025 when she discovered padel. <em>What started as a simple mission to beat Laura one time on the court</em> (which, of course, she did) quickly turned into a full-blown obsession.</p>
+      <p>Soon enough, she was taking classes, playing constantly, and planning trips around padel. That passion eventually evolved into Baby Let's Padel — a project created together with Laura that combines two of their favorite things: <em>travel and padel.</em></p>
+      <p>Because the best way to explore new destinations is with a racket in hand.</p>
+      <span class="founder-tagline">~ Let's play padel while we travel the world ~</span>
+    </div>
+  </div>
+</section>
+
+<!-- TOGETHER -->
+<section class="together">
+  <div class="together-inner">
+    <span class="cap">— Two Latinas · One movement</span>
+    <h2>Building padel<br>in <em>Houston</em>,<br>one Tuesday<br>at a time.</h2>
+    <span class="script">~ trae a un amigo ~</span>
+    <div><a href="../#events" class="together-cta">RSVP this week</a></div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="contact">
+  <div class="contact-mark"><img src="../../assets/logo-mark.png" alt="Baby Let's Padel"></div>
+  <h2 class="contact-h">Vamos<br><em>a jugar.</em></h2>
+  <span class="contact-script">~ Houston, TX · founded by two Latinas ~</span>
+  <div class="foot-bot">
+    <span>© 2026 Baby Let's Padel · Houston, TX</span>
+    <span>Founded by two Latinas · Vamos al padel</span>
+    <a href="../">← Back to home</a>
+  </div>
+</footer>
+
+</body>
+</html>

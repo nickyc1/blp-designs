@@ -335,6 +335,98 @@ button{font-family:inherit;border:none;cursor:pointer;}
   max-width:46ch;
 }
 .founders-r p em{font-style:italic;color:var(--sage-deep);font-weight:400;}
+/* FOUNDERS COMPACT — homepage preview (full bios at /las-fundadoras/) */
+.founders-compact{
+  background:var(--bone);
+  padding:96px 32px;
+  border-bottom:1px solid var(--ink);
+}
+.founders-compact-inner{max-width:1480px;margin:0 auto;}
+.founders-compact-head{
+  text-align:center;
+  margin-bottom:48px;
+  padding-bottom:32px;
+  border-bottom:2px solid var(--ink);
+}
+.founders-compact-head .cap{color:var(--sage-deep);margin-bottom:18px;display:block;}
+.founders-compact-head h2{
+  font-family:'Bebas Neue', sans-serif;
+  font-size:clamp(56px, 8vw, 120px);
+  line-height:.88;letter-spacing:.005em;
+  color:var(--ink);
+}
+.founders-compact-head h2 em{
+  font-family:'Fraunces';font-weight:300;font-style:italic;
+  letter-spacing:-.03em;color:var(--sage-deep);
+  text-transform:none;
+}
+.founders-compact-head h2 .sage{color:var(--sage-deep);}
+.founders-compact-head .script{
+  display:inline-block;margin-top:14px;
+  font-family:'Caveat',cursive;font-weight:700;
+  font-size:32px;color:var(--sage-deep);
+  transform:rotate(-2deg);
+}
+.founders-compact-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:32px;
+  margin-bottom:48px;
+}
+.founder-mini{
+  display:grid;
+  grid-template-columns:160px 1fr;
+  gap:24px;
+  background:var(--bone);
+  border:1px solid var(--ink);
+  padding:20px;
+  align-items:center;
+  transition:transform .2s, box-shadow .2s;
+}
+.founder-mini:hover{transform:translate(-3px,-3px);box-shadow:6px 6px 0 var(--ink);}
+.founder-mini-photo{
+  width:160px;height:160px;
+  position:relative;overflow:hidden;
+  border-radius:50%;
+  border:2px solid var(--ink);
+}
+.founder-mini-photo img{
+  position:absolute;inset:0;
+  width:100%;height:100%;object-fit:cover;
+  object-position:center 18%;
+  z-index:2;
+}
+.founder-mini-fallback{
+  position:absolute;inset:0;z-index:1;
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Bebas Neue';font-size:96px;letter-spacing:.005em;
+  color:var(--bone);
+}
+.founder-mini-text h3{
+  font-family:'Bebas Neue';font-size:32px;letter-spacing:.04em;line-height:.95;
+  color:var(--ink);
+}
+.founder-mini-text h3 em{
+  display:block;
+  font-family:'Caveat',cursive;font-weight:700;font-style:normal;
+  font-size:20px;letter-spacing:0;color:var(--sage-deep);
+  text-transform:none;margin-top:4px;
+}
+.founder-mini-text p{
+  font-family:'Fraunces';font-weight:300;font-style:italic;
+  font-size:16px;line-height:1.5;
+  color:var(--ink-2);margin-top:12px;
+}
+.founders-compact-cta{
+  display:flex;align-items:center;gap:24px;
+  justify-content:center;flex-wrap:wrap;
+  padding-top:8px;
+}
+.founders-compact-cta .script-link{
+  font-family:'Caveat',cursive;font-weight:700;
+  font-size:22px;color:var(--sage-deep);
+}
+
 /* MEET THE FOUNDERS — full bio cards */
 .meet{
   background:var(--bone);
@@ -1168,7 +1260,8 @@ button{font-family:inherit;border:none;cursor:pointer;}
 /* RESPONSIVE */
 @media (max-width:1100px){
   .bar-c{display:none;}
-  .stats-grid, .collection-grid, .partners-grid, .contact-grid, .meet-grid, .drop-preview-grid{grid-template-columns:repeat(2, 1fr);}
+  .stats-grid, .collection-grid, .partners-grid, .contact-grid, .meet-grid, .drop-preview-grid, .founders-compact-grid{grid-template-columns:repeat(2, 1fr);}
+  .founders-compact-grid{grid-template-columns:1fr;}
   .drop-preview-grid{grid-template-columns:repeat(3, 1fr);}
   .meet-grid{grid-template-columns:1fr;}
   .meet-head{grid-template-columns:1fr;gap:14px;}
@@ -1181,7 +1274,10 @@ button{font-family:inherit;border:none;cursor:pointer;}
   .event-loc, .event-time, .event-rsvp{grid-column:1/-1;text-align:left;}
 }
 @media (max-width:560px){
-  .hero,.founders,.stats,.rule,.drop,.partners,.events,.contact{padding-left:18px;padding-right:18px;}
+  .hero,.founders,.founders-compact,.stats,.rule,.drop,.partners,.events,.contact{padding-left:18px;padding-right:18px;}
+  .founders-compact-grid{grid-template-columns:1fr;gap:14px;}
+  .founder-mini{grid-template-columns:1fr;gap:14px;text-align:center;}
+  .founder-mini-photo{margin:0 auto;width:140px;height:140px;}
   .dropromo{grid-template-columns:1fr;min-height:0;}
   .dropromo-img{min-height:320px;}
   .dropromo-text{padding:48px 24px;}
@@ -1205,7 +1301,7 @@ button{font-family:inherit;border:none;cursor:pointer;}
     <div class="bar-l-text">Baby Let's Padel<small>~ vamos al padel ~</small></div>
   </div>
   <nav class="bar-c">
-    <a href="#founders">Las Fundadoras</a>
+    <a href="las-fundadoras/">Las Fundadoras</a>
     <a href="shop/">El Drop</a>
     <a href="#partners">Partners</a>
     <a href="#events">Esta Semana</a>
@@ -1256,64 +1352,39 @@ button{font-family:inherit;border:none;cursor:pointer;}
   </div>
 </div>
 
-<!-- FOUNDERS -->
-<section class="founders" id="founders">
-  <div class="founders-grid">
-    <div class="founders-l">
-      <div class="founders-photo"></div>
-      <span class="founders-stamp">Las Fundadoras<small>~ Houston, TX ~</small></span>
-      <div class="founders-cap">"Real photo coming next week."<small>— from the open play</small></div>
-    </div>
-    <div class="founders-r">
+<!-- FOUNDERS — compact homepage section (full bios at /las-fundadoras/) -->
+<section class="founders-compact" id="founders">
+  <div class="founders-compact-inner">
+    <div class="founders-compact-head">
       <span class="cap">— Las Fundadoras</span>
-      <h2>Two latinas,<br>building a <span class="sage">Padel<br>movement,</span><br>en <span class="ser"><em>Houston.</em></span></h2>
+      <h2>Two latinas,<br>building <em>padel</em> in <span class="sage">Houston.</span></h2>
       <span class="script">~ y mucho corazón ~</span>
-      <p>Baby Let's Padel started as a group chat between Laura and Isabella, two Latinas in Houston who couldn't find a regular padel night that felt like home. <em>So they built one.</em> Four open plays a week, the kit our crew actually wears on court, and a movement that grows one Tuesday at a time.</p>
     </div>
-  </div>
-</section>
-
-<!-- MEET THE FOUNDERS — full bio cards -->
-<section class="meet">
-  <div class="meet-inner">
-    <div class="meet-head">
-      <h2>Meet <em>las fundadoras.</em></h2>
-      <p>Two Latinas, one group chat, a Houston padel community on the rise.</p>
+    <div class="founders-compact-grid">
+      <a class="founder-mini" href="las-fundadoras/">
+        <div class="founder-mini-photo">
+          <img src="../assets/founders/laura.jpg" alt="Laura, co-founder" onerror="this.remove()">
+          <div class="founder-mini-fallback" style="background:linear-gradient(160deg, #5b7d6d, #4a6659);">L</div>
+        </div>
+        <div class="founder-mini-text">
+          <h3>Laura<em>The community builder</em></h3>
+          <p>Houston-based Venezuelan-Mexican Latina. Project controls by day, padel obsession at night. Dog mom to Hope.</p>
+        </div>
+      </a>
+      <a class="founder-mini" href="las-fundadoras/">
+        <div class="founder-mini-photo">
+          <img src="../assets/founders/isabella.jpg" alt="Isabella, co-founder" onerror="this.remove()">
+          <div class="founder-mini-fallback" style="background:linear-gradient(160deg, #1E293B, #141B27);color:var(--bone);">I</div>
+        </div>
+        <div class="founder-mini-text">
+          <h3>Isabella · "Isa"<em>The travel partner</em></h3>
+          <p>Venezuelan-born, USA-based since the early 2000s. Started padel to beat Laura on court — and did. Travels for tournaments.</p>
+        </div>
+      </a>
     </div>
-    <div class="meet-grid">
-
-      <article class="meet-card">
-        <div class="meet-card-photo">
-          <span class="meet-card-stamp">Laura<small>~ co-founder ~</small></span>
-          <img class="meet-photo-img" src="../assets/founders/laura.jpg" alt="Laura, co-founder of Baby Let's Padel" onerror="this.remove()">
-          <div class="meet-photo-fallback laura-bg" style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;">Photo coming this weekend<small>~ from the open play ~</small></div>
-        </div>
-        <div class="meet-card-body">
-          <div class="meet-card-head"><h3>Laura<em>~ the community builder</em></h3></div>
-          <p>Hi, I'm Laura, co-founder of Baby Let's Padel.</p>
-          <p>I was born and raised in Venezuela, and my mom is Mexican, so I grew up around a mix of cultures, big personalities, good food, and loud conversations. I'm based in Houston now and love creating spaces where people can connect through community, wellness, travel, and good experiences. I'm usually planning my next trip, trying a new restaurant, organizing some kind of gathering, or hanging out with my dog Hope.</p>
-          <p>By day, I work in project controls, so yes — I'm very much a numbers girl. Spreadsheets, budgets, reporting, organized chaos, all my love languages. Ironically, I never played a racket sport until discovering padel, and somehow that turned into a <em>full blown obsession</em> and eventually a growing community.</p>
-          <p>I'm naturally a little goofy, love making people laugh, and somehow always end up introducing people to each other. I can come across a little intimidating at first, but I'm deeply loyal, love bringing people together, and I'm unapologetically a girls' girl — though some of my closest friendships are with the guys too.</p>
-          <div class="meet-tagline">~ And if you ever meet Hope, just know she's the real star of Baby Let's Padel ~</div>
-        </div>
-      </article>
-
-      <article class="meet-card">
-        <div class="meet-card-photo">
-          <span class="meet-card-stamp">Isabella<small>~ co-founder ~</small></span>
-          <img class="meet-photo-img" src="../assets/founders/isabella.jpg" alt="Isabella, co-founder of Baby Let's Padel" onerror="this.remove()">
-          <div class="meet-photo-fallback isa-bg" style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:var(--bone);">Photo coming this weekend<small>~ from the open play ~</small></div>
-        </div>
-        <div class="meet-card-body">
-          <div class="meet-card-head"><h3>Isabella · "Isa"<em>~ the travel partner</em></h3></div>
-          <p>Born in Venezuela and based in the USA since the early 2000s, Isabella comes from a background in hospitality and supply chain management. Long before discovering padel, the only racket sport she knew was ping pong — a family favorite that was always part of her childhood. Growing up, there was always a ping pong table at home, at her uncles' houses, and somewhere in the middle of every family gathering.</p>
-          <p>Isa has always loved traveling, discovering new restaurants, and experiencing different cultures. But everything changed in 2025 when she discovered padel. <em>What started as a simple mission to beat Laura one time on the court</em> (which, of course, she did) quickly turned into a full-blown obsession.</p>
-          <p>Soon enough, she was taking classes, playing constantly, and planning trips around padel. That passion eventually evolved into Baby Let's Padel — a project created together with Laura that combines two of their favorite things: <em>travel and padel.</em></p>
-          <p>Because the best way to explore new destinations is with a racket in hand.</p>
-          <div class="meet-tagline">~ Let's play padel while we travel the world ~</div>
-        </div>
-      </article>
-
+    <div class="founders-compact-cta">
+      <a href="las-fundadoras/" class="btn btn-sage" style="font-size:14px;letter-spacing:.22em;padding:18px 28px;">Meet Las Fundadoras →</a>
+      <span class="script-link">~ full bios + the whole story ~</span>
     </div>
   </div>
 </section>
@@ -1716,7 +1787,7 @@ button{font-family:inherit;border:none;cursor:pointer;}
     </div>
     <div>
       <h4>La Crew</h4>
-      <a href="#founders">Las Fundadoras</a>
+      <a href="las-fundadoras/">Las Fundadoras</a>
       <a href="#events">Esta Semana</a>
       <a href="#">Travel Team</a>
     </div>
